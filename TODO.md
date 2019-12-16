@@ -6,3 +6,6 @@
   - Cool cards ( https://chocoladesign.com/ );
 - Inserir os textos já postados no Medium;
 - Inserir um Analytics;
+
+- Post com objetivos para 2020;
+- Post de retrospectiva 2019;
