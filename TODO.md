@@ -1,0 +1,8 @@
+- Trocar o logo e favicon do Gatsby;
+- Editar o README e a descrição do repositório;
+- Coletar referências de design para aplicar ao layout;
+  - Sticky header;
+  - Informações para o footer;
+  - Cool cards ( https://chocoladesign.com/ );
+- Inserir os textos já postados no Medium;
+- Inserir um Analytics;
