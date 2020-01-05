@@ -4,8 +4,6 @@ date: "2019-12-16T00:12:03.284Z"
 description: "Construindo um blog com GatsbyJS"
 ---
 
-Esse é o meu primeiro post e demorou menos do que eu esperava!
-
 > ###TL;DR;
 > A proposta original do sitesemcomplicacao mudou; Este site foi montado em Gatsby e hospedado no Netlify; Espero que ele não morra nos próximos meses; Sejamos otimistas que 2020 já está aí.
 
@@ -16,8 +14,7 @@ A [Vagas.com](https://www.vagas.com.br/) já utilizou em uma landing page e o [F
 ###Por que [GatsbyJS](https://www.gatsbyjs.org/) com hospedagem no [Netlify](https://www.netlify.com/)?
 
 - Tenho minhas ressalvas quanto ao _paywall_ do Medium;
-- Não aguentava mais o TTFB dos hosts compartilhados da Locaweb que chegavam a 4 segundos com Wordpress;
-  - TTFB: Time to First Byte, é uma medida que indica a duração entre uma requisição HTTP e o momento que o browser inicia o recebimento desta resposta, ou seja, recebe o primeiro byte.
+- Não aguentava mais o [TTFB](/time-to-first-byte) dos hosts compartilhados da Locaweb que chegavam a 4 segundos com Wordpress;
 - Cansei de pagar um preço relativamente alto pela qualidade ruim de hospedagem que era oferecida;
 
 ###O que é o sitesemcomplicacao?

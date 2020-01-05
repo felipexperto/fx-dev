@@ -5384,6 +5384,13 @@ gatsby-react-router-scroll@^2.1.17:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
+gatsby-remark-abbr@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-abbr/-/gatsby-remark-abbr-2.0.0.tgz#c63540898ec2c2d51e251fc4b380d604202fb283"
+  integrity sha512-qU6fa7XZOpiNhE7Hn3hLqHRZYWborweGZnmqG8SMBLZf/XFHYEHyWlo4OFZKA81OoIfJycNrSO0RqpDFfgz+iA==
+  dependencies:
+    remark-abbr "^1.0.7"
+
 gatsby-remark-copy-linked-files@^2.1.31:
   version "2.1.31"
   resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.1.31.tgz#2e7bd89ae098429a000f8d085613a8242fdfbddb"
@@ -10503,6 +10510,13 @@ regjsparser@^0.6.0:
   dependencies:
     jsesc "~0.5.0"
 
+remark-abbr@^1.0.7:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/remark-abbr/-/remark-abbr-1.3.2.tgz#332fc6cdf33f75af0d313d9e4d308bd5844988e0"
+  integrity sha512-Ek2eCRgvsz9uE/P383gcts4KbXm4zhovfpuAqZg2uqoJ/3dRPtdldZyFcud44Sgc0WVuKXeWITWa2BC4nfBofw==
+  dependencies:
+    unist-util-visit "^1.3.1"
+
 remark-parse@^6.0.0, remark-parse@^6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/remark-parse/-/remark-parse-6.0.3.tgz#c99131052809da482108413f87b0ee7f52180a3a"
@@ -12476,7 +12490,7 @@ unist-util-visit-parents@^2.0.0, unist-util-visit-parents@^2.1.2:
   dependencies:
     unist-util-is "^3.0.0"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.4.1:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.3.1, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
