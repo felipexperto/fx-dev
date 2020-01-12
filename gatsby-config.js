@@ -1,10 +1,11 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Site sem complicação`,
     author: `Felipe Marciano`,
     description: `estude » (re)crie » compartilhe`,
     siteUrl: `https://www.sitesemcomplicacao.com.br`,
-    image: `/content/assets/sitesemcomplicacao-cover.png`,
     social: {
       twitter: `felipexperto`,
       linkedin: `felipexperto`,
@@ -66,10 +67,22 @@ module.exports = {
         background_color: `#272525`,
         theme_color: `#ffee17`,
         display: `minimal-ui`,
-        icon: `content/assets/sitesemcomplicacao-icon.png`,
+        icon: `src/images/sitesemcomplicacao-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        components: path.join(__dirname, 'src/components'),
+        images: path.join(__dirname, 'src/images'),
+        pages: path.join(__dirname, 'src/pages'),
+        styles: path.join(__dirname, 'src/styles'),
+        templates: path.join(__dirname, 'src/templates'),
+        utils: path.join(__dirname, 'src/utils'),
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,

@@ -14,7 +14,7 @@ import { rhythm } from "../utils/typography"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/felipemarciano-400x400-compressed.png/" }) {
+      avatar: file(absolutePath: { regex: "/author/sitesemcomplicacao-felipemarciano.png/" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed
@@ -26,13 +26,16 @@ const Bio = () => {
           author
           social {
             twitter
+            linkedin
+            github
           }
         }
       }
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author, social } = data.site.siteMetadata;
+  
   return (
     <div
       style={{
