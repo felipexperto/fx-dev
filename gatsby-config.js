@@ -4,6 +4,7 @@ module.exports = {
     author: `Felipe Marciano`,
     description: `estude » (re)crie » compartilhe`,
     siteUrl: `https://www.sitesemcomplicacao.com.br`,
+    image: `/content/assets/sitesemcomplicacao-cover.png`,
     social: {
       twitter: `felipexperto`,
       linkedin: `felipexperto`,
@@ -52,20 +53,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-132746020-1`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Site Sem Complicação`,
+        short_name: `Site Sem Complicação`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#272525`,
+        theme_color: `#ffee17`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/sitesemcomplicacao-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
@@ -77,14 +78,14 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
         options: {
           plugins: [
-            'gatsby-remark-abbr', 
+            `gatsby-remark-abbr`, 
             {
-              resolve: 'gatsby-remark-emoji',
+              resolve: `gatsby-remark-emoji`,
               options: {
-                emojiConversion: 'shortnameToUnicode',
+                emojiConversion: `shortnameToUnicode`,
                 ascii: true,
               }
             }
