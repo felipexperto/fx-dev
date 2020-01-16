@@ -14,7 +14,8 @@ Uma empresa de gestão horizontal - [saiba mais aqui](https://trabalheconosco.va
 > Compartilhamos desde decisões estratégicas, entregas, contratações de pessoas e parceiros, até como vai ser o aniversário do mês, tudo fica disponível para acompanhamento nos nossos canais internos [...]. - por Graziele, que é minha colega de equipe, por falar nisso.
 
 A empresa tem 20 anos mas a palavra não é tradição e sim evolução!
-O core é RH, sem dúvidas, mas procuramos deixar bem claro nosso posicionamento como empresa de tecnologia.
+
+"A VAGAS é, na verdade, uma empresa de tecnologia e não de seleção. O nosso propósito é oferecer uma tecnologia para que as empresas possam escolher melhor os candidatos. Quem escolhe ainda são os clientes que utilizam a nossa solução." - Trecho retirado de: [Entenda como funciona o sistema do Vagas e aumente as chances de ter seu currículo selecionado](https://fernandadelima.com/entenda-como-funciona-o-sistema-do-vagas-e-aumente-as-chances-de-ter-seu-curr%C3%ADculo-selecionado-1073b56d1bad)
 
 Inclusive, neste momento estamos contratando Pessoas Desenvolvedoras de Software Back e Front, UX Designer e algumas outras posições. [Clica aqui e confere todas as vagas abertas no momento](https://trabalheconosco.vagas.com.br/vagas/oportunidades).
 
