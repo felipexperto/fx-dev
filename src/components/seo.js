@@ -22,7 +22,13 @@ function SEO({ description, lang, meta, title, image }) {
           siteMetadata {
             title
             description
-            author
+            authors {
+              id name social {
+                twitter
+                linkedin
+                github
+              }
+            }
           }
         }
       }

@@ -3,14 +3,28 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: `Site sem complicação`,
-    author: `Felipe Marciano`,
+    authors: [
+      {
+        id: 1,
+        name: `Felipe Marciano`,
+        social: {
+          twitter: `felipexperto`,
+          linkedin: `felipexperto`,
+          github: `felipexperto`
+        }
+      },
+      {
+        id: 2,
+        name: `Daniele Gama`,
+        social: {
+          twitter: ``,
+          linkedin: ``,
+          github: ``
+        }
+      }
+    ],
     description: `estude » (re)crie » compartilhe`,
     siteUrl: `https://www.sitesemcomplicacao.com.br`,
-    social: {
-      twitter: `felipexperto`,
-      linkedin: `felipexperto`,
-      github: `felipexperto`
-    },
   },
   plugins: [
     {

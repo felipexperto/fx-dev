@@ -1,4 +1,5 @@
 ---
+authorid: 1
 title: Construindo um blog com GatsbyJS
 date: "2019-12-16T00:12:03.284Z"
 description: "Construindo um blog com GatsbyJS"

@@ -5,36 +5,35 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import avatarFelipe from 'src/images/authors/sitesemcomplicacao-felipemarciano.png';
+import avatarDaniele from 'src/images/authors/sitesemcomplicacao-danielegama.jpg';
 
 import { rhythm } from "../utils/typography"
 
-const Bio = () => {
+const Bio = (authorId) => {
+
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/author/sitesemcomplicacao-felipemarciano.png/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
-          author
-          social {
-            twitter
-            linkedin
-            github
+          authors {
+            id name social {
+              twitter
+              linkedin
+              github
+            }
           }
         }
       }
     }
-  `)
+  `);
 
-  const { author, social } = data.site.siteMetadata;
+  const postAuthorId = Object.values(authorId)[0];
+  const postAuthorInfo = data.site.siteMetadata.authors.filter(item => item.id === postAuthorId);
+  const { name, social: { twitter, linkedin, github } } = postAuthorInfo[0];
   
   return (
     <div
@@ -43,33 +42,39 @@ const Bio = () => {
         marginBottom: rhythm(2.5),
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
+      <img
+        src={postAuthorId === 1 ? avatarFelipe : avatarDaniele}
+        alt={name}
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
           minWidth: 50,
           borderRadius: `100%`,
-        }}
-        imgStyle={{
           borderRadius: `50%`,
         }}
       />
       <p>
-        Criado por <strong>{author}</strong>.<br />
+        Criado por <strong>{name}</strong>.<br />
         Que pode ser encontrado no:
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
+        <a href={`https://twitter.com/${twitter}`}>
           Twitter
-        </a> | <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
+        </a> | <a href={`https://www.linkedin.com/in/${linkedin}`}>
           LinkedIn
-        </a> | <a href={`https://github.com/${social.github}`}>
+        </a> | <a href={`https://github.com/${github}`}>
           Github
         </a>
       </p>
     </div>
   )
+}
+
+Bio.defaultProps = {
+  authorId: 1,
+}
+
+Bio.propTypes = {
+  authorId: PropTypes.number,
 }
 
 export default Bio
