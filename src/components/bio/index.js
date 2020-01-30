@@ -8,12 +8,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import Avatar from 'src/components/avatar';
 import avatarFelipe from 'src/images/authors/sitesemcomplicacao-felipemarciano.png';
 import avatarDaniele from 'src/images/authors/sitesemcomplicacao-danielegama.jpg';
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from "src/utils/typography"
 
-const Bio = (authorId) => {
+const Bio = ({ authorId }) => {
 
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -31,8 +32,7 @@ const Bio = (authorId) => {
     }
   `);
 
-  const postAuthorId = Object.values(authorId)[0];
-  const postAuthorInfo = data.site.siteMetadata.authors.filter(item => item.id === postAuthorId);
+  const postAuthorInfo = data.site.siteMetadata.authors.filter(item => item.id === authorId);
   const { name, social: { twitter, linkedin, github } } = postAuthorInfo[0];
   
   return (
@@ -42,16 +42,9 @@ const Bio = (authorId) => {
         marginBottom: rhythm(2.5),
       }}
     >
-      <img
-        src={postAuthorId === 1 ? avatarFelipe : avatarDaniele}
-        alt={name}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-          borderRadius: `50%`,
-        }}
+      <Avatar
+        authorAvatar={authorId === 1 ? avatarFelipe : avatarDaniele}
+        authorName={name}
       />
       <p>
         Criado por <strong>{name}</strong>.<br />
