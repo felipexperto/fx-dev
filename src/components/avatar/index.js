@@ -1,12 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import * as S from './styles';
 
-const Avatar = ({authorAvatar, authorName}) => (
+const Avatar = ({image, label}) => (
   <S.AvatarImage
-    src={authorAvatar}
-    alt={authorName}
+    src={image}
+    alt={label}
   />
 );
 export default Avatar

@@ -8,11 +8,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+
+import * as S from './styles';
 import Avatar from 'src/components/avatar';
 import avatarFelipe from 'src/images/authors/sitesemcomplicacao-felipemarciano.png';
 import avatarDaniele from 'src/images/authors/sitesemcomplicacao-danielegama.jpg';
-
-import { rhythm } from "src/utils/typography"
 
 const Bio = ({ authorId }) => {
 
@@ -34,17 +34,13 @@ const Bio = ({ authorId }) => {
 
   const postAuthorInfo = data.site.siteMetadata.authors.filter(item => item.id === authorId);
   const { name, social: { twitter, linkedin, github } } = postAuthorInfo[0];
+  const authorAvatar = authorId === 1 ? avatarFelipe : avatarDaniele;
   
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
+    <S.BioWrapper>
       <Avatar
-        authorAvatar={authorId === 1 ? avatarFelipe : avatarDaniele}
-        authorName={name}
+        image={authorAvatar}
+        label={name}
       />
       <p>
         Criado por <strong>{name}</strong>.<br />
@@ -58,7 +54,7 @@ const Bio = ({ authorId }) => {
           Github
         </a>
       </p>
-    </div>
+    </S.BioWrapper>
   )
 }
 
