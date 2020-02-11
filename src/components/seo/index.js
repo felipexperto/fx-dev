@@ -23,11 +23,7 @@ function SEO({ description, lang, meta, title, image }) {
             title
             description
             authors {
-              id name social {
-                twitter
-                linkedin
-                github
-              }
+              id name intro bio
             }
           }
         }

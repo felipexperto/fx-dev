@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import * as S from './styles';
 import Avatar from 'src/components/avatar';
+import AuthorInfo from 'src/components/authorInfo';
 import avatarFelipe from 'src/images/authors/sitesemcomplicacao-felipemarciano.png';
 import avatarDaniele from 'src/images/authors/sitesemcomplicacao-danielegama.jpg';
 
@@ -21,10 +22,31 @@ const Bio = ({ authorId }) => {
       site {
         siteMetadata {
           authors {
-            id name social {
-              twitter
-              linkedin
-              github
+            id name intro bio social {
+              behance { 
+                name url show
+              }
+              custom { 
+                name url show
+              }
+              dribbble { 
+                name url show
+              }
+              instagram { 
+                name url show
+              }
+              linkedin { 
+                name url show
+              }
+              github { 
+                name url show
+              }
+              pinterest { 
+                name url show
+              }
+              twitter { 
+                name url show
+              }
             }
           }
         }
@@ -33,7 +55,7 @@ const Bio = ({ authorId }) => {
   `);
 
   const postAuthorInfo = data.site.siteMetadata.authors.filter(item => item.id === authorId);
-  const { name, social: { twitter, linkedin, github } } = postAuthorInfo[0];
+  const { name } = postAuthorInfo[0];
   const authorAvatar = authorId === 1 ? avatarFelipe : avatarDaniele;
   
   return (
@@ -42,18 +64,7 @@ const Bio = ({ authorId }) => {
         image={authorAvatar}
         label={name}
       />
-      <p>
-        Criado por <strong>{name}</strong>.<br />
-        Que pode ser encontrado no:
-        {` `}
-        <a href={`https://twitter.com/${twitter}`}>
-          Twitter
-        </a> | <a href={`https://www.linkedin.com/in/${linkedin}`}>
-          LinkedIn
-        </a> | <a href={`https://github.com/${github}`}>
-          Github
-        </a>
-      </p>
+      <AuthorInfo props={postAuthorInfo[0]} />
     </S.BioWrapper>
   )
 }

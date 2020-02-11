@@ -7,20 +7,98 @@ module.exports = {
       {
         id: 1,
         name: `Felipe Marciano`,
+        intro: `Sobre o autor`,
+        bio: `Teste 1`,
         social: {
-          twitter: `felipexperto`,
-          linkedin: `felipexperto`,
-          github: `felipexperto`
-        }
+          linkedin: {
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/felipexperto`,
+            show: true,
+          },
+          github: {
+            name: `Github`,
+            url: `https://github.com/felipexperto`,
+            show: true,
+          },
+          twitter: {
+            name: `Twitter`,
+            url: `https://twitter.com/felipexperto`,
+            show: true,
+          },
+          behance: {
+            name: `Behance`,
+            url: `https://www.behance.net/felipexperto`,
+            show: true,
+          },
+          instagram: {
+            name: `Instagram`,
+            url: ``,
+            show: false,
+          },
+          pinterest: {
+            name: `Pinterest`,
+            url: ``,
+            show: false,
+          },
+          dribbble: {
+            name: `Dribbble`,
+            url: ``,
+            show: false,
+          },
+          custom: {
+            name: ``,
+            url: ``,
+            show: false,
+          },
+        },
       },
       {
         id: 2,
         name: `Daniele Gama`,
+        intro: ``,
+        bio: `Teste 2`,
         social: {
-          twitter: ``,
-          linkedin: ``,
-          github: ``
-        }
+          linkedin: {
+            name: `LinkedIn`,
+            url: ``,
+            show: false,
+          },
+          github: {
+            name: `Github`,
+            url: ``,
+            show: false,
+          },
+          twitter: {
+            name: `Twitter`,
+            url: ``,
+            show: false,
+          },
+          behance: {
+            name: `Behance`,
+            url: ``,
+            show: false,
+          },
+          instagram: {
+            name: `Instagram`,
+            url: ``,
+            show: false,
+          },
+          pinterest: {
+            name: `Pinterest`,
+            url: ``,
+            show: false,
+          },
+          dribbble: {
+            name: `Dribbble`,
+            url: ``,
+            show: false,
+          },
+          custom: {
+            name: ``,
+            url: ``,
+            show: false,
+          },
+        },
       }
     ],
     description: `estude » (re)crie » compartilhe`,
