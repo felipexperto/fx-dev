@@ -5,6 +5,9 @@ const colors = {
   red: '#ff040d',
   transparent: 'transparent',
   yellow: '#ffee17',
+  lightgrey: '#aaaaaa',
+  grey: '#666666',
+  darkgrey: '#333333'
 };
 const fonts = {
   weight: {

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import uuid from "uuid";
 
 import * as S from './styles';
@@ -12,7 +12,7 @@ const AuthorInfo = ({ props }) => {
   const socialArr = getSocialNetworks(Object.entries(social));
 
   return (
-    <Fragment>
+    <div>
       { (intro) && <S.Intro>{ intro }</S.Intro> }
       { (name) && <S.Name>{ name }</S.Name> }
       { (bio) && <S.Description>{ bio }</S.Description> }
@@ -32,6 +32,6 @@ const AuthorInfo = ({ props }) => {
           ))
         }
       </S.SocialList>
-    </Fragment>
+    </div>
 )};
 export default AuthorInfo
