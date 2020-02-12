@@ -1,12 +1,24 @@
-**Geral**
+**Dev**
 
 - ~~Trocar o logo e favicon do Gatsby~~;
 - ~~Inserir um Analytics~~;
 - Editar o README e a descrição do repositório;
+- Adicionar underline amarelo-transparente nos links;
+- Estilizar a lista de redes sociais da Bio;
+- Desenvolver sticky header;
+
+**Pesquisa**
+
+- Estudar possibilidade de adicionar categorias e/ou tags por post;
+  - Estudar a possibilidade de relacionar categorias e/ou tags;
+
+- Estudar como desenvolver uma busca;
+  - Estudar a implementação de busca no sticky header;
+  
 - Coletar referências de design para aplicar ao layout;
-  - Sticky header;
+  - ~~Sticky header~~;
   - ~~Informações para o footer~~;
-  - Cool cards ( https://chocoladesign.com/ );
+  - ~~Cool cards ( https://chocoladesign.com/ )~~;
 
 
 **Refatoração**
