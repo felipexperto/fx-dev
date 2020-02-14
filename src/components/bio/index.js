@@ -24,28 +24,28 @@ const Bio = ({ authorId }) => {
           authors {
             id name intro bio social {
               behance { 
-                name url show
-              }
-              custom { 
-                name url show
+                name url boxicon show
               }
               dribbble { 
-                name url show
-              }
-              instagram { 
-                name url show
-              }
-              linkedin { 
-                name url show
+                name url boxicon show
               }
               github { 
-                name url show
+                name url boxicon show
+              }
+              instagram { 
+                name url boxicon show
+              }
+              linkedin { 
+                name url boxicon show
               }
               pinterest { 
-                name url show
+                name url boxicon show
               }
               twitter { 
-                name url show
+                name url boxicon show
+              }
+              custom { 
+                name url boxicon boxicon_type show
               }
             }
           }

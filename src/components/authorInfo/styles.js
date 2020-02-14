@@ -20,17 +20,10 @@ const Name = styled.div`
   font-weight: bold;
   line-height: 1.25em;
 `;
-const SocialItem = styled.li`
-  
-`;
-const SocialList = styled.ul`
-  
-`;
+
 
 export {
   Description,
   Intro,
   Name,
-  SocialItem,
-  SocialList,
 };

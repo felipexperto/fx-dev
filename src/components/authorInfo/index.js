@@ -1,6 +1,6 @@
 import React from "react";
-import uuid from "uuid";
 
+import SocialList from "src/components/socialList";
 import * as S from './styles';
 
 const getSocialNetworks = item => item.map((item) => item[1]).filter(shouldNetworkBeVisible);
@@ -16,22 +16,7 @@ const AuthorInfo = ({ props }) => {
       { (intro) && <S.Intro>{ intro }</S.Intro> }
       { (name) && <S.Name>{ name }</S.Name> }
       { (bio) && <S.Description>{ bio }</S.Description> }
-      <S.SocialList>
-        {
-          socialArr.map((network) => (
-            <S.SocialItem key={uuid.v4()}>
-              <a 
-                href={network.url}
-                title={network.name}
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                  {network.name}
-                </a>
-            </S.SocialItem>
-          ))
-        }
-      </S.SocialList>
+      <SocialList networkArr={socialArr} />
     </div>
 )};
 export default AuthorInfo
