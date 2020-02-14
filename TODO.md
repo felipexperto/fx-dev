@@ -4,11 +4,13 @@
 - ~~Inserir um Analytics~~;
 - Editar o README e a descrição do repositório;
 - Adicionar underline amarelo-transparente nos links;
-- Estilizar a lista de redes sociais da Bio;
+- ~~Estilizar a lista de redes sociais da Bio~~;
 - Desenvolver sticky header;
 
 **Pesquisa**
 
+- Adicionar plugin de comentários
+ - Será?
 - Estudar possibilidade de adicionar categorias e/ou tags por post;
   - Estudar a possibilidade de relacionar categorias e/ou tags;
 
