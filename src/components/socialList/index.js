@@ -1,6 +1,5 @@
 import React from "react";
 import uuid from "uuid";
-import 'boxicons';
 
 import theme from 'src/styles/Themes';
 import * as S from './styles';
