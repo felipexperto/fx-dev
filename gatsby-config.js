@@ -8,12 +8,7 @@ module.exports = {
         id: 1,
         name: `Felipe Marciano`,
         intro: `Sobre o autor`,
-        bio: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 
-        'Content here, content here', making it look like readable English. Many desktop publishing packages and web page 
-        editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web 
-        sites still in their infancy. Various versions have evolved over the years, sometimes by accident, 
-        sometimes on purpose (injected humour and the like).`,
+        bio: `dev front-end & ui designer. viciado em café, cinema e abraçar cachorros.`,
         social: {
           linkedin: {
             name: `LinkedIn`,
@@ -62,7 +57,7 @@ module.exports = {
             url: ``,
             boxicon: `user-pin`,
             boxicon_type: `solid`,
-            show: true,
+            show: false,
           },
         },
       },
@@ -70,7 +65,7 @@ module.exports = {
         id: 2,
         name: `Daniele Gama`,
         intro: ``,
-        bio: `Teste 2`,
+        bio: ``,
         social: {
           linkedin: {
             name: `LinkedIn`,
