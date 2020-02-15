@@ -10,6 +10,7 @@ const itemNavigation = styled.li`
   a {
     box-shadow: none;
     padding: 3rem 1.5rem;
+    transition: all 1s .15s;
 
     &:hover {
       background-color: ${theme.main.colors.yellow};
