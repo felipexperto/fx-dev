@@ -46,7 +46,6 @@ const linkTitle = styled.h3`
   margin-top: 0;
 `;
 
-
 const wrapperNavigation = styled.nav`
   margin: 1rem 0 3rem 0;
 `;
