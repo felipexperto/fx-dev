@@ -9,8 +9,11 @@
 
 **Pesquisa**
 
+- Adicionar um code highlighter;
+
 - Adicionar plugin de comentários
  - Será?
+ 
 - Estudar possibilidade de adicionar categorias e/ou tags por post;
   - Estudar a possibilidade de relacionar categorias e/ou tags;
 

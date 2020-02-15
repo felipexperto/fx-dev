@@ -1,9 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import PostContent from "../components/postContent"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import PostContent from "../components/postContent";
+import PostNavigation from "../components/postNavigation";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -23,33 +24,10 @@ class BlogPostTemplate extends React.Component {
           post={post.html}
           title={post.frontmatter.title}
         />
-
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
+        <PostNavigation
+          previous={previous}
+          next={next}
+        />
       </Layout>
     )
   }
