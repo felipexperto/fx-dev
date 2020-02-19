@@ -3,7 +3,7 @@
 - ~~Trocar o logo e favicon do Gatsby~~;
 - ~~Inserir um Analytics~~;
 - Editar o README e a descrição do repositório;
-- Adicionar underline amarelo-transparente nos links;
+- ~~Adicionar underline amarelo-transparente nos links~~;
 - ~~Estilizar a lista de redes sociais da Bio~~;
 - Desenvolver sticky header;
 
@@ -30,7 +30,7 @@
   
 - Componentizar blog-post.js
   - ~~PostContent~~
-  - Navigation
+  - ~~Navigation~~
 
 
 **Conteúdo**
