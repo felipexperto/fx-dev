@@ -11,6 +11,7 @@ const itemNavigation = styled.li`
     box-shadow: none;
     padding: 3rem 1.5rem;
     transition: all 1s .15s;
+    width: 100%;
 
     &:hover {
       background-color: ${theme.main.colors.yellow};
@@ -29,7 +30,7 @@ const itemNavigationRight = styled(itemNavigation)`
 const listNavigation = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: ${props => props.alignmentRight ? 'flex-end' : 'space-between'};
   list-style: none;
   padding: 0;
 `;
