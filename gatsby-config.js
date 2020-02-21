@@ -211,6 +211,9 @@ module.exports = {
                 emojiConversion: `shortnameToUnicode`,
                 ascii: true,
               }
+            },
+            {
+              resolve: `gatsby-remark-highlight-code`,
             }
           ],
         },

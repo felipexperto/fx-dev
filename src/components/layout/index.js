@@ -1,9 +1,18 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import { defineCustomElements as deckdeckgoLoader} from '@deckdeckgo/highlight-code/dist/loader';
 
 import GlobalStyles from 'src/styles/GlobalStyles';
 import * as S from './styles';
 
 const Layout = ({ location, title, children }) => {
+
+  useEffect(() => {
+    try {
+      deckdeckgoLoader(window);
+    } catch (err) {
+      console.log(err);
+    }
+  },[]);
 
   return (
     <Fragment>
