@@ -9,7 +9,7 @@
 
 **Pesquisa**
 
-- Adicionar um code highlighter;
+- ~~Adicionar um code highlighter~~;
 
 - Adicionar plugin de comentários
  - Será?
