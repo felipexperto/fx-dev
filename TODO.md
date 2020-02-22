@@ -2,18 +2,17 @@
 
 - ~~Trocar o logo e favicon do Gatsby~~;
 - ~~Inserir um Analytics~~;
-- Editar o README e a descrição do repositório;
 - ~~Adicionar underline amarelo-transparente nos links~~;
+- ~~Adicionar um code highlighter~~;
 - ~~Estilizar a lista de redes sociais da Bio~~;
+- Editar o README e a descrição do repositório;
+- Adicionar um ícone de link externo ao lado de todo anchor com link externo (duh)
 - Desenvolver sticky header;
+- Adicionar plugin Disqus de comentários
+ - https://www.gatsbyjs.org/docs/adding-comments/
 
 **Pesquisa**
 
-- ~~Adicionar um code highlighter~~;
-
-- Adicionar plugin de comentários
- - Será?
- 
 - Estudar possibilidade de adicionar categorias e/ou tags por post;
   - Estudar a possibilidade de relacionar categorias e/ou tags;
 
