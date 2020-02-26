@@ -6,6 +6,7 @@
 - ~~Adicionar um code highlighter~~;
 - ~~Estilizar a lista de redes sociais da Bio~~;
 - ~~Adicionar um ícone de link externo ao lado de todo anchor com link externo (duh)~~
+- Arrumar a exibição da data na página de posts que está no modelo americano;
 - Editar o README e a descrição do repositório;
 - Desenvolver sticky header;
 - Adicionar plugin Disqus de comentários
@@ -27,7 +28,7 @@
 
 **Refatoração**
   
-- Componentizar blog-post.js
+- ~~Componentizar blog-post.js~~
   - ~~PostContent~~
   - ~~Navigation~~
 
