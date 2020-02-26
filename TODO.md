@@ -5,8 +5,8 @@
 - ~~Adicionar underline amarelo-transparente nos links~~;
 - ~~Adicionar um code highlighter~~;
 - ~~Estilizar a lista de redes sociais da Bio~~;
+- ~~Adicionar um ícone de link externo ao lado de todo anchor com link externo (duh)~~
 - Editar o README e a descrição do repositório;
-- Adicionar um ícone de link externo ao lado de todo anchor com link externo (duh)
 - Desenvolver sticky header;
 - Adicionar plugin Disqus de comentários
  - https://www.gatsbyjs.org/docs/adding-comments/
@@ -37,4 +37,4 @@
 - ~~Post de retrospectiva 2019~~;
 - Post com objetivos para 2020;
 - Inserir os textos já postados no Medium;
-- Escrever uma Bio válida em gatsby-config.js;
+- ~~Escrever uma Bio válida em gatsby-config.js;~~

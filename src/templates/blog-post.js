@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import PostContent from "../components/postContent";
-import PostNavigation from "../components/postNavigation";
+import Layout from "src/components/layout";
+import SEO from "src/components/seo";
+import PostContent from "src/components/postContent";
+import PostNavigation from "src/components/postNavigation";
 
 class BlogPostTemplate extends React.Component {
   render() {
