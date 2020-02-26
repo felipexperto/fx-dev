@@ -213,9 +213,6 @@ module.exports = {
               }
             },
             {
-              resolve: `gatsby-remark-highlight-code`,
-            },
-            {
               resolve: "gatsby-remark-external-links",
               options: {
                 target: "_blank",

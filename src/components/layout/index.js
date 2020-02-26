@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect } from "react";
-import { defineCustomElements as deckdeckgoLoader} from '@deckdeckgo/highlight-code/dist/loader';
 
 import GlobalStyles from 'src/styles/GlobalStyles';
 import * as S from './styles';
