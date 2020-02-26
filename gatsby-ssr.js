@@ -2,10 +2,10 @@ import React from "react";
 
 export const onRenderBody = ({ setHeadComponents }) => {
  setHeadComponents([
-     <script
+     <link
         key="boxicons"
-        type="text/javascript"
-        src="https://unpkg.com/boxicons@latest/dist/boxicons.js"
+        rel="stylesheet"
+        href="https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css"
       />,
   ]);
 }

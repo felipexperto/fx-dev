@@ -13,6 +13,18 @@ const PostStyles = createGlobalStyle`
       font-size: 1.1em;
     }
 
+    section {
+
+      a[target="_blank"]::after {
+        content: "\\eb09";
+        display: inline-block;
+        font-family: 'boxicons';
+        font-size: .85em;
+        margin-left: .15em;
+        vertical-align: middle;
+      }
+    }
+    
     blockquote {
       border-left: 0.32813rem solid #ffee17;
     }

@@ -1,7 +1,6 @@
 import React from "react";
 import uuid from "uuid";
 
-import theme from 'src/styles/Themes';
 import * as S from './styles';
 
 const SocialList = ({ networkArr }) => {
@@ -18,9 +17,15 @@ const SocialList = ({ networkArr }) => {
             rel="noopener noreferrer"
             >
               { (network.boxicon_type) ?
-                <box-icon name={network.boxicon} color={theme.main.colors.darkgrey} type={network.boxicon_type}></box-icon>
+                <i
+                  name={network.boxicon}
+                  className={`bx ${network.boxicon_type}-${network.boxicon}`}
+                ></i>
                 :
-                <box-icon name={network.boxicon} color={theme.main.colors.darkgrey} type='logo'></box-icon>
+                <i
+                  name={network.boxicon}
+                  className={`bx bxl-${network.boxicon}`}
+                ></i>
               }
             </S.SocialAnchor>
         </S.SocialItem>

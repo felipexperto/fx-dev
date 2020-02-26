@@ -56,7 +56,7 @@ module.exports = {
             name: ``,
             url: ``,
             boxicon: `user-pin`,
-            boxicon_type: `solid`,
+            boxicon_type: `bxs`,
             show: false,
           },
         },
@@ -113,7 +113,7 @@ module.exports = {
             name: ``,
             url: ``,
             boxicon: `user-pin`,
-            boxicon_type: `solid`,
+            boxicon_type: `bxs`,
             show: false,
           },
         },
@@ -214,6 +214,13 @@ module.exports = {
             },
             {
               resolve: `gatsby-remark-highlight-code`,
+            },
+            {
+              resolve: "gatsby-remark-external-links",
+              options: {
+                target: "_blank",
+                rel: "nofollow, noopener, external"
+              }
             }
           ],
         },

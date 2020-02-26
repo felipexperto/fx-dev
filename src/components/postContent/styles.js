@@ -34,10 +34,13 @@ const title = styled.h1`
 `;
 
 const date = styled.p`
+  color: ${ theme.main.colors.grey };
   display: block;
+  font-family: Montserrat, sans-serif;
   font-size: .85rem;
   line-height: 1.5em;
   margin-bottom: ${rhythm(1)};
+  margin-top: ${rhythm(.25)};
 `;
 
 export {

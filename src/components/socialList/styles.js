@@ -8,7 +8,8 @@ const SocialAnchor = styled.a`
   padding: .25rem .5rem;
   transition: all .5s .15s;
 
-  > box-icon {
+  > i {
+    color: ${theme.main.colors.darkgrey};
     transform: translateY(0);
     transition: all .5s .15s;
   }
@@ -16,7 +17,7 @@ const SocialAnchor = styled.a`
   &:hover {
     box-shadow: inset 0 -5px 0 0 ${theme.main.colors.yellow};
 
-    > box-icon {
+    > i {
       transform: translateY(-5px);
     }
   }
