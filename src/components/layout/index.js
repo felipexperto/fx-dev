@@ -1,17 +1,9 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 
 import GlobalStyles from 'src/styles/GlobalStyles';
 import * as S from './styles';
 
 const Layout = ({ location, title, children }) => {
-
-  useEffect(() => {
-    try {
-      deckdeckgoLoader(window);
-    } catch (err) {
-      console.log(err);
-    }
-  },[]);
 
   return (
     <Fragment>
