@@ -142,8 +142,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-relative-images',
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
+              linkImagesToOriginal: false,
               maxWidth: 590,
             },
           },
@@ -152,6 +156,21 @@ module.exports = {
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
+          },
+          `gatsby-remark-abbr`, 
+          {
+            resolve: `gatsby-remark-emoji`,
+            options: {
+              emojiConversion: `shortnameToUnicode`,
+              ascii: true,
+            }
+          },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow, noopener, external"
+            }
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
@@ -199,28 +218,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-        options: {
-          plugins: [
-            `gatsby-remark-abbr`, 
-            {
-              resolve: `gatsby-remark-emoji`,
-              options: {
-                emojiConversion: `shortnameToUnicode`,
-                ascii: true,
-              }
-            },
-            {
-              resolve: "gatsby-remark-external-links",
-              options: {
-                target: "_blank",
-                rel: "nofollow, noopener, external"
-              }
-            }
-          ],
-        },
-    },
+    }
   ],
 }

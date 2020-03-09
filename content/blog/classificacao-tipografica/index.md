@@ -6,7 +6,7 @@ description: "Classificação Tipográfica"
 ---
 
 > ###TL;DR;
-> Se você gostaria de entender a história da marca, sua relevância e a relação da marca com empresas, produtos ou serviços, essa leitura é interessante.
+> Um leve papo sobre tipografia.
 
 ## O que é classificação tipográfica?
 
@@ -14,24 +14,13 @@ Classificação Tipográfica é um modo de organizar famílias tipográficas em 
 
 A primeira tentativa foi realizada pelo historiador de tipografia francês Maximilien Vox e adotada em 1962 pela Association Typographique Internationale (ATypI) e em 1967 pela BS (British Standard). Deste então, dezenas de outras classificações foram criadas, sendo duas das principais causas o aumento exponencial da quantidade de tipografias e a fusão dos diversos estilos.
 
-Quando falo em dezenas, não é um palpite, nossa pesquisa nos levou a encontrar uma documentação que constata 25 Sistemas de Classificação Tipográfica ( 25 Systems for Classifying Typography: A Study in Naming Frequency ).
+Quando falo em dezenas, não é um palpite, nossa pesquisa nos levou a encontrar uma documentação que constata [25 Sistemas de Classificação Tipográfica ( 25 Systems for Classifying Typography: A Study in Naming Frequency )](http://piim.newschool.edu/journal/issues/2013/01/pdfs/ParsonsJournalForInformationMapping_Childers_Griscti_Leben.pdf).
 
 ## A importância da classificação tipográfica
 
 Cada época apresenta um padrão estético (tendências e estilos) que se manifestava pela pintura ou fotografia, música, arquitetura, […] e tipografia, é claro. Cada projeto de design possui uma linguagem dentro de seu conceito, dentro dessa linguagem nós podemos estabelecer elementos gráficos, paletas de cores, estilo de fotografia, […] e tipografia, que darão o tom para a comunicação. Mais rígida ou flexível, tradicional ou inovadora, clássica ou contemporânea e assim por diante. Veja a imagem a seguir:
 
-
-
-![Tom das tipografias - A mesma palavra escrita com fontes diferentes altera o contexto.](../../assets/classificacao-tipografica/tipografias-tom.jpg)
-
-![Tom das tipografias - A mesma palavra escrita com fontes diferentes altera o contexto.](../../assets/tipografias-tom.jpg)
-
-![Tom das tipografias - A mesma palavra escrita com fontes diferentes altera o contexto.](/content/assets/tipografias-tom.jpg)
-
 ![Tom das tipografias - A mesma palavra escrita com fontes diferentes altera o contexto.](./tipografias-tom.jpg)
-
-![Tom das tipografias - A mesma palavra escrita com fontes diferentes altera o contexto.](assets/tipografias-tom.jpg)
-
 
 Simplesmente escrevi a palavra “encontro” e alternei tipografias. Isso muda o tom da mensagem, o cérebro do receptor vasculhará entre as referências algo que se assemelhe ao visto.
 
