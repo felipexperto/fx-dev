@@ -34,5 +34,6 @@ Por fim, uma conversa entre profissionais torna-se mais coesa, nada de: “traci
 
 E sim: Tipografias serifadas; não serifadas, grotescas ou Neo Grotescas (dependendo da classificação); tipografias Romanas, tendo como maior representante a Trajan (encontrada na base da Coluna de Trajano); Blackletter Textura ou Gotish.
 
+> [Para saber mais sobre Classificações Tipográfias, continue lendo neste artigo.](./classificacoes-tipograficas-em-detalhes)
 
 *Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui.*
