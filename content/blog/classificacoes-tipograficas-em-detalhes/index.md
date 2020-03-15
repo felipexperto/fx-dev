@@ -42,10 +42,10 @@ Então, sem enrolação, vamos ao conteúdo.
 - **Manual ou Graphic** - Inclui fontes baseadas em letras produzidas com pincel, pena ou outro instrumento, mas sem o caráter manuscrito: Matura, Banco.
 
 - **Blackletter** - O tipo gótico é baseado na escrita originada ao norte dos Alpes, na Europa. Seus traços são grossos, obtidos com pena de ponta chanfrada, que resultam letras contrastadas, com curvas quebradas e terminações angulares, em um estilo também conhecido como broken script (em inglês, escrita quebrada). Os tipos góticos estão divididos em quatro grupos principais:
- - **Textura ou Gotish** ou ainda littera textualis foi o estilo utilizado Gutenberg na Bíblia de 42 linhas, com letras estreitas típicas.
- - **Bastarda ou Schwabacher**, um estilo vernacular bastante popular que gerou os primeiros tipos alemães. E baseado na escrita cursiva.
- - **Rotunda ou Rundgotisch**, com letras arredondadas e sem terminações, com os retângulos característicos das blackletters.
- - **Fraktur** é o tipo gótico mais comum na Alemanha atualmente e mostra influências do estilo renascentista.
+  - **Textura ou Gotish** ou ainda littera textualis foi o estilo utilizado Gutenberg na Bíblia de 42 linhas, com letras estreitas típicas.
+  - **Bastarda ou Schwabacher**, um estilo vernacular bastante popular que gerou os primeiros tipos alemães. E baseado na escrita cursiva.
+  - **Rotunda ou Rundgotisch**, com letras arredondadas e sem terminações, com os retângulos característicos das blackletters.
+  - **Fraktur** é o tipo gótico mais comum na Alemanha atualmente e mostra influências do estilo renascentista.
 
 ![Classificação Tipográfica de Vox](./classificacao-tipografica-vox.png)
 
