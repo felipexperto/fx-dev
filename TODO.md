@@ -12,10 +12,13 @@
 - Adicionar os autores na lista de post da home
 - Adicionar dados da Daniele como autora
 - Adicionar feature image nos posts (SEO)
+- Teste do site com Nibler
+- Testar site com Moz SEO Checker
 - Editar o README e a descrição do repositório;
 - Desenvolver sticky header;
 - Adicionar plugin Disqus de comentários
  - https://www.gatsbyjs.org/docs/adding-comments/
+- Fazer uma página reunindo os principais links para adicionar na descrição das redes sociais. 
 
 **Pesquisa**
 
