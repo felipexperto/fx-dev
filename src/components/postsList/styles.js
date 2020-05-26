@@ -16,6 +16,7 @@ const cardTitle = styled.h3`
   > a {
     box-shadow: inset 0px -10px 0px 0 ${theme.main.colors.yellow};
     color: currentColor;
+    font-style: italic;
   }
 `;
 

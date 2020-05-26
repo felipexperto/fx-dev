@@ -29,6 +29,8 @@ const footer = styled.footer`
 `;
 
 const title = styled.h1`
+  font-family: 'Merriweather','Georgia',serif;
+  font-style: italic;
   margin-bottom: 0;
   margin-top: ${rhythm(1)};
 `;

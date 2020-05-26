@@ -27,7 +27,28 @@ const PostStyles = createGlobalStyle`
     
     blockquote {
       border-left: 0.32813rem solid #ffee17;
+      font-size: 1.1rem;
+      line-height: 1.4em;
     }
+
+    code {
+      background: #f0f9fb;
+      border-radius: 4px;
+      color: #267fab;
+      display: inline-block;
+      padding: 0 5px;
+      vertical-align: middle;
+    }
+
+    h2,
+    h3 {
+      font-style: italic;
+    }
+  
+    ul {
+      list-style-position: inside;
+    }
+
   }
 `;
 
