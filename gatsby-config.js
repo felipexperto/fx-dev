@@ -58,7 +58,19 @@ module.exports = {
               rel: "nofollow, noopener, external"
             }
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              aliases: {
+                sh: "shell",
+                es6: "javascript",
+                env: "bash",
+                mdx: "md",
+                ".json": "json"
+              },
+            }
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],

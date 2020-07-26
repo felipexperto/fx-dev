@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
+import GlobalStyles from 'src/styles/GlobalStyles';
 import Layout from "src/components/layout";
 import SEO from "src/components/seo";
 import PostContent from "src/components/postContent";
@@ -8,9 +9,9 @@ import PostNavigation from "src/components/postNavigation";
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.markdownRemark;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -18,6 +19,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        <GlobalStyles />
         <PostContent
           authorId={post.frontmatter.authorid}
           date={post.frontmatter.date}

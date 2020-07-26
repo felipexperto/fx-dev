@@ -1,13 +1,11 @@
 import React, { Fragment } from "react";
 
-import GlobalStyles from 'src/styles/GlobalStyles';
 import * as S from './styles';
 
 const Layout = ({ location, title, children }) => {
 
   return (
-    <Fragment>
-      <GlobalStyles />
+    <S.wrapperFull>
       <S.wrapperLayout>
         <S.Header location={location} title={title} />
         <S.wrapperContent>
@@ -15,7 +13,7 @@ const Layout = ({ location, title, children }) => {
         </S.wrapperContent>
         <S.Footer />
       </S.wrapperLayout>
-    </Fragment>
+    </S.wrapperFull>
   )
 }
 

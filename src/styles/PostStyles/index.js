@@ -4,6 +4,10 @@ import theme from 'src/styles/Themes';
 
 const PostStyles = createGlobalStyle`
 
+  body {
+    background-color: ${theme.main.colors.white};
+  }
+
   article {
     
     a {

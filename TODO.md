@@ -9,7 +9,9 @@
 - ~~Arrumar a exibição da data na página de posts que está no modelo americano;~~
 - ~~Componentizar e estilizar os links e datas da lista de posts~~
 - Testes unitários e de integração;
-- Adicionar os autores na lista de post da home
+- ~~Adicionar os autores na lista de post da home~~ (irrelevante)
+- Exibir data nos posts como: há 1 dia, há 7 dias, há um mês, há 2 meses, há um ano, 15/03/2018;
+- Alterar mediaqueries do template usando de exemplo o Bootstrap;
 - Adicionar dados da Daniele como autora
 - Adicionar feature image nos posts (SEO)
 - Teste do site com Nibler
