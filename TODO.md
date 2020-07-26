@@ -15,6 +15,12 @@
 - Teste do site com Nibler
 - Testar site com Moz SEO Checker
 - Editar o README e a descrição do repositório;
+  - python --version
+  - node -v
+  - npm install --global gatsby-cli
+  - npm install
+  - gatsby develop
+  - https://www.gatsbyjs.org/docs/gatsby-on-windows/
 - Desenvolver sticky header;
 - Adicionar plugin Disqus de comentários
  - https://www.gatsbyjs.org/docs/adding-comments/
