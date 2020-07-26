@@ -7,7 +7,7 @@ export { default as Header } from '../header';
 export { default as Footer } from '../footer';
 
 const wrapperFull = styled.div`
-  background-color: ${ theme.main.colors.lightestgrey };
+  background-color: ${({ backgroundColor }) => theme.main.colors[backgroundColor] || theme.main.colors.white };
 `;
 
 const wrapperLayout = styled.div`

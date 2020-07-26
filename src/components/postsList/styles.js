@@ -10,11 +10,12 @@ const Card = styled.article`
   margin-bottom: 2rem;
   padding: 1.5rem;
   transform: scale(1.05);
-  transition: transform 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus,
   &:hover {
     background-color: ${theme.main.colors.yellow};
+    box-shadow: 0 1px 8px 5px rgba(66,66,66,0.08), 0 1px 3px 1px rgba(66,66,66,0.16);
     transform: scale(1.1);
   }
 `;
@@ -40,6 +41,7 @@ const cardExtraInfo = styled.small`
 
 const cardDate = styled(cardExtraInfo)`
   display: block;
+  font-size: .7rem;
   letter-spacing: 0.05em;
   margin-bottom: .5rem;
 `;
@@ -53,7 +55,7 @@ const cardDescription = styled.section`
 `;
 
 const cardDescriptionText = styled.p`
-  font-size: .9rem;
+  font-size: .85rem;
   margin-bottom: 0;
 `;
 

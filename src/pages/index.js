@@ -12,7 +12,7 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle} bgColor='lightestgrey'>
         <SEO title="Todos os posts" />
         <PostsList posts={posts} />
       </Layout>

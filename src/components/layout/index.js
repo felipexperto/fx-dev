@@ -2,10 +2,10 @@ import React, { Fragment } from "react";
 
 import * as S from './styles';
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, bgColor }) => {
 
   return (
-    <S.wrapperFull>
+    <S.wrapperFull backgroundColor={bgColor}>
       <S.wrapperLayout>
         <S.Header location={location} title={title} />
         <S.wrapperContent>
