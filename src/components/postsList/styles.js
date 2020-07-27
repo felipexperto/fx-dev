@@ -2,23 +2,40 @@ import styled from 'styled-components';
 
 import theme from 'src/styles/Themes';
 
-const Card = styled.article`
-  background-color: ${ theme.main.colors.white };
-  border-radius: 4px;
-  box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
-  color: ${ theme.main.colors.black };
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  transform: scale(1.05);
-  transition: all 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+const { lg } = theme.main.medias;
 
-  &:focus,
-  &:hover {
-    background-color: ${theme.main.colors.yellow};
-    box-shadow: 0 1px 8px 5px rgba(66,66,66,0.08), 0 1px 3px 1px rgba(66,66,66,0.16);
-    transform: scale(1.1);
+const cardList = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+
+  & > a {
+    align-items: stretch;
+    margin: 2.5%;
+    width: 100%;
+
+    @media ${lg} {
+      width: 40%;
+    }
+
+    background-color: ${ theme.main.colors.white };
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
+    color: ${ theme.main.colors.black };
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    transform: scale(1.05);
+    transition: all 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+      background-color: ${theme.main.colors.yellow};
+      box-shadow: 0 1px 8px 5px rgba(66,66,66,0.08), 0 1px 3px 1px rgba(66,66,66,0.16);
+      transform: scale(1.1);
+    }
   }
 `;
+
+
 
 const cardHeader = styled.header`
 
@@ -60,7 +77,7 @@ const cardDescriptionText = styled.p`
 `;
 
 export {
-  Card,
+  cardList,
   cardHeader,
   cardTitle,
   cardDate,

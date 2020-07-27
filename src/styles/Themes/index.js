@@ -19,6 +19,20 @@ const fonts = {
     bolder: 700,
   },
 };
+const sizes = {
+  xs: 575,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200
+}
+const medias = {
+  xs: `(max-width: ${sizes.xs}px)`,
+  sm: `(min-width: ${sizes.sm}px)`,
+  md: `(min-width: ${sizes.md}px)`,
+  lg: `(min-width: ${sizes.lg}px)`,
+  xl: `(min-width: ${sizes.xl}px)`
+}
 
 const theme = {
   main: {
@@ -27,6 +41,12 @@ const theme = {
     },
     fonts: {
       ...fonts,
+    },
+    sizes: {
+      ...sizes,
+    },
+    medias: {
+      ...medias,
     }
   },
 };

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import * as S from './styles';
 
@@ -6,13 +6,13 @@ const Layout = ({ location, title, children, bgColor }) => {
 
   return (
     <S.wrapperFull backgroundColor={bgColor}>
+      <S.Header location={location} title={title} />
       <S.wrapperLayout>
-        <S.Header location={location} title={title} />
         <S.wrapperContent>
           {children}
         </S.wrapperContent>
-        <S.Footer />
       </S.wrapperLayout>
+      <S.Footer />
     </S.wrapperFull>
   )
 }

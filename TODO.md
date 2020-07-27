@@ -10,12 +10,11 @@
 - ~~Componentizar e estilizar os links e datas da lista de posts~~
 - Testes unitários e de integração;
 - ~~Adicionar os autores na lista de post da home~~ (irrelevante)
+- ~~Alterar mediaqueries do template usando de exemplo o Bootstrap;~~
+- Limitar o tamanho das descrições dos cards
 - Exibir data nos posts como: há 1 dia, há 7 dias, há um mês, há 2 meses, há um ano, 15/03/2018;
-- Alterar mediaqueries do template usando de exemplo o Bootstrap;
 - Adicionar dados da Daniele como autora
 - Adicionar feature image nos posts (SEO)
-- Teste do site com Nibler
-- Testar site com Moz SEO Checker
 - Editar o README e a descrição do repositório;
   - python --version
   - node -v
@@ -27,6 +26,8 @@
 - Adicionar plugin Disqus de comentários
  - https://www.gatsbyjs.org/docs/adding-comments/
 - Fazer uma página reunindo os principais links para adicionar na descrição das redes sociais. 
+- Teste do site com Nibler
+- Testar site com Moz SEO Checker
 
 **Pesquisa**
 
