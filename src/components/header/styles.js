@@ -20,6 +20,10 @@ const HeaderWrapper = styled.div`
   right: 0;
   top: 0;
   z-index: ${({ theme }) => theme.zIndex.header};
+
+  [data-logo] {
+    width: 160px;
+  }
 `;
 
 const HeaderContainer = styled(Container)`

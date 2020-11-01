@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from "gatsby";
 
+import Logo from 'src/images/logo-felipexperto.inline.svg';
 import { theme } from 'styles'
 import * as S from './styles.js';
 
@@ -11,7 +12,9 @@ const Header = ({ location, title }) => {
     <S.Header data-testid="FX_HEADER">
       <S.HeaderWrapper theme={main}>
         <S.HeaderContainer>
-          <Link to={`/`}>{title}</Link>
+          <Link to={`/`} title={title}>
+            <Logo data-logo/>
+          </Link>
         </S.HeaderContainer>
       </S.HeaderWrapper>
       <S.HeaderBottomSpace />

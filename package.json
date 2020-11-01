@@ -8,6 +8,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "fontsource-inter": "0.0.75",
+    "fontsource-ubuntu": "0.0.72",
     "gatsby": "^2.18.8",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-feed": "^2.3.23",
@@ -15,6 +17,7 @@
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-remark-abbr": "^2.0.0",
@@ -36,8 +39,6 @@
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "styled-components": "^5.0.0",
-    "fontsource-ubuntu": "0.0.72",
-    "fontsource-inter": "0.0.75",
     "uuid": "^3.4.0"
   },
   "devDependencies": {
