@@ -2,12 +2,15 @@ import React from "react";
 
 import Header from '../header';
 import Footer from '../footer';
-import { Container, ContainerFull } from 'styles/Container';
+import { Container, ContainerFull } from 'styles';
 
 const Layout = ({ location, title, children, bgColor }) => {
   return (
     <ContainerFull backgroundColor={bgColor}>
-      <Header location={location} title={title} />
+      <Header
+        location={location}
+        title={title}
+      />
       <Container>
         {children}
       </Container>

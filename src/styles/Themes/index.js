@@ -4,7 +4,7 @@ const colors = {
   black: '#000',
   red: '#ff040d',
   transparent: 'transparent',
-  yellow: '#ffee17',
+  yellow: '#f4da12',
   almostwhite: '#fafafa',
   lightestgrey: '#f1f1f1',
   lightgrey: '#aaaaaa',
@@ -33,6 +33,12 @@ const medias = {
   lg: `(min-width: ${sizes.lg}px)`,
   xl: `(min-width: ${sizes.xl}px)`
 }
+const zIndex = {
+  tooltip: 1,
+  header: 10,
+  modal: 20,
+  overlay: 30,
+}
 
 const theme = {
   main: {
@@ -40,6 +46,7 @@ const theme = {
     fonts,
     sizes,
     medias,
+    zIndex,
   },
 };
 

@@ -1,32 +1,48 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import theme from 'styles/Themes';
 
-const { medias, sizes } = theme.main;
-
-const dinamicPadding = pixels => pixels * .05;
+const { medias } = theme.main;
 
 const defaultContainer = styled.main`
   background-color: ${({ backgroundColor }) => theme.main.colors[backgroundColor] || 'transparent' };
 `;
 
 const Container = styled(defaultContainer)`
+  align-items: center;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
+  ${({ marginBottom }) =>
+    marginBottom &&
+    css`
+      margin-top: ${marginBottom}px;
+    `};
+  ${({ marginTop }) =>
+    marginTop &&
+    css`
+      margin-top: ${marginTop}px;
+    `};
+  ${({ direction }) =>
+    direction &&
+    css`
+      flex-direction: ${direction};
+    `};
 
   @media ${medias.sm} {
-    padding: 0 ${dinamicPadding(sizes.sm)}px;
     width: 540px;
   }
   @media ${medias.md} {
-    padding: 0 ${dinamicPadding(sizes.md)}px;
     width: 720px;
   }
   @media ${medias.lg} {
-    padding: 0 ${dinamicPadding(sizes.lg)}px;
     width: 960px;
   }
+  @media ${medias.xl} {
+    width: 1140px;
+  }
+  width: 100%;
 `;
 
 const ContainerFull = styled(defaultContainer)`
