@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import theme from 'src/styles/Themes';
 import { rhythm } from "src/utils/typography"
@@ -29,7 +29,7 @@ const footer = styled.footer`
 `;
 
 const title = styled.h1`
-  font-family: 'Merriweather','Georgia',serif;
+  font-family: 'Ubuntu',sans-serif;
   font-style: italic;
   margin-bottom: 0;
   margin-top: ${rhythm(1)};
