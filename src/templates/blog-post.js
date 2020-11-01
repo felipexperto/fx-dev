@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import GlobalStyles from 'src/styles/GlobalStyles';
 import Layout from "src/components/layout";
 import SEO from "src/components/seo";
 import PostContent from "src/components/postContent";
@@ -19,7 +18,6 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <GlobalStyles />
         <PostContent
           authorId={post.frontmatter.authorid}
           date={post.frontmatter.date}

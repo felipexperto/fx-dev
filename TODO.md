@@ -26,8 +26,7 @@
 - Adicionar plugin Disqus de comentários
  - https://www.gatsbyjs.org/docs/adding-comments/
 - Fazer uma página reunindo os principais links para adicionar na descrição das redes sociais. 
-- Teste do site com Nibler
-- Testar site com Moz SEO Checker
+- Testes unitários;
 
 **Pesquisa**
 
@@ -39,7 +38,7 @@
 - Estudar como desenvolver uma busca;
   - Estudar a implementação de busca no sticky header;
   
-- Coletar referências de design para aplicar ao layout;
+- ~~Coletar referências de design para aplicar ao layout;~~
   - ~~Sticky header~~;
   - ~~Informações para o footer~~;
   - ~~Cool cards ( https://chocoladesign.com/ )~~;
@@ -55,8 +54,7 @@
 **Conteúdo**
 
 - ~~Post de retrospectiva 2019~~;
-- Post com objetivos para 2020;
-- Inserir os textos já postados no Medium;
+- ~~Inserir os textos já postados no Medium;~~
 - ~~Inserir os textos já postados no cmyk ativo~~;
  - ~~http://localhost/cmykativo/sabe-um-site-que-ensina-design/~~
  - ~~http://localhost/cmykativo/pensar-com-tipos-de-ellen-lupton/~~

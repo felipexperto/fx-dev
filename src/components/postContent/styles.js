@@ -1,7 +1,6 @@
 import styled from 'styled-components/macro';
 
 import theme from 'src/styles/Themes';
-import { rhythm } from "src/utils/typography"
 
 const wrapperArticle = styled.article`
 
@@ -16,14 +15,14 @@ const content = styled.section`
 `;
 
 const footer = styled.footer`
-  padding-top: ${rhythm(1)};
+  padding-top: 16px;
   
   &::before {
     background-color: ${ theme.main.colors.yellow };
     content: "";
     display:block;
     height: 10px;
-    margin-bottom: ${rhythm(1)};
+    margin-bottom: 16px;
     width: 4rem;
   }
 `;
@@ -32,7 +31,7 @@ const title = styled.h1`
   font-family: 'Ubuntu',sans-serif;
   font-style: italic;
   margin-bottom: 0;
-  margin-top: ${rhythm(1)};
+  margin-top: 16px;
 `;
 
 const date = styled.p`
@@ -41,8 +40,8 @@ const date = styled.p`
   font-family: Montserrat, sans-serif;
   font-size: .85rem;
   line-height: 1.5em;
-  margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(.25)};
+  margin-bottom: 16px;
+  margin-top: 4px;
 `;
 
 export {
