@@ -36,18 +36,10 @@ const medias = {
 
 const theme = {
   main: {
-    colors: {
-      ...colors,
-    },
-    fonts: {
-      ...fonts,
-    },
-    sizes: {
-      ...sizes,
-    },
-    medias: {
-      ...medias,
-    }
+    colors,
+    fonts,
+    sizes,
+    medias,
   },
 };
 

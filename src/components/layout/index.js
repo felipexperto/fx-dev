@@ -1,19 +1,18 @@
 import React from "react";
 
-import * as S from './styles';
+import Header from '../header';
+import Footer from '../footer';
+import { Container, ContainerFull } from 'styles/Container';
 
 const Layout = ({ location, title, children, bgColor }) => {
-
   return (
-    <S.wrapperFull backgroundColor={bgColor}>
-      <S.Header location={location} title={title} />
-      <S.wrapperLayout>
-        <S.wrapperContent>
-          {children}
-        </S.wrapperContent>
-      </S.wrapperLayout>
-      <S.Footer />
-    </S.wrapperFull>
+    <ContainerFull backgroundColor={bgColor}>
+      <Header location={location} title={title} />
+      <Container>
+        {children}
+      </Container>
+      <Footer />
+    </ContainerFull>
   )
 }
 
