@@ -1,5 +1,6 @@
 ---
 authorid: 1
+category: Design
 title: "Pensar com Tipos, de Ellen Lupton"
 date: "2014-02-03T00:00:00.000Z"
 description: "Pensar com Tipos, de Ellen Lupton"

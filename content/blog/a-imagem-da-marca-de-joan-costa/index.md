@@ -1,5 +1,6 @@
 ---
 authorid: 1
+category: Design
 title: A Imagem da Marca, de Joan Costa
 date: "2015-02-03T00:00:00.000Z"
 description: "A Imagem da Marca, de Joan Costa"

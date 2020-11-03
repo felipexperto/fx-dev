@@ -1,5 +1,6 @@
 ---
 authorid: 1
+category: Design
 title: Classificação Tipográfica
 date: "2015-02-03T00:00:00.000Z"
 description: "Classificação Tipográfica"

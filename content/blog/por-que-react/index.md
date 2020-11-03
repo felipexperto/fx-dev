@@ -1,5 +1,6 @@
 ---
 authorid: 1
+category: Dev
 title: Por que React?
 date: "2020-03-05T23:00:00.284Z"
 description: "[WIP] Por que React?"

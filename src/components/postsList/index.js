@@ -10,20 +10,21 @@ const PostsList = ({ posts }) => {
       {posts.map(({ node }) => (
         <Link to={node.fields.slug} key={node.fields.slug}>
           <S.cardHeader>
+            { node.frontmatter.category ? (
+              <S.cardCategory>
+                { node.frontmatter.category }
+              </S.cardCategory>
+            ) : null}
+            <S.cardTitle>
+              { node.frontmatter.title || node.fields.slug }
+            </S.cardTitle>
+          </S.cardHeader>
+          <S.cardFooter>
             <S.cardDate>
               {node.frontmatter.date}
             </S.cardDate>
-            <S.cardTitle>
-                { node.frontmatter.title || node.fields.slug }
-            </S.cardTitle>
-          </S.cardHeader>
-          <S.cardDescription>
-            <S.cardDescriptionText
-              dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }}
-            />
-          </S.cardDescription>
+            {/* // @TODO Adicionar tempo de leitura do artigo */}
+          </S.cardFooter>
         </Link>
       ))}
     </S.cardList>

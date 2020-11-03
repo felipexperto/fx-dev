@@ -1,5 +1,6 @@
 ---
 authorid: 1
+category: Design
 title: Afinal, o que é Design Thinking, de Rique Nitzsche
 date: "2015-02-03T00:00:00.000Z"
 description: "Afinal, o que é Design Thinking, de Rique Nitzsche"

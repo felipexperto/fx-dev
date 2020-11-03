@@ -22,6 +22,7 @@ const HeaderWrapper = styled.div`
   z-index: ${({ theme }) => theme.zIndex.header};
 
   [data-logo] {
+    height: 100%;
     width: 160px;
   }
 `;
