@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "src/components/layout";
 import PostsList from "src/components/postsList";
+import { Title } from "src/components/title";
 import SEO from "src/components/seo";
 
 import { GlobalStyles } from "styles";
@@ -18,6 +19,7 @@ class BlogIndex extends React.Component {
         <GlobalStyles />  
         <Layout location={this.props.location} title={siteTitle} bgColor='lightestgrey'>
           <SEO title="Todos os posts" />
+          <Title margin='3rem auto'>Artigos</Title>
           <PostsList posts={posts} />
         </Layout>
       </Fragment>

@@ -11,7 +11,7 @@ const Layout = ({ location, title, children, bgColor }) => {
         location={location}
         title={title}
       />
-      <Container>
+      <Container direction='column'>
         {children}
       </Container>
       <Footer />
