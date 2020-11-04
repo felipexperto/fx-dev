@@ -4,7 +4,7 @@ module.exports = {
       id: 1,
       name: `Felipe Marciano`,
       intro: `Sobre o autor`,
-      bio: `dev front-end & ui designer. viciado em café, cinema e abraçar cachorros.`,
+      bio: `dev front-end, viciado em café, cinema e abraçar cachorros.`,
       social: {
         linkedin: {
           name: `LinkedIn`,
