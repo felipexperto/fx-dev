@@ -6,7 +6,7 @@ date: "2014-01-01T00:00:00.000Z"
 description: "Primeiros passos em Tipografia"
 ---
 
-> ###TL;DR;
+> ###Resumo
 > Este primeiro post de "Primeiros passos" que farei destinado a quem pretende produzir um livro do it yourself ou quer saber mais sobre o assunto.
 
 ## O básico sobre tipografia

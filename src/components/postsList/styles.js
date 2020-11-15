@@ -18,7 +18,6 @@ const cardList = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  -webkit-font-smoothing: antialiased;
 
   & > a {
     align-items: stretch;

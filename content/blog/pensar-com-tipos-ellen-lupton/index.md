@@ -6,7 +6,7 @@ date: "2014-02-03T00:00:00.000Z"
 description: "Pensar com Tipos, de Ellen Lupton"
 ---
 
-> ###TL;DR;
+> ###Resumo
 > Na introdução fica explícito o conteúdo desse livro: “Este não é um livro sobre tipos. É um livro sobre como usá-los.”
 > Ao ler este livro não encontrará história da tipografia, mas exemplos de como utilizar a tipografia em projetos. Assuntos como entrelinha, kerning, familiaridade entre tipos distintos, lettering, construção de logotipos, letras modulares e fontes bitmap estão presentes.
 

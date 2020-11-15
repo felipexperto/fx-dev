@@ -6,7 +6,7 @@ date: "2015-02-03T00:00:00.000Z"
 description: "Classificação Tipográfica"
 ---
 
-> ###TL;DR;
+> ###Resumo
 > Um leve papo sobre tipografia.
 
 ## O que é classificação tipográfica?

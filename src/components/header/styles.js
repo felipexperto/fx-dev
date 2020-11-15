@@ -11,6 +11,7 @@ const Header = styled.header`
 
 const HeaderWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.yellow};
+  box-shadow: 0 1px 10px -2px rgba(0,0,0,.75);
   display: flex;
   flex-direction: column;
   height: ${headerHeight};

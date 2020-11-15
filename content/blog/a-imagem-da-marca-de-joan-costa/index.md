@@ -6,7 +6,7 @@ date: "2015-02-03T00:00:00.000Z"
 description: "A Imagem da Marca, de Joan Costa"
 ---
 
-> ###TL;DR;
+> ###Resumo
 > Se você gostaria de entender a história da marca, sua relevância e a relação da marca com empresas, produtos ou serviços, essa leitura é interessante.
 
 ## Para quem e para quê?

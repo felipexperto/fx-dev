@@ -7,7 +7,7 @@ description: "[WIP] Git: Por que usar? Onde? Como?"
 ---
 
 
-> ### TL;DR;
+> ### Resumo
 > Este post reúne informações que recolhi realizando estudos e praticando.
 > 
 > Busca responder algumas perguntas como: 

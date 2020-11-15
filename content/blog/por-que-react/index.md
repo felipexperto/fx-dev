@@ -6,7 +6,7 @@ date: "2020-03-05T23:00:00.284Z"
 description: "[WIP] Por que React?"
 ---
 
-> ### TL;DR;
+> ### Resumo
 > Este não é um artigo de React *vs* Vue *vs* Angular, poderia ser qualquer um, na real. No entanto, quero é salientar as diferenças de trabalhar somente com Javascript puro ou jQuery e iniciar a utilização de um framework ou lib parruda. Tendo em mente que todas as escolhas projetuais tem prós e contras.
 
 Um dos motivos que teve um grande peso na minha decisão de troca de empresa foi as tecnologias as quais o mercado estava utilizando e eu não. Tenho um background em design e não em sistemas, porém, lendo artigos pude reparar que o *modus operandi* de construção de softwares o qual estava praticando não fazia parte das boas práticas e, para que esse cenário mudasse seria necessário alterar a stack também.

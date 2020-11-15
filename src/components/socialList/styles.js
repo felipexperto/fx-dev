@@ -23,11 +23,15 @@ const SocialAnchor = styled.a`
   }
 `;
 const SocialItem = styled.li`
+  font-size: 1.5rem;
   margin-right: 1rem;
+  margin-top: .5rem;
 `;
 const SocialList = styled.ul`
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 `;
 
 export {

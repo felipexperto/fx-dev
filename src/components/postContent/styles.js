@@ -2,8 +2,14 @@ import styled from 'styled-components/macro';
 
 import theme from 'src/styles/Themes';
 
-const wrapperArticle = styled.article`
+const { sm } = theme.main.medias;
 
+const wrapperArticle = styled.article`
+  max-width: 100%;
+  padding: 0 1rem;
+  @media ${sm} {
+    padding: 0;
+  }
 `;
 
 const header = styled.header`
@@ -20,7 +26,7 @@ const footer = styled.footer`
   &::before {
     background-color: ${ theme.main.colors.yellow };
     content: "";
-    display:block;
+    display: block;
     height: 10px;
     margin-bottom: 16px;
     width: 4rem;
@@ -28,8 +34,8 @@ const footer = styled.footer`
 `;
 
 const title = styled.h1`
-  font-family: 'Ubuntu',sans-serif;
-  font-style: italic;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
   margin-bottom: 0;
   margin-top: 16px;
 `;
@@ -37,7 +43,7 @@ const title = styled.h1`
 const date = styled.p`
   color: ${ theme.main.colors.grey };
   display: block;
-  font-family: Montserrat, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: .85rem;
   line-height: 1.5em;
   margin-bottom: 16px;

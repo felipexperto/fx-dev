@@ -15,14 +15,15 @@
 - Exibir data nos posts como: há 1 dia, há 7 dias, há um mês, há 2 meses, há um ano, 15/03/2018;
 - Adicionar dados da Daniele como autora
 - Adicionar feature image nos posts (SEO)
-- Editar o README e a descrição do repositório;
+- Editar a descrição do repositório
+- Editar o README:
   - python --version
   - node -v
   - npm install --global gatsby-cli
   - npm install
   - gatsby develop
   - https://www.gatsbyjs.org/docs/gatsby-on-windows/
-- Desenvolver sticky header;
+- ~~Desenvolver sticky header;~~
 - Adicionar plugin Disqus de comentários
  - https://www.gatsbyjs.org/docs/adding-comments/
 - Fazer uma página reunindo os principais links para adicionar na descrição das redes sociais. 

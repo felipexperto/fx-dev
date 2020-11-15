@@ -6,7 +6,7 @@ date: "2015-02-04T00:00:00.000Z"
 description: "Classificações Tipográficas em detalhes"
 ---
 
-> ###TL;DR;
+> ###Resumo
 > Um (não tão) leve papo sobre tipografia.
 
 Se você chegou aqui provavelmente é porque tem um interesse maior em tipografia e suas classificações.
