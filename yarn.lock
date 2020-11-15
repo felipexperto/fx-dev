@@ -5988,12 +5988,12 @@ follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
   integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
 
-fontsource-inter@0.0.75:
+fontsource-inter@3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/fontsource-inter/-/fontsource-inter-3.0.5.tgz#4d645514f61921f83034ff244985374413bd019d"
   integrity sha512-7AGbrHVjL2IcIz/Lv64IR5g0W+JuGQT/bFFF5nDD1zNOT5Ke8IMIMc+tE4rb5fCVNG2AGt0gtXH3kGLUURKY8w==
 
-fontsource-ubuntu@0.0.72:
+fontsource-ubuntu@3.0.9:
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/fontsource-ubuntu/-/fontsource-ubuntu-3.0.9.tgz#32a79a19e3dc10f6f549b21601cae0dd705479a8"
   integrity sha512-9woIW2Xkta91wWL1Zkoo9UU8hyVojBvoDh6K15lwVUzHp3h0eFCuJVfhuvMrRF8jamkzhttZ1KX11xpG53IbMA==
