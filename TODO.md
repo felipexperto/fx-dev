@@ -7,6 +7,8 @@
 
 - Adicionar tempo de leitura em cada post;
 
+- Adicionar área de descrição curta antes do texto completo do post;
+
 - Infinity Loading on scroll de posts na home;
 
 
