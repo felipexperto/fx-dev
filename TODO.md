@@ -1,21 +1,21 @@
-**Dev**
+**Features**
 
-- ~~Trocar o logo e favicon do Gatsby~~;
-- ~~Inserir um Analytics~~;
-- ~~Adicionar underline amarelo-transparente nos links~~;
-- ~~Adicionar um code highlighter~~;
-- ~~Estilizar a lista de redes sociais da Bio~~;
-- ~~Adicionar um ícone de link externo ao lado de todo anchor com link externo (duh)~~
-- ~~Arrumar a exibição da data na página de posts que está no modelo americano;~~
-- ~~Componentizar e estilizar os links e datas da lista de posts~~
+- Adicionar plugin Disqus de comentários
+ - https://www.gatsbyjs.org/docs/adding-comments/
+
+- Instalar e testar GTM;
+
+- Adicionar tempo de leitura em cada post;
+
+- Infinity Loading on scroll de posts na home;
+
+
+**Backlog Técnico**
+
 - Testes unitários e de integração;
-- ~~Adicionar os autores na lista de post da home~~ (irrelevante)
-- ~~Alterar mediaqueries do template usando de exemplo o Bootstrap;~~
-- Limitar o tamanho das descrições dos cards
-- Exibir data nos posts como: há 1 dia, há 7 dias, há um mês, há 2 meses, há um ano, 15/03/2018;
-- Adicionar dados da Daniele como autora
-- Adicionar feature image nos posts (SEO)
-- Editar a descrição do repositório
+
+- Editar a descrição do repositório;
+
 - Editar o README:
   - python --version
   - node -v
@@ -23,44 +23,27 @@
   - npm install
   - gatsby develop
   - https://www.gatsbyjs.org/docs/gatsby-on-windows/
-- ~~Desenvolver sticky header;~~
-- Adicionar plugin Disqus de comentários
- - https://www.gatsbyjs.org/docs/adding-comments/
-- Fazer uma página reunindo os principais links para adicionar na descrição das redes sociais. 
-- Testes unitários;
+
 
 **Pesquisa**
 
 - Estudar possibilidade de adicionar categorias e/ou tags por post;
   - Estudar a possibilidade de relacionar categorias e/ou tags;
 
-- Estudar a possibilidade de lazy load ou direcionar para uma nova página pessoas que querem ver todos os posts;
-
 - Estudar como desenvolver uma busca;
+  - Resultados em nova página?
+  - Resultados na home, filtrados?
+  - Vai aceitar parâmetros na url?
+  - Como vai ser este componente de busca?
+  - Onde ele vai ficar? Meio da página, tipo Google? Topo fixo?
+  - Filtro somente por texto ou por categoria também?
   - Estudar a implementação de busca no sticky header;
-  
-- ~~Coletar referências de design para aplicar ao layout;~~
-  - ~~Sticky header~~;
-  - ~~Informações para o footer~~;
-  - ~~Cool cards ( https://chocoladesign.com/ )~~;
-
-
-**Refatoração**
-  
-- ~~Componentizar blog-post.js~~
-  - ~~PostContent~~
-  - ~~Navigation~~
 
 
 **Conteúdo**
 
-- ~~Post de retrospectiva 2019~~;
-- ~~Inserir os textos já postados no Medium;~~
-- ~~Inserir os textos já postados no cmyk ativo~~;
- - ~~http://localhost/cmykativo/sabe-um-site-que-ensina-design/~~
- - ~~http://localhost/cmykativo/pensar-com-tipos-de-ellen-lupton/~~
- - ~~Classificação de Vox~~;
- - ~~Primeiros passos – Tipografia~~;
- - ~~Fontes OTF e TTF~~; (não encontrado)
-- ~~Escrever uma Bio válida em gatsby-config.js;~~
+- Adicionar dados da Daniele como autora;
+
 - Trabalhar description dos posts;
+
+- Adicionar feature image na lista de posts e dentro dos artigos;
