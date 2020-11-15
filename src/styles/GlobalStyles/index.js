@@ -7,6 +7,14 @@ const GlobalStyles = createGlobalStyle`
   *:after {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
   }
 `;
 

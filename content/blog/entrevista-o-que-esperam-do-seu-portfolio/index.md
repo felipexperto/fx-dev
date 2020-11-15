@@ -1,11 +1,12 @@
 ---
 authorid: 2
+category: Design
 title: Entrevista - O que esperam do seu portfolio?
 date: "2015-07-13T00:00:00.000Z"
 description: "Entrevista - O que esperam do seu portfolio?"
 ---
 
-> ### TL;DR;
+> ### Resumo
 > Portfolio: O que colocar? Como apresentar? O que NÃO colocar? (tem muita coisa que queima filme)?
 
 Reunir seus melhores trabalhos em uma apresentação legal que faça o entrevistador te contratar para aquela vaga dos sonhos – parece fácil de resolver, mas sabemos que não é.

@@ -1,7 +1,10 @@
-import GlobalStyle from 'styles/GlobalStyles';
+import { Container, ContainerFull } from 'styles/Container';
+import GlobalStyles from 'styles/GlobalStyles';
 import theme from 'styles/Themes';
 
 export {
-  GlobalStyle,
+  Container,
+  ContainerFull,
+  GlobalStyles,
   theme,
 };

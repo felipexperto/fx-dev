@@ -2,18 +2,31 @@ import { createGlobalStyle } from 'styled-components';
 
 import theme from 'src/styles/Themes';
 
+const { sm } = theme.main.medias;
+
 const PostStyles = createGlobalStyle`
+
+  body {
+    background-color: ${theme.main.colors.white};
+  }
 
   article {
     
     a {
-      box-shadow: inset 0px -10px 0px 0 ${theme.main.colors.yellow};
+      border-bottom: solid 2px black;
       color: currentColor;
-      font-family: 'Courier New', monospace;
-      font-size: 1.1em;
+      font-family: 'Inter', sans-serif;
+      font-weight: bold;
+      line-break: anywhere;
+      @media ${sm} {
+        line-break: normal;
+      }
+      text-decoration: none;
     }
 
     section {
+      font-family: Inter, sans-serif;
+      line-height: 1.5em;
 
       a[target="_blank"]::after {
         content: "\\eb09";
@@ -26,9 +39,14 @@ const PostStyles = createGlobalStyle`
     }
     
     blockquote {
-      border-left: 0.32813rem solid #ffee17;
-      font-size: 1.1rem;
-      line-height: 1.4em;
+      border-left: 0.32813rem solid ${theme.main.colors.yellow};
+      line-height: 1.8em;
+      margin: 2rem 0;
+      padding-left: 2rem;
+
+      ul {
+        padding-left: 0;
+      }
     }
 
     code {
@@ -42,11 +60,22 @@ const PostStyles = createGlobalStyle`
 
     h2,
     h3 {
-      font-style: italic;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 700;
+      line-height: 1.4em;
+    }
+
+    h2 {
+      margin-top: 2em;
     }
   
     ul {
+      line-height: 1.75em;
       list-style-position: inside;
+      padding-left: 1rem;
+      @media ${sm} {
+        padding-left: 2rem;
+      }
     }
 
   }

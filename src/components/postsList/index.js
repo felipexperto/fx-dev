@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "gatsby";
 
 import * as S from './styles';
@@ -6,29 +6,28 @@ import * as S from './styles';
 const PostsList = ({ posts }) => {
 
   return (
-    <Fragment>
+    <S.cardList>
       {posts.map(({ node }) => (
-        <S.Card key={node.fields.slug}>
+        <Link to={node.fields.slug} key={node.fields.slug}>
           <S.cardHeader>
+            { node.frontmatter.category ? (
+              <S.cardCategory>
+                { node.frontmatter.category }
+              </S.cardCategory>
+            ) : null}
             <S.cardTitle>
-              <Link to={node.fields.slug}>
-                { node.frontmatter.title || node.fields.slug }
-              </Link>
+              { node.frontmatter.title || node.fields.slug }
             </S.cardTitle>
+          </S.cardHeader>
+          <S.cardFooter>
             <S.cardDate>
               {node.frontmatter.date}
             </S.cardDate>
-          </S.cardHeader>
-          <S.cardDescription>
-            <S.cardDescriptionText
-              dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }}
-            />
-          </S.cardDescription>
-        </S.Card>
+            {/* // @TODO Adicionar tempo de leitura do artigo */}
+          </S.cardFooter>
+        </Link>
       ))}
-    </Fragment>
+    </S.cardList>
   );
 };
 

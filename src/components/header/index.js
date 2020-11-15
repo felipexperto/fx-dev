@@ -1,60 +1,24 @@
 import React from 'react';
 import { Link } from "gatsby";
-import { rhythm, scale } from "src/utils/typography";
 
+import Logo from 'src/images/logo-felipexperto.inline.svg';
+import { theme } from 'styles'
 import * as S from './styles.js';
 
 const Header = ({ location, title }) => {
-  const rootPath = `${__PATH_PREFIX__}/`;
-  let header;
-
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
+  const { main } = theme;
   
   return (
-    <S.headerWrapper>
-      {header}
-    </S.headerWrapper>
+    <S.Header data-testid="FX_HEADER">
+      <S.HeaderWrapper theme={main}>
+        <S.HeaderContainer>
+          <Link to={`/`} title={title}>
+            <Logo data-logo/>
+          </Link>
+        </S.HeaderContainer>
+      </S.HeaderWrapper>
+      <S.HeaderBottomSpace />
+    </S.Header>
   )
 }
 

@@ -1,8 +1,10 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "src/components/layout"
 import SEO from "src/components/seo"
+
+import { GlobalStyles } from "styles";
 
 class NotFoundPage extends React.Component {
   render() {
@@ -10,11 +12,14 @@ class NotFoundPage extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="404: Not Found" />
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </Layout>
+      <Fragment>
+        <GlobalStyles />  
+        <Layout location={this.props.location} title={siteTitle}>
+          <SEO title="404: Não encontrado" />
+          <h1>Oops!</h1>
+          <p>Essa página não foi encontrada.</p>
+        </Layout>
+      </Fragment>
     )
   }
 }

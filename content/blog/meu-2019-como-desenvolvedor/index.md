@@ -1,5 +1,6 @@
 ---
 authorid: 1
+category: Dev
 title: Meu 2019 como desenvolvedor
 date: "2020-01-08T00:12:03.284Z"
 description: "Meu 2019 como desenvolvedor"

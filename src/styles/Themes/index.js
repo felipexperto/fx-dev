@@ -4,8 +4,10 @@ const colors = {
   black: '#000',
   red: '#ff040d',
   transparent: 'transparent',
-  yellow: '#ffee17',
+  yellow: '#f4da12',
+  darkyellow: '#e3d354',
   almostwhite: '#fafafa',
+  lightestgrey: '#f1f1f1',
   lightgrey: '#aaaaaa',
   grey: '#666666',
   darkgrey: '#333333'
@@ -18,15 +20,34 @@ const fonts = {
     bolder: 700,
   },
 };
+const sizes = {
+  xs: 575,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200
+}
+const medias = {
+  xs: `(max-width: ${sizes.xs}px)`,
+  sm: `(min-width: ${sizes.sm}px)`,
+  md: `(min-width: ${sizes.md}px)`,
+  lg: `(min-width: ${sizes.lg}px)`,
+  xl: `(min-width: ${sizes.xl}px)`
+}
+const zIndex = {
+  tooltip: 1,
+  header: 10,
+  modal: 20,
+  overlay: 30,
+}
 
 const theme = {
   main: {
-    colors: {
-      ...colors,
-    },
-    fonts: {
-      ...fonts,
-    }
+    colors,
+    fonts,
+    sizes,
+    medias,
+    zIndex,
   },
 };
 

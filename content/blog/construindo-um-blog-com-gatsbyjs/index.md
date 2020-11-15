@@ -1,11 +1,12 @@
 ---
 authorid: 1
+category: Dev
 title: Construindo um blog com GatsbyJS
 date: "2019-12-16T00:12:03.284Z"
 description: "Construindo um blog com GatsbyJS"
 ---
 
-> ### TL;DR;
+> ### Resumo
 > A proposta original do sitesemcomplicacao mudou; Este site foi montado em Gatsby e hospedado no Netlify; Espero que ele não morra nos próximos meses; Sejamos otimistas que 2020 já está aí.
 
 [GatsbyJS](https://www.gatsbyjs.org/) é um framework que já tem dado o que falar faz um tempo.

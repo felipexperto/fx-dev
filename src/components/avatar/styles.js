@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 const AvatarImage = styled.img`
   border-radius: 100%;

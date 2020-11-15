@@ -1,12 +1,13 @@
 ---
 authorid: 1
+category: Dev
 title: Git - O início e alguns macetes
 date: "2020-05-26T00:00:00.000Z"
 description: "[WIP] Git: Por que usar? Onde? Como?"
 ---
 
 
-> ### TL;DR;
+> ### Resumo
 > Este post reúne informações que recolhi realizando estudos e praticando.
 > 
 > Busca responder algumas perguntas como: 

@@ -1,21 +1,21 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-import GlobalStyles from 'src/styles/GlobalStyles';
-import * as S from './styles';
+import Header from '../header';
+import Footer from '../footer';
+import { Container, ContainerFull } from 'styles';
 
-const Layout = ({ location, title, children }) => {
-
+const Layout = ({ location, title, children, bgColor }) => {
   return (
-    <Fragment>
-      <GlobalStyles />
-      <S.wrapperLayout>
-        <S.Header location={location} title={title} />
-        <S.wrapperContent>
-          {children}
-        </S.wrapperContent>
-        <S.Footer />
-      </S.wrapperLayout>
-    </Fragment>
+    <ContainerFull backgroundColor={bgColor}>
+      <Header
+        location={location}
+        title={title}
+      />
+      <Container direction='column'>
+        {children}
+      </Container>
+      <Footer />
+    </ContainerFull>
   )
 }
 

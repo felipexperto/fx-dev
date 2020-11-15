@@ -1,9 +1,45 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
+import { Container } from 'styles';
 
-const headerWrapper = styled.header`
+const headerHeight = `72px`;
 
+const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const HeaderWrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.yellow};
+  box-shadow: 0 1px 10px -2px rgba(0,0,0,.75);
+  display: flex;
+  flex-direction: column;
+  height: ${headerHeight};
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: ${({ theme }) => theme.zIndex.header};
+
+  [data-logo] {
+    height: 100%;
+    width: 160px;
+  }
+`;
+
+const HeaderContainer = styled(Container)`
+  padding: 0 15px;
+`;
+
+const HeaderBottomSpace = styled.div`
+  height: ${headerHeight};
+  width: 100%;
 `;
 
 export {
-  headerWrapper,
+  Header,
+  HeaderBottomSpace,
+  HeaderContainer,
+  HeaderWrapper,
 }

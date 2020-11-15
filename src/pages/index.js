@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react"
 import { graphql } from "gatsby";
 
 import Layout from "src/components/layout";
 import PostsList from "src/components/postsList";
+import { Title } from "src/components/title";
 import SEO from "src/components/seo";
+
+import { GlobalStyles } from "styles";
 
 class BlogIndex extends React.Component {
   render() {
@@ -12,10 +15,14 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Todos os posts" />
-        <PostsList posts={posts} />
-      </Layout>
+      <Fragment>
+        <GlobalStyles />  
+        <Layout location={this.props.location} title={siteTitle} bgColor='lightestgrey'>
+          <SEO title="Todos os posts" />
+          <Title margin='3rem auto'>Artigos</Title>
+          <PostsList posts={posts} />
+        </Layout>
+      </Fragment>
     )
   }
 }
@@ -37,9 +44,10 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD / MM / YYYY", locale: "pt")
+            date(formatString: "DD MMMM, YYYY", locale: "pt")
             title
             description
+            category
           }
         }
       }

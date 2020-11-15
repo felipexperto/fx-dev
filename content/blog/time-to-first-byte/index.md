@@ -1,5 +1,6 @@
 ---
 authorid: 1
+category: Dev
 title: Time To First Byte
 date: "2020-01-05T00:35:00.284Z"
 description: "O que é Time To First Byte? Como medir? Por que se importar?"
