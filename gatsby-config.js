@@ -94,7 +94,7 @@ module.exports = {
         background_color: `#272525`,
         theme_color: `#ffee17`,
         display: `minimal-ui`,
-        icon: `src/images/sitesemcomplicacao-icon.png`,
+        icon: `src/images/blog-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
