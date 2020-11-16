@@ -3,11 +3,11 @@
 - Adicionar plugin Disqus de comentários
  - https://www.gatsbyjs.org/docs/adding-comments/
 
-- Instalar e testar GTM;
-
 - Adicionar tempo de leitura em cada post;
 
 - Adicionar área de descrição curta antes do texto completo do post;
+
+- Adicionar banner;
 
 - Infinity Loading on scroll de posts na home;
 
