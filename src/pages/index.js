@@ -6,8 +6,6 @@ import PostsList from "src/components/postsList";
 import { Title } from "src/components/title";
 import SEO from "src/components/seo";
 
-import { GlobalStyles } from "styles";
-
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props;
@@ -16,7 +14,6 @@ class BlogIndex extends React.Component {
 
     return (
       <Fragment>
-        <GlobalStyles />  
         <Layout location={this.props.location} title={siteTitle} bgColor='lightestgrey'>
           <SEO title="Todos os posts" />
           <Title margin='3rem auto'>Artigos</Title>

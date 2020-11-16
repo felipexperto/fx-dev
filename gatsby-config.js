@@ -123,10 +123,11 @@ module.exports = {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-M78LWT2",
-        includeInDevelopment: true,
+        includeInDevelopment: false,
         defaultDataLayer: { platform: "gatsby" },
         routeChangeEventName: "virtualPageView",
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }

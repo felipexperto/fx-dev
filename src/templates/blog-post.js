@@ -6,8 +6,6 @@ import SEO from "src/components/seo";
 import PostContent from "src/components/postContent";
 import PostNavigation from "src/components/postNavigation";
 
-import { GlobalStyles } from "styles";
-
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
@@ -16,7 +14,6 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Fragment>
-        <GlobalStyles/>
         <Layout location={this.props.location} title={siteTitle}>
           <SEO
             title={post.frontmatter.title}
