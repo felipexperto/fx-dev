@@ -3,7 +3,7 @@ const authors = require('./content/authors');
 
 module.exports = {
   siteMetadata: {
-    title: `Site sem complicação`,
+    title: `FX DEV`,
     ...authors,
     description: `estude » (re)crie » compartilhe`,
     siteUrl: `https://www.sitesemcomplicacao.com.br`,
@@ -88,8 +88,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Site Sem Complicação`,
-        short_name: `Site Sem Complicação`,
+        name: `FX DEV`,
+        short_name: `FX DEV`,
         start_url: `/`,
         background_color: `#272525`,
         theme_color: `#ffee17`,
@@ -118,6 +118,15 @@ module.exports = {
           include: /\.inline\.svg$/,
         }
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-M78LWT2",
+        includeInDevelopment: true,
+        defaultDataLayer: { platform: "gatsby" },
+        routeChangeEventName: "virtualPageView",
+      },
+    },
   ],
 }
