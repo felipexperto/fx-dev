@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { GlobalStyles } from 'styles';
 
 export const onRenderBody = ({ setHeadComponents }) => {
  setHeadComponents([
@@ -9,3 +10,10 @@ export const onRenderBody = ({ setHeadComponents }) => {
       />,
   ]);
 }
+
+export const wrapPageElement = ({ element }) => (
+  <Fragment>
+    <GlobalStyles />
+    { element }
+  </Fragment>
+);

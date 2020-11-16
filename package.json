@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
     "fontsource-inter": "3.0.5",
     "fontsource-ubuntu": "3.0.9",
     "gatsby": "^2.18.8",

@@ -4,8 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "src/components/layout"
 import SEO from "src/components/seo"
 
-import { GlobalStyles } from "styles";
-
 class NotFoundPage extends React.Component {
   render() {
     const { data } = this.props
@@ -13,7 +11,6 @@ class NotFoundPage extends React.Component {
 
     return (
       <Fragment>
-        <GlobalStyles />  
         <Layout location={this.props.location} title={siteTitle}>
           <SEO title="404: Não encontrado" />
           <h1>Oops!</h1>
