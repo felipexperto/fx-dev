@@ -28,6 +28,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-highlight-code`
+          },
+          {
             resolve: 'gatsby-remark-relative-images',
           },
           {
@@ -56,19 +59,6 @@ module.exports = {
             options: {
               target: "_blank",
               rel: "nofollow, noopener, external"
-            }
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              aliases: {
-                sh: "shell",
-                es6: "javascript",
-                env: "bash",
-                mdx: "md",
-                ".json": "json"
-              },
             }
           },
           `gatsby-remark-copy-linked-files`,

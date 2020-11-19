@@ -20,25 +20,25 @@ Se você chegou aqui, não tenho dúvidas que você sabe o que são testes unit�
 Imagine que você acabou de gerar uma aplicação com o CLI: Create React App.  
 Se você não sabe como fazer isso, [visite a documentação clicando aqui](https://pt-br.reactjs.org/docs/create-a-new-react-app.html#create-react-app).
 
-A aplicação terá um arquivo `src/App.js` com a seguinte estrutura HTML:
+A aplicação terá um arquivo `src/App.js` com a seguinte estrutura HTML(JSX):
 
-```html
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <div
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </div>
-      </header>
+```jsx
+<div className="App">
+  <header className="App-header">
+    <img src={logo} className="App-logo" alt="logo" />
+    <p>
+      Edit <code>src/App.js</code> and save to reload.
+    </p>
+    <div
+      className="App-link"
+      href="https://reactjs.org"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Learn React
     </div>
+  </header>
+</div>
 ```
 
 E já terá um teste dentro do arquivo `src/App.test.js`. É importante explicar aqui que o `nome do componente` + `.test` dentro do mesmo diretório é uma convenção/boa prática pois a localização do teste fica mais intuitiva e não temos problemas de paths enormes em nossos imports.
@@ -51,15 +51,15 @@ Outro uso comum seria ter uma pasta chamada `Header` e dentro dela o arquivo `in
 
 Vamos dar uma olhada no código inicial dentro de `src/App.test.js`.
 
-```js
-  import { render, screen } from '@testing-library/react';
-  import App from './App';
+```javascript
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-  test('renders learn react link', () => {
-    render(<App />);
-    const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toBeInTheDocument();
-  });
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
 ```
 
 ## **Passo a passo**
@@ -110,22 +110,22 @@ Para exemplificar melhor, a linha acima também poderia ser escrita assim:
 
 Vamos realizar algumas alterações para podermos abordar outros métodos e discutir:
 
-```js
-  import { render, screen } from '@testing-library/react';
-  import App from './App';
+```javascript
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-  describe('Componente App', () => {
-    it('renders learn react link', () => {
-      render(<App />);
-      const linkElement = screen.getByText(/learn react/i);
-      expect(linkElement).toBeInTheDocument();
-    });
-    it('renders learn react link as anchor', () => {
-      render(<App />);
-      const linkElement = screen.getByText(/learn react/i);
-      expect(linkElement).toHaveAttribute('href');
-    });
+describe('Componente App', () => {
+  it('renders learn react link', () => {
+    render(<App />);
+    const linkElement = screen.getByText(/learn react/i);
+    expect(linkElement).toBeInTheDocument();
   });
+  it('renders learn react link as anchor', () => {
+    render(<App />);
+    const linkElement = screen.getByText(/learn react/i);
+    expect(linkElement).toHaveAttribute('href');
+  });
+});
 ```
 
 `describe` é um método opcional que você pode utilizar para envelopar um conjunto de testes. Aqui estamos utilizando para delimitar os testes do nosso componente `App` e a resposta ao rodar os testes fica da seguinte maneira:
@@ -147,13 +147,13 @@ Vamos realizar algumas alterações para podermos abordar outros métodos e disc
 O teste vai passar com qualquer elemento que tenha um `href`, por exemplo, se for uma `div` o teste vai retornar com sucesso.  
 O correto seria:
 
-```js
-  it('renders learn react link as anchor', () => {
-    render(<App />);
-    // adicionando `.closest('a')`
-    const linkElement = screen.getByText(/learn react/i).closest('a');
-    expect(linkElement).toHaveAttribute('href');
-  });
+```javascript
+it('renders learn react link as anchor', () => {
+  render(<App />);
+  // adicionando `.closest('a')`
+  const linkElement = screen.getByText(/learn react/i).closest('a');
+  expect(linkElement).toHaveAttribute('href');
+});
 ```
 
 Então esse último tópico foi gratuito só para chamar atenção em como você realiza seus testes e mostrar que 100% de cobertura não quer dizer uma aplicação sem bugs. :)

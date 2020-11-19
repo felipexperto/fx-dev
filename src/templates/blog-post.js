@@ -6,6 +6,9 @@ import SEO from "src/components/seo";
 import PostContent from "src/components/postContent";
 import PostNavigation from "src/components/postNavigation";
 
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;

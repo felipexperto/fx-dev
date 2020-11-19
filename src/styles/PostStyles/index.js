@@ -49,7 +49,7 @@ const PostStyles = createGlobalStyle`
       }
     }
 
-    code {
+    & code:not([slot="code"]) {
       background: #f0f9fb;
       border-radius: 4px;
       color: #267fab;
