@@ -12,8 +12,8 @@ import { useStaticQuery, graphql } from "gatsby";
 import * as S from './styles';
 import Avatar from 'src/components/avatar';
 import AuthorInfo from 'src/components/authorInfo';
-import avatarFelipe from 'src/images/authors/sitesemcomplicacao-felipemarciano.png';
-import avatarDaniele from 'src/images/authors/sitesemcomplicacao-danielegama.jpg';
+import avatarFelipe from 'src/images/authors/felipemarciano.png';
+import avatarDaniele from 'src/images/authors/danielegama.jpg';
 
 const Bio = ({ authorId }) => {
 

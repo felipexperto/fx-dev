@@ -11,10 +11,14 @@
 
 - Infinity Loading on scroll de posts na home;
 
+- Tema dark;
+
 
 **Backlog Técnico**
 
 - Testes unitários e de integração;
+
+- Passar tema corretamente para context;
 
 - Editar a descrição do repositório;
 

@@ -6,7 +6,7 @@ module.exports = {
     title: `FX DEV`,
     ...authors,
     description: `estude » (re)crie » compartilhe`,
-    siteUrl: `https://www.sitesemcomplicacao.com.br`,
+    siteUrl: `https://www.fx.dev.br`,
   },
   plugins: [
     {
