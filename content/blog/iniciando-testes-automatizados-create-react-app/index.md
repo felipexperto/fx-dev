@@ -1,9 +1,9 @@
 ---
 authorid: 1
 category: Dev
-title: Testes automatizados com Create React App
+title: Iniciando testes automatizados com Create React App
 date: "2020-11-18T20:23:00.000Z"
-description: "Testes automatizados com Create React App"
+description: "Iniciando testes automatizados com Create React App"
 ---
 
 ## **Introdução**

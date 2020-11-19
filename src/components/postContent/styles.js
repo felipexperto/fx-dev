@@ -37,7 +37,7 @@ const title = styled.h1`
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   margin-bottom: 0;
-  margin-top: 16px;
+  margin-top: 1.5em;
 `;
 
 const date = styled.p`
