@@ -1,5 +1,5 @@
 import React from "react";
-import uuid from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 import * as S from './styles';
 
@@ -9,7 +9,7 @@ const SocialList = ({ networkArr }) => {
     <S.SocialList>
     {
       networkArr.map((network) => (
-        <S.SocialItem key={uuid.v4()}>
+        <S.SocialItem key={uuidv4()}>
           <S.SocialAnchor 
             href={network.url}
             title={network.name}

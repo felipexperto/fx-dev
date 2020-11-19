@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-
+import { v4 as uuidv4 } from "uuid";
 import * as S from './styles';
 
 const PostsList = ({ posts }) => {
@@ -8,7 +8,7 @@ const PostsList = ({ posts }) => {
   return (
     <S.cardList>
       {posts.map(({ node }) => (
-        <Link to={node.fields.slug} key={node.fields.slug}>
+        <Link to={node.fields.slug} key={uuidv4()}>
           <S.cardHeader>
             { node.frontmatter.category ? (
               <S.cardCategory>
