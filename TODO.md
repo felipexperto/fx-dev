@@ -11,6 +11,8 @@
 
 - Infinity Loading on scroll de posts na home;
 
+- Links com âncoras dentro de posts;
+
 - Tema dark;
 
 
