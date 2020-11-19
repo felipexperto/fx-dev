@@ -22,7 +22,7 @@ Se você não sabe como fazer isso, [visite a documentação clicando aqui](http
 
 A aplicação terá um arquivo `src/App.js` com a seguinte estrutura HTML:
 
-```js
+```html
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -51,7 +51,7 @@ Outro uso comum seria ter uma pasta chamada `Header` e dentro dela o arquivo `in
 
 Vamos dar uma olhada no código inicial dentro de `src/App.test.js`.
 
-```
+```js
   import { render, screen } from '@testing-library/react';
   import App from './App';
 
@@ -110,7 +110,7 @@ Para exemplificar melhor, a linha acima também poderia ser escrita assim:
 
 Vamos realizar algumas alterações para podermos abordar outros métodos e discutir:
 
-```  
+```js
   import { render, screen } from '@testing-library/react';
   import App from './App';
 
@@ -147,7 +147,7 @@ Vamos realizar algumas alterações para podermos abordar outros métodos e disc
 O teste vai passar com qualquer elemento que tenha um `href`, por exemplo, se for uma `div` o teste vai retornar com sucesso.  
 O correto seria:
 
-```
+```js
   it('renders learn react link as anchor', () => {
     render(<App />);
     // adicionando `.closest('a')`
