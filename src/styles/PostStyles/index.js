@@ -58,6 +58,10 @@ const PostStyles = createGlobalStyle`
       vertical-align: middle;
     }
 
+    & [class^="deckgo-"] {
+      margin-bottom: 3em;
+    }
+
     h2,
     h3 {
       font-family: 'Ubuntu', sans-serif;
