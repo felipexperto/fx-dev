@@ -49,13 +49,17 @@ const PostStyles = createGlobalStyle`
       }
     }
 
-    code {
+    & code:not([slot="code"]) {
       background: #f0f9fb;
       border-radius: 4px;
       color: #267fab;
       display: inline-block;
       padding: 0 5px;
       vertical-align: middle;
+    }
+
+    & [class^="deckgo-"] {
+      margin-bottom: 3em;
     }
 
     h2,

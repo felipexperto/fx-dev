@@ -5,8 +5,8 @@ if (process.env.NODE_ENV === 'development') {
   DOMAIN = 'localhost';
   SITE_URL = process.env.SITE_URL || 'http://localhost:8000';
 } else {
-  DOMAIN = 'sitesemcomplicacao.com.br';
-  SITE_URL = 'https://sitesemcomplicacao.com.br';
+  DOMAIN = 'fx.dev.br';
+  SITE_URL = 'https://www.fx.dev.br';
 }
 
 module.exports = {

@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^2.1.1",
     "babel-plugin-styled-components": "^1.11.1",
     "fontsource-inter": "3.0.5",
     "fontsource-ubuntu": "3.0.9",
@@ -29,14 +30,12 @@
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-highlight-code": "^1.0.0",
     "gatsby-remark-images": "^3.1.35",
-    "gatsby-remark-prismjs": "^3.3.25",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-remark-responsive-iframe": "^2.2.28",
     "gatsby-remark-smartypants": "^2.1.17",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.53",
     "gatsby-transformer-sharp": "^2.3.7",
-    "prismjs": "^1.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
