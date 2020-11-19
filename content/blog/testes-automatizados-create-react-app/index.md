@@ -157,3 +157,10 @@ O correto seria:
 ```
 
 Então esse último tópico foi gratuito só para chamar atenção em como você realiza seus testes e mostrar que 100% de cobertura não quer dizer uma aplicação sem bugs. :)
+
+## **Referências**
+
+- [Testing in React with Jest and Enzyme: An Introduction](https://medium.com/@rossbulat/testing-in-react-with-jest-and-enzyme-an-introduction-99ce047dfcf8);
+- [JEST Expect](https://jestjs.io/docs/en/expect.html#tobevalue);
+- [How to test anchor's href with react-testing-library](https://stackoverflow.com/questions/57827126/how-to-test-anchors-href-with-react-testing-library);
+- [Crie um novo React App](https://pt-br.reactjs.org/docs/create-a-new-react-app.html).
