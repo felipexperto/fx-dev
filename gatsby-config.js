@@ -112,6 +112,17 @@ module.exports = {
         routeChangeEventName: "virtualPageView",
       },
     },
+    // https://github.com/bejamas/gatsby-plugin-web-vitals
+    {
+      resolve: 'gatsby-plugin-web-vitals',
+      options: {
+        trackingId: 'UA-183082490-1',
+        metrics: [`FID`, `TTFB`, `LCP`, `CLS`, `FCP`],
+        eventCategory: 'Performance',
+        includeInDevelopment: false,
+        debug: false,
+      }
+    },
     `gatsby-plugin-styled-components`,
   ],
 }
