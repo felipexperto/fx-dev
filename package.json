@@ -2,7 +2,7 @@
   "name": "fx.dev",
   "private": true,
   "description": "Um blog pessoal para disseminar conteúdo. Criado em Gatsby utilizando Markdown e com base em um template de Kyle Mathews",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "author": "Felipe Marciano <felipexperto@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
