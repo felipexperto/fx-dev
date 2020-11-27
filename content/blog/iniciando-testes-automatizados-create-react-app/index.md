@@ -29,14 +29,14 @@ A aplicação terá um arquivo `src/App.js` com a seguinte estrutura HTML(JSX):
     <p>
       Edit <code>src/App.js</code> and save to reload.
     </p>
-    <div
+    <a
       className="App-link"
       href="https://reactjs.org"
       target="_blank"
       rel="noopener noreferrer"
     >
       Learn React
-    </div>
+    </a>
   </header>
 </div>
 ```
