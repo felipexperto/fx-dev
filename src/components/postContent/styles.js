@@ -35,26 +35,69 @@ const footer = styled.footer`
 
 const title = styled.h1`
   font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 1.5em;
 `;
 
-const date = styled.p`
+const tldrText = styled.p`
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5em;
+  padding-left: 2rem;
+`;
+
+const tldrWrapper = styled.div`
+  border-bottom: solid 1px ${ theme.main.colors.lightgrey };
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+`;
+
+const tldrTitle = styled.h2`
+  background-color: ${ theme.main.colors.yellow };
+  display: inline-block;
+  margin-bottom: .5rem;
+  margin-top: 1.75rem;
+  padding: .25rem .5rem .25rem 2rem; 
+`;
+
+const dates = styled.ul`
+  margin-bottom: 16px;
+  margin-top: 4px;
+  padding-left: 0;
+`;
+
+const dataDefault = styled.li`
   color: ${ theme.main.colors.grey };
-  display: block;
+  display: inline-block;
   font-family: Inter, sans-serif;
   font-size: .85rem;
   line-height: 1.5em;
-  margin-bottom: 16px;
-  margin-top: 4px;
+`;
+
+const date = styled(dataDefault)`
+`;
+
+const update = styled(dataDefault)`
+
+  &::before {
+    content: "•";
+    display: inline-block;
+    margin-left: .25rem;
+    padding-right: .25rem;
+  }
 `;
 
 export {
   content,
   date,
+  dates,
   footer,
   header,
   title,
+  tldrText,
+  tldrTitle,
+  tldrWrapper,
+  update,
   wrapperArticle,
 }

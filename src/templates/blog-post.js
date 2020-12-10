@@ -25,8 +25,11 @@ class BlogPostTemplate extends React.Component {
           <PostContent
             authorId={post.frontmatter.authorid}
             date={post.frontmatter.date}
+            description={post.frontmatter.description}
             post={post.html}
             title={post.frontmatter.title}
+            tldr={post.frontmatter.tldr}
+            update={post.frontmatter.update}
           />
           <PostNavigation
             previous={previous}
@@ -54,8 +57,10 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "DD/MM/YYYY", locale: "pt")
+        update(formatString: "DD/MM/YYYY", locale: "pt")
         description
         authorid
+        tldr
       }
     }
   }

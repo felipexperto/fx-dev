@@ -7,8 +7,11 @@ import * as S from './styles';
 const PostContent = ({
   authorId,
   date,
+  description,
   post,
   title,
+  tldr,
+  update,
   }) => {
 
   return (
@@ -19,10 +22,29 @@ const PostContent = ({
           <S.title>
             { title }
           </S.title>
+          <S.dates>
+            {(date) && (
+              <S.date>
+                Publicado em: { date }
+              </S.date>
+            )}
+            {(update) && (
+              <S.update>
+                Atualizado em: { update }
+              </S.update>
+            )}
+          </S.dates>
+          {(tldr) && (
+            <S.tldrWrapper>
+              <S.tldrTitle>
+                Não li, nem lerei
+              </S.tldrTitle>
+              <S.tldrText>
+                { tldr }
+              </S.tldrText>
+            </S.tldrWrapper>
+          )}
         </S.header>
-        <S.date>
-          { date }
-        </S.date>
         <S.content dangerouslySetInnerHTML={{ __html: post }} />
         <S.footer>
           <Bio authorId={authorId} />
