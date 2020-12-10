@@ -39,9 +39,7 @@ const PostContent = ({
               <S.tldrTitle>
                 Não li, nem lerei
               </S.tldrTitle>
-              <S.tldrText>
-                { tldr }
-              </S.tldrText>
+              <S.tldrText dangerouslySetInnerHTML={{ __html: tldr }} />
             </S.tldrWrapper>
           )}
         </S.header>

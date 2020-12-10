@@ -1,10 +1,11 @@
 ---
 authorid: 1
 category: Dev
-title: Iniciando testes automatizados com Create React App
+title: Iniciando com testes unitários no Create React App
 date: "2020-11-18T20:23:00.000Z"
 update: "2020-12-08T09:11:00.000Z"
-description: "Iniciando testes automatizados com Create React App"
+description: "Uma análise linha a linha baseada no teste padrão do arquivo 'src/App.test.js' no Create React App"
+tldr: "Uma análise linha a linha baseada no teste padrão do arquivo <code>src/App.test.js</code> no Create React App."
 ---
 
 ## **Introdução**

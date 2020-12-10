@@ -3,21 +3,18 @@ authorid: 1
 category: Dev
 title: Git - O início e alguns macetes
 date: "2020-05-26T00:00:00.000Z"
-description: "[WIP] Git: Por que usar? Onde? Como?"
+update: "2020-12-10T00:42:00.000Z"
+description: "Git: O que é? Por que usar? E como usar?"
+tldr: 'Este post reúne informações que recolhi realizando estudos e praticando.<br/>Busca responder as perguntas básicas: "O que?", "Por que?", e "Como?"'
 ---
 
-
-> ### Resumo
-> Este post reúne informações que recolhi realizando estudos e praticando.
-> 
+> ### Tópicos do post
 > Busca responder algumas perguntas como: 
-> - O que é Git?
-> - Por que eu deveria usar versionamento?
-> - Quando usar? Quais situações se faz útil?
-> - Como funciona o Git?
-> - Como usar o Git?
+> - [O que é Git?](#o-que-e-git)
+> - [Por que eu deveria usar versionamento?](#por-que-usar-versionamento)
+> - [Como funciona o Git?](#como-funciona-git)
 
-## O que é Git?
+<h2 id="o-que-e-git">O que é Git?</h2>
 
 É um sistema de controle de versões, em outras palavras essa ferramenta possibilita o controle de diferentes versões de um código substituindo os antigos arquivos: `v0.0.1.zip` 😂
 
@@ -28,7 +25,7 @@ Como escolher? Analise baseado nas suas necessidades, veja pontos como: APIs, pl
 Se quiser adentrar nas comparações veja esse artigo do Stackshare que contém diversos detalhes: [Bitbucket vs GitHub vs GitLab](https://stackshare.io/stackups/bitbucket-vs-github-vs-gitlab).
 
 
-## Por que eu deveria usar versionamento?
+<h2 id="por-que-usar-versionamento">Por que eu deveria usar versionamento?</h2>
 
 Você deve estar se perguntando: 
 
@@ -48,7 +45,7 @@ Trabalhar em equipe num mesmo código é sempre difícil, frequentemente necess�
 
 Fora o uso para desenvolvimento de software, existem repositórios que funcionam como livros, diários, lista de links úteis para comunidade, fórum de vagas de emprego, entre outras possibilidades.
 
-## Como funciona o Git?
+<h2 id="como-funciona-git">Como funciona o Git?</h2>
 
 Pra explicar esse tópico, vamos recorrer a um apelo visual.  
 Veja a imagem abaixo e não se preocupe se não entender nada:
@@ -69,11 +66,6 @@ A partir daquele 4º commit (checkpoint) é possível criar uma nova linha do te
 Após o desenvolvimento e o teste dessa nova funcionalidade, você pode mesclar (`merge`) o código novo (`feature-branch`) no antigo (`master`) de uma vez e em segurança.
 
 Agora imagine o sofrimento de não trabalhar com Git e tentar alterar um arquivo ao mesmo tempo que um colega, você nas linhas `100-120`, ele nas linhas `33-54` e depois os dois nas linhas `70-87`. Salvando um em cima do outro sem parar. 🤯
-
-
-## Como usar o Git?
-
-_[WIP] Em breve._
 
 
 *[code review]: Revisão do código por diversas pessoas.

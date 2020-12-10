@@ -3,11 +3,10 @@ authorid: 1
 category: Design
 title: "Sabe um site que ensina Design? #atualizado"
 date: "2014-11-11T00:00:00.000Z"
+update: "2020-12-10T01:00:00.000Z"
 description: "Respondendo a pergunta e trazendo um pouquinho de conceito e apresentação de possíveis vertentes do design."
+tldr: 'Respondendo a pergunta e trazendo um pouquinho de conceito e apresentação de possíveis vertentes do design.'
 ---
-
-> ###Resumo
-> Um pouquinho de conceito e apresentação de possíveis vertentes do design.
 
 ## Inspiração para o post
 

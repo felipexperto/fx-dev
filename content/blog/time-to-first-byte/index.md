@@ -4,9 +4,8 @@ category: Dev
 title: Time To First Byte
 date: "2020-01-05T00:35:00.284Z"
 description: "O que é Time To First Byte? Como medir? Por que se importar?"
+tldr: 'Time To First Byte ou TTFB, é uma medida que indica a duração entre uma requisição HTTP e o momento que o browser inicia o recebimento desta resposta, ou seja, recebe o primeiro byte. Em outras palavras, é o tempo gasto a partir da requisição do nosso dispositivo até chegar no servidor e voltar carregando o primeiro byte de informação.'
 ---
-
-Time To First Byte ou TTFB, é uma medida que indica a duração entre uma requisição HTTP e o momento que o browser inicia o recebimento desta resposta, ou seja, recebe o primeiro byte. Em outras palavras, é o tempo gasto a partir da requisição do nosso dispositivo até chegar no servidor e voltar carregando o primeiro byte de informação.
 
 > "O tempo de resposta do servidor mede quanto tempo ele leva para carregar o HTML necessário para começar a processar a página de seu servidor, subtraindo o tempo de latência de rede entre o Google e seu servidor." - [Google](https://developers.google.com/speed/docs/insights/Server)
 

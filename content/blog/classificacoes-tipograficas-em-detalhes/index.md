@@ -3,14 +3,9 @@ authorid: 1
 category: Design
 title: Classificações Tipográficas em detalhes
 date: "2015-02-04T00:00:00.000Z"
-description: "Classificações Tipográficas em detalhes"
+description: "Classificações Tipográficas em detalhes (linear, grotesca, romana, etc) e sistemas de classificação tipográficos."
+tldr: "Um (não tão) leve papo sobre tipografia. Se você chegou aqui provavelmente é porque tem um interesse maior em tipografia e suas classificações."
 ---
-
-> ###Resumo
-> Um (não tão) leve papo sobre tipografia.
-
-Se você chegou aqui provavelmente é porque tem um interesse maior em tipografia e suas classificações.
-Então, sem enrolação, vamos ao conteúdo.
 
 ## Classificação Tipográfica de Vox
 
@@ -22,7 +17,7 @@ Então, sem enrolação, vamos ao conteúdo.
 
 - **Transicional** - Fontes situadas entre as Old Faces e as Modernas: Baskerville, Fournier, Bell, Caledónia. A principal característica é a ausência de inclinação do eixo das curvas. Nesse grupo os caracteres perdem a emulação da fluência da pena caligráfica e passam a ser mais "desenhados". A referência original é a Roman du Roi, do typecutter francês Philippe Grandjean (1666-1714), com caracteres construídos em bases matemáticas de um quadrado subdividido em 2.304 partes.
 
-- **Didone** - Também conhecidas como Modernas, as fontes pertencentes a esse grupo referem-se aos tipos criados por Firmin Didot e Giambattista Bodoni no século XVIII, e às suas versões posteriores e releituras, como a Walbaum. Carac¬terísticas: grande contraste entre traços finos e grossos.
+- **Didone** - Também conhecidas como Modernas, as fontes pertencentes a esse grupo referem-se aos tipos criados por Firmin Didot e Giambattista Bodoni no século XVIII, e às suas versões posteriores e releituras, como a Walbaum. Características: grande contraste entre traços finos e grossos.
 
 - **Mecanicista** - Também conhecidas como Slab Serifs ou, na Inglaterra, como Egípcias. Fontes serifadas, baseadas nos tipos produzidos durante a Revolução Industrial: Clarendon, Rockwell, Stymie, Memphis. Características: pouco ou nenhum contraste entre traços grossos e finos; serifas retangulares.
 

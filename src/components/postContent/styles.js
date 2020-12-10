@@ -43,7 +43,7 @@ const title = styled.h1`
 
 const tldrText = styled.p`
   font-family: 'Inter', sans-serif;
-  line-height: 1.5em;
+  line-height: 2em;
   padding-left: 2rem;
 `;
 

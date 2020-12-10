@@ -1,9 +1,11 @@
 ---
 authorid: 1
 category: Dev
-title: Por que React?
+title: Por que me interessei pelo React?
 date: "2020-03-05T23:00:00.284Z"
-description: "[WIP] Por que React?"
+update: "2020-12-10T01:00:00.284Z"
+description: "Um breve artigo sobre as diferenças de trabalhar somente com Javascript/jQuery e um framework/lib"
+tldr: "Este não é um artigo de <code><strong>React</strong> vs <strong>Vue</strong> vs <strong>Angular</strong></code>, poderia ser qualquer um, na real. No entanto, quero é salientar as diferenças de trabalhar somente com Javascript puro ou jQuery e iniciar a utilização de um framework ou lib parruda. Tendo em mente que todas as escolhas projetuais tem prós e contras."
 ---
 
 > ### Resumo

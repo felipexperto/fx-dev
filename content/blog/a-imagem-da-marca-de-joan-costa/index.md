@@ -4,7 +4,7 @@ category: Design
 title: A Imagem da Marca, de Joan Costa
 date: "2015-02-03T00:00:00.000Z"
 update: "2020-12-08T09:11:00.000Z"
-description: "A Imagem da Marca, de Joan Costa"
+description: "A história da marca, sua relevância e a relação da marca com empresas, produtos ou serviços"
 tldr: 'Se você gostaria de entender a história da marca, sua relevância e a relação da marca com empresas, produtos ou serviços, essa leitura é interessante.'
 ---
 
