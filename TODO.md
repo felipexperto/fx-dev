@@ -5,13 +5,9 @@
 
 - Adicionar tempo de leitura em cada post;
 
-- Adicionar área de descrição curta antes do texto completo do post;
-
-- Adicionar banner;
+- Adicionar banner na Home;
 
 - Infinity Loading on scroll de posts na home;
-
-- Links com âncoras dentro de posts;
 
 - Tema dark;
 
@@ -25,6 +21,7 @@
 - Editar a descrição do repositório;
 
 - Editar o README:
+  - Aplicação não dockerizada;
   - python --version
   - node -v
   - npm install --global gatsby-cli
@@ -49,9 +46,5 @@
 
 
 **Conteúdo**
-
-- Adicionar dados da Daniele como autora;
-
-- Trabalhar description dos posts;
 
 - Adicionar feature image na lista de posts e dentro dos artigos;
