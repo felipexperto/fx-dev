@@ -30,6 +30,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const HeaderContainer = styled(Container)`
+justify-content: center;
   padding: 0 15px;
 `;
 
