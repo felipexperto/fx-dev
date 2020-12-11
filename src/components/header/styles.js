@@ -11,7 +11,7 @@ const Header = styled.header`
 
 const HeaderWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.yellow};
-  box-shadow: 0 1px 10px -2px rgba(0,0,0,.75);
+  box-shadow: ${({ isScrolling }) => isScrolling ? '0 1px 10px -2px rgba(0,0,0,.75)': 'none'};
   display: flex;
   flex-direction: column;
   height: ${headerHeight};
@@ -20,6 +20,7 @@ const HeaderWrapper = styled.div`
   position: fixed;
   right: 0;
   top: 0;
+  transition: all .25s ease-in;
   z-index: ${({ theme }) => theme.zIndex.header};
 
   [data-logo] {
