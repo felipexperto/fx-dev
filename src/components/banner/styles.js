@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components/macro';
 import { Container } from 'styles';
 import { animationKeyframes } from 'src/styles';
 
-const { md } = ({ theme }) => theme.medias;
+const md = ({ theme }) => theme.medias.md;
 
 const { fadeIn } = animationKeyframes;
 
@@ -76,9 +76,9 @@ const Circle = styled(BasicShape)`
 `;
 
 const Triangle = styled(BasicShape)`
+  border-color: transparent transparent ${({ theme }) => theme.colors.black} transparent;
   border-style: solid;
   border-width: 0 0 130px 180px;
-  border-color: transparent transparent ${({ theme }) => theme.colors.black} transparent;
   bottom: 55%;
   height: 0;
   left: 35%;

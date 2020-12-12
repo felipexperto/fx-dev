@@ -10,8 +10,9 @@ import * as S from './styles.js';
 const Header = ({ height, title }) => {
   const { main } = theme;
   const { scroll } = useWindowScroll();
+  const isHomepage = isHome();
   const [isScrolling, setIsScrolling] = useState(false);
-  
+  const [shouldBackgroundBeTransparent, setShouldBackgroundBeTransparent] = useState(false);
   
   useEffect(() => {
     let unmounted = false;
@@ -23,21 +24,28 @@ const Header = ({ height, title }) => {
           : setIsScrolling(false);
       };
       handleSearchScroll();
+      setShouldBackgroundBeTransparent(() => isHomepage && !isScrolling);
     }
     
     return () => (unmounted = true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scroll]);
 
   return (
     <S.Header data-testid="FX_HEADER">
-      <S.HeaderWrapper theme={main} isScrolling={isScrolling} height={height}>
+      <S.HeaderWrapper
+        theme={main}
+        isScrolling={isScrolling}
+        isBackgroundTransparent={shouldBackgroundBeTransparent}
+        height={height}
+      >
         <S.HeaderContainer>
           <Link to={`/`} title={title}>
             <Logo data-logo/>
           </Link>
         </S.HeaderContainer>
       </S.HeaderWrapper>
-    {!isHome() && <S.HeaderBottomSpace height={height}/> }
+    {!isHomepage && <S.HeaderBottomSpace height={height}/> }
     </S.Header>
   )
 }
