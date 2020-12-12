@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { Link } from "gatsby";
 
 import { useWindowScroll } from 'src/hooks';
+import { isHome } from 'src/utils/helpers';
 import Logo from 'src/images/logo-felipexperto.inline.svg';
 import { theme } from 'styles'
 import * as S from './styles.js';
 
-const Header = ({ location, title }) => {
+const Header = ({ height, title }) => {
   const { main } = theme;
   const { scroll } = useWindowScroll();
   const [isScrolling, setIsScrolling] = useState(false);
+  
   
   useEffect(() => {
     let unmounted = false;
@@ -28,14 +30,14 @@ const Header = ({ location, title }) => {
 
   return (
     <S.Header data-testid="FX_HEADER">
-      <S.HeaderWrapper theme={main} isScrolling={isScrolling}>
+      <S.HeaderWrapper theme={main} isScrolling={isScrolling} height={height}>
         <S.HeaderContainer>
           <Link to={`/`} title={title}>
             <Logo data-logo/>
           </Link>
         </S.HeaderContainer>
       </S.HeaderWrapper>
-      <S.HeaderBottomSpace />
+    {!isHome() && <S.HeaderBottomSpace height={height}/> }
     </S.Header>
   )
 }

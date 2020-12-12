@@ -16,7 +16,7 @@ class BlogIndex extends React.Component {
       <Fragment>
         <Layout location={this.props.location} title={siteTitle} bgColor='lightestgrey'>
           <SEO title="Todos os posts" />
-          <Title margin='3rem auto'>Artigos</Title>
+          <Title margin='2rem auto'>Meus artigos</Title>
           <PostsList posts={posts} />
         </Layout>
       </Fragment>
