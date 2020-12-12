@@ -1,7 +1,5 @@
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 import { Container } from 'styles';
-
-const headerHeight = `72px`;
 
 const Header = styled.header`
   display: flex;
@@ -10,16 +8,21 @@ const Header = styled.header`
 `;
 
 const HeaderWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.yellow};
-  box-shadow: 0 1px 10px -2px rgba(0,0,0,.75);
+  background-color: ${({ isBackgroundTransparent, theme }) => isBackgroundTransparent ? theme.colors.transparent : theme.colors.yellow };
+  box-shadow: ${({ isScrolling }) => isScrolling ? '0 1px 10px -2px rgba(0,0,0,.75)': 'none'};
   display: flex;
   flex-direction: column;
-  height: ${headerHeight};
+  ${({ height }) =>
+    height &&
+    css`
+      height: ${height};
+    `};
   justify-content: center;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
+  transition: all .25s ease-in;
   z-index: ${({ theme }) => theme.zIndex.header};
 
   [data-logo] {
@@ -33,13 +36,17 @@ const HeaderContainer = styled(Container)`
 `;
 
 const HeaderBottomSpace = styled.div`
-  height: ${headerHeight};
+  ${({ height }) =>
+  height &&
+  css`
+    height: ${height};
+  `};
   width: 100%;
 `;
 
 export {
   Header,
-  HeaderBottomSpace,
   HeaderContainer,
+  HeaderBottomSpace,
   HeaderWrapper,
 }

@@ -17,7 +17,7 @@ const PostNavigation = ({previous, next}) => {
           <S.itemNavigationLeft>
             <Link to={previous.fields.slug} rel="anterior">
               <S.linkIcon>
-              <i class='bx bx-left-arrow-alt'></i>
+              <i className='bx bx-left-arrow-alt'></i>
               </S.linkIcon>
               <S.linkPreTitle>Post anterior</S.linkPreTitle>
               <S.linkTitle>{previous.frontmatter.title}</S.linkTitle>
@@ -28,7 +28,7 @@ const PostNavigation = ({previous, next}) => {
           <S.itemNavigationRight>
             <Link to={next.fields.slug} rel="próximo">
               <S.linkIcon>
-                <i class='bx bx-right-arrow-alt'></i>
+                <i className='bx bx-right-arrow-alt'></i>
               </S.linkIcon>
               <S.linkPreTitle>Próximo post</S.linkPreTitle>
               <S.linkTitle>{next.frontmatter.title}</S.linkTitle>

@@ -5,12 +5,15 @@
 
 - Adicionar tempo de leitura em cada post;
 
-- Adicionar banner na Home;
+- Adicionar tecnologias que utilizo;
+ - [Exemplo 01](https://preview.themeforest.net/item/arter-cv-resume-portfolio-web-app-template/full_screen_preview/27008333?_ga=2.216075988.370116323.1607660090-1265588602.1607660075), [Exemplo 02](https://preview.themeforest.net/item/oblas-angular-portfolio-web-application/full_screen_preview/23654405?_ga=2.172633248.2001170672.1607660092-1265588602.1607660075)
 
 - Infinity Loading on scroll de posts na home;
 
 - Tema dark;
 
+- Adicionar cards com mensagem para números primos na lista principal;
+ - import Logo from 'src/images/estude-recrie-compartilhe-rasterizado.inline.svg';
 
 **Backlog Técnico**
 
