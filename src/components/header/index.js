@@ -19,17 +19,21 @@ const Header = ({ height, title }) => {
 
     if (!unmounted) {
       const handleSearchScroll = () => {
-        return scroll.y > 5
+        return scroll.y > 0
           ? setIsScrolling(true)
           : setIsScrolling(false);
       };
       handleSearchScroll();
-      setShouldBackgroundBeTransparent(() => isHomepage && !isScrolling);
     }
     
     return () => (unmounted = true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scroll]);
+
+  useEffect(() => {
+    setShouldBackgroundBeTransparent(() => isHomepage && !isScrolling);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isScrolling])
 
   return (
     <S.Header data-testid="FX_HEADER">

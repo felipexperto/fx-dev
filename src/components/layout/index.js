@@ -8,7 +8,7 @@ import { isHome } from 'src/utils/helpers';
 
 const Layout = ({ location, title, children, bgColor }) => {
   const headerHeight = '72px';
-  console.log(isHome());
+  
   return (
     <ContainerFull backgroundColor={bgColor}>
       <Header
