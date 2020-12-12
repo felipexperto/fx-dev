@@ -1,1 +1,1 @@
-export const isHome = () => !!(window.location.pathname === '/');
+export const isHome = () => typeof window !== 'undefined' ? !!(window.location.pathname === '/') : false;

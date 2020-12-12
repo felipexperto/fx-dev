@@ -12,8 +12,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { SITE_URL } from "src/../env-config";
 
-console.log(SITE_URL);
-
 function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
     graphql`
