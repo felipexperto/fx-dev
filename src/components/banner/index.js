@@ -17,7 +17,7 @@ const Banner = ({ paddingTop }) => {
             Felipe Marciano
           </S.Title>
           <S.Description>
-            front-end developer, cuja rotina incluir codificar, escrever, lavar louça e acariciar cachorros
+            front-end developer, cuja rotina inclui codificar, escrever, lavar louça e acariciar cachorros
           </S.Description>
           <S.Circle theme={main} />
           <S.Triangle theme={main} />
