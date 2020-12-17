@@ -96,20 +96,36 @@ const cardTitle = styled.h3`
 
 
 
-const cardExtraInfo = styled.small`
-  color: ${ theme.main.colors.grey };
-`;
 
-const cardDate = styled(cardExtraInfo)`
-  color:  ${theme.main.colors.darkgrey};
-  display: block;
-  font-size: .8rem;
+
+const cardComplementaryInfosList = styled.ul`
+  list-style: none;
   margin-bottom: .5rem;
+  margin-left: 0;
+  padding-left: 0;
 `;
 
-const cardAuthor = styled(cardExtraInfo)`
-  margin-left: 1rem;
+const cardComplementaryInfosItem = styled.li`
+  color: ${ theme.main.colors.grey };
+  display: inline-block;
+  font-size: .8rem;
 `;
+
+const cardDate = styled(cardComplementaryInfosItem)`
+  color:  ${theme.main.colors.darkgrey};
+`;
+
+const cardReadingTime = styled(cardComplementaryInfosItem)`
+  color:  ${theme.main.colors.darkgrey};
+  
+  &::before {
+    content: "•";
+    display: inline-block;
+    margin-left: .25rem;
+    padding-right: .25rem;
+  }
+`;
+
 
 const cardDescription = styled.section`
   margin-top: .75rem;
@@ -126,8 +142,9 @@ export {
   cardFooter,
   cardCategory,
   cardTitle,
+  cardComplementaryInfosList,
   cardDate,
-  cardAuthor,
+  cardReadingTime,
   cardDescription,
   cardDescriptionText,
 }

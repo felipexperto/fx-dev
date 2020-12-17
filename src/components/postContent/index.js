@@ -12,6 +12,7 @@ const PostContent = ({
   title,
   tldr,
   update,
+  timeToRead,
   }) => {
 
   return (
@@ -32,6 +33,11 @@ const PostContent = ({
               <S.update>
                 Atualizado em: { update }
               </S.update>
+            )}
+            {(timeToRead) && (
+              <S.timeToRead>
+                Tempo de leitura: { timeToRead } min
+              </S.timeToRead>
             )}
           </S.dates>
           {(tldr) && (

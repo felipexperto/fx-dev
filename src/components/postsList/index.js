@@ -38,10 +38,14 @@ const PostsList = ({ posts }) => {
         </S.cardTitle>
       </S.cardHeader>
       <S.cardFooter>
-        <S.cardDate>
-          {node.frontmatter.date}
-        </S.cardDate>
-        {/* // @TODO Adicionar tempo de leitura do artigo */}
+        <S.cardComplementaryInfosList>
+          <S.cardDate>
+            {node.frontmatter.date}
+          </S.cardDate>
+          <S.cardReadingTime>
+            {Math.round(node.fields.readingTime.minutes)} min
+          </S.cardReadingTime>
+        </S.cardComplementaryInfosList>
       </S.cardFooter>
     </Link>
   ));

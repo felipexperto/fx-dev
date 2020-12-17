@@ -30,6 +30,7 @@ class BlogPostTemplate extends React.Component {
             title={post.frontmatter.title}
             tldr={post.frontmatter.tldr}
             update={post.frontmatter.update}
+            timeToRead={post.timeToRead}
           />
           <PostNavigation
             previous={previous}
@@ -54,6 +55,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "DD/MM/YYYY", locale: "pt")

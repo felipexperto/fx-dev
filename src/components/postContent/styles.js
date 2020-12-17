@@ -88,6 +88,9 @@ const update = styled(dataDefault)`
   }
 `;
 
+const timeToRead = styled(update)`
+`;
+
 export {
   content,
   date,
@@ -98,6 +101,7 @@ export {
   tldrText,
   tldrTitle,
   tldrWrapper,
+  timeToRead,
   update,
   wrapperArticle,
 }
