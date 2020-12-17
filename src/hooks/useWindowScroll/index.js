@@ -8,8 +8,8 @@ const useWindowScroll = () => {
 
   const onWindowScroll = () => {
     return setScroll(() => ({
-      x: typeof window !== undefined ? window.pageXOffset : 0,
-      y: typeof window !== undefined ? window.pageYOffset : 0,
+      x: typeof window !== 'undefined' ? window.pageXOffset : 0,
+      y: typeof window !== 'undefined' ? window.pageYOffset : 0,
     }));
   };
 
