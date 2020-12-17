@@ -19,12 +19,11 @@ const cardList = styled.section`
   flex-wrap: wrap;
   justify-content: space-around;
 
-  & > a {
+  & > a,
+  & > div {
     align-items: stretch;
-    background-color: ${ theme.main.colors.white };
     border-radius: 16px;
     box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
-    color: ${ theme.main.colors.black };
     font-family: "Ubuntu", "Inter", Helvetica, Arial, sans-serif;
     margin: 2% 8%;
     padding: 1.5rem;
@@ -41,7 +40,11 @@ const cardList = styled.section`
     @media ${xl} {
       width: 30%;
     }
+  }
 
+  & > a {
+    background-color: ${ theme.main.colors.white };
+    color: ${ theme.main.colors.black };
 
     &:focus,
     &:hover {
@@ -53,8 +56,21 @@ const cardList = styled.section`
     &:hover ${cardCategory} {
       background-color: ${ theme.main.colors.white };
     }
+  }
 
+  & > div {
+    align-items: center;
+    background-color: ${ theme.main.colors.yellow };
+    color: ${ theme.main.colors.black };
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
 
+  [data-cardlistplaceholderimage] {
+    height: 90%;
+    width: 90%;
   }
 `;
 
@@ -64,7 +80,7 @@ const cardHeader = styled.header`
 
 `;
 
-const cardFooter = styled.header`
+const cardFooter = styled.footer`
   margin-top: 1em;
 `;
 

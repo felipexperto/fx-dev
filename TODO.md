@@ -12,8 +12,6 @@
 
 - Tema dark;
 
-- Adicionar cards com mensagem para números primos na lista principal;
- - import Logo from 'src/images/estude-recrie-compartilhe-rasterizado.inline.svg';
 
 **Backlog Técnico**
 
