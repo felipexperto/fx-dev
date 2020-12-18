@@ -8,7 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import GetAuthorInfo from 'src/services/authors';
+import useAuthorInfo from 'src/hooks/useAuthorInfo';
 import Avatar from 'src/components/UI/Avatar';
 import SocialList from "src/components/UI/SocialList";
 import avatarFelipe from 'src/images/authors/felipemarciano.png';
@@ -17,7 +17,7 @@ import * as S from './styles';
 
 const Bio = ({ authorId }) => {
 
-  const { authorBio, authorName, authorIntro, authorSocial } = GetAuthorInfo(authorId);
+  const { authorBio, authorName, authorIntro, authorSocial } = useAuthorInfo(authorId);
   const authorAvatar = authorId === 1 ? avatarFelipe : avatarDaniele;
   
   return (

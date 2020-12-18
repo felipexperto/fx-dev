@@ -1,11 +1,11 @@
 import React from 'react';
 
-import GetAuthorInfo from 'src/services/authors';
+import useAuthorInfo from 'src/hooks/useAuthorInfo';
 import SocialList from "src/components/UI/SocialList";
 import * as S from './styles';
 
 const Footer = () => {
-  const { authorSocial } = GetAuthorInfo(1);
+  const { authorSocial } = useAuthorInfo(1);
 
   return (
     <S.footerWrapper>
