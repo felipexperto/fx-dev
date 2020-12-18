@@ -1,12 +1,12 @@
 import React from "react";
 
-import Header from '../header';
-import Banner from '../banner';
-import Footer from '../footer';
+import Header from 'src/components/layout/Header';
+import Banner from 'src/components/layout/Banner';
+import Footer from 'src/components/layout/Footer';
 import { Container, ContainerFull } from 'styles';
 import { isHome } from 'src/utils/helpers';
 
-const Layout = ({ location, title, children, bgColor }) => {
+const App = ({ location, title, children, bgColor }) => {
   const headerHeight = '72px';
   
   return (
@@ -25,4 +25,4 @@ const Layout = ({ location, title, children, bgColor }) => {
   )
 }
 
-export default Layout;
+export default App;

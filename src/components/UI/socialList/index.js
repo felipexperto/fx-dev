@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import * as S from './styles';
 
-const SocialList = ({ networkArr }) => {
+const SocialList = ({ networkArr, colorSchemeReverse }) => {
   
   return (
     <S.SocialList>
@@ -11,10 +11,11 @@ const SocialList = ({ networkArr }) => {
       networkArr.map((network) => (
         <S.SocialItem key={uuidv4()}>
           <S.SocialAnchor 
+            colorSchemeReverse={colorSchemeReverse}
             href={network.url}
+            rel="noopener noreferrer"
             title={network.name}
             target="_blank"
-            rel="noopener noreferrer"
             >
               { (network.boxicon_type) ?
                 <i

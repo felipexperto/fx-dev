@@ -7,3 +7,5 @@ export const getNumberOfCardsFromScreenWidth = (screenWidth, sizes) => {
   if (screenWidth < sizes.xl) return 2;
   return 3;
 };
+
+export const isItemNull = (item) => item && item !== null ? false : true;

@@ -11,7 +11,8 @@ const colors = {
   lightestgrey: '#f1f1f1',
   lightgrey: '#aaaaaa',
   grey: '#666666',
-  darkgrey: '#333333'
+  darkgrey: '#333333',
+  darkestgrey: '#222222'
 };
 const fonts = {
   weight: {

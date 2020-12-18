@@ -1,10 +1,10 @@
 import React, { Fragment } from "react"
 import { graphql } from "gatsby";
 
-import Layout from "src/components/layout";
-import PostsList from "src/components/postsList";
-import { Title } from "src/components/title";
-import SEO from "src/components/seo";
+import App from "src/components/layout/App";
+import PostsList from "src/components/layout/PostsList";
+import { Title } from "src/components/UI/Title";
+import SEO from "src/components/layout/Seo";
 
 class BlogIndex extends React.Component {
   render() {
@@ -14,11 +14,11 @@ class BlogIndex extends React.Component {
 
     return (
       <Fragment>
-        <Layout location={this.props.location} title={siteTitle} bgColor='lightestgrey'>
+        <App location={this.props.location} title={siteTitle} bgColor='lightestgrey'>
           <SEO title="Todos os posts" />
           <Title margin='2rem auto'>Meus artigos</Title>
           <PostsList posts={posts} />
-        </Layout>
+        </App>
       </Fragment>
     )
   }

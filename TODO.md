@@ -10,20 +10,26 @@
 
 - Tema dark;
 
-- Novo Footer;
+- Custom 404 page;
 
 
 **Backlog Técnico**
 
-- Eslint;
+
+- Passar tema corretamente para context;
+  - Criar ThemeProvider
+  ```
+  import { ThemeProvider } from 'styled-components';
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  ```
+
+- Configurar regras adicionais no Eslint;
 
 - Troca de fontes e cores por variáveis de tema;
 
 - Husky com pre-commits;
 
 - Testes unitários e de integração;
-
-- Passar tema corretamente para context;
 
 - Editar a descrição do repositório;
 

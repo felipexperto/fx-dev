@@ -2,6 +2,11 @@ import styled from 'styled-components/macro';
 
 import theme from 'src/styles/Themes';
 
+const BioWrapper = styled.div`
+  align-items: flex-start;
+  display: flex;
+`;
+
 const Description = styled.p`
   color: ${ theme.main.colors.grey };
   font-family: 'Inter', sans-serif;
@@ -23,9 +28,9 @@ const Name = styled.div`
   line-height: 1.25em;
 `;
 
-
 export {
+  BioWrapper,
   Description,
   Intro,
   Name,
-};
+}

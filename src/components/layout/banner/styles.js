@@ -16,8 +16,8 @@ const Banner = styled.section`
 `;
 
 const BannerWrapper = styled.div`
-  background: ${({ theme }) => theme.colors.yellow};
-  background: linear-gradient(180deg, rgba(244,218,18,1) 0%, rgba(244,188,18,1) 100%);
+  background: ${({ theme }) => theme.colors.darkyellow};
+  background: linear-gradient(0deg, rgba(244,218,18,1) 0%, rgba(244,188,18,1) 100%);
   color: ${({ theme }) => theme.colors.almostblack};
   display: flex;
   flex-direction: column;

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import { isItemNull } from 'src/utils/helpers';
 import * as S from "./styles";
 
-const isItemNull = (item) => item && item !== null ? false : true;
 const navigationAlignmentRight = (arr) => (isItemNull(arr[0]) && !isItemNull(arr[1]));
 
 const PostNavigation = ({previous, next}) => {

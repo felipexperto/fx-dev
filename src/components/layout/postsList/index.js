@@ -9,9 +9,9 @@ import { theme } from 'styles';
 import * as S from './styles';
 
 const CardListPlaceholder = () => (
-  <div aria-label="Estude, Recrie e Compartilhe">
+  <span aria-label="Estude, Recrie e Compartilhe" role="img">
     <CardListPlaceholderImage data-cardlistplaceholderimage />
-  </div>
+  </span>
 );
 
 const addCardListPlaceholders = (arr, numberOfPlaceholdersToAdd, JsxElement) => {

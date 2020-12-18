@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import { graphql } from "gatsby";
 
-import Layout from "src/components/layout";
-import SEO from "src/components/seo";
-import PostContent from "src/components/postContent";
-import PostNavigation from "src/components/postNavigation";
+import App from "src/components/layout/App";
+import SEO from "src/components/layout/Seo";
+import PostContent from "src/components/layout/PostContent";
+import PostNavigation from "src/components/layout/PostNavigation";
 
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 deckDeckGoHighlightElement();
@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Fragment>
-        <Layout location={this.props.location} title={siteTitle}>
+        <App location={this.props.location} title={siteTitle}>
           <SEO
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
@@ -36,7 +36,7 @@ class BlogPostTemplate extends React.Component {
             previous={previous}
             next={next}
           />
-        </Layout>
+        </App>
       </Fragment>
     )
   }

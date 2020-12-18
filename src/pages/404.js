@@ -1,8 +1,8 @@
 import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 
-import Layout from "src/components/layout"
-import SEO from "src/components/seo"
+import App from "src/components/layout/App"
+import SEO from "src/components/layout/Seo"
 
 class NotFoundPage extends React.Component {
   render() {
@@ -11,11 +11,11 @@ class NotFoundPage extends React.Component {
 
     return (
       <Fragment>
-        <Layout location={this.props.location} title={siteTitle}>
+        <App location={this.props.location} title={siteTitle}>
           <SEO title="404: Não encontrado" />
           <h1>Oops!</h1>
           <p>Essa página não foi encontrada.</p>
-        </Layout>
+        </App>
       </Fragment>
     )
   }

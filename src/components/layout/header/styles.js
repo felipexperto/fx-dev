@@ -8,7 +8,7 @@ const Header = styled.header`
 `;
 
 const HeaderWrapper = styled.div`
-  background-color: ${({ isBackgroundTransparent, theme }) => isBackgroundTransparent ? theme.colors.transparent : theme.colors.yellow };
+  background-color: ${({ isBackgroundTransparent, theme }) => isBackgroundTransparent ? theme.colors.transparent : theme.colors.darkyellow };
   box-shadow: ${({ isScrolling }) => isScrolling ? '0 1px 10px -2px rgba(0,0,0,.75)': 'none'};
   display: flex;
   flex-direction: column;

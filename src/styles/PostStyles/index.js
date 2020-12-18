@@ -39,10 +39,23 @@ const PostStyles = createGlobalStyle`
     }
     
     blockquote {
-      border-left: 0.32813rem solid ${theme.main.colors.yellow};
       line-height: 1.8em;
       margin: 2rem 0;
       padding-left: 2rem;
+      position: relative;
+
+      &::before {
+        background-color: ${theme.main.colors.darkyellow};
+        border-radius: 8px;
+        box-shadow: 0 4px 20px 0 rgba(244, 188, 18,.15), 0 7px 10px -5px rgba(244, 188, 18,.4);
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 0.32813rem;
+      }
 
       ul {
         padding-left: 0;
