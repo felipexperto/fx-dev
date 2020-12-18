@@ -47,7 +47,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-abbr`, 
+          `gatsby-remark-abbr`,
           {
             resolve: `gatsby-remark-emoji`,
             options: {

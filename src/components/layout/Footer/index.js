@@ -19,18 +19,18 @@ const Footer = () => {
           <S.infosColumn>
             <div>
               <S.infosLabel>
-                Para mandar um "Oi"
-                {` `}
+                Para mandar um &quot;Oi&quot;
+                {' '}
                 <span aria-label="Emoji de mão acenando" role="img">👋</span>
-                </S.infosLabel>
+              </S.infosLabel>
               <S.infosEmail>felipexperto@gmail.com</S.infosEmail>
             </div>
             <div>
               <S.infosLabel margin={'2rem 0 .5rem  0'}>
                 Me siga no LinkedIn
-                {` `}
+                {' '}
                 <span aria-label="Emoji de foguete" role="img">🚀</span>
-                </S.infosLabel>
+              </S.infosLabel>
               <S.infosLink
                 href="https://www.linkedin.com/in/felipexperto/"
                 rel="noreferrer"
@@ -44,7 +44,7 @@ const Footer = () => {
         <S.secondRow>
           <S.copyrightColumn>
             © {new Date().getFullYear()}, Construído com
-            {` `}
+            {' '}
             <a href="https://www.gatsbyjs.org"
               rel="noreferrer"
               target="_blank"
@@ -52,7 +52,7 @@ const Footer = () => {
             >
               Gatsby
             </a>
-            {` `}
+            {' '}
             <S.emojiWrapper aria-label="Emoji de coração" role="img">❤</S.emojiWrapper>
           </S.copyrightColumn>
           <S.socialColumn>

@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import { graphql } from "gatsby";
+import { object } from 'prop-types';
 
 import App from "src/components/layout/App";
 import PostsList from "src/components/layout/PostsList";
@@ -22,6 +23,11 @@ class BlogIndex extends React.Component {
       </Fragment>
     )
   }
+}
+
+BlogIndex.propTypes = {
+  data: object.isRequired,
+  location: object.isRequired,
 }
 
 export default BlogIndex
