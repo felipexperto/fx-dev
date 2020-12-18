@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
+import { string, arrayOf, object } from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -29,8 +29,8 @@ function SEO({ description, lang, meta, title, image }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const ogImage = image || `${SITE_URL}/images/blog-cover.png`
+  const metaDescription = description || site.siteMetadata.description;
+  const ogImage = image;
 
   return (
     <Helmet
@@ -82,16 +82,18 @@ function SEO({ description, lang, meta, title, image }) {
 }
 
 SEO.defaultProps = {
-  lang: `pt-br`,
+  lang: 'pt-br',
   meta: [],
-  description: ``,
+  description: '',
+  image: `${SITE_URL}/images/blog-cover.png`,
 }
 
 SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  description: string,
+  lang: string,
+  meta: arrayOf(object),
+  title: string.isRequired,
+  image: string,
 }
 
 export default SEO

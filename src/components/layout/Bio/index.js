@@ -19,7 +19,7 @@ const Bio = ({ authorId }) => {
 
   const { authorBio, authorName, authorIntro, authorSocial } = useAuthorInfo(authorId);
   const authorAvatar = authorId === 1 ? avatarFelipe : avatarDaniele;
-  
+
   return (
     <S.BioWrapper>
       <Avatar

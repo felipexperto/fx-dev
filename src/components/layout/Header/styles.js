@@ -8,7 +8,8 @@ const Header = styled.header`
 `;
 
 const HeaderWrapper = styled.div`
-  background-color: ${({ isBackgroundTransparent, theme }) => isBackgroundTransparent ? theme.colors.transparent : theme.colors.darkyellow };
+  background-color: ${({ isBackgroundTransparent, theme }) => {
+    return isBackgroundTransparent ? theme.colors.transparent : theme.colors.darkyellow }};
   box-shadow: ${({ isScrolling }) => isScrolling ? '0 1px 10px -2px rgba(0,0,0,.75)': 'none'};
   display: flex;
   flex-direction: column;
@@ -37,7 +38,7 @@ const HeaderContainer = styled(Container)`
 
 const HeaderBottomSpace = styled.div`
   ${({ height }) =>
-  height &&
+    height &&
   css`
     height: ${height};
   `};

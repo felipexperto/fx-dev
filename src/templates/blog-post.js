@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { graphql } from "gatsby";
+import { object } from 'prop-types';
 
 import App from "src/components/layout/App";
 import SEO from "src/components/layout/Seo";
@@ -40,6 +41,12 @@ class BlogPostTemplate extends React.Component {
       </Fragment>
     )
   }
+}
+
+BlogPostTemplate.propTypes = {
+  data: object,
+  location: object,
+  pageContext: object,
 }
 
 export default BlogPostTemplate

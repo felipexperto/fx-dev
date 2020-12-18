@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
+import { string } from 'prop-types';
 
 import { useWindowScroll } from 'src/hooks';
 import { isHome } from 'src/utils/helpers';
@@ -13,7 +14,7 @@ const Header = ({ height, title }) => {
   const isHomepage = isHome();
   const [isScrolling, setIsScrolling] = useState(false);
   const [shouldBackgroundBeTransparent, setShouldBackgroundBeTransparent] = useState(false);
-  
+
   useEffect(() => {
     let unmounted = false;
 
@@ -25,14 +26,12 @@ const Header = ({ height, title }) => {
       };
       handleSearchScroll();
     }
-    
+
     return () => (unmounted = true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scroll]);
 
   useEffect(() => {
     setShouldBackgroundBeTransparent(() => isHomepage && !isScrolling);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isScrolling])
 
   return (
@@ -49,9 +48,14 @@ const Header = ({ height, title }) => {
           </Link>
         </S.HeaderContainer>
       </S.HeaderWrapper>
-    {!isHomepage && <S.HeaderBottomSpace height={height}/> }
+      {!isHomepage && <S.HeaderBottomSpace height={height}/> }
     </S.Header>
   )
+}
+
+Header.propTypes = {
+  height: string.isRequired,
+  title: string.isRequired,
 }
 
 export default Header;

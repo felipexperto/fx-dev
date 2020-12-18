@@ -15,6 +15,7 @@
 
 **Backlog Técnico**
 
+- Arrumar página 404
 
 - Passar tema corretamente para context;
   - Criar ThemeProvider

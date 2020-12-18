@@ -1,20 +1,19 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
+import { number, string } from 'prop-types';
 
 import PostStyles from 'src/styles/PostStyles';
-import Bio from "src/components/layout/Bio";
+import Bio from 'src/components/layout/Bio';
 import * as S from './styles';
 
 const PostContent = ({
   authorId,
   date,
-  description,
   post,
   title,
   tldr,
   update,
   timeToRead,
-  }) => {
-
+}) => {
   return (
     <Fragment>
       <PostStyles />
@@ -61,6 +60,16 @@ const PostContent = ({
       </S.wrapperArticle>
     </Fragment>
   )
+}
+
+PostContent.propTypes = {
+  authorId: number.isRequired,
+  date: string.isRequired,
+  post: string.isRequired,
+  title: string.isRequired,
+  tldr: string,
+  update: string,
+  timeToRead: number.isRequired,
 }
 
 export default PostContent;

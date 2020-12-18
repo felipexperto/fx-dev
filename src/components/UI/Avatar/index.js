@@ -1,4 +1,5 @@
 import React from "react";
+import { string } from "prop-types"
 
 import * as S from './styles';
 
@@ -8,4 +9,10 @@ const Avatar = ({image, label}) => (
     alt={label}
   />
 );
-export default Avatar
+
+Avatar.propTypes = {
+  image: string.isRequired,
+  label: string.isRequired,
+};
+
+export default Avatar;

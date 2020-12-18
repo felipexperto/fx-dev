@@ -1,4 +1,5 @@
 import React from 'react';
+import { string } from 'prop-types';
 
 import { theme } from 'styles'
 import * as S from './styles.js';
@@ -26,6 +27,14 @@ const Banner = ({ paddingTop }) => {
       </S.BannerWrapper>
     </S.Banner>
   )
+}
+
+Banner.defaultProps = {
+  paddingTop: '0',
+}
+
+Banner.propTypes = {
+  paddingTop: string,
 }
 
 export default Banner;
