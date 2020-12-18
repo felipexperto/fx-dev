@@ -45,7 +45,13 @@ const Footer = () => {
           <S.copyrightColumn>
             © {new Date().getFullYear()}, Construído com
             {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <a href="https://www.gatsbyjs.org"
+              rel="noreferrer"
+              target="_blank"
+              title="Gatsby"
+            >
+              Gatsby
+            </a>
             {` `}
             <S.emojiWrapper aria-label="Emoji de coração" role="img">❤</S.emojiWrapper>
           </S.copyrightColumn>
