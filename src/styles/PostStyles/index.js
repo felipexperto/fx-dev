@@ -24,20 +24,6 @@ const PostStyles = createGlobalStyle`
       text-decoration: none;
     }
 
-    section {
-      font-family: Inter, sans-serif;
-      line-height: 1.5em;
-
-      a[target="_blank"]::after {
-        content: "\\eb09";
-        display: inline-block;
-        font-family: 'boxicons';
-        font-size: .85em;
-        margin-left: .15em;
-        vertical-align: middle;
-      }
-    }
-    
     blockquote {
       line-height: 1.8em;
       margin: 2rem 0;
@@ -60,9 +46,13 @@ const PostStyles = createGlobalStyle`
       ul {
         padding-left: 0;
       }
+
+      > p:last-child {
+        margin-bottom: 0;
+      }
     }
 
-    & code:not([slot="code"]) {
+    code:not([slot="code"]) {
       background: #f0f9fb;
       border-radius: 4px;
       color: #267fab;
@@ -71,27 +61,72 @@ const PostStyles = createGlobalStyle`
       vertical-align: middle;
     }
 
-    & [class^="deckgo-"] {
-      margin-bottom: 3em;
-    }
-
     h2,
     h3 {
       font-family: 'Ubuntu', sans-serif;
       font-weight: 700;
       line-height: 1.4em;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
     }
 
-    h2 {
-      margin-top: 2em;
+    h4,
+    h5,
+    h6 {
+      margin-bottom: .25rem;
+    }
+
+    h4 + p,
+    h5 + p,
+    h6 + p {
+      margin-top: .25rem;
     }
   
+    section {
+      font-family: Inter, sans-serif;
+      line-height: 1.5em;
+
+      a[target="_blank"]::after {
+        content: "\\eb09";
+        display: inline-block;
+        font-family: 'boxicons';
+        font-size: .85em;
+        margin-left: .15em;
+        vertical-align: middle;
+      }
+    }
+
     ul {
       line-height: 1.75em;
       list-style-position: inside;
       padding-left: 1rem;
       @media ${sm} {
         padding-left: 2rem;
+      }
+
+      li {
+
+        code:not([slot="code"]) {
+          max-width: calc(100% - 2rem);
+        }
+
+        > p {
+          display: inline;
+        }
+      }
+    }
+
+    [class^="deckgo-"] {
+      margin-bottom: 3rem;
+    }
+
+    .fx-group {
+      > *:first-child {
+        margin-bottom: 0;
+      }
+      > *:last-child {
+        margin-bottom: 3rem;
+        margin-top: .5rem;
       }
     }
 

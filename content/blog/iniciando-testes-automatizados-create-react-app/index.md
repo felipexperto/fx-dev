@@ -66,6 +66,8 @@ test('renders learn react link', () => {
 
 ## **Passo a passo**
 
+<div class="fx-group">
+
 > `import { render, screen } from '@testing-library/react';`
 
 Estamos importando os métodos `render` e `screen`.
@@ -77,25 +79,41 @@ Então, quando o `render` é chamado, ele renderiza o componente dentro desta p�
 `screen` é um método que possui `queries` dentro dele.  
 Isso quer dizer que usaremos funções/métodos que estão dentro de `screen` para capturar as informações que queremos.  
 Já vamos chegar lá nas próximas linhas.
+</div>
 
-> `import App from './App';`
+<div class="fx-group">
 
-Importando nosso componente. Sem novidades.
+  > `import App from './App';`
 
-> `test('renders learn react link', () => {`
+  Importando nosso componente. Sem novidades.
+</div>
 
-`test` - que também pode ser encontrado como `it` -, é o método que nos permite escrever um texto descrevendo o que um teste bem sucedido deve fazer. No nosso exemplo, `renderiza o link "learn react"`
+<div class="fx-group">
+
+  > `test('renders learn react link', () => {`
+
+  `test` - que também pode ser encontrado como `it` -, é o método que nos permite escrever um texto descrevendo o que um teste bem sucedido deve fazer. No nosso exemplo, `renderiza o link "learn react"`
+</div>
+
+<div class="fx-group">
 
 > `render(<App />);`
 
 Renderizando o componente `App`.
+</div>
+
+<div class="fx-group">
 
 > `const linkElement = screen.getByText(/learn react/i);`
 
-Atribuindo à constante `linkElement` a `query`(método) `getByText` que deve encontrar o elemento que possui o texto `/learn react/i`.  
+Atribuindo à constante `linkElement` a `query`(método) `getByText` que deve encontrar o elemento que possui o texto `/learn react/i`.
+
 O trecho `/learn react/i` é um padrão regex que desabilita o `case-sensitive`, ou seja, ignora a diferença entre letras maiúsculas e minúsculas. Puro Javascript.
 
 Lembrando que para selecionar elementos você pode continuar utilizando o bom e velho `querySelector`, por exemplo: `const foo = container.querySelector('[data-foo="bar"]')`.
+</div>
+
+<div class="fx-group">
 
 > `expect(linkElement).toBeInTheDocument();`
 
@@ -107,6 +125,7 @@ Para exemplificar melhor, a linha acima também poderia ser escrita assim:
 
 `toBeInTheDocument()` é um matcher. O que é isso?  
 É uma função cujo valor resultante deve ser `true` em relação ao que está testando do `expect`. Neste caso é `estarNoDocumento`. Existe inclusive uma lista de matchers e [você pode encontrá-la aqui](https://jestjs.io/docs/en/expect.html#content).
+</div>
 
 ## **Dificultando as coisas**
 
@@ -136,13 +155,18 @@ describe('Componente App', () => {
 
 `it`, como falamos anteriormente está substituindo o `test` e pela minha experiência pessoal é o método mais utilizado no mercado.
 
+<div class="fx-group">
+
 > `it('renders learn react link as anchor', () => {`
 
 `renders learn react link as anchor`, novo teste, dessa vez, testaremos se o elemento é um link
+</div>
+<div class="fx-group">
 
 > `expect(linkElement).toHaveAttribute('href');`
 
 `toHaveAttribute('href')`, conferindo se o elemento tem um href.  
+</div>
 
 ## **E qual é o problema que temos aqui?**
 

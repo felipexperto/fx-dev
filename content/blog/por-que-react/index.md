@@ -8,9 +8,6 @@ description: "Um breve artigo sobre as diferenças de trabalhar somente com Java
 tldr: "Este não é um artigo de <code><strong>React</strong> vs <strong>Vue</strong> vs <strong>Angular</strong></code>, poderia ser qualquer um, na real. No entanto, quero é salientar as diferenças de trabalhar somente com Javascript puro ou jQuery e iniciar a utilização de um framework ou lib parruda. Tendo em mente que todas as escolhas projetuais tem prós e contras."
 ---
 
-> ### Resumo
-> Este não é um artigo de React *vs* Vue *vs* Angular, poderia ser qualquer um, na real. No entanto, quero é salientar as diferenças de trabalhar somente com Javascript puro ou jQuery e iniciar a utilização de um framework ou lib parruda. Tendo em mente que todas as escolhas projetuais tem prós e contras.
-
 Um dos motivos que teve um grande peso na minha decisão de troca de empresa foi as tecnologias as quais o mercado estava utilizando e eu não. Tenho um background em design e não em sistemas, porém, lendo artigos pude reparar que o *modus operandi* de construção de softwares o qual estava praticando não fazia parte das boas práticas e, para que esse cenário mudasse seria necessário alterar a stack também.
 
 No episódio [#169 JavaScript: manual de sobrevivência 2020](https://hipsters.tech/javascript-manual-de-sobrevivencia-2020-hipsters-169) do Hipsters.tech comentaram uma história sobre o porquê de utilizar React na plataforma do Netflix considerando que não havia um alto nível de complexidade no layout e, durante um evento numa conversa informal com um dos engenheiros de lá surgiu a resposta: Nós tentamos fazer a nossa solução, no entanto, acabou escalando, temos a necessidade de nos adaptar a diversos devices, era necessário um tempo de tutoria para novos colaboradores e foi mais fácil adotar um padrão do mercado.
