@@ -16,6 +16,11 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  body {
+    overflow-anchor: none;
+  }
+
 `;
 
 export default GlobalStyles;
