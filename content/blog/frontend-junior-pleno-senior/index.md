@@ -38,7 +38,7 @@ tldr: "Aviso de post longo pela frente. Isso não é <strong>O Guia Completo par
 </ul>
 
 
-<h2 id="introducao">Introdução</h2>
+<h2 class="anchor" id="introducao">Introdução</h2>
 
 > Ao contrário dos ativos materiais, que diminuem à medida que são usados, os ativos do conhecimento aumentam com o uso: ideias geram novas ideias e o conhecimento compartilhado permanece com o doador ao mesmo tempo que enrique o recebedor. – *Thomas H. Davenport, Conhecimento Empresarial*.
 
@@ -47,7 +47,7 @@ Primeiramente, o que será dito a seguir não é uma verdade absoluta e nem pode
 
 Na área de tecnologia onde tudo ocorre rapidamente - o velho clichê mas é real -, as empresas ainda não estão preparadas para lidar com todas as variáveis que envolve classificar um profissional ou elaborar um plano de carreira. Aliás, deixar seu "Plano de Carreira" na mão de seu empregador, é um erro.
 
-<h2 id="tres-pilares-da-senioridade">Três pilares da senioridade</h2>
+<h2 class="anchor" id="tres-pilares-da-senioridade">Três pilares da senioridade</h2>
 
 Tratando-se da área de tecnologia, **não é possível aplicar uma avaliação pautada somente na variável 'Tempo como frontend'** devido a pontos como: novas oportunidades de como absorver conhecimento, necessidades do mercado e lançamento constante de novas tecnologias.
 
@@ -77,14 +77,14 @@ Com exceção do pilar de **Conhecimento Técnico** o qual você pode comparar o
 - Quais metas deveria atingir?
 
 
-<h2 id="aprendizado-de-software">Aprendizado de Software</h2>
+<h2 class="anchor" id="aprendizado-de-software">Aprendizado de Software</h2>
 
 Sendo assim, vamos mergulhar nas **expectativas comportamentais de cada nível de senioridade** e, se você já leu [O Codificador Limpo de Robert C. Martin](https://www.altabooks.com.br/produto/o-codificador-limpo/) talvez vá se recordar de alguns trechos a seguir ou até da nomenclatura.
 
 > O ofício da pessoa desenvolvedora de software profissional é similar ao do artesão. Passado de pessoa para pessoa. Ensinado pelos mais velhos para os mais jovens. Trocado entre colegas. Observado e reaprendido, conforme os velhos observam os jovens. - *Texto adaptado de O Codificador Limpo*.
 
 
-<h3 id="aprendizes-junior">Aprendizes / Júnior</h3>
+<h3 class="anchor" id="aprendizes-junior">Aprendizes / Júnior</h3>
 
 > Eles não têm autonomia e são supervisionados bem de perto pelos operadores. No começo, não recebem qualquer tarefa, simplesmente dão assistência aos operadores. Essa deve ser uma época de programação em par bastante intensa, esse é o momento em que as disciplinas são aprendidas e reforçadas. É quando a base dos valores é criada.
 > 
@@ -107,7 +107,7 @@ Esse perfil é constantemente acompanhado por alguém mais experiente, que vai d
 À empresa cabe ter uma boa política de retenção de talentos para esse profissional entender que é valorizado e, quando estiver seguro que pode passar a ser Pleno, não ter motivos para ir embora.
 
 
-<h3 id="operadores-pleno">Operadores / Pleno</h3>
+<h3 class="anchor" id="operadores-pleno">Operadores / Pleno</h3>
 
 > São programadores treinados, competentes e energéticos. Durante esse período em suas carreiras aprenderão a trabalhar bem em uma equipe até se tornarem líderes. Tem conhecimento da tecnologia atual, mas normalmente carecem da experiência com muitos sistemas. Eles têm a tendência de conhecer uma linguagem, um sistema e uma plataforma; porém, estão constantemente aprendendo mais. Níveis de experiência variam amplamente de acordo com cada um, mas a média gira em torno de cinco anos. Do lado extremo dessa média, temos mestres em ascensão; do outro, aprendizes recentes.
 > 
@@ -128,7 +128,7 @@ Compreende os padrões e abordagens estabelecidos nas bases de código existente
 Fará a gestão compartilhada de sua equipe e do negócio.
 
 
-<h3 id="mestres-senior">Mestres / Sênior</h3>
+<h3 class="anchor" id="mestres-senior">Mestres / Sênior</h3>
 
 > São programadores que já assumiram a liderança em mais de um projeto significativo de software. Normalmente eles terão mais de dez anos de experiência e terão trabalhado em diversos tipos de sistemas, linguagens e sistemas operacionais. Sabem como lidar e coordenar múltiplas equipes; são designers e arquitetos proficientes e podem codificar círculos em volta de todo mundo sem uma gota de suor.
 >
@@ -156,7 +156,7 @@ Saber equilibrar o risco do projeto com o prazo e a stack que será utilizada é
 
 Outra ação esperada é que esteja antenada no mercado e sugira inovações. Se novas abordagens ou ferramentas forem compatíveis com a realidade da empresa e tenham impacto positivo, sejam sugeridas e trazidas para debate. Lembrando que a defesa de utilização deve ser realizada com maturidade.
 
-<h2 id="complexidade-de-escopo">Complexidade de escopo</h2>
+<h2 class="anchor" id="complexidade-de-escopo">Complexidade de escopo</h2>
 
 **Qual é o objetivo de discutirmos complexidade de tarefas?** 
 
@@ -165,7 +165,7 @@ Outra ação esperada é que esteja antenada no mercado e sugira inovações. Se
 A esperança é que seja possível ajudar a mensurar os esforços executados e que sirvam de justificativa para a transição de nível.
 
 
-<h3 id="complexidade-junior">Aprendizes / Júnior</h3>
+<h3 class="anchor" id="complexidade-junior">Aprendizes / Júnior</h3>
 
 <ul>
   <li>Criação/Manutenção de componentes simples, sem regras de negócio (ex: avatar, botão);</li>
@@ -181,7 +181,7 @@ A esperança é que seja possível ajudar a mensurar os esforços executados e q
 </ul>
 
 
-<h3 id="complexidade-pleno">Operadores / Pleno</h3>
+<h3 class="anchor" id="complexidade-pleno">Operadores / Pleno</h3>
 
 <ul>
   <li>Criação/Manutenção de componentes complexos e/ou reutilizáveis dentro do projeto (form com validação, componentes que lidam com estados, modal);</li>
@@ -197,7 +197,7 @@ A esperança é que seja possível ajudar a mensurar os esforços executados e q
 </ul>
 
 
-<h3 id="complexidade-senior">Mestres / Sênior</h3>
+<h3 class="anchor" id="complexidade-senior">Mestres / Sênior</h3>
 
 <ul>
   <li>Estruturação de um projeto que atende às boas práticas, entre elas: Logs, Disponibilização de métricas, Configuração de ambientes, Performance, Velocidade, Fácil manutenção, Modularização de CSS;</li>
@@ -205,7 +205,7 @@ A esperança é que seja possível ajudar a mensurar os esforços executados e q
   <li>Implementação de uma nova página complexa do zero com muitas interações, filtros e regras de negócio.</li>
 </ul>
 
-<h2 id="conclusao">Conclusão</h2>
+<h2 class="anchor" id="conclusao">Conclusão</h2>
 
 Enfim, espero que este conteúdo tenha te auxiliado de alguma maneira ou ao menos fomentado a discussão. Apesar do [escopo nebuloso do título de **Frontend**](https://github.com/kamranahmedse/developer-roadmap), da realidade de mudanças constantes e de empresas com diferentes necessidades.
 
