@@ -61,13 +61,27 @@ const PostStyles = createGlobalStyle`
       vertical-align: middle;
     }
 
+    h2.anchor,
+    h3.anchor,
+    h4.anchor,
+    h5.anchor,
+    h6.anchor {
+      margin-top: -4.375rem;
+
+      &::before {
+        content: '';
+        display: block;
+        height: 6.25rem;
+        margin: -2rem 0 0;
+      }
+    }
+
     h2,
     h3 {
       font-family: 'Ubuntu', sans-serif;
       font-weight: 700;
       line-height: 1.4em;
       margin-bottom: 1rem;
-      margin-top: 2rem;
     }
 
     h4,
