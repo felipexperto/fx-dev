@@ -34,16 +34,6 @@
 
 - Editar a descrição do repositório;
 
-- Editar o README:
-  - Aplicação não dockerizada;
-  - python --version
-  - node -v
-  - npm install --global gatsby-cli
-  - npm install
-  - gatsby develop
-  - https://www.gatsbyjs.org/docs/gatsby-on-windows/
-
-
 **Pesquisa**
 
 - Estudar possibilidade de adicionar categorias e/ou tags por post;

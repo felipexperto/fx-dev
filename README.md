@@ -1,16 +1,137 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+# **FX DEV**
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+## **O que é o Projeto?**
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Um blog pessoal para disseminar conteúdo e também um laboratório.  
+Foi criado em [Gatsby](https://www.gatsbyjs.com/) utilizando Markdown e com base (_boilerplate_) em um template de Kyle Mathews.
+
+## **Rodando a aplicação**
+
+- Clone o repositório do projeto;
+- Sempre que alternar entre as versões com e sem Docker, apague a pasta `node_modules`.
+
+### **Com Docker**
+
+#### **Dependências**
+
+Para o ambiente de desenvolvimento e testes você vai precisar de:
+
+- [Docker](https://www.docker.com/);
+#### **Passo a passo**
+
+1. Crie a imagem base para o projeto:
+    - `docker-compose build` ou
+    - `docker-compose build --no-cache` (alternativa sem utilizar cache)
+
+2. Execute o projeto:
+    - `docker-compose up` (pode levar algum tempo na etapa de `Linking Dependencies`)
+
+3. Utilize a url (sem porta) para ver a aplicação rodando:
+    - `http://localhost`
+
+4. Para encerrar a execução:
+    - `Ctrl+C` no terminal
+    - `docker-compose down`
+
+### **Sem Docker**
+
+#### **Dependências**
+
+Para o ambiente de desenvolvimento e testes você vai precisar de:
+
+- [Python](https://www.python.org/);
+- [Node](https://nodejs.org/pt-br/);
+- [NVM - Node Version Module](https://github.com/nvm-sh/nvm) (opcional);
+- [Yarn](https://yarnpkg.com/).
+
+Para saber se você possui as três dependências instaladas basta rodar o comando abaixo e deve receber os números das versões:
+
+```bash
+python --version && node -v && yarn -v
+```
+
+#### **Passo a passo**
+
+1. Instale as dependências do projeto:
+    - `yarn install`
+
+2. Execute o projeto:
+    - `yarn start`
+
+3. Utilize a url:
+    - `http://localhost:8000`
+
+4. Para encerrar a execução:
+    - `Ctrl+C` no terminal
+
+
+# 🤔 Troubleshooting
+
+## ENOENT
+
+`Error: ENOENT: no such file or directory, stat '/app/public/404.html'`
+
+Se você rodou o comando: `docker-compose -f docker-compose.deploy.yml up` e ocorreu o erro acima,  faça o build da imagem de deploy:
+
+- `docker-compose -f docker-compose.deploy.yml build`
+
+## nginx
+
+```
+nginx_1  | 2020/04/08 14:17:18 [emerg] 1#1: host not found in upstream "app" in /etc/nginx/conf.d/default.conf:6
+nginx_1  | nginx: [emerg] host not found in upstream "app" in /etc/nginx/conf.d/default.conf:6
+dicaprio_nginx_1 exited with code 1
+```
+
+Se você rodou o comando: `docker-compose up`, está tentando executar o ambiente de desenvolvimento e ocorreu o erro acima, refaça o build:
+
+- `docker-compose build`
+
+## node_modules
+
+```
+There was a problem loading the local develop command. Gatsby may not be installed in your site's "node_modules" directory. Perhaps you need to run "npm install"? You might need to delete your "package-lock.json" as well.
+```
+
+Se você rodou o comando: `docker-compose up` e ocorreu o erro acima, refaça o build conforme descrito em `Rodando a aplicação > Com Docker`
+
+## Localhost fica carregando com tela em branco
+
+Se você recebeu a mensagem `success Building development bundle` e não tem resposta da aplicação:
+
+- Pare todos os containers do docker
+    - `docker-compose down --remove-orphans`
+
+- Apague sua pasta node_modules
+    - `rm -rf node_modules`
+
+- No terminal liste suas imagens do Docker
+    - `docker images`
+
+- Observe as datas na coluna `CREATED`
+    - Ex: `30 minutes ago`, `1 hour ago`, `2 hours ago`
+
+- Utilizando a `IMAGE ID` apague as mais recentes que sejam relacionadas ao `FX DEV`, tagueadas ( `fx-dev` ) ou não ( `<none>` )
+    - Ex: `docker rmi -f d016f8a6b748 69d12795e647 66f5e68079ab`
+
+- Faça o build de uma nova imagem de desenvolvimento
+    - `docker-compose build --no-cache`
+
+- Siga a partir da etapa 2 do tópico `Rodando a aplicação > Com Docker`
+
+- Dê preferência à utilização da janela de **Visitante** do seu navegador. Ela não conterá cache ou cookies de execuções anteriores.
+
+## Não consigo executar comandos com `npm` ou `yarn`
+
+Se você precisa rodar scripts com `npm` ou `yarn`, tais como: instalar, atualizar ou adicionar dependências, lint e semelhantes, sempre rode-os dentro do container:
+
+- `docker-compose run --rm app <comando no container>`
+    - Ex.: `docker-compose run --rm app yarn install`
+    - Ex.: `docker-compose run --rm app yarn add <nome-do-pacote>`
+    - Ex.: `docker-compose run --rm app yarn lint`
+
+
+# Documentação Padrão do Gatsby
 
 ## 🚀 Quick start
 
