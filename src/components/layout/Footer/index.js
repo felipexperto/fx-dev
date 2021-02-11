@@ -5,6 +5,13 @@ import SocialList from "src/components/UI/SocialList";
 import * as S from './styles';
 
 const Footer = () => {
+  let datalayerComponent = null;
+  if (typeof window === 'undefined') {
+    datalayerComponent = [];
+  } else {
+    datalayerComponent = window.dataLayer ? window.dataLayer : [];
+  }
+
   const { authorSocial } = useAuthorInfo(1);
 
   return (
@@ -35,6 +42,17 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/felipexperto/"
                 rel="noreferrer"
                 target="_blank"
+                onClick={(e) => {
+                  e.preventDefault();
+                  datalayerComponent.push({
+                    'event': 'interaction',
+                    'eventCategory': 'social:me',
+                    'eventAction': 'clicou:linkedin',
+                    'eventLabel': e.target.href,
+                    'eventValue': 0,
+                  });
+                  window.location.href = e.target.href;
+                }}
               >
                 linkedin.com/in/felipexperto/
               </S.infosLink>
