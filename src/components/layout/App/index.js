@@ -6,22 +6,25 @@ import Banner from 'src/components/layout/Banner';
 import Footer from 'src/components/layout/Footer';
 import { Container, ContainerFull } from 'styles';
 import { isHome } from 'src/utils/helpers';
+import { DatalayerContextProvider } from 'src/contexts';
 
 const App = ({ title, children, bgColor }) => {
   const headerHeight = '72px';
 
   return (
-    <ContainerFull backgroundColor={bgColor}>
-      <Header
-        height={headerHeight}
-        title={title}
-      />
-      {isHome() && <Banner paddingTop={headerHeight} />}
-      <Container direction='column'>
-        {children}
-      </Container>
-      <Footer />
-    </ContainerFull>
+    <DatalayerContextProvider>
+      <ContainerFull backgroundColor={bgColor}>
+        <Header
+          height={headerHeight}
+          title={title}
+        />
+        {isHome() && <Banner paddingTop={headerHeight} />}
+        <Container direction='column'>
+          {children}
+        </Container>
+        <Footer />
+      </ContainerFull>
+    </DatalayerContextProvider>
   )
 }
 
