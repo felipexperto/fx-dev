@@ -1,17 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import useAuthorInfo from 'src/hooks/useAuthorInfo';
 import SocialList from "src/components/UI/SocialList";
+import { DatalayerContext } from 'src/contexts';
 import * as S from './styles';
 
 const Footer = () => {
-  let datalayerComponent = null;
-  if (typeof window === 'undefined') {
-    datalayerComponent = [];
-  } else {
-    datalayerComponent = window.dataLayer ? window.dataLayer : [];
-  }
-
+  const datalayerComponent = useContext(DatalayerContext);
   const { authorSocial } = useAuthorInfo(1);
 
   return (
@@ -47,7 +42,7 @@ const Footer = () => {
                   datalayerComponent.push({
                     'event': 'interaction',
                     'eventCategory': 'social:me',
-                    'eventAction': 'clicou:linkedin',
+                    'eventAction': 'clicou:LinkedIn',
                     'eventLabel': e.target.href,
                     'eventValue': 0,
                   });
