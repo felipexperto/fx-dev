@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { bool, array } from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
-import { DatalayerContext } from 'src/contexts';
+import { DatalayerContext } from 'contexts';
 import * as S from './styles';
 
 const SocialList = ({ networkArr, colorSchemeReverse }) => {

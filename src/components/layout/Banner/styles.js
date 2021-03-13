@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro';
 import { Container } from 'styles';
-import { animationKeyframes } from 'src/styles';
+import { animationKeyframes } from 'styles';
 
 const md = ({ theme }) => theme.medias.md;
 

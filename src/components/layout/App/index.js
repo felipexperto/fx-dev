@@ -1,12 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 
-import Header from 'src/components/layout/Header';
-import Banner from 'src/components/layout/Banner';
-import Footer from 'src/components/layout/Footer';
+import Header from 'components/layout/Header';
+import Banner from 'components/layout/Banner';
+import Footer from 'components/layout/Footer';
 import { Container, ContainerFull } from 'styles';
-import { isHome } from 'src/utils/helpers';
-import { DatalayerContextProvider } from 'src/contexts';
+import { isHome } from 'utils/helpers';
+import { DatalayerContextProvider } from 'contexts';
 
 const App = ({ title, children, bgColor }) => {
   const headerHeight = '72px';

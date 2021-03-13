@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-import theme from 'src/styles/Themes';
+import theme from 'styles/Themes';
 
 const BioWrapper = styled.div`
   align-items: flex-start;

@@ -9,10 +9,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { useAuthorInfo } from 'hooks';
-import Avatar from 'src/components/UI/Avatar';
-import SocialList from 'src/components/UI/SocialList';
-import avatarFelipe from 'src/images/authors/felipemarciano.png';
-import avatarDaniele from 'src/images/authors/danielegama.jpg';
+import Avatar from 'components/UI/Avatar';
+import SocialList from 'components/UI/SocialList';
+import avatarFelipe from 'images/authors/felipemarciano.png';
+import avatarDaniele from 'images/authors/danielegama.jpg';
 import * as S from './styles';
 
 const Bio = ({ authorId }) => {

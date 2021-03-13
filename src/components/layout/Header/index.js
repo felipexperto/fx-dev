@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import { string } from 'prop-types';
 
-import { useWindowScroll } from 'src/hooks';
-import { isHome } from 'src/utils/helpers';
-import Logo from 'src/images/logo-felipexperto.inline.svg';
+import { useWindowScroll } from 'hooks';
+import { isHome } from 'utils/helpers';
+import Logo from 'images/logo-felipexperto.inline.svg';
 import { theme } from 'styles';
 import * as S from './styles.js';
 

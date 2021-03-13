@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 import { v4 as uuidv4 } from 'uuid';
 import { array } from 'prop-types';
 
-import CardListPlaceholderImage from 'src/images/estude-recrie-compartilhe-rasterizado.inline.svg';
-import { useWindowSize } from 'src/hooks';
-import { getNumberOfCardsFromScreenWidth } from 'src/utils/helpers';
+import CardListPlaceholderImage from 'images/estude-recrie-compartilhe-rasterizado.inline.svg';
+import { useWindowSize } from 'hooks';
+import { getNumberOfCardsFromScreenWidth } from 'utils/helpers';
 import { theme } from 'styles';
 import * as S from './styles';
 

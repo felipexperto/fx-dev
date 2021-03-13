@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { object } from 'prop-types';
 
-import App from 'src/components/layout/App';
-import SEO from 'src/components/layout/Seo';
-import PostContent from 'src/components/layout/PostContent';
-import PostNavigation from 'src/components/layout/PostNavigation';
+import App from 'components/layout/App';
+import SEO from 'components/layout/Seo';
+import PostContent from 'components/layout/PostContent';
+import PostNavigation from 'components/layout/PostNavigation';
 
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 deckDeckGoHighlightElement();

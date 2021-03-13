@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-import theme from 'src/styles/Themes';
+import theme from 'styles/Themes';
 
 const { sm } = theme.main.medias;
 

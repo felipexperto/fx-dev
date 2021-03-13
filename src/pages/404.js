@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { object, string } from 'prop-types';
 
-import App from 'src/components/layout/App';
-import SEO from 'src/components/layout/Seo';
+import App from 'components/layout/App';
+import SEO from 'components/layout/Seo';
 
-import { Title } from 'src/components/UI/Title';
+import { Title } from 'components/UI/Title';
 class NotFoundPage extends React.Component {
   render() {
     const { data, location } = this.props;

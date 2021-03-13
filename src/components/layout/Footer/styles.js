@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro';
 import { Container } from 'styles';
-import theme from 'src/styles/Themes';
+import theme from 'styles/Themes';
 
 const { md } = theme.main.medias;
 

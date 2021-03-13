@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
 import { useAuthorInfo } from 'hooks';
-import SocialList from 'src/components/UI/SocialList';
-import { DatalayerContext } from 'src/contexts';
+import SocialList from 'components/UI/SocialList';
+import { DatalayerContext } from 'contexts';
 import * as S from './styles';
 
 const Footer = () => {

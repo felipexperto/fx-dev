@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { number, string } from 'prop-types';
 
-import PostStyles from 'src/styles/PostStyles';
-import Bio from 'src/components/layout/Bio';
+import PostStyles from 'styles/PostStyles';
+import Bio from 'components/layout/Bio';
 import * as S from './styles';
 
 const PostContent = ({
