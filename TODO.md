@@ -15,26 +15,7 @@
 
 **Backlog Técnico**
 
-- ~~Opengraph image padrão (blog-cover)~~
-
-- Arrumar página 404
-
-- Passar tema corretamente para context;
-  - Criar ThemeProvider
-  ```
-  import { ThemeProvider } from 'styled-components';
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
-  ```
-
-- Configurar regras adicionais no Eslint;
-
-- Troca de fontes e cores por variáveis de tema;
-
-- Husky com pre-commits;
-
 - Testes unitários e de integração;
-
-- Editar a descrição do repositório;
 
 **Pesquisa**
 
