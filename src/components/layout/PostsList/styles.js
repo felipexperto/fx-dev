@@ -1,11 +1,10 @@
 import styled from 'styled-components/macro';
 
-import theme from 'styles/Themes';
-
-const { sm, xl } = theme.main.medias;
+const medias = ({ theme }) => theme.medias;
+const { sm, xl } = medias;
 
 const cardCategory = styled.span`
-  background-color: ${theme.main.colors.darkyellow};
+  background-color: ${({ theme }) => theme.colors.darkyellow};
   border-radius: 100em;
   display: inline-block;
   font-size: 14px;
@@ -32,17 +31,17 @@ const cardComplementaryInfosList = styled.ul`
 `;
 
 const cardComplementaryInfosItem = styled.li`
-  color: ${theme.main.colors.grey};
+  color: ${({ theme }) => theme.colors.grey};
   display: inline-block;
   font-size: 0.8rem;
 `;
 
 const cardDate = styled(cardComplementaryInfosItem)`
-  color: ${theme.main.colors.darkgrey};
+  color: ${({ theme }) => theme.colors.darkgrey};
 `;
 
 const cardReadingTime = styled(cardComplementaryInfosItem)`
-  color: ${theme.main.colors.darkgrey};
+  color: ${({ theme }) => theme.colors.darkgrey};
 
   &::before {
     content: '•';
@@ -82,27 +81,27 @@ const cardList = styled.section`
   }
 
   & > a {
-    background-color: ${theme.main.colors.white};
-    color: ${theme.main.colors.black};
+    background-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.black};
 
     &:focus,
     &:hover {
-      background-color: ${theme.main.colors.darkyellow};
-      color: ${theme.main.colors.white};
+      background-color: ${({ theme }) => theme.colors.darkyellow};
+      color: ${({ theme }) => theme.colors.white};
       box-shadow: 0 1px 8px 5px rgba(66, 66, 66, 0.08),
         0 1px 3px 1px rgba(66, 66, 66, 0.16);
       transform: scale(1.1);
     }
     &:focus ${cardCategory}, &:hover ${cardCategory} {
-      background-color: ${theme.main.colors.darkgrey};
-      color: ${theme.main.colors.white};
+      background-color: ${({ theme }) => theme.colors.darkgrey};
+      color: ${({ theme }) => theme.colors.white};
     }
   }
 
   & > span {
     align-items: center;
-    background-color: ${theme.main.colors.darkyellow};
-    color: ${theme.main.colors.black};
+    background-color: ${({ theme }) => theme.colors.darkyellow};
+    color: ${({ theme }) => theme.colors.black};
     display: flex;
     justify-content: center;
     padding-bottom: 3rem;

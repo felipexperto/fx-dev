@@ -1,20 +1,18 @@
 import styled from 'styled-components/macro';
 
-import theme from 'styles/Themes';
-
 const BioWrapper = styled.div`
   align-items: flex-start;
   display: flex;
 `;
 
 const Description = styled.p`
-  color: ${theme.main.colors.grey};
+  color: ${({ theme }) => theme.colors.grey};
   font-family: 'Inter', sans-serif;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
 `;
 const Intro = styled.div`
-  color: ${theme.main.colors.grey};
+  color: ${({ theme }) => theme.colors.grey};
   display: block;
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;

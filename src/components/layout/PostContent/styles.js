@@ -1,8 +1,6 @@
 import styled from 'styled-components/macro';
 
-import theme from 'styles/Themes';
-
-const { sm } = theme.main.medias;
+const sm = ({ theme }) => theme.medias.sm;
 
 const wrapperArticle = styled.article`
   border-radius: 8px;
@@ -25,7 +23,7 @@ const footer = styled.footer`
   padding-top: 3rem;
 
   &::before {
-    background-color: ${theme.main.colors.darkyellow};
+    background-color: ${({ theme }) => theme.colors.darkyellow};
     border-radius: 8px;
     content: '';
     display: block;
@@ -59,11 +57,11 @@ const tldrWrapper = styled.div`
 `;
 
 const tldrHeader = styled.div`
-  background-color: ${theme.main.colors.darkyellow};
+  background-color: ${({ theme }) => theme.colors.darkyellow};
   border-radius: 4px;
   box-shadow: 0 4px 20px 0 rgba(244, 188, 18, 0.15),
     0 7px 10px -5px rgba(244, 188, 18, 0.4);
-  color: ${theme.main.colors.white};
+  color: ${({ theme }) => theme.colors.white};
   display: inline-block;
   padding: 1rem 1.25rem;
 `;
@@ -84,7 +82,7 @@ const dates = styled.ul`
 `;
 
 const dataDefault = styled.li`
-  color: ${theme.main.colors.grey};
+  color: ${({ theme }) => theme.colors.grey};
   display: inline-block;
   font-family: Inter, sans-serif;
   font-size: 0.85rem;

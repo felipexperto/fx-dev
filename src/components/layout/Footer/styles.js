@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components/macro';
 import { Container } from 'styles';
-import theme from 'styles/Themes';
 
-const { md } = theme.main.medias;
+const md = ({ theme }) => theme.medias.md;
 
 const footerWrapper = styled.footer`
-  background: ${theme.main.colors.darkestgrey};
+  background: ${({ theme }) => theme.colors.darkestgrey};
   font-family: 'Inter', sans-serif;
   margin-top: 4rem;
   padding: 4rem 0;
@@ -17,7 +16,7 @@ const footerContainer = styled(Container)`
 `;
 
 const row = styled.div`
-  color: ${theme.main.colors.white};
+  color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-direction: column;
   @media ${md} {
@@ -54,8 +53,8 @@ const copyrightColumn = styled(column)`
   padding-right: 2rem;
 
   a {
-    color: ${theme.main.colors.white};
-    font-weight: ${theme.main.fonts.weight.bold};
+    color: ${({ theme }) => theme.colors.white};
+    font-weight: ${({ theme }) => theme.fonts.weight.bold};
     text-decoration: none;
   }
 `;
@@ -68,11 +67,11 @@ const presentationTitle = styled.strong`
   display: block;
   font-family: 'Ubuntu', sans-serif;
   font-size: 3rem;
-  font-weight: ${theme.main.fonts.weight.bolder};
+  font-weight: ${({ theme }) => theme.fonts.weight.bolder};
   line-height: 1.4em;
 `;
 const presentationSubtitle = styled.strong`
-  color: ${theme.main.colors.white};
+  color: ${({ theme }) => theme.colors.white};
   display: block;
   font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
@@ -91,7 +90,7 @@ const infosHighlight = () => css`
   display: inline-block;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.25rem;
-  font-weight: ${theme.main.fonts.weight.bolder};
+  font-weight: ${({ theme }) => theme.fonts.weight.bolder};
 `;
 
 const infosEmail = styled.strong`
@@ -104,7 +103,7 @@ const infosLink = styled.a`
 `;
 
 const emojiWrapper = styled.span`
-  color: ${theme.main.colors.red};
+  color: ${({ theme }) => theme.colors.red};
 `;
 
 export {

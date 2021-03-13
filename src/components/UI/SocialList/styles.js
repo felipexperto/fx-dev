@@ -1,23 +1,19 @@
 import styled from 'styled-components/macro';
 
-import theme from 'styles/Themes';
-
 const SocialAnchor = styled.a`
   border-bottom: 0;
   padding: 0.25rem 0.5rem;
   transition: all 0.5s 0.15s;
 
   > i {
-    color: ${({ colorSchemeReverse }) =>
-      colorSchemeReverse
-        ? theme.main.colors.white
-        : theme.main.colors.darkgrey};
+    color: ${({ theme, colorSchemeReverse }) =>
+      colorSchemeReverse ? theme.colors.white : theme.colors.darkgrey};
     transition: all 0.5s 0.15s;
   }
 
   &:hover {
     > i {
-      color: ${theme.main.colors.darkyellow};
+      color: ${({ theme }) => theme.colors.darkyellow};
     }
   }
 `;
