@@ -11,6 +11,7 @@ module.exports = {
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "prettier",
   ],
   "settings": {
     "react": {
@@ -27,8 +28,10 @@ module.exports = {
   },
   "plugins": [
     "react",
+    "prettier",
   ],
   "rules": {
+    "prettier/prettier": "error",
     // regras adicionais
     "jsx-a11y/href-no-hash": "off", // permite hrefs com hash
     "jsx-a11y/label-has-for": "off", // permite labels sem attr 'for'
@@ -43,7 +46,8 @@ module.exports = {
     "no-trailing-spaces": 1, // não permite espaços desnecessários ao final de cada linha
     "no-mixed-spaces-and-tabs": 1, // não permite indentação com espaços e tabs misturados
     "indent": [
-      "error", 2 // indentação com 2 espaços
+      "error", 2, // indentação com 2 espaços
+      { "ignoredNodes": ["ConditionalExpression"] }
     ],
     "eol-last": 1, // obriga nova linha vazia ao final do arquivo
     "spaced-comment": 1, // obriga um espaço após os símbolos de comentário // e /*

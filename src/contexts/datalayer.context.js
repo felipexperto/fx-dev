@@ -12,9 +12,13 @@ const DatalayerContextProvider = ({ children }) => {
     } else {
       setDatalayerComponent(window.dataLayer ? window.dataLayer : []);
     }
-  }, [])
+  }, []);
 
-  return <DatalayerContext.Provider value={datalayerComponent}>{children}</DatalayerContext.Provider>;
+  return (
+    <DatalayerContext.Provider value={datalayerComponent}>
+      {children}
+    </DatalayerContext.Provider>
+  );
 };
 
 DatalayerContextProvider.defaultProps = {

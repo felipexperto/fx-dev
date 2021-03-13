@@ -1,7 +1,5 @@
+import useAuthorInfo from './useAuthorInfo';
 import useWindowScroll from './useWindowScroll';
 import useWindowSize from './useWindowSize';
 
-export {
-  useWindowScroll,
-  useWindowSize,
-};
+export { useAuthorInfo, useWindowScroll, useWindowSize };

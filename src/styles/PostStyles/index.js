@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import theme from 'src/styles/Themes';
+import theme from 'styles/Themes';
 
 const { sm } = theme.main.medias;
 

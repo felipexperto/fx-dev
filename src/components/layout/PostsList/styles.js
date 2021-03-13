@@ -1,23 +1,22 @@
 import styled from 'styled-components/macro';
 
-import theme from 'src/styles/Themes';
-
-const { sm, xl } = theme.main.medias;
+const medias = ({ theme }) => theme.medias;
+const { sm, xl } = medias;
 
 const cardCategory = styled.span`
-  background-color: ${theme.main.colors.darkyellow};
+  background-color: ${({ theme }) => theme.colors.darkyellow};
   border-radius: 100em;
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
-  padding: .25em 1em;
+  padding: 0.25em 1em;
   text-transform: uppercase;
 `;
 
 const cardTitle = styled.h3`
   font-weight: 700;
-  margin-bottom: .25em;
-  margin-top: .75em;
+  margin-bottom: 0.25em;
+  margin-top: 0.75em;
 
   > a {
     box-shadow: none;
@@ -26,33 +25,31 @@ const cardTitle = styled.h3`
 
 const cardComplementaryInfosList = styled.ul`
   list-style: none;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 0;
   padding-left: 0;
 `;
 
 const cardComplementaryInfosItem = styled.li`
-  color: ${ theme.main.colors.grey };
+  color: ${({ theme }) => theme.colors.grey};
   display: inline-block;
-  font-size: .8rem;
+  font-size: 0.8rem;
 `;
 
 const cardDate = styled(cardComplementaryInfosItem)`
-  color:  ${theme.main.colors.darkgrey};
+  color: ${({ theme }) => theme.colors.darkgrey};
 `;
 
 const cardReadingTime = styled(cardComplementaryInfosItem)`
-  color:  ${theme.main.colors.darkgrey};
-  
+  color: ${({ theme }) => theme.colors.darkgrey};
+
   &::before {
-    content: "•";
+    content: '•';
     display: inline-block;
-    margin-left: .25rem;
-    padding-right: .25rem;
+    margin-left: 0.25rem;
+    padding-right: 0.25rem;
   }
 `;
-
-
 
 const cardList = styled.section`
   display: flex;
@@ -63,8 +60,9 @@ const cardList = styled.section`
   & > span {
     align-items: stretch;
     border-radius: 16px;
-    box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
-    font-family: "Ubuntu", "Inter", Helvetica, Arial, sans-serif;
+    box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08),
+      0 1px 3px 1px rgba(66, 66, 66, 0.16);
+    font-family: 'Ubuntu', 'Inter', Helvetica, Arial, sans-serif;
     margin: 2% 8%;
     max-width: 100%;
     padding: 1.5rem;
@@ -83,27 +81,27 @@ const cardList = styled.section`
   }
 
   & > a {
-    background-color: ${ theme.main.colors.white };
-    color: ${ theme.main.colors.black };
+    background-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.black};
 
     &:focus,
     &:hover {
-      background-color: ${theme.main.colors.darkyellow};
-      color: ${ theme.main.colors.white };
-      box-shadow: 0 1px 8px 5px rgba(66,66,66,0.08), 0 1px 3px 1px rgba(66,66,66,0.16);
+      background-color: ${({ theme }) => theme.colors.darkyellow};
+      color: ${({ theme }) => theme.colors.white};
+      box-shadow: 0 1px 8px 5px rgba(66, 66, 66, 0.08),
+        0 1px 3px 1px rgba(66, 66, 66, 0.16);
       transform: scale(1.1);
     }
-    &:focus ${cardCategory},
-    &:hover ${cardCategory} {
-      background-color: ${theme.main.colors.darkgrey};
-      color: ${ theme.main.colors.white };
+    &:focus ${cardCategory}, &:hover ${cardCategory} {
+      background-color: ${({ theme }) => theme.colors.darkgrey};
+      color: ${({ theme }) => theme.colors.white};
     }
   }
 
   & > span {
     align-items: center;
-    background-color: ${ theme.main.colors.darkyellow };
-    color: ${ theme.main.colors.black };
+    background-color: ${({ theme }) => theme.colors.darkyellow};
+    color: ${({ theme }) => theme.colors.black};
     display: flex;
     justify-content: center;
     padding-bottom: 3rem;
@@ -116,9 +114,7 @@ const cardList = styled.section`
   }
 `;
 
-const cardHeader = styled.header`
-
-`;
+const cardHeader = styled.header``;
 
 const cardFooter = styled.footer`
   margin-top: 1em;
@@ -133,4 +129,4 @@ export {
   cardComplementaryInfosList,
   cardDate,
   cardReadingTime,
-}
+};

@@ -1,6 +1,5 @@
-export const isHome = () => typeof window !== 'undefined'
-  ? !!(window.location.pathname === '/')
-  : false;
+export const isHome = () =>
+  typeof window !== 'undefined' ? !!(window.location.pathname === '/') : false;
 
 export const getNumberOfCardsFromScreenWidth = (screenWidth, sizes) => {
   if (screenWidth < sizes.sm) return 1;
@@ -8,4 +7,4 @@ export const getNumberOfCardsFromScreenWidth = (screenWidth, sizes) => {
   return 3;
 };
 
-export const isItemNull = (item) => item && item !== null ? false : true;
+export const isItemNull = (item) => (item && item !== null ? false : true);

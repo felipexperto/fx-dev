@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { object } from 'prop-types';
 
-import { isItemNull } from 'src/utils/helpers';
+import { isItemNull } from 'utils/helpers';
 import * as S from './styles';
 
-const navigationAlignmentRight = (arr) => (isItemNull(arr[0]) && !isItemNull(arr[1]));
+const navigationAlignmentRight = (arr) =>
+  isItemNull(arr[0]) && !isItemNull(arr[1]);
 
-const PostNavigation = ({previous, next}) => {
-
+const PostNavigation = ({ previous, next }) => {
   return (
     <S.wrapperNavigation>
       <S.listNavigation
@@ -18,7 +18,7 @@ const PostNavigation = ({previous, next}) => {
           <S.itemNavigationLeft>
             <Link to={previous.fields.slug} rel="anterior">
               <S.linkIcon>
-                <i className='bx bx-left-arrow-alt'></i>
+                <i className="bx bx-left-arrow-alt"></i>
               </S.linkIcon>
               <S.linkPreTitle>Post anterior</S.linkPreTitle>
               <S.linkTitle>{previous.frontmatter.title}</S.linkTitle>
@@ -29,7 +29,7 @@ const PostNavigation = ({previous, next}) => {
           <S.itemNavigationRight>
             <Link to={next.fields.slug} rel="próximo">
               <S.linkIcon>
-                <i className='bx bx-right-arrow-alt'></i>
+                <i className="bx bx-right-arrow-alt"></i>
               </S.linkIcon>
               <S.linkPreTitle>Próximo post</S.linkPreTitle>
               <S.linkTitle>{next.frontmatter.title}</S.linkTitle>
@@ -38,12 +38,12 @@ const PostNavigation = ({previous, next}) => {
         )}
       </S.listNavigation>
     </S.wrapperNavigation>
-  )
-}
+  );
+};
 
 PostNavigation.propTypes = {
   previous: object,
   next: object,
-}
+};
 
 export default PostNavigation;

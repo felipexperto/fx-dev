@@ -113,6 +113,6 @@ module.exports = {
           show: false,
         },
       },
-    }
-  ]
-}
+    },
+  ],
+};

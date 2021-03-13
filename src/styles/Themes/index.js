@@ -12,7 +12,7 @@ const colors = {
   lightgrey: '#aaaaaa',
   grey: '#666666',
   darkgrey: '#333333',
-  darkestgrey: '#222222'
+  darkestgrey: '#222222',
 };
 const fonts = {
   weight: {
@@ -27,21 +27,21 @@ const sizes = {
   sm: 576,
   md: 768,
   lg: 992,
-  xl: 1200
-}
+  xl: 1200,
+};
 const medias = {
   xs: `(max-width: ${sizes.xs}px)`,
   sm: `(min-width: ${sizes.sm}px)`,
   md: `(min-width: ${sizes.md}px)`,
   lg: `(min-width: ${sizes.lg}px)`,
-  xl: `(min-width: ${sizes.xl}px)`
-}
+  xl: `(min-width: ${sizes.xl}px)`,
+};
 const zIndex = {
   tooltip: 1,
   header: 10,
   modal: 20,
   overlay: 30,
-}
+};
 
 const theme = {
   main: {
