@@ -85,7 +85,7 @@ SEO.defaultProps = {
   lang: 'pt-br',
   meta: [],
   description: '',
-  image: `${SITE_URL}/images/blog-cover.png`,
+  image: `${SITE_URL}/open-graph/blog-cover.png`,
 }
 
 SEO.propTypes = {

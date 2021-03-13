@@ -15,6 +15,8 @@
 
 **Backlog Técnico**
 
+- ~~Opengraph image padrão (blog-cover)~~
+
 - Arrumar página 404
 
 - Passar tema corretamente para context;
