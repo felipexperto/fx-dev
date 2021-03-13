@@ -1,11 +1,11 @@
-import React, { Fragment } from "react"
-import { graphql } from "gatsby";
+import React, { Fragment } from 'react';
+import { graphql } from 'gatsby';
 import { object } from 'prop-types';
 
-import App from "src/components/layout/App";
-import PostsList from "src/components/layout/PostsList";
-import { Title } from "src/components/UI/Title";
-import SEO from "src/components/layout/Seo";
+import App from 'src/components/layout/App';
+import PostsList from 'src/components/layout/PostsList';
+import { Title } from 'src/components/UI/Title';
+import SEO from 'src/components/layout/Seo';
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,22 +15,26 @@ class BlogIndex extends React.Component {
 
     return (
       <Fragment>
-        <App location={this.props.location} title={siteTitle} bgColor='lightestgrey'>
+        <App
+          location={this.props.location}
+          title={siteTitle}
+          bgColor="lightestgrey"
+        >
           <SEO title="Todos os posts" />
-          <Title margin='2rem auto'>Meus artigos</Title>
+          <Title margin="2rem auto">Meus artigos</Title>
           <PostsList posts={posts} />
         </App>
       </Fragment>
-    )
+    );
   }
 }
 
 BlogIndex.propTypes = {
   data: object.isRequired,
   location: object.isRequired,
-}
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -59,4 +63,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { node, string } from 'prop-types';
 
 import Header from 'src/components/layout/Header';
@@ -14,19 +14,14 @@ const App = ({ title, children, bgColor }) => {
   return (
     <DatalayerContextProvider>
       <ContainerFull backgroundColor={bgColor}>
-        <Header
-          height={headerHeight}
-          title={title}
-        />
+        <Header height={headerHeight} title={title} />
         {isHome() && <Banner paddingTop={headerHeight} />}
-        <Container direction='column'>
-          {children}
-        </Container>
+        <Container direction="column">{children}</Container>
         <Footer />
       </ContainerFull>
     </DatalayerContextProvider>
-  )
-}
+  );
+};
 
 App.defaultProps = {
   bgColor: 'transparent',

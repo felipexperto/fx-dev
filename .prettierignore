@@ -1,4 +1,12 @@
 .cache
+.DS_Store
 package.json
 package-lock.json
 public
+/.vscode/
+/coverage/
+node_modules
+*.log*
+dist/
+configs
+/*.js

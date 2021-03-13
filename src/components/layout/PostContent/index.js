@@ -19,32 +19,18 @@ const PostContent = ({
       <PostStyles />
       <S.wrapperArticle>
         <S.header>
-          <S.title>
-            { title }
-          </S.title>
+          <S.title>{title}</S.title>
           <S.dates>
-            {(date) && (
-              <S.date>
-                Publicado em: { date }
-              </S.date>
-            )}
-            {(update) && (
-              <S.update>
-                Atualizado em: { update }
-              </S.update>
-            )}
-            {(timeToRead) && (
-              <S.timeToRead>
-                Tempo de leitura: { timeToRead } min
-              </S.timeToRead>
+            {date && <S.date>Publicado em: {date}</S.date>}
+            {update && <S.update>Atualizado em: {update}</S.update>}
+            {timeToRead && (
+              <S.timeToRead>Tempo de leitura: {timeToRead} min</S.timeToRead>
             )}
           </S.dates>
-          {(tldr) && (
+          {tldr && (
             <S.tldrWrapper>
               <S.tldrHeader>
-                <S.tldrTitle>
-                  Não li, nem lerei
-                </S.tldrTitle>
+                <S.tldrTitle>Não li, nem lerei</S.tldrTitle>
                 <S.tldrSubtitle>
                   Um breve resumo para pessoas cansadas
                 </S.tldrSubtitle>
@@ -59,8 +45,8 @@ const PostContent = ({
         </S.footer>
       </S.wrapperArticle>
     </Fragment>
-  )
-}
+  );
+};
 
 PostContent.propTypes = {
   authorId: number.isRequired,
@@ -70,6 +56,6 @@ PostContent.propTypes = {
   tldr: string,
   update: string,
   timeToRead: number.isRequired,
-}
+};
 
 export default PostContent;

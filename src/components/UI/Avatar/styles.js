@@ -7,6 +7,4 @@ const AvatarImage = styled.img`
   width: 50px;
 `;
 
-export {
-  AvatarImage
-};
+export { AvatarImage };

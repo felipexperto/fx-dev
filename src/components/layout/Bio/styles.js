@@ -8,16 +8,16 @@ const BioWrapper = styled.div`
 `;
 
 const Description = styled.p`
-  color: ${ theme.main.colors.grey };
+  color: ${theme.main.colors.grey};
   font-family: 'Inter', sans-serif;
   margin-bottom: 1rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 `;
 const Intro = styled.div`
-  color: ${ theme.main.colors.grey };
+  color: ${theme.main.colors.grey};
   display: block;
   font-family: 'Inter', sans-serif;
-  font-size: .85rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
 `;
 const Name = styled.div`
@@ -28,9 +28,4 @@ const Name = styled.div`
   line-height: 1.25em;
 `;
 
-export {
-  BioWrapper,
-  Description,
-  Intro,
-  Name,
-}
+export { BioWrapper, Description, Intro, Name };

@@ -1,6 +1,6 @@
-import { DatalayerContext, DatalayerContextProvider } from './datalayer.context';
-
-export {
+import {
   DatalayerContext,
   DatalayerContextProvider,
-};
+} from './datalayer.context';
+
+export { DatalayerContext, DatalayerContextProvider };

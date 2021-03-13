@@ -1,14 +1,9 @@
-import React from "react";
-import { string } from "prop-types"
+import React from 'react';
+import { string } from 'prop-types';
 
 import * as S from './styles';
 
-const Avatar = ({image, label}) => (
-  <S.AvatarImage
-    src={image}
-    alt={label}
-  />
-);
+const Avatar = ({ image, label }) => <S.AvatarImage src={image} alt={label} />;
 
 Avatar.propTypes = {
   image: string.isRequired,

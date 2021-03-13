@@ -1,11 +1,11 @@
-import React, { Fragment } from "react";
-import { graphql } from "gatsby";
+import React, { Fragment } from 'react';
+import { graphql } from 'gatsby';
 import { object } from 'prop-types';
 
-import App from "src/components/layout/App";
-import SEO from "src/components/layout/Seo";
-import PostContent from "src/components/layout/PostContent";
-import PostNavigation from "src/components/layout/PostNavigation";
+import App from 'src/components/layout/App';
+import SEO from 'src/components/layout/Seo';
+import PostContent from 'src/components/layout/PostContent';
+import PostNavigation from 'src/components/layout/PostNavigation';
 
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 deckDeckGoHighlightElement();
@@ -33,13 +33,10 @@ class BlogPostTemplate extends React.Component {
             update={post.frontmatter.update}
             timeToRead={post.timeToRead}
           />
-          <PostNavigation
-            previous={previous}
-            next={next}
-          />
+          <PostNavigation previous={previous} next={next} />
         </App>
       </Fragment>
-    )
+    );
   }
 }
 
@@ -47,9 +44,9 @@ BlogPostTemplate.propTypes = {
   data: object,
   location: object,
   pageContext: object,
-}
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -73,4 +70,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

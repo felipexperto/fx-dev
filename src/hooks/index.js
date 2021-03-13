@@ -1,7 +1,4 @@
 import useWindowScroll from './useWindowScroll';
 import useWindowSize from './useWindowSize';
 
-export {
-  useWindowScroll,
-  useWindowSize,
-};
+export { useWindowScroll, useWindowSize };

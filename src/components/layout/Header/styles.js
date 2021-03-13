@@ -9,8 +9,12 @@ const Header = styled.header`
 
 const HeaderWrapper = styled.div`
   background-color: ${({ isBackgroundTransparent, theme }) => {
-    return isBackgroundTransparent ? theme.colors.transparent : theme.colors.darkyellow }};
-  box-shadow: ${({ isScrolling }) => isScrolling ? '0 1px 10px -2px rgba(0,0,0,.75)': 'none'};
+    return isBackgroundTransparent
+      ? theme.colors.transparent
+      : theme.colors.darkyellow;
+  }};
+  box-shadow: ${({ isScrolling }) =>
+    isScrolling ? '0 1px 10px -2px rgba(0,0,0,.75)' : 'none'};
   display: flex;
   flex-direction: column;
   ${({ height }) =>
@@ -23,7 +27,7 @@ const HeaderWrapper = styled.div`
   position: fixed;
   right: 0;
   top: 0;
-  transition: all .25s ease-in;
+  transition: all 0.25s ease-in;
   z-index: ${({ theme }) => theme.zIndex.header};
 
   [data-logo] {
@@ -39,15 +43,10 @@ const HeaderContainer = styled(Container)`
 const HeaderBottomSpace = styled.div`
   ${({ height }) =>
     height &&
-  css`
-    height: ${height};
-  `};
+    css`
+      height: ${height};
+    `};
   width: 100%;
 `;
 
-export {
-  Header,
-  HeaderContainer,
-  HeaderBottomSpace,
-  HeaderWrapper,
-}
+export { Header, HeaderContainer, HeaderBottomSpace, HeaderWrapper };

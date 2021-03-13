@@ -12,12 +12,15 @@ const fadeInAnimation = () => css`
   animation: ${fadeIn} 1s linear 1;
 `;
 
-const Banner = styled.section`
-`;
+const Banner = styled.section``;
 
 const BannerWrapper = styled.div`
   background: ${({ theme }) => theme.colors.darkyellow};
-  background: linear-gradient(0deg, rgba(244,218,18,1) 0%, rgba(244,188,18,1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(244, 218, 18, 1) 0%,
+    rgba(244, 188, 18, 1) 100%
+  );
   color: ${({ theme }) => theme.colors.almostblack};
   display: flex;
   flex-direction: column;
@@ -28,7 +31,6 @@ const BannerWrapper = styled.div`
       padding-top: ${paddingTop};
     `};
   width: 100%;
-  
 `;
 
 const BannerContainer = styled(Container)`
@@ -41,13 +43,12 @@ const BannerContainer = styled(Container)`
   position: relative;
 `;
 
-const PreTitle = styled.div`
-`;
+const PreTitle = styled.div``;
 
 const Title = styled.h1`
   font-size: 3rem;
   font-weight: 700;
-  margin: .5rem 0 .5rem 0;
+  margin: 0.5rem 0 0.5rem 0;
 `;
 
 const Description = styled.p`
@@ -76,7 +77,8 @@ const Circle = styled(BasicShape)`
 `;
 
 const Triangle = styled(BasicShape)`
-  border-color: transparent transparent ${({ theme }) => theme.colors.black} transparent;
+  border-color: transparent transparent ${({ theme }) => theme.colors.black}
+    transparent;
   border-style: solid;
   border-width: 0 0 130px 180px;
   bottom: 55%;
@@ -104,4 +106,4 @@ export {
   Circle,
   Triangle,
   Square,
-}
+};

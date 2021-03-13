@@ -5,7 +5,8 @@ import theme from 'styles/Themes';
 const { medias } = theme.main;
 
 const defaultContainer = styled.main`
-  background-color: ${({ backgroundColor }) => theme.main.colors[backgroundColor] || 'transparent' };
+  background-color: ${({ backgroundColor }) =>
+    theme.main.colors[backgroundColor] || 'transparent'};
 `;
 
 const Container = styled(defaultContainer)`
@@ -51,7 +52,4 @@ const ContainerFull = styled(defaultContainer)`
   max-width: 100%;
 `;
 
-export {
-  Container,
-  ContainerFull
-};
+export { Container, ContainerFull };
