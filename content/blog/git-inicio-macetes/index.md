@@ -3,7 +3,7 @@ authorid: 1
 category: Dev
 title: Git - O início e alguns macetes
 date: "2020-05-26T00:00:00.000Z"
-update: "2020-12-10T00:42:00.000Z"
+update: "2021-04-28T10:03:00.000Z"
 description: "Git: O que é? Por que usar? E como usar?"
 tldr: 'Este post reúne informações que recolhi realizando estudos e praticando.<br/>Busca responder as perguntas básicas: "O que?", "Por que?", e "Como?"'
 ---
@@ -13,6 +13,7 @@ tldr: 'Este post reúne informações que recolhi realizando estudos e praticand
 > - [O que é Git?](#o-que-e-git)
 > - [Por que eu deveria usar versionamento?](#por-que-usar-versionamento)
 > - [Como funciona o Git?](#como-funciona-git)
+> - [Git na prática com Github](#git-na-pratica-com-github)
 
 <h2 id="o-que-e-git">O que é Git?</h2>
 
@@ -67,5 +68,14 @@ Após o desenvolvimento e o teste dessa nova funcionalidade, você pode mesclar 
 
 Agora imagine o sofrimento de não trabalhar com Git e tentar alterar um arquivo ao mesmo tempo que um colega, você nas linhas `100-120`, ele nas linhas `33-54` e depois os dois nas linhas `70-87`. Salvando um em cima do outro sem parar. 🤯
 
+<h2 id="git-na-pratica-com-github">Git na prática com Github</h2>
+
+Já respondemos as perguntas "Porquê?", "O que?" e "Como?", então vamos seguir alguns links que vão te ajudar a colocar a mão na massa.
+
+- [Git e Github são coisas diferentes](http://gabsferreira.com/git-e-github-sao-coisas-diferentes/), por [@o_gabsferreira](https://twitter.com/o_gabsferreira)
+- [Criando e enviando arquivos para seu repositório no Github](http://gabsferreira.com/criando-e-enviando-arquivos-para-seu-repositorio-no-github/), por [@o_gabsferreira](https://twitter.com/o_gabsferreira)
+
+Depois de ler estes dois artigos, você imagina que existam outras plataformas que trabalham com Git como sistema de controle de versões.  
+Dentre as alternativas mais famosas ao Github, temos: [Gitlab](https://about.gitlab.com/) e [Bitbucket](https://bitbucket.org/), você pode inclusive conferir outras alternativas [nesta página da stackshare](https://stackshare.io/github/alternatives).
 
 *[code review]: Revisão do código por diversas pessoas.
