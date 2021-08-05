@@ -2,7 +2,7 @@
 authorid: 1
 category: Dev
 title: "Git cheatsheet (comandos e macetes)"
-date: "2020-08-04T13:33:00.284Z"
+date: "2021-08-04T13:33:00.284Z"
 description: "Essa lista tem objetivo de te ajudar em situações cotidianas :)"
 tldr: "Essa lista tem objetivo de te ajudar em situações cotidianas :)"
 ---
