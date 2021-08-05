@@ -94,10 +94,14 @@ Listar todos os commits e tags ( de maneira visualmente agradável)
 </div>
 <div class="fx-group">
 
-Listar todos commits não pusheados (em caso de merge, aparecerão todos os commits da branch)
-
-- `git log origin/master..HEAD` OU
+Listar todos commits não pusheados na branch atual
 - `git cherry -v`
+
+</div>
+<div class="fx-group">
+
+Listar todos commits da branch atual que não estão na branch `main`
+- `git log origin/main..HEAD`
 
 </div>
 <div class="fx-group">
