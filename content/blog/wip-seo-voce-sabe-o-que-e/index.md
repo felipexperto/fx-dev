@@ -30,21 +30,45 @@ Enquanto pesquisava encontrei um artigo em inglês que promete explicar mais de 
 
 ## O que posso fazer pra melhorar o meu site?
 
-Google Audit
+### Diagnóstico
 
-Google PageSpeed Testing
+Existem algumas ferramentas que podem te ajudar no diagnóstico e identificar possíveis pontos de melhoria, como:
 
+#### Google Audit
 
-Web Vitals
+#### Google PageSpeed Testing
 
-[Cumulative Layout Shift Debugger (CLS)](https://webvitals.dev/cls)
+#### Web Vitals
 
+#### [Cumulative Layout Shift Debugger (CLS)](https://webvitals.dev/cls)
 
+#### [bytecheck](http://bytecheck.com/)
 
+#### [bundlephobia](https://bundlephobia.com/)
 
-[bytecheck](http://bytecheck.com/)
+### Abordagens
 
+- Minifique as imagens
 
-[bundlephobia](https://bundlephobia.com/)
+- Reduza a quantidade de chamadas HTTP
+
+Round trip time is the time taken for the client to send a request and the server to respond. It’s affected by a huge range of things, but is primarily impacted by the number of requests that are being sent. As shown in the Pingdom screenshots at the top of this post, I managed to almost halve the number of HTTP requests that were being made, which massively reduced the round-trip time.
+
+- Minifique e combine arquivos html, css e js
+
+- Ative o GZip
+
+- Javascript assíncrono
+
+- Lazy load
+
+- Reduzir scripts externos
+
+- Utilize uma CDN
+
+- Faça upgrade do seu plano de hospedagem
+
+- Reduza o número de fontes
+
 
 
