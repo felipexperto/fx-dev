@@ -104,7 +104,16 @@ Desde compartilhar conhecimentos sobre regra de negócio ou dar parecer técnico
 
 ## Isso quer dizer que posso me considerar um Designer?
 
-Sim e não. Você é participante do processo de design, no entanto, para guiar a evolução de maneira a chegar numa proposta adequada ao usuário e suas necessidades existem diversas metodologias e conhecimentos específicos necessários.
+Calma lá(haha)! Você é participante do processo de design, no entanto, para guiar a evolução de maneira a chegar numa proposta adequada ao usuário e suas necessidades existem diversas metodologias e conhecimentos específicos necessários.
+
+## Como os problemas são abordados?
+
+Existem diversas metodologias, acredito que a mais famosa é o "Design Thinking", dependendo do autor, pode consistir num número de etapas diferentes mas em geral envolve: Empatia, Definição, Ideação, Prototipagem, Teste e Iteração.
+
+> A ideia por trás do design thinking é oferecer aos profissionais das várias orientações/formações uma estrutura metodológica capaz de desconstruir e reconstruir, resolver e solucionar, experimentar e prototipar questões e problemas, ou seja, é uma metodologia estratégica para resolver problemas difíceis centrada nas necessidades humanas [...]. - Afinal, o que é Design Thinking, de Rique Nitzsche
+
+Temos também o Double Diamond e trouxe a imagem abaixo mais para exemplificar os processos que se encontram em cada etapa.
+
 
 
 ## Áreas da UX
@@ -116,60 +125,28 @@ Sim e não. Você é participante do processo de design, no entanto, para guiar 
 - Arquitetura da Informação e Visual Design, englobam um pouco de produção de conteúdo também, como expô-lo, seja texto, vídeo ou som.
 
 
-## Em quais etapas do processo profissionais de UX atuam?
+## E todo mundo faz tudo?
 
-[desenvolvimento]
+Não exatamente... Designers são profissionais em T, assim como pessoas desenvolvedoras. São especialistas em alguma área e tem conhecimento suficiente para transitarem em outras.  
 
+Por exemplo, nós vemos muitas vagas de título "UX/UI Designer", ela pode ser preenchida por um UX Researcher que tem especialidade em pesquisa e conhecimentos em UI ou por um UI Designer com conhecimentos em UX, dependerá do que a empresa precisa no momento. Se for o caso de levar adiante uma iniciativa de Design System, provavelmente o UI Designer será mais interessante, caso seja para orientar outros UX Designers em pesquisa, o UX Researcher terá vantagem.
 
-### O que não é UX Design
+Trouxe esse infográfico que parece parece meio bagunçado pra tentar exemplificar um pouco do que ocorre hoje no mercado. Nós podemos fazer dois triângulos, um na direita e outro na esquerda. Pra falar sobre o Product Designer e o UX Designer respectivamente.
 
-As próximas palavras deste tópico vem do livro "Introdução e boas práticas em UX Design", por Fabricio Teixeira:
+Um se concentra mais nas demandas da empresa e outro do usuário, porém, vivendo em harmonia, teoricamente. haha
 
-Para começo de conversa: UX Design não é direção de arte. Também não é planejamento, não é gerencia de projetos, não é desenvolvimento de software. UX faz o meio de campo entre todas essas disciplinas, garantindo que todas elas estejam caminhando juntas em direção a um mesmo objetivo. E o UX designer, por exemplo, que traduz a estratégia criada pelo planejador em forma de telas e fluxos que serão utilizados pelo usuário.
+O que nós podemos ver é que os papéis muitas vezes se sobrepõem, se misturam. E tá tudo bem também, o escopo não é bem delimitado mas nas linhas gerais todos sabem o que esperar.
 
-UX também não é, definitivamente, uma disciplina exata. Muitas vezes, as pessoas procuram se aproximar de UX Design para conseguirem tomar decisões sobre "qual tipo de menu usar no meu site" ou "como melhorar a usabilidade para aumentar as conversões do meu formulário de cadastro".
+## Entre algumas coisas, nós aprendemos que:
 
-O fato é que as respostas para essas perguntas dependem de uma quantidade tão grande de fatores que é impossível afirmar com precisão que o caminho certo e o A ou o B. Mas também é essa grande parte da beleza do Design: o fato de que tudo depende de como as pessoas se comportarão, algo bastante difícil de prever. O UX designer não é um profeta que sabe como as pessoas pensam; ele é um pesquisador que investiga o que levou uma determinada pessoa a agir de determinada forma e então propõe melhorias de design baseadas nesses insights.
+UX Design não é: UX
 
-UX Design também não é uma disciplina de um software ou linguagem. Podem até existir UX designers especializados em desenhar sites em HTML, ou aplicativos em C++; mas por ser centrada no comportamento humano, a teoria que estrutura o trabalho desse profissional é agnóstica de código, plataforma ou tamanho de tela.
+- Direção de arte;
+- Planejamento;
+- Gerência de projetos;
+- Desenvolvimento de software;
 
-### No que consiste a Experiência do Usuário?
-
-Peter Morville apresentou sete aspectos em um modelo de colmeia com o intuito de mostrar que o processo de UX é multi-dimensional, em vez de linear: 
-
-**Útil (Useful)**
-Resolve uma necessidade.
-
-**Desejável (Desirable)**
-Visual atraente, boa experiência visual.
-
-**Utilizável (Usable)**
-Fácil de usar, ou seja, além de ser visualmente atraente, a Experiência do Usuário (UX) deve ser altamente funcional.
-
-**Acessível (Accessible)**
-Independente dos dispositivos ou limitações dos usuários, será possível utilizar.
-
-**Confiável (Credible)**
-Passa confiança, seja pela aparência inicial, uso anterior, comentários de pessoas ou marcas envolvidas.
-
-**Localizável (Findable)**
-As informações/opções/ações/[...] são facilmente encontráveis.
-
-**Valioso (Valuable)**
-Deve promover valor para o negócio e para o usuário, para o primeiro, normalmente é dinheiro, para o segundo, é solucionar um problema (atingir um objetivo).
-
-
-
-
-
-
-
-
-
-
-
-
-
+E sim um meio de campo entre todas essas disciplinas, garantindo que todas elas estejam caminhando juntas em direção a um mesmo objetivo. Definitivamente, uma disciplina exata, depende de uma quantidade tão grande de fatores que é impossível afirmar com precisão que o caminho certo é o A ou o B.
 
 
 ## **Referências**
@@ -177,3 +154,5 @@ Deve promover valor para o negócio e para o usuário, para o primeiro, normalme
 - https://www.liferay.com/pt/resources/l/user-experience
 - https://rockcontent.com/br/blog/experiencia-do-usuario/
 - https://www.tronebrandenergy.com/blog/seven-components-user-experience-ux
+- http://labcom.com.br/blog/design-thinking-novos-desafios-novas-solucoes
+- Introdução e boas práticas em UX Design, por Fabricio Teixeira
