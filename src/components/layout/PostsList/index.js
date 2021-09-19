@@ -25,29 +25,37 @@ const addCardListPlaceholders = (
   }
 };
 
+const isWipPost = (postSlug) => postSlug.includes('wip-');
+
 const PostsList = ({ posts }) => {
   const { main } = theme;
   const { width } = useWindowSize();
 
   const cardsByRow = getNumberOfCardsFromScreenWidth(width, main.sizes);
-  const allPosts = posts.map(({ node }) => (
-    <Link to={node.fields.slug} key={uuidv4()}>
-      <S.cardHeader>
-        {node.frontmatter.category ? (
-          <S.cardCategory>{node.frontmatter.category}</S.cardCategory>
-        ) : null}
-        <S.cardTitle>{node.frontmatter.title || node.fields.slug}</S.cardTitle>
-      </S.cardHeader>
-      <S.cardFooter>
-        <S.cardComplementaryInfosList>
-          <S.cardDate>{node.frontmatter.date}</S.cardDate>
-          <S.cardReadingTime>
-            {Math.round(node.fields.readingTime.minutes)} min
-          </S.cardReadingTime>
-        </S.cardComplementaryInfosList>
-      </S.cardFooter>
-    </Link>
-  ));
+  const allPosts = posts.map(({ node }) => {
+    return (
+      !isWipPost(node.fields.slug) && (
+        <Link to={node.fields.slug} key={uuidv4()}>
+          <S.cardHeader>
+            {node.frontmatter.category ? (
+              <S.cardCategory>{node.frontmatter.category}</S.cardCategory>
+            ) : null}
+            <S.cardTitle>
+              {node.frontmatter.title || node.fields.slug}
+            </S.cardTitle>
+          </S.cardHeader>
+          <S.cardFooter>
+            <S.cardComplementaryInfosList>
+              <S.cardDate>{node.frontmatter.date}</S.cardDate>
+              <S.cardReadingTime>
+                {Math.round(node.fields.readingTime.minutes)} min
+              </S.cardReadingTime>
+            </S.cardComplementaryInfosList>
+          </S.cardFooter>
+        </Link>
+      )
+    );
+  });
 
   const allPostsLength = allPosts.length;
   const hasSingleItemByRow = cardsByRow === 1;
