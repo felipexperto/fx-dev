@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components/macro';
 
 import { Banner, Footer, Header } from 'components/layout';
 import { Container, ContainerFull, theme } from 'styles';

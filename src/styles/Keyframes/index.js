@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from 'styled-components/macro';
 
 const rotating = keyframes`
   from {
