@@ -2,9 +2,7 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import Header from 'components/layout/Header';
-import Banner from 'components/layout/Banner';
-import Footer from 'components/layout/Footer';
+import { Banner, Footer, Header } from 'components/layout';
 import { Container, ContainerFull, theme } from 'styles';
 import { isHome } from 'utils/helpers';
 import { DatalayerContextProvider } from 'contexts';

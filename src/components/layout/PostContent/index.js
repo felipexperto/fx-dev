@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { number, string } from 'prop-types';
 
 import PostStyles from 'styles/PostStyles';
-import Bio from 'components/layout/Bio';
+import { Bio } from 'components/layout';
 import * as S from './styles';
 
 const PostContent = ({

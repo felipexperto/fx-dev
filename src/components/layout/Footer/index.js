@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import { useAuthorInfo } from 'hooks';
-import SocialList from 'components/UI/SocialList';
+import { SocialList } from 'components/UI';
 import { DatalayerContext } from 'contexts';
 import * as S from './styles';
 

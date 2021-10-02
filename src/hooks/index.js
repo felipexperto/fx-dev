@@ -1,5 +1,3 @@
-import useAuthorInfo from './useAuthorInfo';
-import useWindowScroll from './useWindowScroll';
-import useWindowSize from './useWindowSize';
-
-export { useAuthorInfo, useWindowScroll, useWindowSize };
+export { default as useAuthorInfo } from './useAuthorInfo';
+export { default as useWindowScroll } from './useWindowScroll';
+export { default as useWindowSize } from './useWindowSize';

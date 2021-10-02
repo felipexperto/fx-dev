@@ -1,44 +1,52 @@
 import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { object } from 'prop-types';
-
-import App from 'components/layout/App';
-import SEO from 'components/layout/Seo';
-import PostContent from 'components/layout/PostContent';
-import PostNavigation from 'components/layout/PostNavigation';
-
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+
+import { App, PostContent, PostNavigation, SEO } from 'components/layout';
+
 deckDeckGoHighlightElement();
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
+const BlogPostTemplate = ({ data, pageContext }) => {
+  const postBody = data.markdownRemark;
+  const postHead = postBody.frontmatter;
+  const siteTitle = data.site.siteMetadata.title;
 
-    return (
-      <Fragment>
-        <App location={this.props.location} title={siteTitle}>
-          <SEO
-            title={post.frontmatter.title}
-            description={post.frontmatter.description || post.excerpt}
-          />
-          <PostContent
-            authorId={post.frontmatter.authorid}
-            date={post.frontmatter.date}
-            description={post.frontmatter.description}
-            post={post.html}
-            title={post.frontmatter.title}
-            tldr={post.frontmatter.tldr}
-            update={post.frontmatter.update}
-            timeToRead={post.timeToRead}
-          />
-          <PostNavigation previous={previous} next={next} />
-        </App>
-      </Fragment>
-    );
-  }
-}
+  const { html } = postBody;
+  const { previous, next } = pageContext;
+  const {
+    authorid,
+    date,
+    description,
+    excerpt,
+    timeToRead,
+    title,
+    tldr,
+    update,
+  } = postHead;
+
+  return (
+    <Fragment>
+      <App title={siteTitle}>
+        <SEO
+          title={`${title} | ${siteTitle}`}
+          description={description || excerpt}
+        />
+        <PostContent
+          authorId={authorid}
+          date={date}
+          description={description}
+          post={html}
+          timeToRead={timeToRead}
+          title={title}
+          tldr={tldr}
+          update={update}
+        />
+        <PostNavigation previous={previous} next={next} />
+      </App>
+    </Fragment>
+  );
+};
 
 BlogPostTemplate.propTypes = {
   data: object,

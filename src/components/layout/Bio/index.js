@@ -9,8 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { useAuthorInfo } from 'hooks';
-import Avatar from 'components/UI/Avatar';
-import SocialList from 'components/UI/SocialList';
+import { Avatar, SocialList } from 'components/UI';
 import avatarFelipe from 'images/authors/felipemarciano.png';
 import avatarDaniele from 'images/authors/danielegama.jpg';
 import * as S from './styles';

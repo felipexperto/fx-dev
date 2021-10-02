@@ -5,12 +5,8 @@ import { array } from 'prop-types';
 
 import * as S from './styles';
 
-const isWipPost = (postSlug) => postSlug.includes('wip-');
-
 const PostsList = ({ posts }) => {
   const allPosts = posts.map(({ node }) => {
-    if (isWipPost(node.fields.slug)) return;
-
     return (
       <Link to={node.fields.slug} key={uuidv4()}>
         <S.cardHeader>

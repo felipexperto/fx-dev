@@ -2,32 +2,23 @@ import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { object } from 'prop-types';
 
-import App from 'components/layout/App';
-import PostsList from 'components/layout/PostsList';
-import { Title } from 'components/UI/Title';
-import SEO from 'components/layout/Seo';
+import { App, PostsList, SEO } from 'components/layout';
+import { Title } from 'components/UI';
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
 
-    return (
-      <Fragment>
-        <App
-          location={this.props.location}
-          title={siteTitle}
-          bgColor="lightestgrey"
-        >
-          <SEO title="Todos os posts" />
-          <Title margin="2rem auto">Meus artigos</Title>
-          <PostsList posts={posts} />
-        </App>
-      </Fragment>
-    );
-  }
-}
+  return (
+    <Fragment>
+      <App location={location} title={siteTitle} bgColor="lightestgrey">
+        <SEO title={`Todos os posts | ${siteTitle}`} />
+        <Title margin="2rem auto">Meus artigos</Title>
+        <PostsList posts={posts} />
+      </App>
+    </Fragment>
+  );
+};
 
 BlogIndex.propTypes = {
   data: object.isRequired,
