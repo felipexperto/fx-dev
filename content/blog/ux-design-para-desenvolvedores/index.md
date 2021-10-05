@@ -2,9 +2,8 @@
 authorid: 1
 category: Dev
 title: "UX Design para desenvolvedores - Falando um pouco sobre o conceito e a atuação"
-date: "2020-08-13T23:00:00.284Z"
-description: ""
-tldr: ""
+date: "2020-010-04T23:00:00.284Z"
+description: "O que é Design? O que é UX? E eu com isso? Só quero programar..."
 ---
 
 ## **Antes de tudo: UX não é só para designers**
@@ -38,7 +37,6 @@ UX Design é sobre entender o real propósito de um problema que precisa ser res
 ### De onde veio o termo?
 
 O termo foi criado em 1993 por Donald Norman, vice-presidente de Tecnologia Avançada da Apple, no início da década de 1990. O termo foi criado considerando a falta de um para fazer referência à experiência do usuário de maneira abrangente.
-
 
 ### Tecniquês
 
@@ -110,10 +108,13 @@ Calma lá(haha)! Você é participante do processo de design, no entanto, para g
 
 Existem diversas metodologias, acredito que a mais famosa é o "Design Thinking", dependendo do autor, pode consistir num número de etapas diferentes mas em geral envolve: Empatia, Definição, Ideação, Prototipagem, Teste e Iteração.
 
+![Ilustração no formato de círculo exemplificando que o processo de design thinking é cíclico e contínuo](./2-processo-design-thinking)
+
 > A ideia por trás do design thinking é oferecer aos profissionais das várias orientações/formações uma estrutura metodológica capaz de desconstruir e reconstruir, resolver e solucionar, experimentar e prototipar questões e problemas, ou seja, é uma metodologia estratégica para resolver problemas difíceis centrada nas necessidades humanas [...]. - Afinal, o que é Design Thinking, de Rique Nitzsche
 
-Temos também o Double Diamond e trouxe a imagem abaixo mais para exemplificar os processos que se encontram em cada etapa.
+Temos também o Double Diamond e trouxe a imagem abaixo (retirada do [blog de Gabriel Silvestri](https://gabrielsilvestri.com.br/o-que-e-ux-design/)) para exemplificar os processos que se encontram em cada etapa.
 
+![Etapas de UX no modelo Double Diamond. Ilustração de Gabriel Silvestri](./1-processo-etapas-de-ux-double-diamond-1.png)
 
 
 ## Áreas da UX
@@ -139,7 +140,7 @@ O que nós podemos ver é que os papéis muitas vezes se sobrepõem, se misturam
 
 ## Entre algumas coisas, nós aprendemos que:
 
-UX Design não é: UX
+UX Design não é:
 
 - Direção de arte;
 - Planejamento;
@@ -151,8 +152,9 @@ E sim um meio de campo entre todas essas disciplinas, garantindo que todas elas 
 
 ## **Referências**
 
-- https://www.liferay.com/pt/resources/l/user-experience
-- https://rockcontent.com/br/blog/experiencia-do-usuario/
-- https://www.tronebrandenergy.com/blog/seven-components-user-experience-ux
-- http://labcom.com.br/blog/design-thinking-novos-desafios-novas-solucoes
-- Introdução e boas práticas em UX Design, por Fabricio Teixeira
+- [User Experience, Liferay](https://www.liferay.com/pt/resources/l/user-experience)
+- [Experiência do Usuário, RocketContent](https://rockcontent.com/br/blog/experiencia-do-usuario/)
+- [Seven Components of User Experience](https://www.tronebrandenergy.com/blog/seven-components-user-experience-ux)
+- [Design Thinking: Novos desafios, novas soluções, Labcom](http://labcom.com.br/blog/design-thinking-novos-desafios-novas-solucoes)
+- [O que é UX Design?, por Gabriel Silvestri](https://gabrielsilvestri.com.br/o-que-e-ux-design/)
+- Livro: Introdução e boas práticas em UX Design, por Fabricio Teixeira
