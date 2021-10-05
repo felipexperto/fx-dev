@@ -2,7 +2,7 @@
 authorid: 1
 category: Dev
 title: "UX Design para desenvolvedores - Falando um pouco sobre o conceito e a atuação"
-date: "2020-010-04T23:00:00.284Z"
+date: "2021-10-04T23:00:00.284Z"
 description: "O que é Design? O que é UX? E eu com isso? Só quero programar..."
 ---
 
