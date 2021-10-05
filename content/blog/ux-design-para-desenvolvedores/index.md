@@ -108,7 +108,7 @@ Calma lá(haha)! Você é participante do processo de design, no entanto, para g
 
 Existem diversas metodologias, acredito que a mais famosa é o "Design Thinking", dependendo do autor, pode consistir num número de etapas diferentes mas em geral envolve: Empatia, Definição, Ideação, Prototipagem, Teste e Iteração.
 
-![Ilustração no formato de círculo exemplificando que o processo de design thinking é cíclico e contínuo](./2-processo-design-thinking)
+![Ilustração no formato de círculo exemplificando que o processo de design thinking é cíclico e contínuo](./2-processo-design-thinking.png)
 
 > A ideia por trás do design thinking é oferecer aos profissionais das várias orientações/formações uma estrutura metodológica capaz de desconstruir e reconstruir, resolver e solucionar, experimentar e prototipar questões e problemas, ou seja, é uma metodologia estratégica para resolver problemas difíceis centrada nas necessidades humanas [...]. - Afinal, o que é Design Thinking, de Rique Nitzsche
 
