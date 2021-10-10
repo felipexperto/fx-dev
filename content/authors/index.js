@@ -22,7 +22,7 @@ module.exports = {
           name: `Twitter`,
           url: `https://twitter.com/felipexperto`,
           boxicon: `twitter`,
-          show: true,
+          show: false,
         },
         behance: {
           name: `Behance`,
