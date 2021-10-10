@@ -1,7 +1,7 @@
 ---
 authorid: 1
 category: Dev
-title: "Freela: Informações para iniciar bem um projeto"
+title: "Freela: Checklist de informações para iniciar bem um projeto"
 date: "2021-10-10T10:00:00.284Z"
 description: ""
 tldr: ""
@@ -58,13 +58,13 @@ Texto introdutório resumindo o negócio, 'Missão, Visão e Valores', página o
 
 **Razão da pergunta**
 
-Essa pergunta (se bem explorada) pode ajudar a identificar o tamanho e complexidade do escopo de trabalho, como: quantidade de páginas, sitemap, menus, formulários, entre outros. E ajudar a direcionar a criação dando ideias sobre possĩveis seções, menus, layouts, templates.
+Essa pergunta (se bem explorada) pode ajudar a identificar o tamanho e complexidade do escopo de trabalho, como: quantidade de páginas, sitemap, menus, formulários, entre outros. E ajudar a direcionar a criação dando ideias sobre possíveis seções, menus, layouts, templates.
 
 ### O que o cliente não gostaria de ter em seu site?
 
 **Razão da pergunta** 
 
-Algumas vezes é mais fácil você perguntar o que alguém não quer porque ela não sabe o que quer. Sendo assim, você pode sugerir que visitem os sites de concorrentes e façam uma lista de pontos necessários e desnecessários. Referências de layout e discussão sobre o nĩvel de importância das informações (como um banner de promoção, formulãrio de contato, chatbot, etc) podem surgir nesse momento também.
+Algumas vezes é mais fácil você perguntar o que alguém não quer porque ela não sabe o que quer. Sendo assim, você pode sugerir que visitem os sites de concorrentes e façam uma lista de pontos necessários e desnecessários. Referências de layout e discussão sobre o nível de importância das informações (como um banner de promoção, formulário de contato, chatbot, etc) podem surgir nesse momento também.
 
 ### O cliente possui todo o conteúdo necessário para a produção do site? Textos revisados, imagens em alta resolução, vídeos em boa qualidade?
 
