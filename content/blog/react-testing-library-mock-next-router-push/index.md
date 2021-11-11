@@ -2,7 +2,7 @@
 authorid: 1
 category: Dev
 title: "React Testing Library: Mockando Next Router.push"
-date: "2021-11-30T10:47:00.284Z"
+date: "2021-10-30T10:47:00.284Z"
 update: ""
 description: ""
 tldr: ""
