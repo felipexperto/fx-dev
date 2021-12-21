@@ -7,13 +7,6 @@ description: ""
 tldr: ''
 ---
 
-## Índice
-
-- []()
-- []()
-- []()
-
-
 ## Sempre mantenha Strict Mode configurado
 
 Ter o `Strict Mode` declarado irá limitar você de escrever código inseguro. Além disso, é bem fácil de ativá-lo. Basta adicionar o código abaixo como primeira linha em seus arquivos Javascript.
