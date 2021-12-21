@@ -3,7 +3,7 @@ authorid: 1
 category: Dev
 title: "Javascript Cheatsheet"
 date: "2021-12-20T00:00:00.000Z"
-description: ""
+description: "Javascript Cheatsheet. Alguns macetes pra solucionar problemas rotineiros."
 tldr: ''
 ---
 
