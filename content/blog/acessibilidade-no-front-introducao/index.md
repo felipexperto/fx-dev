@@ -9,7 +9,7 @@ tldr: ''
 
 Olá, pessoa! Tudo bem?
 
-Sem muita enrolação, vamos conversar sobre acessibilidade. Muitas vezes esse assunto envolve documentações extensas e cansativas, então noosa intenção é sermos práticos pra que você não durma ou feche a aba. 
+Sem muita enrolação, vamos conversar sobre acessibilidade. Muitas vezes esse assunto envolve documentações extensas e cansativas, então nossa intenção é sermos práticos pra que você não durma ou feche a aba. 
 
 Só pra deixar claro, o objetivo audacioso deste post é dar uma introdução conceitual e apresentar práticas aplicáveis no dia a dia para que você finalize essa leitura sabendo identificar falhas básicas de acessibilidade e como corrigi-las.
 
