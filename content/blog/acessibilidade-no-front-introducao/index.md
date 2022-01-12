@@ -19,7 +19,7 @@ A descrição mais concisa que pude encontrar foi:
 
 > Oferecer possibilidades de transpor as barreiras que existem na nossa sociedade, garantindo que todas as pessoas possam participar dos diversos âmbitos sociais.
 
-No nosso caso, como frontends, tratamos de acessibilidade na web, afinal, o âmbito é extremamente digital pois o produto do nosso trabalho são aplicativos e sites.
+No nosso caso, como frontends, tratamos de acessibilidade na web, afinal, o âmbito é estritamente digital pois o produto do nosso trabalho são aplicativos e sites.
 
 Se você for pesquisar, também é possível encontrar bastante conteúdo sobre acessibilidade como `a11y` existe até um projeto opensource que leva a sigla no nome, chamado [The A11y Project](https://www.a11yproject.com/) e, que possui diversos conteúdos, tanto para designers, quanto desenvolvedores, Product Managers, enfim, se despertou sua curiosidade dê uma olhada depois (vale a pena).
 
@@ -49,7 +49,7 @@ Ao invés de trazer o que cada um desses tópicos significa e acabarmos numa con
 
 - Conteúdo acessível por teclado: Que seja possível interagir com todos os elementos da página utilizando o teclado, que esses elementos siga uma ordem intuitiva e  esteja claro para o usuário o elemento que está focado.
 
-- Facilmente navegável: Imagine um mega menu, se você repetidamente pressiona `TAB`, entra nas opções e não consegue sair, é um problema. Então cabe a nós elaborar uma estratégia para que as pessoam consigam acessar esse menu diretamente ou o conteúdo principal, por exemplo.
+- Facilmente navegável: Imagine um mega menu, se você repetidamente pressiona `TAB`, entra nas opções e não consegue sair, é um problema. Então cabe a nós elaborar uma estratégia para que as pessoas consigam acessar esse menu diretamente ou o conteúdo principal, por exemplo.
 
 - Se o conteúdo for animado, que o intervalo de tempo seja razoável e as animações suaves: Um slider que passa muito rápido e ninguém consegue ler não é muito útil não é mesmo? Além disso, dependendo da velocidade algumas pessoas podem experimentar desde um mal estar até crises epilépticas.
 
