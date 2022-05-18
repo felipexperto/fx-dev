@@ -138,6 +138,13 @@ Verificar diferenças entre commits
 
 </div>
 
+<div class="fx-group">
+
+Ver os arquivos de um commit
+- `git diff-tree --no-commit-id --name-only -r [hash-do-commit]`
+
+</div>
+
 
 ### Merge
 
