@@ -15,9 +15,8 @@ import avatarDaniele from 'images/authors/danielegama.jpg';
 import * as S from './styles';
 
 const Bio = ({ authorId }) => {
-  const { authorBio, authorName, authorIntro, authorSocial } = useAuthorInfo(
-    authorId
-  );
+  const { authorBio, authorName, authorIntro, authorSocial } =
+    useAuthorInfo(authorId);
   const authorAvatar = authorId === 1 ? avatarFelipe : avatarDaniele;
 
   return (

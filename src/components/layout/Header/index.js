@@ -13,10 +13,8 @@ const Header = ({ height, title }) => {
   const { scroll } = useWindowScroll();
   const isHomepage = isHome();
   const [isScrolling, setIsScrolling] = useState(false);
-  const [
-    shouldBackgroundBeTransparent,
-    setShouldBackgroundBeTransparent,
-  ] = useState(false);
+  const [shouldBackgroundBeTransparent, setShouldBackgroundBeTransparent] =
+    useState(false);
 
   useEffect(() => {
     let unmounted = false;
