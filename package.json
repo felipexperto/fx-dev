@@ -12,7 +12,7 @@
     "babel-plugin-styled-components": "^1.11.1",
     "fontsource-inter": "3.0.5",
     "fontsource-ubuntu": "3.0.9",
-    "gatsby": "^2.18.8",
+    "gatsby": "^4.24.3",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-feed": "^2.3.23",
     "gatsby-plugin-google-tagmanager": "^2.5.0",
