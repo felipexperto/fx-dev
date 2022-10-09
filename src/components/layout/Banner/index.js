@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import Austronaut from 'images/astronaut-pool.inline.svg';
+import Austronaut from 'images/banner/astronaut-pool.inline.svg';
 
 import { theme } from 'styles';
 import * as S from './styles.js';
