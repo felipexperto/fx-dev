@@ -2,8 +2,6 @@ import styled, { css } from 'styled-components/macro';
 import { Container } from 'styles';
 import { animationKeyframes } from 'styles';
 
-const md = ({ theme }) => theme.medias.md;
-
 const { fadeIn } = animationKeyframes;
 
 const fadeInAnimation = () => css`
@@ -15,13 +13,8 @@ const fadeInAnimation = () => css`
 const Banner = styled.section``;
 
 const BannerWrapper = styled.div`
-  background: ${({ theme }) => theme.colors.darkyellow};
-  background: linear-gradient(
-    0deg,
-    rgba(244, 218, 18, 1) 0%,
-    rgba(244, 188, 18, 1) 100%
-  );
-  color: ${({ theme }) => theme.colors.almostblack};
+  background: ${({ theme }) => theme.colors.yellow};
+  color: ${({ theme }) => theme.colors.black};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,11 +29,21 @@ const BannerWrapper = styled.div`
 const BannerContainer = styled(Container)`
   ${fadeInAnimation}
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
   font-family: 'Ubuntu', sans-serif;
+  justify-content: space-between;
   overflow: hidden;
   padding: 3rem 1rem;
   position: relative;
+`;
+
+const FirstColumn = styled.div`
+  flex-direction: column;
+`;
+
+const SecondColumn = styled.div`
+  flex-direction: column;
 `;
 
 const PreTitle = styled.div``;
@@ -58,52 +61,13 @@ const Description = styled.p`
   width: 41ch;
 `;
 
-const BasicShape = styled.div`
-  display: none;
-  @media ${md} {
-    display: block;
-  }
-  opacity: 10%;
-  position: absolute;
-`;
-
-const Circle = styled(BasicShape)`
-  background-color: ${({ theme }) => theme.colors.black};
-  border-radius: 100rem;
-  height: 14rem;
-  left: 25%;
-  bottom: -10%;
-  width: 14rem;
-`;
-
-const Triangle = styled(BasicShape)`
-  border-color: transparent transparent ${({ theme }) => theme.colors.black}
-    transparent;
-  border-style: solid;
-  border-width: 0 0 130px 180px;
-  bottom: 55%;
-  height: 0;
-  left: 35%;
-  transform: rotate(60deg);
-  width: 0;
-`;
-
-const Square = styled(BasicShape)`
-  background-color: ${({ theme }) => theme.colors.black};
-  height: 8rem;
-  left: 75%;
-  transform: rotate(45deg);
-  width: 8rem;
-`;
-
 export {
   Banner,
   BannerWrapper,
   BannerContainer,
+  FirstColumn,
+  SecondColumn,
   PreTitle,
   Title,
   Description,
-  Circle,
-  Triangle,
-  Square,
 };
