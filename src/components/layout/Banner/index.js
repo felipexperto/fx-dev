@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import Austronaut from 'images/banner/astronaut-pool.inline.svg';
+import { BannerIllustration } from 'components/UI';
 
 import { theme } from 'styles';
 import * as S from './styles.js';
@@ -23,7 +23,7 @@ const Banner = ({ paddingTop }) => {
             </S.Description>
           </S.FirstColumn>
           <S.SecondColumn>
-            <Austronaut />
+            <BannerIllustration />
           </S.SecondColumn>
         </S.BannerContainer>
       </S.BannerWrapper>

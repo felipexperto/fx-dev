@@ -4,6 +4,8 @@ import { animationKeyframes } from 'styles';
 
 const { fadeIn } = animationKeyframes;
 
+const md = ({ theme }) => theme.medias.md;
+
 const fadeInAnimation = () => css`
   -webkit-animation: ${fadeIn} 1s linear 1;
   -moz-animation: ${fadeIn} 1s linear 1;
@@ -43,7 +45,12 @@ const FirstColumn = styled.div`
 `;
 
 const SecondColumn = styled.div`
+  display: none;
   flex-direction: column;
+
+  @media ${md} {
+    display: block;
+  }
 `;
 
 const PreTitle = styled.div``;
