@@ -11,9 +11,12 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Fragment>
-      <App location={location} title={siteTitle} bgColor="lightestgrey">
+      <App location={location} title={siteTitle} bgColor="yellow">
         <SEO title={`Todos os posts | ${siteTitle}`} />
-        <Title margin="2rem auto">Meus artigos</Title>
+        <Title as="h2" margin="2rem auto">
+          Todos os posts
+        </Title>
+        <p>Ordenados por &quot;Mais Recentes&quot;</p>
         <PostsList posts={posts} />
       </App>
     </Fragment>

@@ -17,7 +17,9 @@ const App = ({ title, children, bgColor }) => {
         <ContainerFull backgroundColor={bgColor}>
           <Header height={headerHeight} title={title} />
           {isHome() && <Banner paddingTop={headerHeight} />}
-          <Container direction="column">{children}</Container>
+          <ContainerFull backgroundColor="darkestgrey" borderRadius="16px">
+            <Container direction="column">{children}</Container>
+          </ContainerFull>
           <Footer />
         </ContainerFull>
       </ThemeProvider>

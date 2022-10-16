@@ -7,6 +7,8 @@ const { medias } = theme.main;
 const defaultContainer = styled.main`
   background-color: ${({ backgroundColor }) =>
     theme.main.colors[backgroundColor] || 'transparent'};
+  border-radius: ${({ borderRadius }) =>
+    borderRadius ? `${borderRadius}` : '0'};
 `;
 
 const Container = styled(defaultContainer)`
