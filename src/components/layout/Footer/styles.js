@@ -6,7 +6,6 @@ const md = ({ theme }) => theme.medias.md;
 const footerWrapper = styled.footer`
   background: ${({ theme }) => theme.colors.darkestgrey};
   font-family: 'Inter', sans-serif;
-  margin-top: 4rem;
   padding: 4rem 0;
   width: 100%;
 `;
