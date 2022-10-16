@@ -9,7 +9,7 @@ const colors = {
   darkyellow: '#f4bc12',
   almostwhite: '#fafafa',
   lightestgrey: '#f1f1f1',
-  lightgrey: '#aaaaaa',
+  lightgrey: '#cccccc',
   grey: '#666666',
   darkgrey: '#333333',
   darkestgrey: '#212529',
