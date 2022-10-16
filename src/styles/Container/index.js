@@ -5,8 +5,8 @@ import theme from 'styles/Themes';
 const { medias } = theme.main;
 
 const defaultContainer = styled.main`
-  background-color: ${({ backgroundColor }) =>
-    theme.main.colors[backgroundColor] || 'transparent'};
+  background-color: ${({ backgroundColor, theme }) =>
+    theme.colors[backgroundColor] || 'transparent'};
   border-radius: ${({ borderRadius }) =>
     borderRadius ? `${borderRadius}` : '0'};
 `;
@@ -20,7 +20,7 @@ const Container = styled(defaultContainer)`
   ${({ marginBottom }) =>
     marginBottom &&
     css`
-      margin-top: ${marginBottom}px;
+      margin-bottom: ${marginBottom}px;
     `};
   ${({ marginTop }) =>
     marginTop &&
