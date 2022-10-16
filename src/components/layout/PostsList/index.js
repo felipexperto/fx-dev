@@ -9,27 +9,27 @@ const PostsList = ({ posts }) => {
   const allPosts = posts.map(({ node }) => {
     return (
       <Link to={node.fields.slug} key={uuidv4()}>
-        <S.cardHeader>
+        <S.CardHeader>
           {node.frontmatter.category ? (
-            <S.cardCategory>{node.frontmatter.category}</S.cardCategory>
+            <S.CardCategory>{node.frontmatter.category}</S.CardCategory>
           ) : null}
-          <S.cardTitle>
+          <S.CardTitle>
             {node.frontmatter.title || node.fields.slug}
-          </S.cardTitle>
-        </S.cardHeader>
-        <S.cardFooter>
-          <S.cardComplementaryInfosList>
-            <S.cardDate>{node.frontmatter.date}</S.cardDate>
-            <S.cardReadingTime>
+          </S.CardTitle>
+        </S.CardHeader>
+        <S.CardFooter>
+          <S.CardComplementaryInfosList>
+            <S.CardDate>{node.frontmatter.date}</S.CardDate>
+            <S.CardReadingTime>
               {Math.round(node.fields.readingTime.minutes)} min
-            </S.cardReadingTime>
-          </S.cardComplementaryInfosList>
-        </S.cardFooter>
+            </S.CardReadingTime>
+          </S.CardComplementaryInfosList>
+        </S.CardFooter>
       </Link>
     );
   });
 
-  return <S.cardList>{allPosts}</S.cardList>;
+  return <S.CardList>{allPosts}</S.CardList>;
 };
 
 PostsList.propTypes = {

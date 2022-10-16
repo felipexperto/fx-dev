@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { object } from 'prop-types';
 
 import { App, PostsList, SEO } from 'components/layout';
-import { Title } from 'components/UI';
+import { Tipography } from 'components/UI';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -11,11 +11,11 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Fragment>
-      <App location={location} title={siteTitle} bgColor="yellow">
+      <App location={location} title={siteTitle} bgColor="#f4da12">
         <SEO title={`Todos os posts | ${siteTitle}`} />
-        <Title as="h2" margin="2rem auto">
+        <Tipography as="h2" color="white" margin="2rem auto">
           Todos os posts
-        </Title>
+        </Tipography>
         <p>Ordenados por &quot;Mais Recentes&quot;</p>
         <PostsList posts={posts} />
       </App>

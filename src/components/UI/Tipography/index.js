@@ -3,19 +3,19 @@ import { node, string } from 'prop-types';
 
 import * as S from './styles';
 
-const Title = ({ as, children, ...rest }) => (
-  <S.Title as={as} {...rest}>
+const Tipography = ({ as, children, ...rest }) => (
+  <S.Tipography as={as} {...rest}>
     {children}
-  </S.Title>
+  </S.Tipography>
 );
 
-Title.propTypes = {
+Tipography.propTypes = {
   as: string,
   children: node.isRequired,
 };
 
-Title.defaultProps = {
+Tipography.defaultProps = {
   as: 'h1',
 };
 
-export default Title;
+export default Tipography;

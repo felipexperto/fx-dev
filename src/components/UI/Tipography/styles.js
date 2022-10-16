@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components/macro';
 
-export const Title = styled.h2`
+export const Tipography = styled.h1`
+  color: ${({ color, theme }) =>
+    color ? theme.colors[color] : theme.colors.black};
   font-family: 'Ubuntu', 'Inter', Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;

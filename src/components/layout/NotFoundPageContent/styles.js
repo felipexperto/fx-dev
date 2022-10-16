@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 import { Container } from 'styles';
-import { Title } from 'components/UI';
+import { Tipography } from 'components/UI';
 
 export const ContainerForFewContentPage = styled(Container)`
   align-items: middle;
@@ -10,7 +10,7 @@ export const ContainerForFewContentPage = styled(Container)`
   justify-content: center;
 `;
 
-export const TitleInlineStyle = styled(Title)`
+export const TitleInlineStyle = styled(Tipography)`
   font-size: 40px;
   font-weight: bolder;
   margin-bottom: 0;

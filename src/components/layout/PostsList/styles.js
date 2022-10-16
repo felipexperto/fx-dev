@@ -4,7 +4,7 @@ import { theme } from 'styles';
 const medias = theme.main.medias;
 const { sm } = medias;
 
-const cardCategory = styled.span`
+const CardCategory = styled.span`
   background-color: ${({ theme }) => theme.colors.darkyellow};
   border-radius: 100em;
   display: inline-block;
@@ -14,7 +14,7 @@ const cardCategory = styled.span`
   text-transform: uppercase;
 `;
 
-const cardTitle = styled.h3`
+const CardTitle = styled.h3`
   font-weight: 700;
   margin-bottom: 0.25em;
   margin-top: 0.75em;
@@ -24,24 +24,24 @@ const cardTitle = styled.h3`
   }
 `;
 
-const cardComplementaryInfosList = styled.ul`
+const CardComplementaryInfosList = styled.ul`
   list-style: none;
   margin-bottom: 0.5rem;
   margin-left: 0;
   padding-left: 0;
 `;
 
-const cardComplementaryInfosItem = styled.li`
+const CardComplementaryInfosItem = styled.li`
   color: ${({ theme }) => theme.colors.grey};
   display: inline-block;
   font-size: 0.8rem;
 `;
 
-const cardDate = styled(cardComplementaryInfosItem)`
+const CardDate = styled(CardComplementaryInfosItem)`
   color: ${({ theme }) => theme.colors.darkgrey};
 `;
 
-const cardReadingTime = styled(cardComplementaryInfosItem)`
+const CardReadingTime = styled(CardComplementaryInfosItem)`
   color: ${({ theme }) => theme.colors.darkgrey};
 
   &::before {
@@ -52,7 +52,7 @@ const cardReadingTime = styled(cardComplementaryInfosItem)`
   }
 `;
 
-const cardList = styled.section`
+const CardList = styled.section`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -85,7 +85,7 @@ const cardList = styled.section`
         0 1px 3px 1px rgba(66, 66, 66, 0.16);
       transform: scale(1.1);
     }
-    &:focus ${cardCategory}, &:hover ${cardCategory} {
+    &:focus ${CardCategory}, &:hover ${CardCategory} {
       background-color: ${({ theme }) => theme.colors.darkgrey};
       color: ${({ theme }) => theme.colors.white};
     }
@@ -99,19 +99,19 @@ const cardList = styled.section`
   }
 `;
 
-const cardHeader = styled.header``;
+const CardHeader = styled.header``;
 
-const cardFooter = styled.footer`
+const CardFooter = styled.footer`
   margin-top: 1em;
 `;
 
 export {
-  cardList,
-  cardHeader,
-  cardFooter,
-  cardCategory,
-  cardTitle,
-  cardComplementaryInfosList,
-  cardDate,
-  cardReadingTime,
+  CardList,
+  CardHeader,
+  CardFooter,
+  CardCategory,
+  CardTitle,
+  CardComplementaryInfosList,
+  CardDate,
+  CardReadingTime,
 };
