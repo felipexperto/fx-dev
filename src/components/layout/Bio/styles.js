@@ -6,13 +6,13 @@ const BioWrapper = styled.div`
 `;
 
 const Description = styled.p`
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.lightgrey};
   font-family: 'Inter', sans-serif;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
 `;
 const Intro = styled.div`
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.lightgrey};
   display: block;
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;

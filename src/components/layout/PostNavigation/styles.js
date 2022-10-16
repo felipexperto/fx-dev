@@ -25,7 +25,6 @@ const linkTitle = styled.h3`
 `;
 
 const itemNavigation = styled.li`
-  background-color: ${({ theme }) => theme.colors.almostwhite};
   display: flex;
   margin: 0.5rem 0;
   width: 90%;

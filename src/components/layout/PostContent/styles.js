@@ -4,13 +4,10 @@ const sm = ({ theme }) => theme.medias.sm;
 
 const wrapperArticle = styled.article`
   border-radius: 8px;
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
-    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   margin-top: 0;
   max-width: 100%;
   padding: 2rem;
   @media ${sm} {
-    margin-top: 4rem;
     padding: 4rem 4rem;
   }
 `;
