@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
-import "fontsource-inter"
-import "fontsource-ubuntu"
+import '@fontsource/fira-sans';
 
 import { GlobalStyles } from 'styles';
 

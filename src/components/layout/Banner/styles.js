@@ -33,7 +33,6 @@ const BannerContainer = styled(Container)`
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  font-family: 'Ubuntu', sans-serif;
   justify-content: space-between;
   overflow: hidden;
   padding: 3rem 1rem;

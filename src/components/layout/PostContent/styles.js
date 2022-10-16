@@ -32,7 +32,6 @@ const footer = styled.footer`
 
 const title = styled.h1`
   color: ${({ theme }) => theme.colors.white};
-  font-family: 'Ubuntu', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -42,7 +41,6 @@ const title = styled.h1`
 const tldrText = styled.p`
   border: solid 1px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  font-family: 'Inter', sans-serif;
   line-height: 2em;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
   margin-left: 2rem;
@@ -69,9 +67,7 @@ const tldrTitle = styled.h2`
   margin-top: 0;
 `;
 
-const tldrSubtitle = styled.span`
-  font-family: 'Inter', sans-serif;
-`;
+const tldrSubtitle = styled.span``;
 
 const dates = styled.ul`
   margin-bottom: 16px;
@@ -82,7 +78,6 @@ const dates = styled.ul`
 const dataDefault = styled.li`
   color: ${({ theme }) => theme.colors.lightgrey};
   display: inline-block;
-  font-family: Inter, sans-serif;
   font-size: 0.85rem;
   line-height: 1.5em;
 `;

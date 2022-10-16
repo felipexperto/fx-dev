@@ -1136,6 +1136,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/fira-sans@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-4.5.10.tgz#63a6dacfa482017a840b40e9c2cfefb187a0e515"
+  integrity sha512-4Edj+GA0LYSqfXOvdTwVGmCShT8Ycd8bKzdfzM302n+I6Hsg6h3gBkBeNgN19PhkcngDznZyHv3EkyrKqvMTGw==
+
 "@gatsbyjs/parcel-namer-relative-to-cwd@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/parcel-namer-relative-to-cwd/-/parcel-namer-relative-to-cwd-1.9.0.tgz#9263de16d93463974d6fe0cd960eadca184a7d9f"
@@ -6248,16 +6253,6 @@ follow-redirects@^1.14.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
-
-fontsource-inter@3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/fontsource-inter/-/fontsource-inter-3.0.5.tgz#4d645514f61921f83034ff244985374413bd019d"
-  integrity sha512-7AGbrHVjL2IcIz/Lv64IR5g0W+JuGQT/bFFF5nDD1zNOT5Ke8IMIMc+tE4rb5fCVNG2AGt0gtXH3kGLUURKY8w==
-
-fontsource-ubuntu@3.0.9:
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/fontsource-ubuntu/-/fontsource-ubuntu-3.0.9.tgz#32a79a19e3dc10f6f549b21601cae0dd705479a8"
-  integrity sha512-9woIW2Xkta91wWL1Zkoo9UU8hyVojBvoDh6K15lwVUzHp3h0eFCuJVfhuvMrRF8jamkzhttZ1KX11xpG53IbMA==
 
 for-in@^1.0.2:
   version "1.0.2"

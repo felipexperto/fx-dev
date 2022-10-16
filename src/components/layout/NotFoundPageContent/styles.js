@@ -18,13 +18,11 @@ export const TitleInlineStyle = styled(Tipography)`
 `;
 
 export const Subtitle = styled.p`
-  font-family: Inter, sans-serif;
   font-size: 18px;
   text-align: center;
 `;
 
 export const Anchor = styled.a`
-  font-family: Inter, sans-serif;
   font-size: 18px;
   text-align: center;
   text-decoration: none;

@@ -16,7 +16,6 @@ const PostStyles = createGlobalStyle`
     a {
       border-bottom: solid 2px ${theme.main.colors.white};
       color: currentColor;
-      font-family: 'Inter', sans-serif;
       font-weight: bold;
       line-break: anywhere;
       @media ${sm} {
@@ -79,7 +78,6 @@ const PostStyles = createGlobalStyle`
 
     h2,
     h3 {
-      font-family: 'Ubuntu', sans-serif;
       font-weight: 700;
       line-height: 1.4em;
       margin-bottom: 1rem;
@@ -98,7 +96,6 @@ const PostStyles = createGlobalStyle`
     }
   
     section {
-      font-family: Inter, sans-serif;
       line-height: 1.5em;
 
       a[target="_blank"]::after {

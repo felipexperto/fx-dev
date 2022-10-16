@@ -8,6 +8,12 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'Fira Sans', Ubuntu, sans-serif;
+  }
+
+  .bx::after,
+  .bx::before {
+    font-family: 'boxicons' !important;
   }
 
   html,

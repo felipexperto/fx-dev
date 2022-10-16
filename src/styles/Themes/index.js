@@ -1,4 +1,3 @@
-/* Colors */
 const colors = {
   white: '#fff',
   black: '#000',
@@ -14,14 +13,18 @@ const colors = {
   darkgrey: '#333333',
   darkestgrey: '#212529',
 };
+
 const fonts = {
+  family: '"Fira Sans", Ubuntu, sans-serif',
   weight: {
     light: 300,
     normal: 400,
+    medium: 500,
     bold: 600,
     bolder: 700,
   },
 };
+
 const sizes = {
   xs: 575,
   sm: 576,
@@ -29,6 +32,7 @@ const sizes = {
   lg: 992,
   xl: 1200,
 };
+
 const medias = {
   xs: `(max-width: ${sizes.xs}px)`,
   sm: `(min-width: ${sizes.sm}px)`,
@@ -36,6 +40,7 @@ const medias = {
   lg: `(min-width: ${sizes.lg}px)`,
   xl: `(min-width: ${sizes.xl}px)`,
 };
+
 const zIndex = {
   tooltip: 1,
   header: 10,
