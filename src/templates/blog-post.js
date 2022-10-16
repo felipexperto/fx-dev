@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <Fragment>
-      <App title={siteTitle}>
+      <App title={siteTitle} bgColor="yellow">
         <SEO
           title={`${title} | ${siteTitle}`}
           description={description || excerpt}
