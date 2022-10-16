@@ -11,9 +11,10 @@ const PostStyles = createGlobalStyle`
   }
 
   article {
+    color: ${theme.main.colors.white};
     
     a {
-      border-bottom: solid 2px black;
+      border-bottom: solid 2px ${theme.main.colors.white};
       color: currentColor;
       font-family: 'Inter', sans-serif;
       font-weight: bold;
