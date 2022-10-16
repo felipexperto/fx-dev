@@ -4,8 +4,8 @@ export const Tipography = styled.h1`
   color: ${({ color, theme }) =>
     color ? theme.colors[color] : theme.colors.black};
   font-family: 'Ubuntu', 'Inter', Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: ${({ fontSize }) => (fontSize ? fontSize : '1.5rem')};
+  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : '700')};
   padding-left: 1rem;
   ${({ margin }) =>
     margin &&

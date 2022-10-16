@@ -11,12 +11,19 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Fragment>
-      <App location={location} title={siteTitle} bgColor="#f4da12">
+      <App location={location} title={siteTitle} bgColor="yellow">
         <SEO title={`Todos os posts | ${siteTitle}`} />
-        <Tipography as="h2" color="white" margin="2rem auto">
+        <Tipography as="h2" color="white" margin="2rem auto 0 auto">
           Todos os posts
         </Tipography>
-        <p>Ordenados por &quot;Mais Recentes&quot;</p>
+        <Tipography
+          as="h3"
+          color="lightgrey"
+          fontSize="0.875rem"
+          fontWeight="normal"
+        >
+          Ordenados por &quot;Mais Recentes&quot;
+        </Tipography>
         <PostsList posts={posts} />
       </App>
     </Fragment>

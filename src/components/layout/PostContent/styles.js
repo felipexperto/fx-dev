@@ -34,6 +34,7 @@ const footer = styled.footer`
 `;
 
 const title = styled.h1`
+  color: ${({ theme }) => theme.colors.white};
   font-family: 'Ubuntu', sans-serif;
   font-size: 2rem;
   font-weight: 700;
@@ -82,7 +83,7 @@ const dates = styled.ul`
 `;
 
 const dataDefault = styled.li`
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.lightgrey};
   display: inline-block;
   font-family: Inter, sans-serif;
   font-size: 0.85rem;
