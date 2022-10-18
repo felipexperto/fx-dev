@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components/macro';
 import { Container } from 'styles';
+import { Tipography } from 'components/UI';
 import { animationKeyframes } from 'styles';
 
 const { fadeIn } = animationKeyframes;
@@ -54,10 +55,11 @@ const SecondColumn = styled.div`
 
 const PreTitle = styled.div``;
 
-const Title = styled.h1`
+const Title = styled(Tipography)`
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: ${({ theme }) => theme.fonts.weight.bold};
   margin: 0.5rem 0 0.5rem 0;
+  padding: 0;
 `;
 
 const Description = styled.p`
