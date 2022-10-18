@@ -1,5 +1,5 @@
 ---
-authorid: 2
+authorid: 1
 category: Design
 title: Primeiros passos em Tipografia
 date: "2014-01-01T00:00:00.000Z"

@@ -10,13 +10,11 @@ import PropTypes from 'prop-types';
 
 import { useAuthorInfo } from 'hooks';
 import { Avatar } from 'components/UI';
-import avatarFelipe from 'images/authors/felipemarciano.png';
-import avatarDaniele from 'images/authors/danielegama.jpg';
+import authorAvatar from 'images/authors/felipemarciano.png';
 import * as S from './styles';
 
 const Bio = ({ authorId }) => {
   const { authorBio, authorName, authorIntro } = useAuthorInfo(authorId);
-  const authorAvatar = authorId === 1 ? avatarFelipe : avatarDaniele;
 
   return (
     <S.BioWrapper>
