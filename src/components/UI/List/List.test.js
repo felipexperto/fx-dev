@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'commons/utils/test';
+import { render } from 'utils/test';
 
 import List from './';
 
