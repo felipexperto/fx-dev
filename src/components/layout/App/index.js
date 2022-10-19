@@ -1,32 +1,27 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import { ThemeProvider } from 'styled-components/macro';
 
-import { Banner, Footer, Header } from 'components/layout';
-import { Container, ContainerFull, theme } from 'styles';
+import { Banner, Footer, Header, Root } from 'components/layout';
+import { Container, ContainerFull } from 'styles';
 import { isHome } from 'utils/helpers';
-import { DatalayerContextProvider } from 'contexts';
 
 const App = ({ title, children, bgColor }) => {
   const headerHeight = '72px';
-  const { main } = theme;
 
   return (
-    <DatalayerContextProvider>
-      <ThemeProvider theme={main}>
-        <ContainerFull backgroundColor={bgColor}>
-          <Header height={headerHeight} title={title} />
-          {isHome() && <Banner paddingTop={headerHeight} />}
-          <ContainerFull
-            backgroundColor="darkestgrey"
-            borderRadius="16px 16px 0 0"
-          >
-            <Container direction="column">{children}</Container>
-          </ContainerFull>
-          <Footer />
+    <Root>
+      <ContainerFull backgroundColor={bgColor}>
+        <Header height={headerHeight} title={title} />
+        {isHome() && <Banner paddingTop={headerHeight} />}
+        <ContainerFull
+          backgroundColor="darkestgrey"
+          borderRadius="16px 16px 0 0"
+        >
+          <Container direction="column">{children}</Container>
         </ContainerFull>
-      </ThemeProvider>
-    </DatalayerContextProvider>
+        <Footer />
+      </ContainerFull>
+    </Root>
   );
 };
 
