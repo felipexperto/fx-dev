@@ -1,15 +1,17 @@
 **Redesign**
 
-refactor: ajeitar media queries para uma utilização melhor
-
-refactor: Bio component (remover Daniele)
-
-chore: acertar os pesos das tipografias conforme layout
-
 chore: alterar layout dos cards no post list
+  criar componente PostCard;
+
+chore: customizar o TL;DR; nos posts
+
+refactor: ajeitar media queries para uma utilização melhor
 
 feat: implementar filtro da lista de posts por categoria
 
+refactor: reescrever projeto em Typescript e remover propTypes
+
+adicionar script de gerar componentes
 
 **Features**
 
