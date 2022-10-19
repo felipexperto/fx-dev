@@ -69,32 +69,10 @@ const CardList = styled.section`
     box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08),
       0 1px 3px 1px rgba(66, 66, 66, 0.16);
     color: ${({ theme }) => theme.colors.black};
-    margin: 2%;
     max-width: 100%;
     padding: 1.5rem;
     transition: all 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
-    width: 96%;
-
-    &:focus,
-    &:hover {
-      background-color: ${({ theme }) => theme.colors.darkyellow};
-      color: ${({ theme }) => theme.colors.white};
-      box-shadow: 0 1px 8px 5px rgba(66, 66, 66, 0.08),
-        0 1px 3px 1px rgba(66, 66, 66, 0.16);
-      transform: scale(1.1);
-    }
-    &:focus ${CardCategory}, &:hover ${CardCategory} {
-      background-color: ${({ theme }) => theme.colors.darkgrey};
-      color: ${({ theme }) => theme.colors.white};
-    }
-
-    @media ${sm} {
-      & {
-        margin: 2%;
-        width: 46%;
-      }
-    }
   }
 `;
 
