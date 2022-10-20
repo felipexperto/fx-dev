@@ -1,6 +1,6 @@
 import React from 'react';
 import { node } from 'prop-types';
-import { ThemeProvider } from 'styled-components/macro';
+import { ThemeProvider } from 'styled-components';
 
 import { theme } from 'styles';
 import { DatalayerContextProvider } from 'contexts';
