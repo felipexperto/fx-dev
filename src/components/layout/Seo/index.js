@@ -10,8 +10,6 @@ import { string, arrayOf, object } from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { SITE_URL } from 'src/../env-config';
-
 function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
     graphql`
@@ -88,7 +86,7 @@ SEO.defaultProps = {
   lang: 'pt-br',
   meta: [],
   description: '',
-  image: `${SITE_URL}/open-graph/blog-cover.png`,
+  image: `${process.env.GATSBY_SITE_URL}/open-graph/blog-cover.png`,
 };
 
 SEO.propTypes = {
