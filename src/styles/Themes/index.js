@@ -10,8 +10,11 @@ const colors = {
   lightestgrey: '#f1f1f1',
   lightgrey: '#cccccc',
   grey: '#666666',
-  darkgrey: '#333333',
+  darkgrey: '#2B2F33',
   darkestgrey: '#212529',
+  career: '#53442C',
+  design: '#4D562C',
+  dev: '#26545A',
 };
 
 const fonts = {
