@@ -30,7 +30,7 @@ const CardSecondColumn = styled.div`
 const CardTitle = styled.h3`
   color: ${({ theme }) => theme.colors.white};
   line-height: 1.6rem;
-  margin-top: 0.25rem;
+  margin: 0.25rem auto 0.25rem 0;
 `;
 
 const CardComplementaryInfosList = styled.ul`
