@@ -1,49 +1,52 @@
 import styled from 'styled-components/macro';
-import { theme } from 'styles';
+import { Link } from 'gatsby';
 
-const medias = theme.main.medias;
-const { sm } = medias;
+// const sm = ({ theme }) => theme.medias.sm;
 
-const CardCategory = styled.span`
-  background-color: ${({ theme }) => theme.colors.darkyellow};
-  border-radius: 100em;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0.25em 1em;
-  text-transform: uppercase;
+const Card = styled(Link)`
+  margin: 0.5rem 1rem;
+  text-decoration: none;
+`;
+
+const CardContent = styled.div`
+  background-color: ${({ theme }) => theme.colors.darkgrey};
+  border-color: ${({ theme }) => theme.colors.grey};
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px;
+  display: flex;
+  padding: 1rem;
+`;
+
+const CardFirstColumn = styled.div``;
+
+const CardSecondColumn = styled.div`
+  align-items: flex-start;
+  display: flex;
+  padding-left: 1rem;
+  flex-direction: column;
 `;
 
 const CardTitle = styled.h3`
-  font-weight: 700;
-  margin-bottom: 0.25em;
-  margin-top: 0.75em;
-
-  > a {
-    box-shadow: none;
-  }
+  color: ${({ theme }) => theme.colors.white};
+  line-height: 1.6rem;
+  margin-top: 0.25rem;
 `;
 
 const CardComplementaryInfosList = styled.ul`
+  color: ${({ theme }) => theme.colors.lightgrey};
+  display: flex;
+  font-size: 0.75rem;
   list-style: none;
-  margin-bottom: 0.5rem;
-  margin-left: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 `;
 
-const CardComplementaryInfosItem = styled.li`
-  color: ${({ theme }) => theme.colors.grey};
-  display: inline-block;
-  font-size: 0.8rem;
-`;
+const CardComplementaryInfosItem = styled.li``;
 
-const CardDate = styled(CardComplementaryInfosItem)`
-  color: ${({ theme }) => theme.colors.darkgrey};
-`;
+const CardDate = styled(CardComplementaryInfosItem)``;
 
 const CardReadingTime = styled(CardComplementaryInfosItem)`
-  color: ${({ theme }) => theme.colors.darkgrey};
-
   &::before {
     content: '•';
     display: inline-block;
@@ -52,41 +55,11 @@ const CardReadingTime = styled(CardComplementaryInfosItem)`
   }
 `;
 
-const CardList = styled.section`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  @media ${sm} {
-    flex-direction: row;
-  }
-
-  & > a {
-    align-items: stretch;
-    background-color: ${({ theme }) => theme.colors.white};
-    border-radius: 16px;
-    box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08),
-      0 1px 3px 1px rgba(66, 66, 66, 0.16);
-    color: ${({ theme }) => theme.colors.black};
-    max-width: 100%;
-    padding: 1.5rem;
-    transition: all 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
-    text-decoration: none;
-  }
-`;
-
-const CardHeader = styled.header``;
-
-const CardFooter = styled.footer`
-  margin-top: 1em;
-`;
-
 export {
-  CardList,
-  CardHeader,
-  CardFooter,
-  CardCategory,
+  Card,
+  CardContent,
+  CardFirstColumn,
+  CardSecondColumn,
   CardTitle,
   CardComplementaryInfosList,
   CardDate,
