@@ -9,7 +9,7 @@ import Dev from 'images/postcard/icon-dev.inline.svg';
 import * as S from './styles';
 
 const POSTCARD = {
-  career: {
+  carreira: {
     bgColor: 'career',
     icon: <Career />,
   },
