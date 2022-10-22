@@ -2,9 +2,9 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import * as S from './style';
 
-const List = ({ as, children, flexDirection }) => {
+const List = ({ as, children, 'data-testid': dataTestId, flexDirection }) => {
   return (
-    <S.Container data-testid="list">
+    <S.Container data-testid={dataTestId}>
       <S.List as={as} flexDirection={flexDirection}>
         {children}
       </S.List>
@@ -14,13 +14,15 @@ const List = ({ as, children, flexDirection }) => {
 
 List.defaultProps = {
   as: 'ul',
-  children: `<div />`,
+  children: '<div />',
+  'data-testid': 'list',
   flexDirection: 'row',
 };
 
 List.propTypes = {
   as: string,
   children: node,
+  'data-testid': string,
   flexDirection: string,
 };
 
