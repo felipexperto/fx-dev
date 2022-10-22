@@ -1,8 +1,6 @@
 import styled from 'styled-components/macro';
-import { theme } from 'styles';
 
-const medias = theme.main.medias;
-const { sm } = medias;
+const sm = ({ theme }) => theme.medias.sm;
 
 const CardCategory = styled.span`
   background-color: ${({ theme }) => theme.colors.darkyellow};
