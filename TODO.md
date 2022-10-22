@@ -1,11 +1,17 @@
 **Redesign**
 
 chore: alterar layout dos cards no post list
-  criar componente PostCard;
+  [x] criar componente PostCard;
+  [ ] conferir acessibilidade nestes componentes
+  [ ] versão desktop
+  [ ] verificar se o hook por tamanho da tela ainda existe e deletá-lo
 
 chore: customizar o TL;DR; nos posts
+  [ ] consultar layout de quotes do Obsidian
 
 refactor: ajeitar media queries para uma utilização melhor
+  [x] Pegar valor vindo do theme sem importar o theme;
+  [ ] Criar um helper para pegar multiplos breakpoints;
 
 feat: implementar filtro da lista de posts por categoria
 
