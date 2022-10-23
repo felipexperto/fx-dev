@@ -1,6 +1,6 @@
 ---
 authorid: 1
-category: Career
+category: Carreira
 title: Meu 2019 como desenvolvedor
 date: "2020-01-08T00:12:03.284Z"
 description: "Meu 2019 como desenvolvedor"
