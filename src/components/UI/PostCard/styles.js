@@ -1,19 +1,22 @@
 import styled from 'styled-components/macro';
 import { Link } from 'gatsby';
 
-// const sm = ({ theme }) => theme.medias.sm;
-
-const Card = styled(Link)`
+const Card = styled.li`
+  background-color: ${({ theme }) => theme.colors.darkgrey};
+  border-color: ${({ theme }) => theme.colors.grey};
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
   margin: 0.5rem 1rem;
+`;
+
+const CardAnchor = styled(Link)`
+  display: block;
+  height: 100%;
   text-decoration: none;
 `;
 
 const CardContent = styled.div`
-  background-color: ${({ theme }) => theme.colors.darkgrey};
-  border-color: ${({ theme }) => theme.colors.grey};
-  border-style: solid;
-  border-radius: 4px;
-  border-width: 1px;
   display: flex;
   padding: 1rem;
 `;
@@ -57,6 +60,7 @@ const CardReadingTime = styled(CardComplementaryInfosItem)`
 
 export {
   Card,
+  CardAnchor,
   CardContent,
   CardFirstColumn,
   CardSecondColumn,

@@ -29,18 +29,20 @@ const PostCard = ({ category, date, minutes, title, url }) => {
   const icon = POSTCARD[categoryName].icon;
 
   return (
-    <S.Card to={url} key={uuidv4()}>
-      <S.CardContent>
-        <S.CardFirstColumn>{icon}</S.CardFirstColumn>
-        <S.CardSecondColumn>
-          <S.CardComplementaryInfosList>
-            <S.CardDate>{date}</S.CardDate>
-            <S.CardReadingTime>{minutes} min</S.CardReadingTime>
-          </S.CardComplementaryInfosList>
-          <S.CardTitle>{title}</S.CardTitle>
-          <Chip bgColor={chipBgColor}>{category}</Chip>
-        </S.CardSecondColumn>
-      </S.CardContent>
+    <S.Card>
+      <S.CardAnchor to={url} key={uuidv4()}>
+        <S.CardContent>
+          <S.CardFirstColumn>{icon}</S.CardFirstColumn>
+          <S.CardSecondColumn>
+            <S.CardComplementaryInfosList>
+              <S.CardDate>{date}</S.CardDate>
+              <S.CardReadingTime>{minutes} min</S.CardReadingTime>
+            </S.CardComplementaryInfosList>
+            <S.CardTitle>{title}</S.CardTitle>
+            <Chip bgColor={chipBgColor}>{category}</Chip>
+          </S.CardSecondColumn>
+        </S.CardContent>
+      </S.CardAnchor>
     </S.Card>
   );
 };
