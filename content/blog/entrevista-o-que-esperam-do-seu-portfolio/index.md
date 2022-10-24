@@ -1,6 +1,6 @@
 ---
-authorid: 2
-category: Design
+authorid: 1
+category: Carreira
 title: Entrevista - O que esperam do seu portfolio?
 date: "2015-07-13T00:00:00.000Z"
 description: "Entrevista - O que esperam do seu portfolio?"

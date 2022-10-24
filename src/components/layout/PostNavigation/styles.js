@@ -11,21 +11,18 @@ const linkIcon = styled.div`
 `;
 const linkPreTitle = styled.div`
   color: ${({ theme }) => theme.colors.grey};
-  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   margin-bottom: 0.75em;
   text-transform: uppercase;
 `;
 const linkTitle = styled.h3`
   color: ${({ theme }) => theme.colors.darkgrey};
-  font-family: 'Ubuntu', sans-serif;
   font-size: 1.2rem;
   margin-bottom: 0;
   margin-top: 0;
 `;
 
 const itemNavigation = styled.li`
-  background-color: ${({ theme }) => theme.colors.almostwhite};
   display: flex;
   margin: 0.5rem 0;
   width: 90%;

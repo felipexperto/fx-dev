@@ -4,13 +4,10 @@ const sm = ({ theme }) => theme.medias.sm;
 
 const wrapperArticle = styled.article`
   border-radius: 8px;
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
-    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   margin-top: 0;
   max-width: 100%;
   padding: 2rem;
   @media ${sm} {
-    margin-top: 4rem;
     padding: 4rem 4rem;
   }
 `;
@@ -34,7 +31,7 @@ const footer = styled.footer`
 `;
 
 const title = styled.h1`
-  font-family: 'Ubuntu', sans-serif;
+  color: ${({ theme }) => theme.colors.white};
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -44,7 +41,6 @@ const title = styled.h1`
 const tldrText = styled.p`
   border: solid 1px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  font-family: 'Inter', sans-serif;
   line-height: 2em;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
   margin-left: 2rem;
@@ -71,9 +67,7 @@ const tldrTitle = styled.h2`
   margin-top: 0;
 `;
 
-const tldrSubtitle = styled.span`
-  font-family: 'Inter', sans-serif;
-`;
+const tldrSubtitle = styled.span``;
 
 const dates = styled.ul`
   margin-bottom: 16px;
@@ -82,9 +76,8 @@ const dates = styled.ul`
 `;
 
 const dataDefault = styled.li`
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.lightgrey};
   display: inline-block;
-  font-family: Inter, sans-serif;
   font-size: 0.85rem;
   line-height: 1.5em;
 `;

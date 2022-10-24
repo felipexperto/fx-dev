@@ -1,6 +1,6 @@
 ---
 authorid: 1
-category: Dev
+category: Carreira
 title: Meu 2020 como pessoa desenvolvedora
 date: "2021-01-02T21:52:00.284Z"
 description: "Meu 2020 como pessoa desenvolvedora"

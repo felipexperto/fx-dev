@@ -5,8 +5,6 @@ const md = ({ theme }) => theme.medias.md;
 
 const footerWrapper = styled.footer`
   background: ${({ theme }) => theme.colors.darkestgrey};
-  font-family: 'Inter', sans-serif;
-  margin-top: 4rem;
   padding: 4rem 0;
   width: 100%;
 `;
@@ -65,7 +63,6 @@ const socialColumn = styled(column)`
 
 const presentationTitle = styled.strong`
   display: block;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 3rem;
   font-weight: ${({ theme }) => theme.fonts.weight.bolder};
   line-height: 1.4em;
@@ -73,14 +70,12 @@ const presentationTitle = styled.strong`
 const presentationSubtitle = styled.strong`
   color: ${({ theme }) => theme.colors.white};
   display: block;
-  font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
   margin-top: 0.75rem;
 `;
 
 const infosLabel = styled.span`
   display: block;
-  font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   margin: ${({ margin }) => (margin ? margin : '.5rem 0')};
 `;
@@ -88,7 +83,6 @@ const infosLabel = styled.span`
 const infosHighlight = () => css`
   color: inherit;
   display: inline-block;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 1.25rem;
   font-weight: ${({ theme }) => theme.fonts.weight.bolder};
 `;

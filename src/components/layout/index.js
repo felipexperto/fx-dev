@@ -7,4 +7,5 @@ export { default as NotFoundPageContent } from './NotFoundPageContent';
 export { default as PostContent } from './PostContent';
 export { default as PostNavigation } from './PostNavigation';
 export { default as PostsList } from './PostsList';
+export { default as Root } from './Root';
 export { default as SEO } from './Seo';

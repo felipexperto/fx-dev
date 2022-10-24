@@ -1,6 +1,6 @@
 ---
 authorid: 1
-category: Dev
+category: Carreira
 title: Frontend Júnior, Pleno ou Sênior?
 date: "2021-01-03T23:10:00.284Z"
 description: "Este post é um conjunto de experiência e muitas referências que propõem um diálogo, buscando criar uma base para argumentação sobre o assunto."

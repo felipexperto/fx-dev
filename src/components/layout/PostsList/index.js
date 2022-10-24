@@ -1,35 +1,23 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { v4 as uuidv4 } from 'uuid';
 import { array } from 'prop-types';
-
 import * as S from './styles';
 
 const PostsList = ({ posts }) => {
-  const allPosts = posts.map(({ node }) => {
-    return (
-      <Link to={node.fields.slug} key={uuidv4()}>
-        <S.cardHeader>
-          {node.frontmatter.category ? (
-            <S.cardCategory>{node.frontmatter.category}</S.cardCategory>
-          ) : null}
-          <S.cardTitle>
-            {node.frontmatter.title || node.fields.slug}
-          </S.cardTitle>
-        </S.cardHeader>
-        <S.cardFooter>
-          <S.cardComplementaryInfosList>
-            <S.cardDate>{node.frontmatter.date}</S.cardDate>
-            <S.cardReadingTime>
-              {Math.round(node.fields.readingTime.minutes)} min
-            </S.cardReadingTime>
-          </S.cardComplementaryInfosList>
-        </S.cardFooter>
-      </Link>
-    );
-  });
-
-  return <S.cardList>{allPosts}</S.cardList>;
+  return (
+    <S.List as="ol" data-testid="posts-list">
+      {posts.map(({ node }) => (
+        <S.PostCard
+          category={node.frontmatter.category}
+          date={node.frontmatter.date}
+          key={uuidv4}
+          minutes={Math.round(node.fields.readingTime.minutes)}
+          title={node.frontmatter.title}
+          url={node.fields.slug}
+        />
+      ))}
+    </S.List>
+  );
 };
 
 PostsList.propTypes = {

@@ -1,14 +1,30 @@
-**Features**
+**Redesign**
 
-- Adicionar plugin Disqus de comentários
- - https://www.gatsbyjs.org/docs/adding-comments/
+chore: alterar layout dos cards no post list
+  [x] criar componente PostCard;
+  [x] conferir acessibilidade nestes componentes
+  [x] versão desktop
+  [x] verificar se o hook por tamanho da tela ainda existe e deletá-lo
+
+chore: customizar o TL;DR; nos posts
+  [ ] consultar layout de quotes do Obsidian
+
+refactor: ajeitar media queries para uma utilização melhor
+  [x] Pegar valor vindo do theme sem importar o theme;
+  [ ] Criar um helper para pegar multiplos breakpoints;
+
+feat: implementar filtro da lista de posts por categoria
+
+refactor: reescrever projeto em Typescript e remover propTypes
+
+chore: adicionar script de gerar componentes
+
+**Features**
 
 - Adicionar seção com tecnologias que utilizo;
  - [Exemplo 01](https://preview.themeforest.net/item/arter-cv-resume-portfolio-web-app-template/full_screen_preview/27008333?_ga=2.216075988.370116323.1607660090-1265588602.1607660075), [Exemplo 02](https://preview.themeforest.net/item/oblas-angular-portfolio-web-application/full_screen_preview/23654405?_ga=2.172633248.2001170672.1607660092-1265588602.1607660075)
 
 - Infinity Loading on scroll de posts na home ou paginação quando houverem +50 posts;
-
-- Tema dark;
 
 - Custom 404 page;
 
@@ -19,20 +35,10 @@
 
 **Pesquisa**
 
-- Estudar possibilidade de adicionar categorias e/ou tags por post;
-  - Estudar a possibilidade de relacionar categorias e/ou tags;
-
 - Estudar como desenvolver uma busca;
   - Resultados em nova página?
-  - Resultados na home, filtrados?
   - Vai aceitar parâmetros na url?
-  - Como vai ser este componente de busca?
-  - Onde ele vai ficar? Meio da página, tipo Google? Topo fixo?
-  - Filtro somente por texto ou por categoria também?
   - Estudar a implementação de busca no sticky header;
 
+- É possível montar uma página de currículo utilizando APIs do LinkedIn?
 
-**Conteúdo**
-
-- Adicionar feature image na lista de posts e dentro dos artigos;
- - É uma decisão correta considerando que há um limite de tráfego de banda?
