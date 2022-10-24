@@ -2,9 +2,9 @@
 
 chore: alterar layout dos cards no post list
   [x] criar componente PostCard;
-  [ ] conferir acessibilidade nestes componentes
-  [ ] versão desktop
-  [ ] verificar se o hook por tamanho da tela ainda existe e deletá-lo
+  [x] conferir acessibilidade nestes componentes
+  [x] versão desktop
+  [x] verificar se o hook por tamanho da tela ainda existe e deletá-lo
 
 chore: customizar o TL;DR; nos posts
   [ ] consultar layout de quotes do Obsidian
@@ -17,7 +17,7 @@ feat: implementar filtro da lista de posts por categoria
 
 refactor: reescrever projeto em Typescript e remover propTypes
 
-adicionar script de gerar componentes
+chore: adicionar script de gerar componentes
 
 **Features**
 
