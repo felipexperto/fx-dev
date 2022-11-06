@@ -6,6 +6,13 @@ chore: alterar layout dos cards no post list
   [x] versão desktop
   [x] verificar se o hook por tamanho da tela ainda existe e deletá-lo
 
+chore: improve a11y
+  [ ] adicionar lint de a11y `jsx-a11y`
+  [ ] ver a proposta de `react-a11y`
+  [ ] ver a proposta de `react-axe`
+  [ ] adicionar a dependência e configurar
+  [ ] adicionar o plugin de acessibilidade `storybook-addon-a11y`
+
 chore: customizar o TL;DR; nos posts
   [ ] consultar layout de quotes do Obsidian
 
