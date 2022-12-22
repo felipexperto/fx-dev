@@ -14,8 +14,8 @@ const PostStyles = createGlobalStyle`
     color: ${theme.main.colors.white};
     
     a {
-      border-bottom: solid 2px ${theme.main.colors.white};
-      color: currentColor;
+      border-bottom: solid 2px ${theme.main.colors.yellow};
+      color: ${theme.main.colors.yellow};
       font-weight: bold;
       line-break: anywhere;
       @media ${sm} {
@@ -25,23 +25,12 @@ const PostStyles = createGlobalStyle`
     }
 
     blockquote {
+      background-color: rgba(158, 158, 158, 0.1);
+      border-radius: 4px;
       line-height: 1.8em;
       margin: 2rem 0;
-      padding-left: 2rem;
+      padding: 1rem 2rem 2rem 2rem;
       position: relative;
-
-      &::before {
-        background-color: ${theme.main.colors.darkyellow};
-        border-radius: 8px;
-        box-shadow: 0 4px 20px 0 rgba(244, 188, 18,.15), 0 7px 10px -5px rgba(244, 188, 18,.4);
-        bottom: 0;
-        content: "";
-        display: block;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 0.32813rem;
-      }
 
       ul {
         padding-left: 0;
@@ -53,12 +42,48 @@ const PostStyles = createGlobalStyle`
     }
 
     code:not([slot="code"]) {
-      background: #f0f9fb;
+      background: ${theme.main.colors.yellow};
       border-radius: 4px;
-      color: #267fab;
+      color: ${theme.main.colors.almostblack};
       display: inline-block;
+      font-family: "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace;
       padding: 0 5px;
       vertical-align: middle;
+    }
+
+    h1 {
+      font-size: 2em;  
+      margin-top: 1.667em; 
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-top: 1.8em; 
+    }
+    h3 {
+      font-size: 1.4em;
+      margin-top: 2em; 
+    }
+    h4 {
+      font-size: 1.3em;
+      margin-top: 2em; 
+    }
+    h5 {
+      font-size: 1.2em;
+      margin-top: 1.667em; 
+    }
+    h6 {
+      font-size: 1.1em;
+      margin-top: 1.455em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: ${theme.main.colors.darkyellow};
+      margin-bottom: 0;
     }
 
     h2.anchor,
@@ -80,7 +105,6 @@ const PostStyles = createGlobalStyle`
     h3 {
       font-weight: 700;
       line-height: 1.4em;
-      margin-bottom: 1rem;
     }
 
     h4,
@@ -96,7 +120,7 @@ const PostStyles = createGlobalStyle`
     }
   
     section {
-      line-height: 1.5em;
+      line-height: 1.6em;
 
       a[target="_blank"]::after {
         content: "\\eb09";

@@ -39,27 +39,22 @@ const title = styled.h1`
 `;
 
 const tldrText = styled.p`
-  border: solid 1px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  line-height: 2em;
-  padding: 3rem 1.5rem 1.5rem 1.5rem;
-  margin-left: 2rem;
-  margin-top: -2rem;
+  line-height: 1.6em;
 `;
 
 const tldrWrapper = styled.div`
+  background-color: rgba(158, 158, 158, 0.1);
+  border: solid 1px ${({ theme }) => theme.colors.darkyellow};
+  border-radius: 4px;
+  padding: 2rem;
   margin-bottom: 3rem;
   margin-top: 3rem;
 `;
 
 const tldrHeader = styled.div`
-  background-color: ${({ theme }) => theme.colors.darkyellow};
   border-radius: 4px;
-  box-shadow: 0 4px 20px 0 rgba(244, 188, 18, 0.15),
-    0 7px 10px -5px rgba(244, 188, 18, 0.4);
   color: ${({ theme }) => theme.colors.white};
   display: inline-block;
-  padding: 1rem 1.25rem;
 `;
 
 const tldrTitle = styled.h2`
@@ -67,7 +62,9 @@ const tldrTitle = styled.h2`
   margin-top: 0;
 `;
 
-const tldrSubtitle = styled.span``;
+const tldrSubtitle = styled.span`
+  font-weight: ${({ theme }) => theme.fonts.weight.bold};
+`;
 
 const dates = styled.ul`
   margin-bottom: 16px;
