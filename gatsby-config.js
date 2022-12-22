@@ -130,6 +130,21 @@ module.exports = {
         debug: false,
       }
     },
+    {
+      resolve: 'gatsby-plugin-newrelic',
+      options: {
+        config: {
+            instrumentationType: 'proAndSPA',
+            accountId: '3747236',
+            trustKey: '3747236',
+            agentID: '1386024480',
+            licenseKey: 'NRJS-92a1775b3720d091af0',
+            applicationID: '1386024480',
+            beacon: 'bam.nr-data.net',
+            errorBeacon: 'bam.nr-data.net'
+        }
+      }
+     }
     `gatsby-plugin-styled-components`,
   ],
 }
