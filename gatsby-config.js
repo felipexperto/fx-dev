@@ -144,7 +144,7 @@ module.exports = {
             errorBeacon: 'bam.nr-data.net'
         }
       }
-     }
+     },
     `gatsby-plugin-styled-components`,
   ],
 }
