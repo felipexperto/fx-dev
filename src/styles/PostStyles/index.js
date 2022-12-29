@@ -17,11 +17,8 @@ const PostStyles = createGlobalStyle`
       border-bottom: solid 2px ${theme.main.colors.yellow};
       color: ${theme.main.colors.yellow};
       font-weight: bold;
-      line-break: anywhere;
-      @media ${sm} {
-        line-break: normal;
-      }
       text-decoration: none;
+      word-break: break-word;
     }
 
     blockquote {
@@ -56,11 +53,11 @@ const PostStyles = createGlobalStyle`
       margin-top: 1.667em; 
     }
     h2 {
-      font-size: 1.5em;
+      font-size: 1.8em;
       margin-top: 1.8em; 
     }
     h3 {
-      font-size: 1.4em;
+      font-size: 1.5em;
       margin-top: 2em; 
     }
     h4 {
