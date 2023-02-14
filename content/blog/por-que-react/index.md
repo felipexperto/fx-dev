@@ -32,9 +32,4 @@ Por fim, utilizar uma tecnologia consolidada no mercado, com milhões de utiliza
 
 ## Em breve continuamos...
 
-Próximo tópico: **Quando você não deve utilizar React...**  
-
-Alguns posts para antecipar a leitura:
-
-- [React Popularity and When Not to Use React](https://scotch.io/starters/react/react-popularity-and-when-not-to-use-react)
-- [Stop Using React for EVERYTHING!](https://medium.com/@zackargyle/stop-using-react-for-everything-c8297ac1a644#.tdd4fptdd)
+Próximo tópico: [O que é React e conceitos básicos](/o-que-e-react).  
