@@ -165,13 +165,13 @@ E por serem processos automatizados são fáceis de lidar, não importa se você
 
 ##### Testando retornos de API
 
-Em sua explicação Rogelio utiliza um [exemplo de teste de retorno de API](https://youtu.be/HAuXJVI_bUs?t=334) (veja o vídeo para melhor entendimento) onde a cada nova informação que é retornada na API se faz necessário atualizar o mock - quem nunca passou por isso? - e que muitas vezes nós utilizamos um `console.log` para verificar as novas informações, copiamos e colamos a atualização, criando um ciclo, como na imagem ao lado.
+Em sua explicação Rogelio utiliza um [exemplo de teste de retorno de API](https://youtu.be/HAuXJVI_bUs?t=334) (veja o vídeo para melhor entendimento) onde a cada nova informação que é retornada na API se faz necessário atualizar o mock - quem nunca passou por isso? - e que muitas vezes nós utilizamos um `console.log` para verificar as novas informações, copiamos e colamos a atualização, criando um ciclo, como na imagem a seguir.
+
+![Ciclo de asserção](./assertion-cycle.png)
 
 > Who's making the assertion, is it you or your test? - [Juliano Rafael](https://dev.to/frontendwizard/don-t-snapshot-your-ui-components-make-assertions-41b5).
 
 Em casos como esse, seria mais fácil somente rodar um comando e atualizar um snapshot.
-
-![Ciclo de asserção](./assertion-cycle.png)
 
 ##### Testando componentes
 
