@@ -120,14 +120,20 @@ Fazer checkout em um commit de uma branch
 </div>
 <div class="fx-group">
 
-Desfazer um commit pusheado
+Deletar um commit pusheado
 - `git log`
 - Copie o hash do commit, ex: `c929b5c`
 - `git revert [hash-do-commit]`
 - Faça um `push` para sua branch
 
 </div>
+<div class="fx-group">
 
+Deletar o último commit pusheado sem **deixar rastros**
+- `git reset --hard HEAD~1`
+- Faça um `git push --force origin [nome-da-sua-branch]`
+
+</div>
 
 ### Diff
 
