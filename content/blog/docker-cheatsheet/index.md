@@ -3,6 +3,7 @@ authorid: 1
 category: Dev
 title: "Docker cheatsheet (comandos e macetes)"
 date: "2020-12-28T22:28:00.284Z"
+update: "2023-12-28T18:00:00.284Z"
 description: "Esse artigo tem o objetivo audacioso de ser melhor que a lista de macetes do GTA: San Andreas."
 tldr: "Esse artigo tem o objetivo audacioso de ser melhor que a lista de macetes do GTA: San Andreas. Essa é pra mim e pra você, pessoa desenvolvedora vencida pelo cansaço ou com memória de peixe e sendo procurada pelo Nemo."
 ---
@@ -197,7 +198,12 @@ Exibir informações de um container:
 - `docker inspect [ID do container]`
 
 </div>
+<div class="fx-group">
 
+Exibir logs de um container em modo interativo:  
+- `docker logs --follow [ID do container]`
+
+</div>
 
 
 ### Iniciar
