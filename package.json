@@ -11,7 +11,7 @@
     "@deckdeckgo/highlight-code": "^2.1.1",
     "@fontsource/fira-sans": "^4.5.10",
     "babel-plugin-styled-components": "^1.11.1",
-    "gatsby": "^4.24.3",
+    "gatsby": "^5.13.7",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-feed": "^2.3.23",
     "gatsby-plugin-google-tagmanager": "^2.5.0",
