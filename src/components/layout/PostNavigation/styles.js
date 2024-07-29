@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 const sm = ({ theme }) => theme.medias.sm;
 
@@ -34,8 +34,10 @@ const itemNavigation = styled.li`
   a {
     background-color: ${({ theme }) => theme.colors.white};
     border-radius: 4px;
-    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
-      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    box-shadow:
+      0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12),
+      0 5px 5px -3px rgba(0, 0, 0, 0.2);
     padding: 1rem 1.5rem 1.5rem 1.5rem;
     text-decoration: none;
     transition: all 0.5s;
@@ -43,7 +45,8 @@ const itemNavigation = styled.li`
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.darkyellow};
-      box-shadow: 0 4px 20px 0 rgba(244, 188, 18, 0.15),
+      box-shadow:
+        0 4px 20px 0 rgba(244, 188, 18, 0.15),
         0 7px 10px -5px rgba(244, 188, 18, 0.4);
       & ${linkIcon}, & ${linkTitle} {
         color: ${({ theme }) => theme.colors.white};

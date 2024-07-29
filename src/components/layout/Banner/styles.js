@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components';
 import { Container } from 'styles';
 import { Tipography } from 'components/UI';
 import { animationKeyframes } from 'styles';

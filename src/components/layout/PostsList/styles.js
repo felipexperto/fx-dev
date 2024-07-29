@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import { List as L, PostCard as P } from 'components/UI';
 
 const lg = ({ theme }) => theme.medias.lg;

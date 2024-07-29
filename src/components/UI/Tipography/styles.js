@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components';
 
 export const Tipography = styled.h1`
   color: ${({ color, theme }) =>
