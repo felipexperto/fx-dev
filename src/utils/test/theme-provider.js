@@ -1,8 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import 'jest-styled-components';
 import { Root } from 'components/layout';
+import { render } from '@testing-library/react';
 
 // eslint-disable-next-line react/prop-types
 const WrapperProvider = ({ children }) => <Root>{children}</Root>;

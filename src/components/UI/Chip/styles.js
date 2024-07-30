@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 const Chip = styled.div`
   background-color: ${({ bgColor, theme }) => theme.colors[bgColor]};

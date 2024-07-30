@@ -51,7 +51,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-abbr`,
           {
             resolve: `gatsby-remark-emoji`,
             options: {
@@ -73,7 +72,47 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "FX DEV RSS Feed",
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -130,21 +169,6 @@ module.exports = {
         debug: false,
       }
     },
-    {
-      resolve: 'gatsby-plugin-newrelic',
-      options: {
-        config: {
-            instrumentationType: 'proAndSPA',
-            accountId: '3747236',
-            trustKey: '3747236',
-            agentID: '1386024480',
-            licenseKey: 'NRJS-92a1775b3720d091af0',
-            applicationID: '1386024480',
-            beacon: 'bam.nr-data.net',
-            errorBeacon: 'bam.nr-data.net'
-        }
-      }
-     },
     `gatsby-plugin-styled-components`,
   ],
 }
