@@ -1,11 +1,31 @@
 {
   "name": "fx.dev",
   "private": true,
-  "description": "Um blog pessoal para disseminar conteúdo. Criado em Gatsby utilizando Markdown e com base em um template de Kyle Mathews",
+  "description": "Um blog pessoal para disseminar conteúdo. Criado em Gatsby utilizando Markdown",
   "version": "0.3.0",
+  "engines": {
+    "node": "20"
+  },
   "author": "Felipe Marciano <felipexperto@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "jest --env=jsdom",
+    "unit": "yarn test --verbose --watchAll=false",
+    "coverage": "yarn test --coverage --watchAll=false",
+    "lint": "eslint ./src",
+    "lint:fix": "yarn lint --fix",
+    "prettier": "prettier ./src",
+    "prettier:fix": "yarn prettier --write \"**/*.{js,jsx,json}\"",
+    "prettier:check": "yarn prettier --check",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@deckdeckgo/highlight-code": "^4.4.0",
@@ -58,31 +78,5 @@
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
     "react-test-renderer": "^18.3.1"
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "jest --env=jsdom",
-    "unit": "yarn test --verbose --watchAll=false",
-    "coverage": "yarn test --coverage --watchAll=false",
-    "lint": "eslint ./src",
-    "lint:fix": "yarn lint --fix",
-    "prettier": "prettier ./src",
-    "prettier:fix": "yarn prettier --write \"**/*.{js,jsx,json}\"",
-    "prettier:check": "yarn prettier --check",
-    "prepare": "husky install"
   }
 }
