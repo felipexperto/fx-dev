@@ -55,7 +55,15 @@ Vou compartilhar aqui os que mais tenho utilizado.
 
 **Prompt de Pareto**: {{ Escreva o seu objetivo }}. Identifique e compartilhe 20% dos aprendizados mais importantes que me ajudem a entender 80% desse objetivo.
 
-**Prompt Plano de Aprendizado**: Sou um desenvolvedor Frontend Pleno, quero me tornar um desenvolvedor Sênior. Crie um plano de aprendizado de 30 dias que me ajude a alcançar esse objetivo.
+**Prompts de Aprendizado**:
+
+- Quais são temas que devo dominar para compreender {{ assunto }}
+- Quero aprender {{ assunto }} do zero
+- Crie um plano com as cinco áreas mais importantes para melhorar esta habilidade
+- Transforme os pontos principais de {{ assunto }} em uma história ou narrativa
+- Crie um teste para eu verificar meus conhecimentos sobre {{ assunto }}
+- Ajude-me a aplicar {{ assunto }} em uma situação do mundo real
+- Sou um desenvolvedor Pleno, quero me tornar um desenvolvedor Sênior. Crie um plano de aprendizado de 30 dias que me ajude a alcançar esse objetivo.
 
 **Prompt de Resumo**: Resuma o artigo {{ url do artigo }} e me forneça uma lista dos aprendizados e insights mais importantes.
 
