@@ -1,6 +1,8 @@
 module.exports = {
+  preset: 'ts-jest',
   transform: {
-    "^.+\\.jsx?$": `<rootDir>/configs/jest-preprocess.js`,
+    "^.+\\.(js|jsx)$": `<rootDir>/configs/jest-preprocess.js`,
+    '^.+\\.(ts|tsx)?$': 'ts-jest',
   },
   moduleDirectories: ["node_modules", "src"],
   roots: [
