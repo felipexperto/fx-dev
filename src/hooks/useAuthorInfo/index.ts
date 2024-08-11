@@ -1,10 +1,8 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { Author } from 'types';
+import { filterAuthorById, filterSocialNetworks } from './helpers';
 
-const shouldNetworkBeVisible = (item) => item.show === true;
-const getSocialNetworks = (item) =>
-  item.map((item) => item[1]).filter(shouldNetworkBeVisible);
-
-const useAuthorInfo = (authorId) => {
+const useAuthorInfo = (authorId: number) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -71,11 +69,10 @@ const useAuthorInfo = (authorId) => {
     }
   `);
 
-  const postAuthorInfo = data.site.siteMetadata.authors.filter(
-    (item) => item.id === authorId
-  );
-  const { bio, name, intro, social } = postAuthorInfo[0];
-  const socialArr = getSocialNetworks(Object.entries(social));
+  const postAuthorInfo: Author[] = filterAuthorById(authorId, data);
+
+  const { bio, name, intro, social }: Author = postAuthorInfo[0];
+  const socialArr = filterSocialNetworks(social);
 
   return {
     authorBio: bio,
