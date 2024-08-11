@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Chip = styled.div`
+const Chip = styled.div<{ bgColor: string, borderColor: string }>`
   background-color: ${({ bgColor, theme }) => theme.colors[bgColor]};
   border-color: ${({ borderColor, theme }) => theme.colors[borderColor]};
   border-style: solid;
