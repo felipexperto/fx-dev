@@ -48,6 +48,11 @@ jest.mock('next/config', () => ({
 }));
 ```
 
+## Explicação
+
+- `__esModule: true`: Essa propriedade é usada para garantir que o módulo seja tratado como um módulo ES e não como um objeto comum do CommonJS.
+- `default: () => {...}`: Isso simula a função getConfig que é exportada como padrão em next/config.
+
 ## Dependências e versões
 
 ```markup
