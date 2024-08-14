@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
+import { HTMLAttributes } from 'react';
 
-export type ListProps = {
+export type ListProps = HTMLAttributes<HTMLUListElement | HTMLOListElement> & {
   as?: string;
   children: ReactNode;
   'data-testid': string;
