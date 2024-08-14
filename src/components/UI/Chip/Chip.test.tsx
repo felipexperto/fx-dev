@@ -13,11 +13,11 @@ describe('[Components] Chip', () => {
   };
 
   test('should render component properly', () => {
-    const mockProps: ChipProps = { children: 'xablau','data-testid': 'chip' };
+    const mockProps: ChipProps = { children: 'xablau', 'data-testid': 'chip' };
 
     renderView(mockProps);
     const component = screen.getByTestId('chip');
-    
+
     expect(component).toBeVisible();
     expect(component).toHaveStyle('background-color: transparent');
     expect(component).toHaveStyle('border-color: transparent');

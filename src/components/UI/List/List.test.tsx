@@ -6,13 +6,16 @@ import List from './';
 
 describe('[Components] List', () => {
   const generateListOfItems = (numberOfItems: number) => {
-    return <>
-      { Array(numberOfItems)
+    return (
+      <>
+        {Array(numberOfItems)
           .fill(null)
-          .map((_, index) => <li key={index}>Element {index + 1}</li>)
-      }
-    </>
-  }
+          .map((_, index) => (
+            <li key={index}>Element {index + 1}</li>
+          ))}
+      </>
+    );
+  };
 
   const renderView = ({ children, ...props }: ListProps) => {
     const utils = render(<List {...props}>{children}</List>);
@@ -22,7 +25,7 @@ describe('[Components] List', () => {
   };
 
   test('should render component properly', () => {
-    const mockProps: ListProps = { children: 'xablau','data-testid': 'list' };
+    const mockProps: ListProps = { children: 'xablau', 'data-testid': 'list' };
 
     renderView(mockProps);
     expect(screen.getByTestId('list')).toBeVisible();
@@ -31,15 +34,22 @@ describe('[Components] List', () => {
   });
 
   test('should render column list', () => {
-    const mockProps: ListProps = { children: generateListOfItems(3),'data-testid': 'list', flexDirection: 'column' };
+    const mockProps: ListProps = {
+      children: generateListOfItems(3),
+      'data-testid': 'list',
+      flexDirection: 'column',
+    };
 
     renderView(mockProps);
     expect(screen.getByTestId('list')).toBeVisible();
     expect(screen.getByTestId('list')).toHaveStyle('flex-direction: column');
   });
-  
+
   test('should render list of items', () => {
-    const mockProps: ListProps = { children: generateListOfItems(3), 'data-testid': 'list-xablau' };
+    const mockProps: ListProps = {
+      children: generateListOfItems(3),
+      'data-testid': 'list-xablau',
+    };
 
     renderView(mockProps);
     expect(screen.getByTestId('list-xablau')).toBeVisible();
