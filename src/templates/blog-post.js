@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import { object } from 'prop-types';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   } = postHead;
 
   return (
-    <Fragment>
+    <>
       <App title={siteTitle} bgColor="yellow">
         <SEO
           title={`${title} | ${siteTitle}`}
@@ -44,7 +44,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         />
         <PostNavigation previous={previous} next={next} />
       </App>
-    </Fragment>
+    </>
   );
 };
 
