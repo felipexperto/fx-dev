@@ -17,7 +17,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest --env=jsdom",
+    "test": "jest --env=jsdom --config ./jest.config.js --maxWorkers 2",
     "unit": "yarn test --verbose --watchAll=false",
     "coverage": "yarn test --coverage --watchAll=false",
     "lint": "eslint ./src",
