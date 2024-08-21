@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from 'react';
 import Baseball from 'images/banner/astronaut-baseball.inline.svg';
 import Bicycle from 'images/banner/astronaut-bicycle.inline.svg';
@@ -8,16 +7,16 @@ import Peace from 'images/banner/astronaut-peace.inline.svg';
 import Pool from 'images/banner/astronaut-pool.inline.svg';
 import Rocket from 'images/banner/astronaut-rocket.inline.svg';
 
-import * as S from './styles.js';
+import * as S from './styles';
 
 const ILLUSTRATION_BANNER = [
-  <Baseball />,
-  <Bicycle />,
-  <Laptop />,
-  <Lying />,
-  <Peace />,
-  <Pool />,
-  <Rocket />,
+  <Baseball key="banner-baseball" />,
+  <Bicycle key="banner-bicycle" />,
+  <Laptop key="banner-laptop" />,
+  <Lying key="banner-lying" />,
+  <Peace key="banner-peace" />,
+  <Pool key="banner-pool" />,
+  <Rocket key="banner-rocket" />,
 ];
 
 const illustrationLength = ILLUSTRATION_BANNER.length;
