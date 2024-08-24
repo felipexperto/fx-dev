@@ -132,6 +132,7 @@ module.exports = {
         src: path.join(__dirname, 'src'),
         components: path.join(__dirname, 'src/components'),
         contexts: path.join(__dirname, 'src/contexts'),
+        helpers: path.join(__dirname, 'src/helpers'),
         hooks: path.join(__dirname, 'src/hooks'),
         images: path.join(__dirname, 'src/images'),
         pages: path.join(__dirname, 'src/pages'),

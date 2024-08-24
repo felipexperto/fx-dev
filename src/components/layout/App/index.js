@@ -3,7 +3,7 @@ import { node, string } from 'prop-types';
 
 import { Banner, Footer, Header, Root } from 'components/layout';
 import { Container, ContainerFull } from 'styles';
-import { isHome } from 'utils/helpers';
+import { isHome } from 'helpers';
 
 const App = ({ title, children, bgColor }) => {
   const headerHeight = '72px';

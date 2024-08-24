@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { string } from 'prop-types';
 
 import { useWindowScroll } from 'hooks';
-import { isHome } from 'utils/helpers';
+import { isHome } from 'helpers';
 import Logo from 'images/logo-felipexperto.inline.svg';
 import { theme } from 'styles';
 import * as S from './styles.js';

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { object } from 'prop-types';
 
-import { isItemNull } from 'utils/helpers';
+import { isItemNull } from 'utils';
 import * as S from './styles';
 
 const navigationAlignmentRight = (arr) =>
