@@ -14,12 +14,12 @@ describe('[Components] Postcard', () => {
 
   test('should render component properly', () => {
     const mockProps: PostCardProps = {
-      "category": "Carreira",
-      "date": "02 janeiro, 2021",
-      "minutes": 3,
-      "title": "Meu 2020 como pessoa desenvolvedora",
-      "url": "/meu-2020-como-pessoa-desenvolvedora/"
-  };
+      category: 'Carreira',
+      date: '02 janeiro, 2021',
+      minutes: 3,
+      title: 'Meu 2020 como pessoa desenvolvedora',
+      url: '/meu-2020-como-pessoa-desenvolvedora/',
+    };
 
     renderView(mockProps);
     const component = screen.getByTestId('meu-2020-como-pessoa-desenvolvedora');

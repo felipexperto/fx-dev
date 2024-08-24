@@ -9,7 +9,7 @@ import * as S from './styles';
 const PostCard = ({ category, date, minutes, title, url }: PostCardProps) => {
   const categoryName = category.toLowerCase();
   const chipBgColor = POSTCARD_CATEGORIES[categoryName].bgColor;
-  const dataTestId = url.replaceAll('/', '')
+  const dataTestId = url.replaceAll('/', '');
   const icon = POSTCARD_CATEGORIES[categoryName].icon;
 
   return (
@@ -23,7 +23,12 @@ const PostCard = ({ category, date, minutes, title, url }: PostCardProps) => {
               <S.CardReadingTime>{minutes} min</S.CardReadingTime>
             </S.CardComplementaryInfosList>
             <S.CardTitle>{title}</S.CardTitle>
-            <Chip bgColor={chipBgColor} data-testid={`chip-${categoryName}-${dataTestId}`}>{category}</Chip>
+            <Chip
+              bgColor={chipBgColor}
+              data-testid={`chip-${categoryName}-${dataTestId}`}
+            >
+              {category}
+            </Chip>
           </S.CardSecondColumn>
         </S.CardContent>
       </S.CardAnchor>

@@ -5,7 +5,7 @@ import BannerIllustration from './';
 
 describe('[Components] BannerIllustration', () => {
   const renderView = () => {
-    const utils = render(<BannerIllustration/>);
+    const utils = render(<BannerIllustration />);
     return {
       ...utils,
     };
@@ -13,7 +13,7 @@ describe('[Components] BannerIllustration', () => {
 
   test('should render component properly', () => {
     renderView();
-    const component = screen.getByTestId("banner-wrapper");
+    const component = screen.getByTestId('banner-wrapper');
 
     expect(component).toBeVisible();
   });

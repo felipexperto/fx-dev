@@ -25,7 +25,11 @@ const BannerIllustration = () => {
   const position = Math.floor(Math.random() * illustrationLength);
   const illustration = ILLUSTRATION_BANNER.at(position);
 
-  return <S.IllustrationWrapper data-testid="banner-wrapper">{illustration}</S.IllustrationWrapper>;
+  return (
+    <S.IllustrationWrapper data-testid="banner-wrapper">
+      {illustration}
+    </S.IllustrationWrapper>
+  );
 };
 
 export default BannerIllustration;
