@@ -11,7 +11,8 @@ module.exports = {
   collectCoverageFrom: [
     "src/**/*.{js,jsx,ts,tsx}",
     "!<rootDir>/node_modules/",
-    "!<rootDir>/src/styles/**/*.js"
+    "!<rootDir>/src/styles/**/*.ts",
+    "!<rootDir>/src/types/**/*.ts"
   ],
   coverageReporters: ['lcov', 'text'],
   coverageThreshold: {

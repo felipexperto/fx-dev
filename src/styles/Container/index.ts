@@ -1,17 +1,24 @@
 import styled, { css } from 'styled-components';
-
+import { FlexDirection } from 'types/CssTypes';
 import theme from 'styles/Themes';
 
 const { medias } = theme.main;
 
-const defaultContainer = styled.main`
+const defaultContainer = styled.main<{
+  backgroundColor: string;
+  borderRadius: string;
+}>`
   background-color: ${({ backgroundColor, theme }) =>
     theme.colors[backgroundColor] || 'transparent'};
   border-radius: ${({ borderRadius }) =>
     borderRadius ? `${borderRadius}` : '0'};
 `;
 
-const Container = styled(defaultContainer)`
+const Container = styled(defaultContainer)<{
+  direction: FlexDirection;
+  marginBottom: number;
+  marginTop: number;
+}>`
   align-items: center;
   display: flex;
   margin-left: auto;
