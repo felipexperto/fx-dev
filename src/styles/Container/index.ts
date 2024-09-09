@@ -1,44 +1,32 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { FlexDirection } from 'types/CssTypes';
 import theme from 'styles/Themes';
 
 const { medias } = theme.main;
 
 const defaultContainer = styled.main<{
-  backgroundColor: string;
-  borderRadius: string;
+  backgroundColor?: string;
+  borderRadius?: string;
 }>`
   background-color: ${({ backgroundColor, theme }) =>
-    theme.colors[backgroundColor] || 'transparent'};
+    backgroundColor ? theme.colors[backgroundColor] : 'transparent'};
   border-radius: ${({ borderRadius }) =>
-    borderRadius ? `${borderRadius}` : '0'};
+    borderRadius ?? '0'};
 `;
 
 const Container = styled(defaultContainer)<{
-  direction: FlexDirection;
-  marginBottom: number;
-  marginTop: number;
+  direction?: FlexDirection;
+  marginBottom?: number;
+  marginTop?: number;
 }>`
   align-items: center;
   display: flex;
+  flex-direction: ${({ direction }) => direction ?? 'row'};
+  margin-bottom: ${({ marginBottom }) => marginBottom ?? '0'};
   margin-left: auto;
   margin-right: auto;
+  margin-top: ${({ marginTop }) => marginTop ?? '0'};
   max-width: 100%;
-  ${({ marginBottom }) =>
-    marginBottom &&
-    css`
-      margin-bottom: ${marginBottom}px;
-    `};
-  ${({ marginTop }) =>
-    marginTop &&
-    css`
-      margin-top: ${marginTop}px;
-    `};
-  ${({ direction }) =>
-    direction &&
-    css`
-      flex-direction: ${direction};
-    `};
 
   @media ${medias.sm} {
     width: 540px;
