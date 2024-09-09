@@ -3,11 +3,11 @@ import '@testing-library/jest-dom';
 import 'jest-styled-components';
 import { Root } from 'components/layout';
 import { render } from '@testing-library/react';
+import { WrapperProviderProps } from './types';
 
-// eslint-disable-next-line react/prop-types
-const WrapperProvider = ({ children }) => <Root>{children}</Root>;
+const WrapperProvider = ({ children }: WrapperProviderProps ) => <Root>{children}</Root>;
 
-const customRender = (ui, options) =>
+const customRender = (ui: any, options?: any) =>
   render(ui, { wrapper: WrapperProvider, ...options });
 
 export * from '@testing-library/react';
