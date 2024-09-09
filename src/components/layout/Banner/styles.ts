@@ -18,13 +18,13 @@ const setPaddingTop = (paddingTop: string) => css`
 
 const Banner = styled.section``;
 
-const BannerWrapper = styled.div<{ paddingTop?: string; }>`
+const BannerWrapper = styled.div<{ paddingTop?: string }>`
   background: ${({ theme }) => theme.colors.yellow};
   color: ${({ theme }) => theme.colors.black};
   display: flex;
   flex-direction: column;
   justify-content: center;
-  ${({ paddingTop }) => paddingTop ? setPaddingTop(paddingTop) : '0'}
+  ${({ paddingTop }) => (paddingTop ? setPaddingTop(paddingTop) : '0')}
   width: 100%;
 `;
 

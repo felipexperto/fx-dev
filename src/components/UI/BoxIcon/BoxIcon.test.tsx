@@ -16,7 +16,7 @@ describe('[Components] BoxIcon', () => {
     const mockProps: BoxIconProps = {
       className: 'bx-left-arrow-alt',
       'data-testid': 'box-icon',
-      name: 'arrow-left'
+      name: 'arrow-left',
     };
 
     renderView(mockProps);

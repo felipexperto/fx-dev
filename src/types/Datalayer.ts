@@ -15,4 +15,4 @@ export type DatalayerEventProps = {
 
 export type DatalayerWindow = {
   push: (event: DatalayerEventProps) => void;
-}
+};

@@ -10,8 +10,7 @@ const defaultContainer = styled.main<{
 }>`
   background-color: ${({ backgroundColor, theme }) =>
     backgroundColor ? theme.colors[backgroundColor] : 'transparent'};
-  border-radius: ${({ borderRadius }) =>
-    borderRadius ?? '0'};
+  border-radius: ${({ borderRadius }) => borderRadius ?? '0'};
 `;
 
 const Container = styled(defaultContainer)<{

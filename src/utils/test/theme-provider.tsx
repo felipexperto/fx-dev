@@ -5,7 +5,9 @@ import { Root } from 'components/layout';
 import { render } from '@testing-library/react';
 import { WrapperProviderProps } from './types';
 
-const WrapperProvider = ({ children }: WrapperProviderProps ) => <Root>{children}</Root>;
+const WrapperProvider = ({ children }: WrapperProviderProps) => (
+  <Root>{children}</Root>
+);
 
 const customRender = (ui: any, options?: any) =>
   render(ui, { wrapper: WrapperProvider, ...options });

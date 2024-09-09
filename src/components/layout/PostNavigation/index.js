@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { object } from 'prop-types';
-
-import { isItemNull } from 'utils';
+import { BoxIcon } from 'components/UI';
+import { isNull } from 'utils';
 import * as S from './styles';
 
-const navigationAlignmentRight = (arr) =>
-  isItemNull(arr[0]) && !isItemNull(arr[1]);
+const navigationAlignmentRight = (arr) => isNull(arr[0]) && !isNull(arr[1]);
 
 const PostNavigation = ({ previous, next }) => {
   return (
@@ -18,7 +17,7 @@ const PostNavigation = ({ previous, next }) => {
           <S.itemNavigationLeft>
             <Link to={previous.fields.slug} rel="anterior">
               <S.linkIcon>
-                <i className="bx bx-left-arrow-alt"></i>
+                <BoxIcon className="bx-left-arrow-alt" />
               </S.linkIcon>
               <S.linkPreTitle>Post anterior</S.linkPreTitle>
               <S.linkTitle>{previous.frontmatter.title}</S.linkTitle>
@@ -29,7 +28,7 @@ const PostNavigation = ({ previous, next }) => {
           <S.itemNavigationRight>
             <Link to={next.fields.slug} rel="próximo">
               <S.linkIcon>
-                <i className="bx bx-right-arrow-alt"></i>
+                <BoxIcon className="bx-right-arrow-alt" />
               </S.linkIcon>
               <S.linkPreTitle>Próximo post</S.linkPreTitle>
               <S.linkTitle>{next.frontmatter.title}</S.linkTitle>

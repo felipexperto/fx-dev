@@ -10,4 +10,4 @@ export type DatalayerCtxType = Object[] | DatalayerWindow;
 export type DatalayerUseCtxProps = {
   DatalayerContext: Function;
   DatalayerContextProvider: Function;
-}
+};

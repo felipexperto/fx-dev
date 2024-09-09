@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react';
 
 export type TypographyProps = {
   children: ReactNode;
@@ -6,4 +6,4 @@ export type TypographyProps = {
   fontSize?: string;
   fontWeight?: string;
   margin?: string;
-}
+};
