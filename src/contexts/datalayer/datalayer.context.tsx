@@ -1,10 +1,11 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { node } from 'prop-types';
+import { DatalayerCtxProviderProps, DatalayerCtxType } from './types';
 
-const DatalayerContext = createContext([]);
+const DatalayerContext = createContext<DatalayerCtxType>([]);
 
-const DatalayerContextProvider = ({ children }) => {
-  const [datalayerComponent, setDatalayerComponent] = useState(null);
+const DatalayerContextProvider = ({ children }: DatalayerCtxProviderProps) => {
+  const [datalayerComponent, setDatalayerComponent] =
+    useState<DatalayerCtxType>([]);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -19,14 +20,6 @@ const DatalayerContextProvider = ({ children }) => {
       {children}
     </DatalayerContext.Provider>
   );
-};
-
-DatalayerContextProvider.defaultProps = {
-  children: `<div />`,
-};
-
-DatalayerContextProvider.propTypes = {
-  children: node,
 };
 
 export { DatalayerContext, DatalayerContextProvider };
