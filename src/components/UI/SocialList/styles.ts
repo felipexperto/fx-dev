@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SocialAnchor = styled.a`
+const SocialAnchor = styled.a<{ colorSchemeReverse?: boolean }>`
   border-bottom: 0;
   padding: 0.25rem 0.5rem;
   transition: all 0.5s 0.15s;

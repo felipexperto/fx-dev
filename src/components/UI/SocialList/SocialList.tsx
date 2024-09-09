@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { bool, array } from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-
+import { BoxIcon } from 'components/UI';
 import { DatalayerContext } from 'contexts';
+import { datalayerInteractionEvent } from './helpers';
+import { SocialListProps } from './types';
 import * as S from './styles';
 
-const SocialList = ({ networkArr, colorSchemeReverse }) => {
+const SocialList = ({ networkArr, colorSchemeReverse }: SocialListProps) => {
   const datalayerComponent = useContext(DatalayerContext);
 
   return (
@@ -20,26 +22,23 @@ const SocialList = ({ networkArr, colorSchemeReverse }) => {
             target="_blank"
             onClick={(e) => {
               e.preventDefault();
-              datalayerComponent.push({
-                event: 'interaction',
-                eventCategory: 'social:me',
-                eventAction: `clicou:${network.name}`,
-                eventLabel: network.url,
-                eventValue: 0,
+              datalayerInteractionEvent({
+                fn: datalayerComponent,
+                data: network,
               });
               window.location.href = network.url;
             }}
           >
             {network.boxicon_type ? (
-              <i
+              <BoxIcon
                 name={network.boxicon}
-                className={`bx ${network.boxicon_type}-${network.boxicon}`}
-              ></i>
+                className={`${network.boxicon_type}-${network.boxicon}`}
+              />
             ) : (
-              <i
+              <BoxIcon
                 name={network.boxicon}
-                className={`bx bxl-${network.boxicon}`}
-              ></i>
+                className={`bxl-${network.boxicon}`}
+              />
             )}
           </S.SocialAnchor>
         </S.SocialItem>
