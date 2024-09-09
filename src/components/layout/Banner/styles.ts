@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components';
-import { Container } from 'styles';
-import { Tipography } from 'components/UI';
-import { animationKeyframes } from 'styles';
+import { animationKeyframes, Container } from 'styles';
+import { Typography } from 'components/UI';
 
 const { fadeIn } = animationKeyframes;
 
-const md = ({ theme }) => theme.medias.md;
+const md = ({ theme }: any) => theme.medias.md;
 
 const fadeInAnimation = () => css`
   -webkit-animation: ${fadeIn} 1s linear 1;
@@ -13,19 +12,19 @@ const fadeInAnimation = () => css`
   animation: ${fadeIn} 1s linear 1;
 `;
 
+const setPaddingTop = (paddingTop: string) => css`
+  padding-top: ${paddingTop};
+`;
+
 const Banner = styled.section``;
 
-const BannerWrapper = styled.div`
+const BannerWrapper = styled.div<{ paddingTop?: string; }>`
   background: ${({ theme }) => theme.colors.yellow};
   color: ${({ theme }) => theme.colors.black};
   display: flex;
   flex-direction: column;
   justify-content: center;
-  ${({ paddingTop }) =>
-    paddingTop &&
-    css`
-      padding-top: ${paddingTop};
-    `};
+  ${({ paddingTop }) => paddingTop ? setPaddingTop(paddingTop) : '0'}
   width: 100%;
 `;
 
@@ -55,7 +54,7 @@ const SecondColumn = styled.div`
 
 const PreTitle = styled.div``;
 
-const Title = styled(Tipography)`
+const Title = styled(Typography)`
   font-size: 3rem;
   font-weight: ${({ theme }) => theme.fonts.weight.bold};
   margin: 0.5rem 0 0.5rem 0;

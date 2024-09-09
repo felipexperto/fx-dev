@@ -1,11 +1,10 @@
 import React from 'react';
-import { string } from 'prop-types';
 import { BannerIllustration } from 'components/UI';
-
+import { BannerProps } from './types';
 import { theme } from 'styles';
-import * as S from './styles.js';
+import * as S from './styles';
 
-const Banner = ({ paddingTop }) => {
+const Banner = ({ paddingTop = '0' }: BannerProps) => {
   const { main } = theme;
 
   return (
@@ -29,14 +28,6 @@ const Banner = ({ paddingTop }) => {
       </S.BannerWrapper>
     </S.Banner>
   );
-};
-
-Banner.defaultProps = {
-  paddingTop: '0',
-};
-
-Banner.propTypes = {
-  paddingTop: string,
 };
 
 export default Banner;
