@@ -2,8 +2,8 @@ import { redirectTo, reloadPage, isWindowDefined } from './browserUtils';
 
 describe('[Utils] - browserUtils', () => {
   beforeEach(() => {
-    delete window.location;
-    window.location = {
+    delete (window as any).location;
+    (window as any).location = {
       assign: jest.fn(),
       reload: jest.fn(),
     };
@@ -22,7 +22,7 @@ describe('[Utils] - browserUtils', () => {
   });
 
   test('should reload page', () => {
-    reloadPage('/xablau');
+    reloadPage();
     expect(window.location.reload).toHaveBeenCalledTimes(1);
   });
 });
