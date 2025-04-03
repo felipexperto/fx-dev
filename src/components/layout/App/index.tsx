@@ -1,11 +1,12 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 
+import { AppProps } from './types';
 import { Banner, Footer, Header, Root } from 'components/layout';
 import { Container, ContainerFull } from 'styles';
 import { isHome } from 'helpers';
 
-const App = ({ title, children, bgColor }) => {
+const App = ({ title, children, bgColor }: AppProps) => {
   const headerHeight = '72px';
 
   return (
