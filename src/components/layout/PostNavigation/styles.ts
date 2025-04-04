@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const sm = ({ theme }) => theme.medias.sm;
+const sm = ({ theme }: { theme: any }) => theme.medias.sm;
 
 const linkIcon = styled.div`
   color: ${({ theme }) => theme.colors.darkgrey};
@@ -64,7 +64,7 @@ const itemNavigationRight = styled(itemNavigation)`
   text-align: right;
 `;
 
-const listNavigation = styled.ul`
+const listNavigation = styled.ul<{ alignmentRight?: boolean }>`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

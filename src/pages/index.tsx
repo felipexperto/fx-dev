@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { object } from 'prop-types';
 
-import { App, PostsList, SEO } from 'components/layout';
+import { App, PostsList, Seo } from 'components/layout';
 import { Typography } from 'components/UI';
 
 const BlogIndex = ({ data, location }) => {
@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Fragment>
       <App location={location} title={siteTitle} bgColor="yellow">
-        <SEO title={`Todos os posts | ${siteTitle}`} />
+        <Seo title={`Todos os posts | ${siteTitle}`} />
         <Typography as="h2" color="white" margin="2rem auto 0 auto">
           Todos os posts
         </Typography>

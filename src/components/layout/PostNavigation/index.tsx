@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { object } from 'prop-types';
 import { BoxIcon } from 'components/UI';
 import { isNull } from 'utils';
 import * as S from './styles';
 
-const navigationAlignmentRight = (arr) => isNull(arr[0]) && !isNull(arr[1]);
+const navigationAlignmentRight = (arr: Array<Record<string, unknown>>) =>
+  isNull(arr[0]) && !isNull(arr[1]);
 
-const PostNavigation = ({ previous, next }) => {
+const PostNavigation = ({ previous, next }: { previous: any; next: any }) => {
   return (
     <S.wrapperNavigation>
       <S.listNavigation
@@ -38,11 +38,6 @@ const PostNavigation = ({ previous, next }) => {
       </S.listNavigation>
     </S.wrapperNavigation>
   );
-};
-
-PostNavigation.propTypes = {
-  previous: object,
-  next: object,
 };
 
 export default PostNavigation;

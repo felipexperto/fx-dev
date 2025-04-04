@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Container } from 'styles';
 
-const md = ({ theme }) => theme.medias.md;
+const md = ({ theme }: { theme: any }) => theme.medias.md;
 
 const footerWrapper = styled.footer`
   background: ${({ theme }) => theme.colors.darkestgrey};
@@ -74,7 +74,7 @@ const presentationSubtitle = styled.strong`
   margin-top: 0.75rem;
 `;
 
-const infosLabel = styled.span`
+const infosLabel = styled.span<{ margin?: string }>`
   display: block;
   font-size: 0.9rem;
   margin: ${({ margin }) => (margin ? margin : '.5rem 0')};

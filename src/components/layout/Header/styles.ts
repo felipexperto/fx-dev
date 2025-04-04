@@ -7,7 +7,12 @@ const Header = styled.header`
   justify-content: center;
 `;
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.div<{
+  height?: string;
+  isBackgroundTransparent?: boolean;
+  isScrolling?: boolean;
+  theme: any;
+}>`
   background-color: ${({ theme }) => theme.colors.yellow};
   box-shadow: ${({ isScrolling }) =>
     isScrolling ? '0 1px 10px -2px rgba(0,0,0,.75)' : 'none'};
@@ -36,7 +41,7 @@ const HeaderContainer = styled(Container)`
   padding: 0 15px;
 `;
 
-const HeaderBottomSpace = styled.div`
+const HeaderBottomSpace = styled.div<{ height?: string }>`
   ${({ height }) =>
     height &&
     css`

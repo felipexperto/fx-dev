@@ -1,7 +1,7 @@
+import { ReactNode } from 'react';
+
 export type AppProps = {
-  bgColor: string,
-  children: [key: string],
-  title: string
+  bgColor: string;
+  children: ReactNode;
+  title: string;
 };
-
-

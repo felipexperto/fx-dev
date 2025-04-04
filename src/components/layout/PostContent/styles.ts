@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const sm = ({ theme }) => theme.medias.sm;
+const sm = ({ theme }: { theme: any }) => theme.medias.sm;
 
 const wrapperArticle = styled.article`
   border-radius: 8px;

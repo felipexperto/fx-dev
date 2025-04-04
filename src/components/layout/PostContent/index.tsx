@@ -1,19 +1,19 @@
 import React, { Fragment } from 'react';
-import { number, string } from 'prop-types';
+import { PostContentProps } from 'types';
 
 import PostStyles from 'styles/PostStyles';
 import { Bio } from 'components/layout';
 import * as S from './styles';
 
 const PostContent = ({
-  authorId,
+  authorid,
   date,
   post,
   title,
   tldr,
   update,
   timeToRead,
-}) => {
+}: PostContentProps) => {
   return (
     <Fragment>
       <PostStyles />
@@ -41,21 +41,11 @@ const PostContent = ({
         </S.header>
         <S.content dangerouslySetInnerHTML={{ __html: post }} />
         <S.footer>
-          <Bio authorId={authorId} />
+          <Bio authorid={authorid} />
         </S.footer>
       </S.wrapperArticle>
     </Fragment>
   );
-};
-
-PostContent.propTypes = {
-  authorId: number.isRequired,
-  date: string.isRequired,
-  post: string.isRequired,
-  title: string.isRequired,
-  tldr: string,
-  update: string,
-  timeToRead: number.isRequired,
 };
 
 export default PostContent;

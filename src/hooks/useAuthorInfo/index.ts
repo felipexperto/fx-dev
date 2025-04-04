@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { Author } from 'types';
 import { filterAuthorById, filterSocialNetworks } from './helpers';
 
-const useAuthorInfo = (authorId: number) => {
+const useAuthorInfo = (authorid: number) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -69,7 +69,7 @@ const useAuthorInfo = (authorId: number) => {
     }
   `);
 
-  const postAuthorInfo: Author[] = filterAuthorById(authorId, data);
+  const postAuthorInfo: Author[] = filterAuthorById(authorid, data);
 
   const { bio, name, intro, social }: Author = postAuthorInfo[0];
   const socialArr = filterSocialNetworks(social);

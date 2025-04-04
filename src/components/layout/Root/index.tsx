@@ -1,11 +1,10 @@
-import React from 'react';
-import { node } from 'prop-types';
+import React, { ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { theme } from 'styles';
 import { DatalayerContextProvider } from 'contexts';
 
-const Root = ({ children }) => {
+const Root = ({ children }: { children: ReactNode }) => {
   const { main } = theme;
 
   return (
@@ -13,10 +12,6 @@ const Root = ({ children }) => {
       <ThemeProvider theme={main}>{children}</ThemeProvider>
     </DatalayerContextProvider>
   );
-};
-
-Root.propTypes = {
-  children: node.isRequired,
 };
 
 export default Root;

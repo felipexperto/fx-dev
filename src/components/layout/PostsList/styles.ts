@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { List as L, PostCard as P } from 'components/UI';
 
-const lg = ({ theme }) => theme.medias.lg;
+const lg = ({ theme }: { theme: any }) => theme.medias.lg;
 
 const List = styled(L)`
   list-style: none;

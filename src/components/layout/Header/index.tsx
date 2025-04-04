@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
-import { string } from 'prop-types';
+import { EffectCallback } from './types';
 
 import { useWindowScroll } from 'hooks';
 import { isHome } from 'helpers';
 import Logo from 'images/logo-felipexperto.inline.svg';
 import { theme } from 'styles';
-import * as S from './styles.js';
+import * as S from './styles';
 
-const Header = ({ height, title }) => {
+const Header = ({ height, title }: { height: string; title: string }) => {
   const { main } = theme;
   const { scroll } = useWindowScroll();
   const isHomepage = isHome();
@@ -16,7 +16,7 @@ const Header = ({ height, title }) => {
   const [shouldBackgroundBeTransparent, setShouldBackgroundBeTransparent] =
     useState(false);
 
-  useEffect(() => {
+  useEffect((): EffectCallback => {
     let unmounted = false;
 
     if (!unmounted) {
@@ -50,11 +50,6 @@ const Header = ({ height, title }) => {
       {!isHomepage && <S.HeaderBottomSpace height={height} />}
     </S.Header>
   );
-};
-
-Header.propTypes = {
-  height: string.isRequired,
-  title: string.isRequired,
 };
 
 export default Header;

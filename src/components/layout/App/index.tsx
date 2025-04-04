@@ -1,12 +1,10 @@
 import React from 'react';
-import { node, string } from 'prop-types';
-
 import { AppProps } from './types';
 import { Banner, Footer, Header, Root } from 'components/layout';
 import { Container, ContainerFull } from 'styles';
 import { isHome } from 'helpers';
 
-const App = ({ title, children, bgColor }: AppProps) => {
+const App = ({ title, children, bgColor = 'transparent' }: AppProps) => {
   const headerHeight = '72px';
 
   return (
@@ -26,17 +24,6 @@ const App = ({ title, children, bgColor }: AppProps) => {
       </ContainerFull>
     </Root>
   );
-};
-
-App.defaultProps = {
-  bgColor: 'transparent',
-  colorSchemeReverse: false,
-};
-
-App.propTypes = {
-  title: string.isRequired,
-  children: node.isRequired,
-  bgColor: string,
 };
 
 export default App;

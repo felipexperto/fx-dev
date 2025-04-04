@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { bool, array } from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { BoxIcon } from 'components/UI';
 import { DatalayerContext } from 'contexts';
@@ -7,7 +6,10 @@ import { datalayerInteractionEvent } from './helpers';
 import { SocialListProps } from './types';
 import * as S from './styles';
 
-const SocialList = ({ networkArr, colorSchemeReverse }: SocialListProps) => {
+const SocialList = ({
+  networkArr,
+  colorSchemeReverse = false,
+}: SocialListProps) => {
   const datalayerComponent = useContext(DatalayerContext);
 
   return (
@@ -45,15 +47,6 @@ const SocialList = ({ networkArr, colorSchemeReverse }: SocialListProps) => {
       ))}
     </S.SocialList>
   );
-};
-
-SocialList.defaultProps = {
-  colorSchemeReverse: false,
-};
-
-SocialList.propTypes = {
-  networkArr: array.isRequired,
-  colorSchemeReverse: bool,
 };
 
 export default SocialList;

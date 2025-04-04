@@ -6,19 +6,22 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { useAuthorInfo } from 'hooks';
 import { Avatar } from 'components/UI';
 import authorAvatar from 'images/authors/felipemarciano.png';
 import * as S from './styles';
 
-const Bio = ({ authorId }) => {
-  const { authorBio, authorName, authorIntro } = useAuthorInfo(authorId);
+const Bio = ({ authorid = 1 }: { authorid: number }) => {
+  const { authorBio, authorName, authorIntro } = useAuthorInfo(authorid);
 
   return (
     <S.BioWrapper>
-      <Avatar image={authorAvatar} label={authorName} />
+      <Avatar
+        data-testid="avatar-bio"
+        image={authorAvatar}
+        label={authorName}
+      />
       <div>
         {authorIntro && <S.Intro>{authorIntro}</S.Intro>}
         {authorName && <S.Name>{authorName}</S.Name>}
@@ -26,14 +29,6 @@ const Bio = ({ authorId }) => {
       </div>
     </S.BioWrapper>
   );
-};
-
-Bio.defaultProps = {
-  authorId: 1,
-};
-
-Bio.propTypes = {
-  authorId: PropTypes.number,
 };
 
 export default Bio;

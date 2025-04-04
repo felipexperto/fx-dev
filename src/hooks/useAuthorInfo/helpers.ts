@@ -8,8 +8,8 @@ export const filterSocialNetworks = (social: AuthorSocialProfile) =>
     .map((item) => item[1])
     .filter(shouldNetworkBeVisible);
 
-export const filterAuthorById = (authorId: number, data: SiteData) => {
+export const filterAuthorById = (authorid: number, data: SiteData) => {
   return data.site.siteMetadata.authors.filter(
-    (item: Author) => item.id === authorId
+    (item: Author) => item.id === authorid
   );
 };

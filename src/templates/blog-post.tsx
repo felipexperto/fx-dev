@@ -1,13 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { object } from 'prop-types';
+import { BlogPostTemplateProps } from '../types';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 
-import { App, PostContent, PostNavigation, SEO } from 'components/layout';
+import { App, PostContent, PostNavigation, Seo } from 'components/layout';
 
 deckDeckGoHighlightElement();
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const BlogPostTemplate = ({ data, pageContext }: BlogPostTemplateProps) => {
+  console.log({ data, pageContext });
+
   const postBody = data.markdownRemark;
   const postHead = postBody.frontmatter;
   const siteTitle = data.site.siteMetadata.title;
@@ -28,12 +31,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   return (
     <>
       <App title={siteTitle} bgColor="yellow">
-        <SEO
+        <Seo
           title={`${title} | ${siteTitle}`}
           description={description || excerpt}
         />
         <PostContent
-          authorId={authorid}
+          authorid={authorid}
           date={date}
           description={description}
           post={html}
