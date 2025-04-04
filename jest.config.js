@@ -1,6 +1,8 @@
 module.exports = {
+  preset: 'ts-jest',
   transform: {
-    "^.+\\.jsx?$": `<rootDir>/configs/jest-preprocess.js`,
+    "^.+\\.(js|jsx)$": `<rootDir>/configs/jest-preprocess.js`,
+    '^.+\\.(ts|tsx)?$': 'ts-jest',
   },
   moduleDirectories: ["node_modules", "src"],
   roots: [
@@ -9,7 +11,8 @@ module.exports = {
   collectCoverageFrom: [
     "src/**/*.{js,jsx,ts,tsx}",
     "!<rootDir>/node_modules/",
-    "!<rootDir>/src/styles/**/*.js"
+    "!<rootDir>/src/styles/**/*.ts",
+    "!<rootDir>/src/types/**/*.ts"
   ],
   coverageReporters: ['lcov', 'text'],
   coverageThreshold: {
