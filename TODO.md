@@ -22,7 +22,7 @@ refactor: ajeitar media queries para uma utilização melhor
 
 feat: implementar filtro da lista de posts por categoria
 
-refactor: reescrever projeto em Typescript e remover propTypes
+[x] refactor: reescrever projeto em Typescript e remover propTypes
 
 chore: adicionar script de gerar componentes
 
@@ -49,3 +49,8 @@ chore: adicionar script de gerar componentes
 
 - É possível montar uma página de currículo utilizando APIs do LinkedIn?
 
+**Atualizar o layout**
+
+- https://mainline-astro-template.vercel.app/
+- https://docs.astro.build/en/guides/styling/#markdown-styling
+- Adicionar o shadcn? https://ui.shadcn.com/docs/components/carousel
