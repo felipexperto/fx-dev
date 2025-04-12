@@ -1,0 +1,15 @@
+---
+import "../styles/blogpost.css";
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const { pageTitle } = Astro.props;
+---
+
+<BaseLayout pageTitle={`${pageTitle} | FX Dev`}>
+	<div id="layout-blogpost">
+		<body>
+			<slot />
+		</body>
+	</div>
+</BaseLayout>
