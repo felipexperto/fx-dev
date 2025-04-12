@@ -1,0 +1,13 @@
+---
+import "../styles/global.css";
+
+import HeadTags from '../components/HeadTags.astro';
+
+const { pageTitle } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-br">
+	<HeadTags pageTitle={pageTitle}></HeadTags>
+	<slot />
+</html>

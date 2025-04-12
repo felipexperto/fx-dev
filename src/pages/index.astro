@@ -1,12 +1,12 @@
 ---
 import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import DefaultLayout from '../layouts/Default.astro';
 
 import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
 ---
 
-<Layout>
+<DefaultLayout>
 	<Welcome />
 
 	<ul>
@@ -14,4 +14,4 @@ const posts = await getCollection('blog');
 			<li><a href={`/${post.id}`}>{post.data.title}</a></li>
 		))}
 	</ul>
-</Layout>
+</DefaultLayout>
