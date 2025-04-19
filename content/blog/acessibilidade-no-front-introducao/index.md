@@ -4,12 +4,12 @@ category: Dev
 title: "Acessibilidade no Frontend - Introdução"
 date: "2022-01-11T22:00:00.000Z"
 description: "Introdução rápida de acessibilidade no front, do conceito à prática"
-tldr: ''
+tldr: ""
 ---
 
 Olá, pessoa! Tudo bem?
 
-Sem muita enrolação, vamos conversar sobre acessibilidade. Muitas vezes esse assunto envolve documentações extensas e cansativas, então nossa intenção é sermos práticos pra que você não durma ou feche a aba. 
+Sem muita enrolação, vamos conversar sobre acessibilidade. Muitas vezes esse assunto envolve documentações extensas e cansativas, então nossa intenção é sermos práticos pra que você não durma ou feche a aba.
 
 Só pra deixar claro, o objetivo audacioso deste post é dar uma introdução conceitual e apresentar práticas aplicáveis no dia a dia para que você finalize essa leitura sabendo identificar falhas básicas de acessibilidade e como corrigi-las.
 
@@ -33,7 +33,7 @@ Em outras palavras, eles são incumbidos de escrever a WCAG (`Web Content Access
 
 ## Princípios da WCAG 2.1
 
-Atualmente a WCAG encontra-se em sua versão 2.1 e tudo que é escrito nela é baseado em 4 princípios: Perceptível, Operável, Compreensível e Robusto. 
+Atualmente a WCAG encontra-se em sua versão 2.1 e tudo que é escrito nela é baseado em 4 princípios: Perceptível, Operável, Compreensível e Robusto.
 
 Ao invés de trazer o que cada um desses tópicos significa e acabarmos numa conversa abstrata, dei uma lida geral e concatenei 12 recomendações que eles publicaram em 2018 em pequenos textos que na minha opinião refletem o que temos que entregar para o usuário final para que consigamos nos adaptar a cada um dos tópicos:
 
@@ -43,11 +43,11 @@ Ao invés de trazer o que cada um desses tópicos significa e acabarmos numa con
 
 - Informações em várias mídias (texto, áudio, vídeo): Sabe aquele blog que você visita e tem um player onde é possível ouvir o conteúdo da matéria, então, o foco não é pra quem tem pressa ou preguiça e sim para aqueles que possuem dificuldades de leitura. Nós também podemos encontrar vídeos, muito comuns em blogs de reviews, a ideia é a mesma.
 
-- De fácil entendimento: Na área de Design, falando especificadamente de UX Design, existe um profissional chamado UX Writer cujo um dos trabalhos é identificar a dificuldade das pessoas lerem um texto e compreenderem. Em outras palavras, eles tem um conjunto de regras para avaliar a complexidade de textos. Isso serve muito para interface, por exemplo: Imagine quantos perfis de pessoas com diferentes dispositivos lidam com a interface do aplicativo de um banco e você precisa que a proposta se encaixe para todos eles. 
+- De fácil entendimento: Na área de Design, falando especificadamente de UX Design, existe um profissional chamado UX Writer cujo um dos trabalhos é identificar a dificuldade das pessoas lerem um texto e compreenderem. Em outras palavras, eles tem um conjunto de regras para avaliar a complexidade de textos. Isso serve muito para interface, por exemplo: Imagine quantos perfis de pessoas com diferentes dispositivos lidam com a interface do aplicativo de um banco e você precisa que a proposta se encaixe para todos eles.
 
 ### Operável
 
-- Conteúdo acessível por teclado: Que seja possível interagir com todos os elementos da página utilizando o teclado, que esses elementos siga uma ordem intuitiva e  esteja claro para o usuário o elemento que está focado.
+- Conteúdo acessível por teclado: Que seja possível interagir com todos os elementos da página utilizando o teclado, que esses elementos siga uma ordem intuitiva e esteja claro para o usuário o elemento que está focado.
 
 - Facilmente navegável: Imagine um mega menu, se você repetidamente pressiona `TAB`, entra nas opções e não consegue sair, é um problema. Então cabe a nós elaborar uma estratégia para que as pessoas consigam acessar esse menu diretamente ou o conteúdo principal, por exemplo.
 
@@ -61,7 +61,7 @@ Ao invés de trazer o que cada um desses tópicos significa e acabarmos numa con
 
 ### Robusto
 
-- Maximizar a compatibilidade com atuais e futuros agentes de usuário, incluindo tecnologias assistivas: O tópico é bem auto-explicativo, no entanto, para ficar claro, quando falamos *agentes de usuário* significa todos os navegadores em todos os dispositivos.
+- Maximizar a compatibilidade com atuais e futuros agentes de usuário, incluindo tecnologias assistivas: O tópico é bem auto-explicativo, no entanto, para ficar claro, quando falamos _agentes de usuário_ significa todos os navegadores em todos os dispositivos.
 
 ## Critérios de Sucesso
 
@@ -92,10 +92,12 @@ Para saber mais sobre as etapas você pode conferir este vídeo: [Selo de Acessi
 Falando um pouco sobre estatísticas, vamos ver como andam os números de 2019 e 2020 com base nos 14.5 milhões de endereços .br:
 
 2019
+
 - Sites sem problemas: 0,61%;
 - Com pelo menos um problema: 99,39%.
 
 2020
+
 - Sites sem problemas: 0,74%;
 - Com pelo menos um problema: 99,26%.
 
@@ -125,7 +127,7 @@ Dentre as pessoas com dificuldades parcial ou total nas habilidades para enxerga
 
 ### Permanente versus Temporário
 
-Os números citados são grandes e nós sequer estamos englobando o cenário do *Permanente versus Temporário*, o que isso quer dizer?
+Os números citados são grandes e nós sequer estamos englobando o cenário do _Permanente versus Temporário_, o que isso quer dizer?
 
 Imagine um personagem chamado Pedro, ele nasceu sem o braço direito, ele está dentro daquela estatística. Agora temos dois novos personagens, o Ricardo e a Marina. Ricardo quebrou o braço direito em um acidente de moto e Marina teve uma filha recentemente e como trabalha de home office, frequentemente está com a criança num braço e o mouse no outro.
 
@@ -149,7 +151,7 @@ Se chegamos até aqui e ainda não ficou clara a resposta para essa pergunta, va
 
 Antes de mais nada, você precisa saber o que está procurando. Você se lembra que vimos os principais problemas de acessibilidade e eram pontos básicos de navegação?
 
-Sendo assim, aconselho duas séries de vídeos, a primeira é chamada: [a11y casts playlist](https://www.youtube.com/playlist?list=PL7Bjl0Cb4SboBHNihVBRd-AdctfXcmClc) criada pelo Google Chrome Developers, que abordará assuntos como: O que é *focus*? Controlando o foco; Basta usar um botão; Tabindex; Leitores de Tela (VoiceOver, NVDA); Atributo ARIA, entre outros.
+Sendo assim, aconselho duas séries de vídeos, a primeira é chamada: [a11y casts playlist](https://www.youtube.com/playlist?list=PL7Bjl0Cb4SboBHNihVBRd-AdctfXcmClc) criada pelo Google Chrome Developers, que abordará assuntos como: O que é _focus_? Controlando o foco; Basta usar um botão; Tabindex; Leitores de Tela (VoiceOver, NVDA); Atributo ARIA, entre outros.
 
 E a segunda playlist é chamada [Quick accessibility test playlist](https://www.youtube.com/watch?v=ahDuaWKSGZA&list=PLTqm2yVMMUKWTr9XWdW5hJ9tk512Ow0SE&index=1) com vídeos de em média 1 minuto onde você aprende a fazer testes rápidos manuais e não precisará de nada além do teclado e mouse. Alguns assuntos abordados são: Navegação com teclado, Redimensionamento da janela e zoom, Alto Contraste, entre outros.
 
@@ -164,18 +166,18 @@ E a segunda playlist é chamada [Quick accessibility test playlist](https://www.
 })();
 ```
 
-Já entendeu? Não? A questão é que o atributo `alt` vazio não é um erro, ele indica uma imagem decorativa, ou seja, que não tem conteúdo relevante para ser descrita. 
+Já entendeu? Não? A questão é que o atributo `alt` vazio não é um erro, ele indica uma imagem decorativa, ou seja, que não tem conteúdo relevante para ser descrita.
 
 Meu ponto é: As ferramentas e snippets podem auxiliar muito na jornada mas sem entendimento dos conceitos para tomar suas decisões, elas podem induzir ao caminho errado. Dito isso, vamos ao próximo tópico!
 
 ### Ferramentas
 
-Avançando para ferramentas de diagnóstico, as duas primeiras ferramentas são: 
+Avançando para ferramentas de diagnóstico, as duas primeiras ferramentas são:
 
 - Google Chrome Lighthouse;
 - Firefox Accessibility Inspector.
 
-Resolvi citá-las primeiro porque provavelmente você tem esses dois navegadores instalados e deve aproveitar os recursos antes de sair caçando soluções mirabolantes. Aconselho o vídeo [Understand Website Accessibility with the Firefox Accessibility Inspector](https://www.youtube.com/watch?v=7mqqgIxX_NU) postado no canal [Mozilla Developer](https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w) onde Jen Simmons ([@jensimmons](https://twitter.com/jensimmons), designer, desenvolvedora, educadora e palestrante) explica sobre o *Accessibility Inspector*.
+Resolvi citá-las primeiro porque provavelmente você tem esses dois navegadores instalados e deve aproveitar os recursos antes de sair caçando soluções mirabolantes. Aconselho o vídeo [Understand Website Accessibility with the Firefox Accessibility Inspector](https://www.youtube.com/watch?v=7mqqgIxX_NU) postado no canal [Mozilla Developer](https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w) onde Jen Simmons ([@jensimmons](https://twitter.com/jensimmons), designer, desenvolvedora, educadora e palestrante) explica sobre o _Accessibility Inspector_.
 
 Agora vamos avançar para Bookmarklets, que nada mais são do que scripts favoritáveis no navegador que executam funções em Javascript no site e, no nosso caso, relacionadas a acessibilidade:
 
@@ -222,13 +224,3 @@ Lembrando que existe uma variedade de ferramentas e você tem liberdade para esc
 - [Configurando ambiente GNOME para auxiliar PCDs (Diolinux)](https://youtu.be/6lQR3xYewRw?t=429)
 - [Movimento Web para todos](https://mwpt.com.br/)
 - [Curso de Acessibilidade Digital e Comunicacional da Secretaria Municipal da Pessoa com Deficiência](https://www.prefeitura.sp.gov.br/cidade/secretarias/pessoa_com_deficiencia/cpa/index.php?p=12009)
-
-
-
-
-
-
-
-
-
-

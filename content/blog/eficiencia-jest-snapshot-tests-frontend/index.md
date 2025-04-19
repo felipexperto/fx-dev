@@ -6,7 +6,7 @@ tags:
 title: "A eficiência de Jest snapshot tests no frontend"
 date: "2023-02-25T00:00:00.000Z"
 description: "Jest snapshot tests em interfaces, utilizar ou não?"
-tldr: ''
+tldr: ""
 ---
 
 ## Contexto
@@ -36,6 +36,7 @@ Começando do começo… Snapshots são artefatos, arquivos de texto com extens�
 Se houver dentro de um teste o comando `toMatchSnapshot()` em sua primeira execução será gerado um snapshot (texto serializado bem semelhante a uma estrutura HTML) e guardado junto ao teste, a partir deste momento, nas próximas vezes essa referência é comparada e caso haja uma diferença o teste falha e você recebe um alerta.
 
 `Exemplo de snapshot`
+
 ```js
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
@@ -131,7 +132,7 @@ No entanto, fomos além e um teste foi feito no projeto utilizando o comando `np
 | ---------------------- | ---------- | -------- | --------- | ------ |
 | Inicial                | 98.83%     | 96.02%   | 99.07%    | 98.89% |
 | Modificado             | 98.38%     | 95.74%   | 98.14%    | 98.52% |
-| Diferenças percentuais | 0.45%      | 0.28%    | 0.93%     | 0.37%       |
+| Diferenças percentuais | 0.45%      | 0.28%    | 0.93%     | 0.37%  |
 
 Podemos concluir que mesmo de maneira sutil há influência de snapshots na cobertura total do projeto.
 
@@ -180,31 +181,33 @@ E sobre testar a renderização de componentes que são mais complexos, o que Ro
 1. [Simplesmente não teste](https://youtu.be/HAuXJVI_bUs?t=983 "https://youtu.be/HAuXJVI_bUs?t=983");
 2. Utilize Selenium/Cypress/Semelhantes;
 3. Snapshots serializers usando `Jest 19+`;
-    1. No exemplo o método render depende de `enzyme` e foi necessário adicionar a lib: `enzyme-to-json/serializer`, utilizando `shallow` como método de renderização para produzir arquivos legíveis. [Este artigo de Luis Vieira](https://medium.com/@luisvieira_gmr/snapshot-testing-react-components-with-jest-best-practices-dd1585b2b93d "https://medium.com/@luisvieira_gmr/snapshot-testing-react-components-with-jest-best-practices-dd1585b2b93d") explica em mais detalhes a diferença de outputs no tópico `Watch the snapshot output`.
-    2. Basicamente o serializer permite um `prettify`/`formatação` do arquivo de snapshot e a ideia é que você o utilize para gerar snapshots assertivos e de fácil leitura. Aqui temos um artigo mais completo: [Jest Snapshot Serializers](https://medium.com/@luisvieira_gmr/jest-snapshot-serializers-6a96f5c362a1 "https://medium.com/@luisvieira_gmr/jest-snapshot-serializers-6a96f5c362a1").
+   1. No exemplo o método render depende de `enzyme` e foi necessário adicionar a lib: `enzyme-to-json/serializer`, utilizando `shallow` como método de renderização para produzir arquivos legíveis. [Este artigo de Luis Vieira](https://medium.com/@luisvieira_gmr/snapshot-testing-react-components-with-jest-best-practices-dd1585b2b93d "https://medium.com/@luisvieira_gmr/snapshot-testing-react-components-with-jest-best-practices-dd1585b2b93d") explica em mais detalhes a diferença de outputs no tópico `Watch the snapshot output`.
+   2. Basicamente o serializer permite um `prettify`/`formatação` do arquivo de snapshot e a ideia é que você o utilize para gerar snapshots assertivos e de fácil leitura. Aqui temos um artigo mais completo: [Jest Snapshot Serializers](https://medium.com/@luisvieira_gmr/jest-snapshot-serializers-6a96f5c362a1 "https://medium.com/@luisvieira_gmr/jest-snapshot-serializers-6a96f5c362a1").
 
 Enquanto isso, Juliano Rafael em seu artigo [Don't snapshot your UI components, make assertions!](https://dev.to/frontendwizard/don-t-snapshot-your-ui-components-make-assertions-41b5 "https://dev.to/frontendwizard/don-t-snapshot-your-ui-components-make-assertions-41b5") apoia a criação de testes utilizando asserções, por exemplo:
 
 `Exemplo de teste com asserções (expect)`
+
 ```js
-describe('Card', () => {
-  it('should show image and title', () => {
-    const title = "Title of my post"
-    const url = "some url for the image"
-    const altText = "description of the image"
-    const { getByText, getByAltText } = render(() =>
-      <Card image={url} title={title} />)
-    getByText(title)
-    expect(getByAltText(altText)).toHaveAttribute('src', url)
-  })
-})
+describe("Card", () => {
+  it("should show image and title", () => {
+    const title = "Title of my post";
+    const url = "some url for the image";
+    const altText = "description of the image";
+    const { getByText, getByAltText } = render(() => (
+      <Card image={url} title={title} />
+    ));
+    getByText(title);
+    expect(getByAltText(altText)).toHaveAttribute("src", url);
+  });
+});
 ```
 
 E defende os seguintes pontos:
 
--   Mensagens de erro assertivas: Snapshots mostram o que está errado com o componente baseado em comparação com um bom diff mas pára por aí. Com asserções as mensagens realmente falam o que está errado, por exemplo: `TestingLibraryElementError: Unable to find an element with the alt text: description of the image`
--   Sem falsos positivos: Se você adicionar uma nova informação neste card (sem alterar as existentes) os testes não quebrarão.
--   Você está consumindo o componente como o usuário: A utilização das queries providas pelo `dom-testing-library` forçam a usar os componentes como um usuário usaria (procurando por textos, botões ou imagens).
+- Mensagens de erro assertivas: Snapshots mostram o que está errado com o componente baseado em comparação com um bom diff mas pára por aí. Com asserções as mensagens realmente falam o que está errado, por exemplo: `TestingLibraryElementError: Unable to find an element with the alt text: description of the image`
+- Sem falsos positivos: Se você adicionar uma nova informação neste card (sem alterar as existentes) os testes não quebrarão.
+- Você está consumindo o componente como o usuário: A utilização das queries providas pelo `dom-testing-library` forçam a usar os componentes como um usuário usaria (procurando por textos, botões ou imagens).
 
 #### Snapshots gigantes
 
@@ -228,8 +231,8 @@ Veja o código abaixo que foi inserido logo após os imports de um teste:
 
 ```js
 expect.addSnapshotSerializer({
-  test: object => typeof object === 'string',
-  print: object => {
+  test: (object) => typeof object === "string",
+  print: (object) => {
     console.dir({ object });
     return object;
   },
@@ -238,9 +241,9 @@ expect.addSnapshotSerializer({
 
 Neste exemplo nós estamos fazendo algumas coisas:
 
--   O simples fato de fazer essa declaração num arquivo de teste já está afetando como todos os métodos `toMatchSnapshot()` dentro deste teste renderizam o resultado;
--   O método `test` existe para garantir que estamos recebendo uma string e esse é o único tipo suportado. Ele é executado e em seguida passa o valor para o método `print`;
--   O método `print` itera sobre o snapshot dando `console.log`, esse seria o momento onde colocaríamos nosso código para fazer modificações. Esta declaração por si só altera o snapshot, removendo as aspas dos atributos e vamos conversar sobre o porquê.
+- O simples fato de fazer essa declaração num arquivo de teste já está afetando como todos os métodos `toMatchSnapshot()` dentro deste teste renderizam o resultado;
+- O método `test` existe para garantir que estamos recebendo uma string e esse é o único tipo suportado. Ele é executado e em seguida passa o valor para o método `print`;
+- O método `print` itera sobre o snapshot dando `console.log`, esse seria o momento onde colocaríamos nosso código para fazer modificações. Esta declaração por si só altera o snapshot, removendo as aspas dos atributos e vamos conversar sobre o porquê.
 
 Imagine o seguinte trecho gerado por um snapshot:
 
@@ -273,18 +276,18 @@ Imagine o seguinte trecho gerado por um snapshot:
 
 O método `print` a cada iteração trará somente os valores que forem strings, ou seja, os valores dos atributos, o resto é desconsiderado. Em outras palavras, o conteúdo que você teria acesso seria:
 
--   `{ object: 'MuiIconButton-label' }`
--   `{ object: 'style__BagIcon-sc-1waxn8h-1 jiLboM' }`
--   `{ object: 'none' }`
--   `{ object: '19' }`
--   `{ object: '19' }`
--   `{ object: 'http://www.w3.org/2000/svg' }`
--   `{ object: 'evenodd' }`
--   `{`  `object: 'M13.813.974H5.155c-.853 0-1.516.968-1.516 2.112H15.36c0-1.144-.695-2.112-1.548-2.112ZM17.292 5.974c-.063-1.038-.949-1.832-2.024-1.832H3.76c-1.075 0-1.96.794-2.024 1.832L.977 16.816c-.063 1.13.854 2.107 2.024 2.107h12.995c1.17 0 2.118-.977 2.023-2.107l-.727-10.842Zm-7.778 6.078c-2.56 0-4.648-2.016-4.648-4.46 0-.274.222-.488.506-.488.285 0 .506.214.506.489 0 1.924 1.613 3.45 3.604 3.45 1.992 0 3.605-1.557 3.605-3.45 0-.275.221-.489.506-.489.284 0 .506.214.506.489.063 2.473-2.024 4.459-4.585 4.459Z'`  
-    `}`
--   `{ object: '#fff' }`
--   `{ object: 'evenodd' }`
--   `{ object: 'MuiTouchRipple-root' }`
+- `{ object: 'MuiIconButton-label' }`
+- `{ object: 'style__BagIcon-sc-1waxn8h-1 jiLboM' }`
+- `{ object: 'none' }`
+- `{ object: '19' }`
+- `{ object: '19' }`
+- `{ object: 'http://www.w3.org/2000/svg' }`
+- `{ object: 'evenodd' }`
+- `{` `object: 'M13.813.974H5.155c-.853 0-1.516.968-1.516 2.112H15.36c0-1.144-.695-2.112-1.548-2.112ZM17.292 5.974c-.063-1.038-.949-1.832-2.024-1.832H3.76c-1.075 0-1.96.794-2.024 1.832L.977 16.816c-.063 1.13.854 2.107 2.024 2.107h12.995c1.17 0 2.118-.977 2.023-2.107l-.727-10.842Zm-7.778 6.078c-2.56 0-4.648-2.016-4.648-4.46 0-.274.222-.488.506-.488.285 0 .506.214.506.489 0 1.924 1.613 3.45 3.604 3.45 1.992 0 3.605-1.557 3.605-3.45 0-.275.221-.489.506-.489.284 0 .506.214.506.489.063 2.473-2.024 4.459-4.585 4.459Z'`  
+  `}`
+- `{ object: '#fff' }`
+- `{ object: 'evenodd' }`
+- `{ object: 'MuiTouchRipple-root' }`
 
 Enfim, não é útil para nosso objetivo.
 
@@ -293,26 +296,27 @@ Enfim, não é útil para nosso objetivo.
 Essa lib faz um diff entre os valores gerados por dois testes. Sua utilização é interessante em casos onde gostaria de ser testada a diferença num componente com a mudança de estado do mesmo.
 
 `Código de exemplo`
+
 ```js
-const React = require('react')
-const {toMatchDiffSnapshot} = require('snapshot-diff')
-const Component = require('./Component')
+const React = require("react");
+const { toMatchDiffSnapshot } = require("snapshot-diff");
+const Component = require("./Component");
 
-expect.extend({toMatchDiffSnapshot})
+expect.extend({ toMatchDiffSnapshot });
 
-test('snapshot difference between 2 React components state', () => {
+test("snapshot difference between 2 React components state", () => {
   expect(<Component test="say" />).toMatchDiffSnapshot(
     <Component test="my name" />,
-  )
-})
+  );
+});
 ```
 
 Levando em consideração que preocupações com relação a adicionar uma nova lib envolvem:
 
--   Adicionar mais uma dependência no projeto (por mais que não vá para o bundle final);
--   Aumento da carga cognitiva necessária para edição do projeto (nova lib > novas docs > novas abordagens);
--   Manutenção por parte dos autores;
--   Uso da comunidade (se a comunidade não utiliza, provavelmente não será atualizado);
+- Adicionar mais uma dependência no projeto (por mais que não vá para o bundle final);
+- Aumento da carga cognitiva necessária para edição do projeto (nova lib > novas docs > novas abordagens);
+- Manutenção por parte dos autores;
+- Uso da comunidade (se a comunidade não utiliza, provavelmente não será atualizado);
 
 Não acredito que hajam grandes benefícios.
 
@@ -323,7 +327,7 @@ Não acredito que hajam grandes benefícios.
 1. Configurações de projeto como Webpack ou babel plugins;
 2. Retornos de API;
 3. Assegurar a consistência estética para componentes de Design System;
-    - Um bom exemplo são as bibliotecas de componentes que utiliza por ser uma biblioteca de componentes;
+   - Um bom exemplo são as bibliotecas de componentes que utiliza por ser uma biblioteca de componentes;
 
 ### Quando não utilizar
 

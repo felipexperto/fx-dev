@@ -41,6 +41,7 @@ As metodologias relacionadas ao design thinking tem por objetivo ajudar os desig
 O autor também destaca, que em essência, a prática do design precisa de equipes interdisciplinares e colaborativas, desse modo, ele apresenta as dez personalidades que considera importantes no desenvolvimento da estrutura de inovação nas empresas e oito personagens para criar um grupo cheio de determinação, além de contar um pouco sobre as especializações dos funcionários da IDEO.
 
 ## Mão na massa
+
 O livro possui algumas pequenas listas das quais podem ser de grande valia:
 
 - Três chaves para entender o comportamento dos designers;
@@ -52,4 +53,4 @@ Sem mencionar um tópico de leitura recomendada e as inúmeras referências enco
 
 Minhas considerações após a leitura completa da obra são: É um livro de linguagem fácil, porém, ao assunto não cabe essa simplicidade, é o tipo de obra que você necessita de papel, caneta e marca-texto para anotar e destacar tanto conteúdo relevante em meio às páginas e posteriormente relacionar os trechos que mais aproximam-se dos seus interesses e afinidades. Vale cada centavo.
 
-*Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui.*
+_Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui._

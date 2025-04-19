@@ -43,4 +43,4 @@ A serifadas são tidas como melhores no quesito legibilidade, pois considera-se
 O importante na hora de escolher a tipografia certa para o livro é ver a finalidade dele: livros infantis, por exemplo, tem textos curtos, por isso algumas fontes diferenciadas (como a famigerada Comic Sans) se encaixam bem, já livros com um tema pesado, como uma tese, que possui um texto muito longo, com rodapés, citações e legendas, ficam mais agradáveis com fontes serifadas, que se encaixam bem a situação, como a Garamond, Times e Minion com seus contrastes de hastes.
 É essencial perceber a diferença entre os tipos de fontes, afinal uma fonte de texto pode ser usada como display, mas dificilmente uma fonte display poderá ser utilizada para um texto.
 
-*Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui.*
+_Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui._

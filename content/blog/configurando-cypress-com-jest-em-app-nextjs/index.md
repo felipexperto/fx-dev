@@ -6,12 +6,12 @@ tags:
 title: "Configurando Cypress com Jest em app NextJS"
 date: "2024-05-17T11:05:00.000Z"
 description: "Exemplo prático de como implementar Cypress num projeto NextJS que já contém testes de unidade com Jest"
-tldr: ''
+tldr: ""
 ---
 
 Salve, pessoa! Como estás?
 
-Hoje a ideia do post é simples: Configurar o Cypress pra gerar coverage num projeto NextJS que já possui Jest. 
+Hoje a ideia do post é simples: Configurar o Cypress pra gerar coverage num projeto NextJS que já possui Jest.
 
 Este post não inclui:
 
@@ -22,9 +22,7 @@ Este post não inclui:
 - Como fazer o merge (junção) do coverage do Jest e Cypress;
 - Como fazer o processo em aplicações Typescript;
 
-
 Vamos começar detalhando as tecnologias do projeto e depois a instalação.
-
 
 ## Tecnologias e versões
 
@@ -150,7 +148,6 @@ Novamente, vamos percorrer comando por comando:
 
 **Atenção na chave `include`!** No meu caso vou testar somente os arquivos de `containers`, ou seja, aqueles que estão na minha pasta: `src/containers` e faremos uma hierarquia de diretórios semelhante dentro da pasta `cypress` alguns passos a frente.
 
-
 ## Alterações no babel.config.js
 
 Neste projeto estou utilizando o arquivo `babel.config.js` na pasta raíz, pode ser que no seu projeto haja um arquivo `.babelrc`, é válido também.  
@@ -160,14 +157,14 @@ Pessoalmente não tive uma boa experiência criando os dois, não consegui rodar
 module.exports = function babelConfig({ cache, env }) {
   cache.invalidate(() => process.env.NODE_ENV);
 
-  const isCypress = process.env.CYPRESS_ENV === 'true';
+  const isCypress = process.env.CYPRESS_ENV === "true";
 
   const presets = [
     [
-      'next/babel',
+      "next/babel",
       {
-        'preset-env': {
-          modules: env('test') ? 'commonjs' : 'auto',
+        "preset-env": {
+          modules: env("test") ? "commonjs" : "auto",
         },
       },
     ],
@@ -175,28 +172,28 @@ module.exports = function babelConfig({ cache, env }) {
 
   const plugins = [
     [
-      'module-resolver',
+      "module-resolver",
       {
         alias: {
-          styles: './styles',
-          containers: './src/containers',
-          public: './public',
+          styles: "./styles",
+          containers: "./src/containers",
+          public: "./public",
         },
       },
     ],
     [
-      'styled-components',
+      "styled-components",
       {
         ssr: true,
         displayName: true,
         preprocess: false,
       },
     ],
-    ['inline-react-svg'],
+    ["inline-react-svg"],
   ];
 
   if (isCypress) {
-    plugins.push('istanbul');
+    plugins.push("istanbul");
   }
 
   return { presets, plugins };
@@ -205,21 +202,20 @@ module.exports = function babelConfig({ cache, env }) {
 
 ## Criando o arquivo cypress.config.js
 
-A seguir você verá o arquivo `cypress.config.js` que deverá ficar na pasta raíz do seu projeto.  
-
+A seguir você verá o arquivo `cypress.config.js` que deverá ficar na pasta raíz do seu projeto.
 
 ```js
-const { defineConfig } = require('cypress');
+const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:3000',
-    supportFile: 'cypress/support/e2e.js',
-    specPattern: 'cypress/integration/containers/**/*',
+    baseUrl: "http://localhost:3000",
+    supportFile: "cypress/support/e2e.js",
+    specPattern: "cypress/integration/containers/**/*",
     chromeWebSecurity: false,
     pageLoadTimeout: 70000,
     setupNodeEvents(on, config) {
-      require('@cypress/code-coverage/task')(on, config);
+      require("@cypress/code-coverage/task")(on, config);
       return config;
     },
     video: false,
@@ -242,11 +238,11 @@ Dentro desta pasta criei um diretório chamado `containers` e coloquei meus test
 Exemplo de teste:
 
 ```js
-describe('Admin page', () => {
-  it('Should check if promotional banner is visible', () => {
-    cy.visit('/');    
-    cy.contains('Promoção relâmpago');
-    cy.getByDataTestId('banner-promotional').should('exist');
+describe("Admin page", () => {
+  it("Should check if promotional banner is visible", () => {
+    cy.visit("/");
+    cy.contains("Promoção relâmpago");
+    cy.getByDataTestId("banner-promotional").should("exist");
   });
 });
 ```
@@ -257,9 +253,12 @@ describe('Admin page', () => {
 
 ```js
 module.exports = (on, config) => {
-  require('@cypress/code-coverage/task')(on, config);
+  require("@cypress/code-coverage/task")(on, config);
 
-  on('file:preprocessor', require('@cypress/code-coverage/use-browserify-istanbul'));
+  on(
+    "file:preprocessor",
+    require("@cypress/code-coverage/use-browserify-istanbul"),
+  );
 
   // important - return config because code coverage plugin
   // modifies environment variables there
@@ -274,32 +273,31 @@ Vamos criar três arquivos.
 `e2e.js`
 
 ```js
-import '@cypress/code-coverage/support';
+import "@cypress/code-coverage/support";
 
-import './commands';
+import "./commands";
 ```
 
 `index.js`
 
 ```js
-import '@cypress/code-coverage/support';
+import "@cypress/code-coverage/support";
 
 after(() => {
-  cy.task('coverageReport');
+  cy.task("coverageReport");
 });
 ```
 
 `commands.js`
 
 ```js
-import 'cypress-wait-until';
+import "cypress-wait-until";
 
-Cypress.Commands.add('getByDataTestId', (selector, ...args) => {
+Cypress.Commands.add("getByDataTestId", (selector, ...args) => {
   cy.get(`[data-testid=${selector}]`, ...args);
 });
 
-Cypress.on('uncaught:exception', () => false);
-
+Cypress.on("uncaught:exception", () => false);
 ```
 
 ## Conclusão

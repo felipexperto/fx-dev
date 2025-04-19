@@ -6,7 +6,6 @@ date: "2021-01-02T21:52:00.284Z"
 description: "Meu 2020 como pessoa desenvolvedora"
 ---
 
-
 ## Estudos
 
 É incrível como as prioridades podem mudar de um ano para o outro e, prova disso é que no post [Meu 2019 como desenvolvedor](/meu-2019-como-desenvolvedor) havia mencionado cursos comprados na Black Friday de 2019 e que ainda não terminei 🤷 😂
@@ -32,6 +31,7 @@ Quais são diretrizes importantes para iniciarmos um projeto padronizado, como: 
 <div class="fx-group">
 
 Isso gerou alguns posts:
+
 - [Docker: Preciso mesmo disso?](/docker-quando-utilizar);
 - [Docker: Guia de sobrevivência - Parte 1](/docker-guia-de-sobrevivencia-parte-1);
 - [Docker: Guia de sobrevivência - Parte 2](/docker-guia-de-sobrevivencia-parte-2);
@@ -45,10 +45,9 @@ Até onde vai a responsabilidade de cada um, como podemos implementá-los, melho
 O blog teve sua identidade alterada e algumas melhorias foram promovidas.  
 Apesar de faltarem alguns recursos é um motivo de orgulho. 😊
 
-
 ## Eventos
 
-Ao contrário de 2019, esse ano foi mais virtual do que presencial. 
+Ao contrário de 2019, esse ano foi mais virtual do que presencial.
 
 Um evento memorável foi a [Next.js Conf](https://nextjs.org/2020/conf). Aliás, tudo que rolou está gravado e disponível.
 
@@ -69,7 +68,6 @@ E dois eventos promovidos pela [TUIA](https://www.tuia.me/) e Distrito:
 - [Postman](https://www.postman.com/);
 - [Slack](https://slack.com/intl/pt-br/);
 - [Visual Studio Code](https://code.visualstudio.com/);
-
 
 ## Música
 

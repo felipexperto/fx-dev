@@ -26,20 +26,22 @@ Então ao final deste post a esperança é que você aprenda como fazer esse moc
 Dando um pouco de contexto, meu componente tem um botão que executa a função `redirectToAnotherPage`, onde vai setar um cookie (utilizando a lib `universal-cookie` e isso é irrelevante 😂) e depois dar um `Router.push`, redirecionando o usuário. Essa função está fora do componente simplesmente pra não sofrer nenhum `rerender`.
 
 ```jsx
-import React from 'react';
-import { Router } from 'next-router';
-import Cookies from 'universal-cookie';
+import React from "react";
+import { Router } from "next-router";
+import Cookies from "universal-cookie";
 
 const redirectToAnotherPage = () => {
   const cookies = new Cookies();
-  cookies.set('cookie_imaginario', 'true', { path: '/' });
-  Router.push('/another-page');
+  cookies.set("cookie_imaginario", "true", { path: "/" });
+  Router.push("/another-page");
 };
 
 const MyComponent = () => {
   return (
-    <button type="button" onClick={redirectToAnotherPage}>Redirecionar</button>
-  )
+    <button type="button" onClick={redirectToAnotherPage}>
+      Redirecionar
+    </button>
+  );
 };
 
 export default MyComponent;
@@ -54,37 +56,36 @@ Rodando o comando do Jest para coletar a cobertura de código `jest --collect-co
 Antes de tudo, vamos testar se nosso botão está no DOM:
 
 ```jsx
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import MyComponent from './index';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import MyComponent from "./index";
 
-describe('[Components]: Button', () => {
-  test('should be in the DOM', () => {
+describe("[Components]: Button", () => {
+  test("should be in the DOM", () => {
     render(<MyComponent />);
-    const button = screen.getByText('Redirecionar');
+    const button = screen.getByText("Redirecionar");
     expect(button).toBeInTheDocument();
   });
 });
-
 ```
 
 Agora vamos criar outro teste somente clicando no botão ( [fireEvent](https://testing-library.com/docs/dom-testing-library/api-events/#fireevent) dentro de [act](https://testing-library.com/docs/react-testing-library/api/#act)) e sem `expect`:
 
 ```jsx
-import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
-import MyComponent from './index';
+import React from "react";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
+import MyComponent from "./index";
 
-describe('[Components]: Button', () => {
-  test('should be in the DOM', () => {
+describe("[Components]: Button", () => {
+  test("should be in the DOM", () => {
     render(<MyComponent />);
-    const button = screen.getByText('Redirecionar');
+    const button = screen.getByText("Redirecionar");
     expect(button).toBeInTheDocument();
   });
-  test('should redirect', () => {
+  test("should redirect", () => {
     render(<MyComponent />);
-    const skipButton = screen.getByText('Redirecionar');
+    const skipButton = screen.getByText("Redirecionar");
     act(() => {
       fireEvent.click(skipButton);
     });
@@ -95,32 +96,32 @@ describe('[Components]: Button', () => {
 Este teste passou, é claro, não espera nada. Agora temos que pensar em como interceptar o método executado após o click. Para isso precisaremos de um [spyOn](https://jestjs.io/pt-BR/docs/jest-object#jestspyonobject-methodname) do Jest. A sintaxe segundo a documentação é: `jest.spyOn(objeto, método)`, então vamos importar o `Router` e testar:
 
 ```jsx
-  import React from 'react';
-  import { Router } from 'next-router';
-  // ... outros imports
+import React from "react";
+import { Router } from "next-router";
+// ... outros imports
 
-  test('should redirect', () => {
-    const spyRouter = jest.spyOn(Router, 'push');
-    render(<MyComponent />);
-    const skipButton = screen.getByText('Redirecionar');
-    act(() => {
-      fireEvent.click(skipButton);
-    });
-    expect(spyRouter).toHaveBeenCalled();
+test("should redirect", () => {
+  const spyRouter = jest.spyOn(Router, "push");
+  render(<MyComponent />);
+  const skipButton = screen.getByText("Redirecionar");
+  act(() => {
+    fireEvent.click(skipButton);
   });
+  expect(spyRouter).toHaveBeenCalled();
+});
 ```
 
 Ué, deu erro... Está dizendo que nenhuma instância do router foi encontrada e que nós deveríamos usar `next/router` somente dentro do client side da nossa aplicação... 🤔
 
 ```bash
-    No router instance found.
-    You should only use "next/router" inside the client side of your app.
+No router instance found.
+You should only use "next/router" inside the client side of your app.
 
-       6 |   const cookies = new Cookies();
-       7 |   cookies.set('cookie_imaginario', 'true', { path: '/' });
-    >  8 |   Router.push('/another-page');
-         |          ^
-       9 | };
+    6 |   const cookies = new Cookies();
+    7 |   cookies.set('cookie_imaginario', 'true', { path: '/' });
+>   8 |   Router.push('/another-page');
+      |          ^
+    9 | };
 ```
 
 A questão é que existe uma instância sim, ela só não está mockada. E como nós provamos isso? Basta adicionar um `console.log(Router)`, logo após abrir o teste `should redirect` e, no seu terminal poderá ver a resposta abaixo:
@@ -153,11 +154,11 @@ A questão é que existe uma instância sim, ela só não está mockada. E como 
 Vamos deixar o `console.log` onde está, adicionar uma linha no nosso código após os imports e rodar o teste novamente:
 
 ```jsx
-  import React from 'react';
-  import { Router } from 'next-router';
-  // ... outros imports
+import React from "react";
+import { Router } from "next-router";
+// ... outros imports
 
-  jest.mock('next/router');
+jest.mock("next/router");
 ```
 
 Agora os métodos foram mockados, o teste passou e a cobertura está com 100% neste componente. 🎉 🎉
@@ -191,33 +192,33 @@ Não vou colar a resposta inteira do `console.log` mas abaixo podemos ver como f
 ## Solução final
 
 ```jsx
-  import React from 'react';
-  import { Router } from 'next-router';
-  import { fireEvent, render, screen } from '@testing-library/react';
-  import { act } from 'react-dom/test-utils';
-  import MyComponent from './index';
+import React from "react";
+import { Router } from "next-router";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
+import MyComponent from "./index";
 
-  jest.mock('next/router');
+jest.mock("next/router");
 
-  describe('[Components]: Button', () => {
-    test('should be in the DOM', () => {
-      render(<MyComponent />);
-      const button = screen.getByText('Redirecionar');
-      expect(button).toBeInTheDocument();
-    });
-
-    test('should redirect', () => {
-      const spyRouter = jest.spyOn(Router, 'push');
-      render(<MyComponent />);
-      const skipButton = screen.getByText('Redirecionar');
-
-      act(() => {
-        fireEvent.click(skipButton);
-      });
-
-      expect(spyRouter).toHaveBeenCalled();
-    });
+describe("[Components]: Button", () => {
+  test("should be in the DOM", () => {
+    render(<MyComponent />);
+    const button = screen.getByText("Redirecionar");
+    expect(button).toBeInTheDocument();
   });
+
+  test("should redirect", () => {
+    const spyRouter = jest.spyOn(Router, "push");
+    render(<MyComponent />);
+    const skipButton = screen.getByText("Redirecionar");
+
+    act(() => {
+      fireEvent.click(skipButton);
+    });
+
+    expect(spyRouter).toHaveBeenCalled();
+  });
+});
 ```
 
 ## Solução alternativa
@@ -225,29 +226,29 @@ Não vou colar a resposta inteira do `console.log` mas abaixo podemos ver como f
 Na primeira solução nós estávamos importando o `next/router` e desestruturando o `Router`, agora nós estamos lidando com todos os métodos da lib por isso o `push` está dentro da chave `default`. Lembrando que para ver o objeto e seus métodos basta fazer: `console.log(require('next/router'))`.
 
 ```jsx
-import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
-import MyComponent from './index';
+import React from "react";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
+import MyComponent from "./index";
 
-jest.mock('next/router', () => ({
-  ...jest.requireActual('next/router'),
+jest.mock("next/router", () => ({
+  ...jest.requireActual("next/router"),
   default: {
     push: jest.fn(),
   },
 }));
 
-describe('[Components]: Button', () => {
-  test('should be in the DOM', () => {
+describe("[Components]: Button", () => {
+  test("should be in the DOM", () => {
     render(<MyComponent />);
-    const button = screen.getByText('Redirecionar');
+    const button = screen.getByText("Redirecionar");
     expect(button).toBeInTheDocument();
   });
 
-  test('should create cookie and redirect', () => {
-    const spyRouter = jest.spyOn(require('next/router').default, 'push');
+  test("should create cookie and redirect", () => {
+    const spyRouter = jest.spyOn(require("next/router").default, "push");
     render(<MyComponent />);
-    const skipButton = screen.getByText('Redirecionar');
+    const skipButton = screen.getByText("Redirecionar");
 
     act(() => {
       fireEvent.click(skipButton);

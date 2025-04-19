@@ -11,18 +11,18 @@ description: "Nosso objetivo hoje é agilizar o dia a dia com IA"
 Começo esse post dizendo que tenho conhecimento que Inteligência Artificial não é a solução para todo e qualquer problema.  
 No entanto, acredito que podemos confiar algumas tarefas de baixa complexidade do nosso cotidiano a IA, de modo que economizemos nosso tempo e sejamos mais eficazes.
 
-Poderíamos conversar sobre diversos pontos relacionados a esse assunto (mas não vamos): 
+Poderíamos conversar sobre diversos pontos relacionados a esse assunto (mas não vamos):
 
 - **O ponto de vista ético, da lei e jurisprudência na utilização e geração do conteúdo**: quem produz, quem recebe, quem tem seu conteúdo apropriado, quem deveria ser cobrado ou pago;
 - **O fator humano na criação de uma peça**: A originalidade, a criatividade, a concorrência desleal, o papel dos desenvolvedores contra vieses;
-- **Transparência e Rastreabilidade**: De onde vem esses dados, até que ponto meus dados são coletados, onde eles são utilizados, qual é o ciclo de vida desses dados; 
+- **Transparência e Rastreabilidade**: De onde vem esses dados, até que ponto meus dados são coletados, onde eles são utilizados, qual é o ciclo de vida desses dados;
 - **Transformações no mercado de trabalho**: desemprego, barreira social/tecnológica, abismo tecnológico e seus efeitos na sociedade;
 
 Então só vou deixar os tópicos acima, caso você ainda não tenha parado para pensar sobre isso...
 
 ## Introdução
 
-Sabemos que Inteligência Artificial é a capacidade de sistemas computacionais de imitarem as funções cognitivas dos seres humanos de aprendizagem e resolução de problemas.  
+Sabemos que Inteligência Artificial é a capacidade de sistemas computacionais de imitarem as funções cognitivas dos seres humanos de aprendizagem e resolução de problemas.
 
 E que ela precisa de 3 coisas:
 
@@ -43,11 +43,11 @@ Essa fala é minha mesmo e se você prestou atenção no tópico anterior vai en
 
 A alcunha que tem sido veiculada para essa habilidade de entender como se comunicar com a Inteligência Artificial é **Engenharia de Prompt**.
 
-Como em tudo na vida, existem alguns macetes, nesse caso, também chamados de **prompt frameworks**. Se você procurar por `inteligencia artificial prompt frameworks` ou `ai prompt frameworks` vai encontrar diversos resultados.  
+Como em tudo na vida, existem alguns macetes, nesse caso, também chamados de **prompt frameworks**. Se você procurar por `inteligencia artificial prompt frameworks` ou `ai prompt frameworks` vai encontrar diversos resultados.
 
-Eles são basicamente conjuntos de direcionamentos para que você forneça os dados necessários para a IA e atinja o melhor resultado possível.  
+Eles são basicamente conjuntos de direcionamentos para que você forneça os dados necessários para a IA e atinja o melhor resultado possível.
 
-Entenda que nenhum deles é uma bala de prata e pode ser que sejam necessárias adaptações e diversas tentativas para chegar num resultado que você ache satisfatório.  
+Entenda que nenhum deles é uma bala de prata e pode ser que sejam necessárias adaptações e diversas tentativas para chegar num resultado que você ache satisfatório.
 
 Vou compartilhar aqui os que mais tenho utilizado.
 
@@ -71,7 +71,7 @@ Vou compartilhar aqui os que mais tenho utilizado.
 
 **ELI5 - Explain like I'm 5**: Podemos trazudir esse comando como **explique como se eu tivesse 5 anos**, a IA fará analogias muito básicas envolvendo jogos ou blocos facilitando nosso entendimento sobre o assunto.
 
-**Prompt PACIF**: 
+**Prompt PACIF**:
 
 - Papel: Define o papel que você deseja que a IA desempenhe no contexto do problema;
 - Ação: Direcione a ação desejada que você espera da IA;

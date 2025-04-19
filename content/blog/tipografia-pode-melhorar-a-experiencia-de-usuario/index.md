@@ -27,18 +27,20 @@ O grupo com a revista bem diagrama imagina em média que se passaram `-03:18min`
 
 Em outras palavras, o esforço para superar as más escolhas tipográficas exigiram energia e provavelmente causaram incômodo, deixando a leitura menos agradável e perceptivelmente "mais demorada".
 
-O papel da tipografia é importante o suficiente para mudar a percepção de usuário com sutis mudanças entre fontes. 
+O papel da tipografia é importante o suficiente para mudar a percepção de usuário com sutis mudanças entre fontes.
 
 Aliás, outro estudo relacionado a `Congruence Effect` apresentou para os participantes 4 modelos da mesma propaganda de celular alterando somente a fonte e o texto. Uma com foco em luxo e privilégio enquanto a outra baseada no celular ser fino e ocupar pouco espaço.
 
-Haviam duas tipografias descritas pelos pesquisadores como: 
+Haviam duas tipografias descritas pelos pesquisadores como:
+
 - Monotype Cursiva: leve, aconchegante e que expressa emoção;
 - Castellar: Fonte condensada, fria e sem emoção;
 
 A propaganda que mais agradou as pessoas (numa escala de 1 à 7) foi a que continha foco no privilégio e com a tipografia Monotype Cursiva. Em outras palavras, o exemplo o qual a tipografia estava alinhada com a mensagem (congruência) foi a escolhida com uma porcentagem de 17% a mais de aprovação para a propaganda e 12% a mais para a marca.
 
-> **Isso me faz pensar:**  
-> - É possível aumentarmos a conversão de uma página lidando apenas com tipografia? Se você tem a oportunidade de fazer teste A/B, me conte depois. 👀  
+> **Isso me faz pensar:**
+>
+> - É possível aumentarmos a conversão de uma página lidando apenas com tipografia? Se você tem a oportunidade de fazer teste A/B, me conte depois. 👀
 > - E será que grandes empresas que possuem uma tipografia própria lucram mais ou deixam de lucrar justamente por questões tipográficas?
 
 O próprio Alessio Laiso realizou um experimento com 73 participantes de 17 países onde criou 4 layouts de sites com ramos diferentes (banco, notícias, fitness e roupas) com 4 tipografias (Baskerville, Fira Sans, Helvetica e Roboto Sans) buscando descobrir o nível de Confiança, Facilidade de uso e Atratividade.

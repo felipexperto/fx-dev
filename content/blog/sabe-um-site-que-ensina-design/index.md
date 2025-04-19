@@ -5,7 +5,7 @@ title: "Sabe um site que ensina Design? #atualizado"
 date: "2014-11-11T00:00:00.000Z"
 update: "2020-12-10T01:00:00.000Z"
 description: "Respondendo a pergunta e trazendo um pouquinho de conceito e apresentação de possíveis vertentes do design."
-tldr: 'Respondendo a pergunta e trazendo um pouquinho de conceito e apresentação de possíveis vertentes do design.'
+tldr: "Respondendo a pergunta e trazendo um pouquinho de conceito e apresentação de possíveis vertentes do design."
 ---
 
 ## Inspiração para o post
@@ -20,7 +20,7 @@ Pense como se fosse Engenharia: Temos Engenharia de Software, Mecânica, Elétri
 
 ## Em outras palavras
 
-> Design é um verbo e não substantivo, está associado à concepção e não ao produto final, é o processo. 
+> Design é um verbo e não substantivo, está associado à concepção e não ao produto final, é o processo.
 
 ## E por que todos associam Design com Estética?
 
@@ -41,7 +41,7 @@ Contudo, o Designer de Produto pode saber como projetar uma cadeira e diagramar 
 
 O Design Gráfico sendo uma vertente do Design de Produto é a especialização da profissão - provavelmente - induzida pela demanda do mercado. Só pra deixar claro, esse profissional (o designer gráfico) é especializado em um determinado tipo de suporte, o papel. Não dê o projeto da cadeira na mão dessa criatura (haha).
 
-## Sua formação não limita seu escopo de trabalho 
+## Sua formação não limita seu escopo de trabalho
 
 Lembra que falei sobre a base de estudo, como se fosse a Engenharia?
 Isso vai permitir que você "pivote" sua carreira e siga outra direção. Não estou dizendo que é fácil mas você não se sentirá um estranho no ninho como se mudasse de Farmácia para Advocacia.
@@ -54,4 +54,4 @@ O mercado muda, as necessidades mudam e você tem que mudar também.
 
 Cada especialização requer de 2 à 4 anos de estudo, dependendo da qualificação do profissional (tecnólogo ou bacharel) e outras nem possuem cursos formais(universidade), somente cursos avulsos, palestras, eventos e muita aprendizagem apanhando.
 
-*Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui.*
+_Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui._

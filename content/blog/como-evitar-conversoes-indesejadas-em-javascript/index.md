@@ -4,14 +4,14 @@ category: Dev
 title: "Como evitar conversões indesejadas em Javascript"
 date: "2021-10-17T10:30:00.000Z"
 description: ""
-tldr: ''
+tldr: ""
 ---
 
 ## Introdução
 
 Javascript é uma linguagem de programação de tipagem fraca, ou seja, você não precisa declarar os tipos de suas variáveis ou constantes (string, number, boolean...).
 
-E como ela reage a isso? Acontece um efeito chamado *Type Coercion* que é simplesmente a conversão de valores de um tipo de dado para outro. Ainda não ficou muito claro, vamos ver um exemplo:
+E como ela reage a isso? Acontece um efeito chamado _Type Coercion_ que é simplesmente a conversão de valores de um tipo de dado para outro. Ainda não ficou muito claro, vamos ver um exemplo:
 
 ```
 const ageString = "20"; // string
@@ -119,8 +119,8 @@ String(obj) // '[object Object]' (isso NÃO funciona)
 
 Para transformar um objeto em string, utilize `JSON.stringify(obj)`;
 
-
 Fonte:
+
 - [How to Avoid JavaScript Type Conversions](https://blog.bitsrc.io/how-to-avoid-javascript-type-conversions-29e1258f37d8)
 - [A linguagem Javascript](https://universidadedatecnologia.com.br/a-linguagem-javascript/)
 - [30 Seconds of Code - isNumber](https://www.30secondsofcode.org/js/s/is-number)

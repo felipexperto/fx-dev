@@ -6,7 +6,7 @@ tags:
 title: "Testando componente lazy load React Suspense com Jest, React Testing Library e Typescript"
 date: "2022-06-03T22:40:00.000Z"
 description: "Testando componente lazy load React Suspense com Jest, React Testing Library e Typescript"
-tldr: ''
+tldr: ""
 ---
 
 Já se deparou com o erro abaixo?
@@ -14,14 +14,14 @@ Já se deparou com o erro abaixo?
 ```
 console.error
     Warning: A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
-    
+
     When testing, code that resolves suspended data should be wrapped into act(...):
-    
+
     act(() => {
       /* finish loading suspended data */
     });
     /* assert on the output */
-    
+
     This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
 
 ...
@@ -30,7 +30,6 @@ TestingLibraryElementError: Unable to find an element by: [data-testid="error"]
 ```
 
 Bem genérico, certo? Mas se você estiver utilizando `Lazy` e `Suspense` para carregar seus componentes, talvez os próximos exemplos sejam úteis.
-
 
 ## Tecnologias e versões
 

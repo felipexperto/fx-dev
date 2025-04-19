@@ -7,12 +7,11 @@ description: "Redis - Primeiros Passos"
 tldr: ""
 ---
 
-
 ## Introdução
 
-Redis significa **RE**mote **DI**ctionary **S**erver. 
+Redis significa **RE**mote **DI**ctionary **S**erver.
 
-Diferente de um banco de dados tradicional como MySQL ou Oracle, é categorizado como um banco de dados não relacional, sendo muitas vezes referenciado pela sigla `NOSQL` (Not Only SQL). 
+Diferente de um banco de dados tradicional como MySQL ou Oracle, é categorizado como um banco de dados não relacional, sendo muitas vezes referenciado pela sigla `NOSQL` (Not Only SQL).
 
 O Redis foi criado por Salvatore Sanfilippo (vulgo antirez) que liberou o Redis em 2009 de forma open-source. Nasceu para atender a uma demanda interna de demanda de performance na análise de logs em tempo real na startup de Salvatore.
 
@@ -41,7 +40,7 @@ O armazenamento de dados em cache é válido quando existem dados que são utili
 
 ## Redis Clients
 
-- [Lista de Clientes de Redis NodeJS](https://redis.io/docs/clients/#nodejs); 
+- [Lista de Clientes de Redis NodeJS](https://redis.io/docs/clients/#nodejs);
 - [Versão Online TryRedis](https://try.redis.io/);
 
 ## Convenção para nomear chaves no Redis

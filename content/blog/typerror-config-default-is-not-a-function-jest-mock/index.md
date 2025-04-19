@@ -21,27 +21,27 @@ Repare que o `TypeError` fala que não encontrou um método `default`.
 Nesse momento eu estava utilizando o seguinte mock:
 
 ```js
-jest.mock('next/config', () => ({
-  ...jest.requireActual('next/config'),
+jest.mock("next/config", () => ({
+  ...jest.requireActual("next/config"),
   getConfig: () => ({
     publicRuntimeConfig: {
-        enabled: 'true',
-        siteKey: 'xablau',
-    }
-  })
+      enabled: "true",
+      siteKey: "xablau",
+    },
+  }),
 }));
 ```
 
 O problema foi resolvido quando alterei o mock para:
 
 ```js
-jest.mock('next/config', () => ({
+jest.mock("next/config", () => ({
   __esModule: true,
   default: () => ({
     publicRuntimeConfig: {
       recaptcha: {
-        enabled: 'true',
-        siteKey: 'xablau',
+        enabled: "true",
+        siteKey: "xablau",
       },
     },
   }),
