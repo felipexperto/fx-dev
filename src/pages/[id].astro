@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import Container from '../components/Container.astro';
 import BlogPost from '../layouts/BlogPost.astro';
 
 // 1. Generate a new path for every collection entry
@@ -11,11 +12,14 @@ export async function getStaticPaths() {
   }));
 }
 // 2. For your template, you can get the entry directly from the prop
-const { post } : any = Astro.props;
+const { post }: any = Astro.props;
 const { Content } = await render(post);
 ---
 
 <BlogPost pageTitle={post.data.title}>
-  <h1>{post.data.title}</h1>
-  <Content />
+  <Container>
+    <h1>{post.data.title}</h1>
+    {post.data?.tldr && <div id="tldr" set:html={post.data.tldr} />}
+    <Content />
+  </Container>
 </BlogPost>

@@ -1,17 +1,168 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import DefaultLayout from '../layouts/Default.astro';
+import Container from '../components/Container.astro';
 
 import { getCollection } from 'astro:content';
+
+function formatDate(utcDate: string) {
+    const months = [
+        "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+        "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+    ];
+
+    const fullDate = new Date(utcDate);
+    const day = fullDate.getUTCDate();
+    const month = months[fullDate.getUTCMonth()];
+    const year = fullDate.getUTCFullYear();
+
+    return `${day} ${month}, ${year}`;
+}
+
 const posts = await getCollection('blog');
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data?.date) - new Date(a.data?.date)
+);
+
+const searchKeywords = Object.values(posts).map((post) => {
+  const { data, id, body } = post;
+  const { description, title } = data || {};
+  const searchItem = {
+    id,
+    description,
+    title,
+    body: body?.split(' ').slice(0, 300),
+  };
+  return searchItem;
+}, []);
+
+const serializedData = JSON.stringify(searchKeywords);
 ---
 
 <DefaultLayout>
-	<Welcome />
-
-	<ul>
-		{posts.map((post: any) => (
-			<li><a href={`/${post.id}`}>{post.data.title}</a></li>
-		))}
-	</ul>
+  <Container>
+    <section class="pb-10 pt-8" data-testid="hero-banner">
+      <h1 class="font-(--font-bold) text-3xl my-2">Procure um assunto</h1>
+      <form>
+        <input
+          class="bg-white p-3 rounded-sm shadow-2xl text-abyss-500 w-full"
+          id="search-input"
+          max-length="20"
+          name="search-input"
+          placeholder="Digite e as postagens serão filtradas"
+          type="text"
+        />
+      </form>
+    </section>
+    <section class="my-8" data-testid="section-posts" id="section-posts">
+      <ul data-testid="posts-list" id="posts-list">
+        {
+          sortedPosts.map((post: any) => (
+            <li data-testid={post.id} id={post.id}>
+              <a
+                class="block mb-12"
+                href={`/${post.id}`}
+              >
+                <datetime class="text-sm">{formatDate(post.data.date)}</datetime>
+                <h3 class="font-(--font-bold) text-xl">{post.data.title}</h3>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div
+        aria-live="polite"
+        class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative hidden"
+        id="search-alert"
+        role="alert"
+      >
+        <strong class="font-bold">Eita!</strong>
+        <span class="block sm:inline">Nenhum resultado encontrado.</span>
+      </div>
+    </section>
+  </Container>
 </DefaultLayout>
+
+<script define:vars={{ serializedData }}>
+  let fuse = null;
+  const searchAlert = document.getElementById('search-alert');
+  const searchInput = document.getElementById('search-input');
+  const postList = document.getElementById('posts-list');
+  const allPosts = Array.from(postList.children);
+
+  function initFuse() {
+    if (!fuse) {
+      try {
+        fuse = new Fuse(JSON.parse(serializedData), {
+          keys: ['title', 'description', 'body'],
+          threshold: 0.3,
+        });
+      } catch (error) {
+        console.error('Error initializing Fuse:', error);
+      }
+    }
+  }
+
+  if (typeof Fuse !== 'undefined') {
+    initFuse();
+  } else {
+    document.addEventListener('DOMContentLoaded', initFuse);
+  }
+
+  function debounce(callbackFn, delay) {
+    let timeoutId;
+
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        callbackFn.apply(this, args);
+      }, delay);
+    };
+  }
+
+  function toggleDisplay(action = 'hide') {
+    const CLASSLIST_METHOD = {
+      hide: (item) => item.classList.add('hidden'),
+      show: (item) => item.classList.remove('hidden'),
+    };
+    return CLASSLIST_METHOD[action];
+  }
+
+  function toggleAllPosts(action = 'hide') {
+    allPosts.forEach((post) => toggleDisplay(action)(post));
+  }
+
+  function toggleSearchAlert(action = 'hide') {
+    toggleDisplay(action)(searchAlert);
+  }
+
+  function updatePostList(e) {
+    const inputValue = e.target.value.trim();
+
+    if (inputValue.length < 3) {
+      toggleAllPosts('show');
+      return;
+    }
+
+    if (!fuse) {
+      console.error('Fuse.js não foi inicializado');
+      toggleAllPosts('show');
+      return;
+    }
+
+    const results = fuse.search(inputValue);
+
+    if (results.length) {
+      toggleSearchAlert();
+      toggleAllPosts();
+      results.map((post) => {
+        postList.querySelector(`#${post.item.id}`).classList.remove('hidden');
+      });
+    } else {
+      toggleAllPosts();
+      toggleSearchAlert('show');
+    }
+  }
+
+  const debouncedSearch = debounce(updatePostList, 300);
+  searchInput?.addEventListener('input', debouncedSearch);
+</script>

@@ -1,4 +1,4 @@
-version: '3.5'
+version: "3.5"
 
 services:
   app:
@@ -14,8 +14,8 @@ services:
   nginx:
     image: nginx
     ports:
-      - '80:80'
-      - '443:443'
+      - "80:80"
+      - "443:443"
     volumes:
       - ./docker/nginx.conf:/tmp/fxdev.conf
     environment:

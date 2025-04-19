@@ -1,0 +1,22 @@
+---
+// https://fonts.google.com/specimen/Fira+Code
+// https://fonts.google.com/specimen/Fira+Sans
+// https://www.npmjs.com/package/@fontsource/fira-sans
+
+import '@fontsource/fira-code/latin-400';
+import '@fontsource/fira-sans/latin-400.css';
+import '@fontsource/fira-sans/latin-400-italic.css';
+import '@fontsource/fira-sans/latin-500.css';
+import '@fontsource/fira-sans/latin-700.css';
+
+import GtmScript from './GtmScript.astro';
+
+const { pageTitle } = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" />
+<GtmScript />
+<title>{pageTitle}</title>

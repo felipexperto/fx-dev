@@ -1,13 +1,30 @@
 ---
-import Base from '../layouts/Base.astro';
+import DefaultHeadTags from '../components/DefaultHeadTags.astro';
+import GtmIframe from '../components/GtmIframe.astro';
+import Header from '../components/Header.astro';
+import NavigationBar from '@components/NavigationBar.astro';
+
+import '../styles/global.css';
 
 const { pageTitle = 'Astro Basics' } = Astro.props;
 ---
 
-<Base pageTitle={`${pageTitle} | FX Dev`}>
-	<div id="layout-default">
-		<body>
-			<slot />
-		</body>
-	</div>
-</Base>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <DefaultHeadTags pageTitle={`${pageTitle} | FX Dev`} />
+    <script id="script-fusejs" src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"
+    ></script>
+  </head>
+  <body
+    class="bg-slate-100 dark:bg-abyss-500"
+    data-testid="layout-default"
+    id="layout-default"
+  >
+    <GtmIframe />
+    <Header>
+      <NavigationBar />
+    </Header>
+    <slot />
+  </body>
+</html>

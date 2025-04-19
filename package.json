@@ -1,7 +1,7 @@
 {
   "name": "fx.dev",
   "private": true,
-  "description": "Um blog pessoal para disseminar conteúdo. Criado em Gatsby utilizando Markdown",
+  "description": "Um blog pessoal para disseminar conteúdo.",
   "version": "2.0.0",
   "engines": {
     "node": "22.14.0"
@@ -18,14 +18,12 @@
   "homepage": "https://github.com/felipexperto/fx-dev#readme",
   "dependencies": {
     "@astrojs/partytown": "^2.1.4",
-    "@astrojs/react": "^4.2.3",
     "@astrojs/ts-plugin": "^1.10.4",
+    "@fontsource/fira-code": "^5.2.5",
+    "@fontsource/fira-sans": "^5.2.5",
     "@tailwindcss/vite": "^4.1.3",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.1",
     "astro": "^5.6.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "astro-icon": "^1.1.5",
     "sharp": "^0.34.1",
     "tailwindcss": "^4.1.3"
   },
@@ -34,11 +32,17 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "prettier:check": "prettier . --check",
+    "prettier:fix": "prettier . --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/felipexperto/fx-dev.git"
   },
-  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
+  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
+  "devDependencies": {
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1"
+  }
 }

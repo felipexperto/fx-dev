@@ -1,25 +1,147 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-bold);
+  margin-bottom: 0.25em;
+  margin-top: 1em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-yellow-600);
+}
+
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: var(--color-yellow-300);
+}
+
 h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.3em;
+  margin-bottom: 1em;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
 }
 
 h6 {
-  font-size: 1.1rem;
+  color: var(--color-gray-500);
+  font-size: 1rem;
+}
+
+.dark h6 {
+  color: var(--color-gray-300);
+}
+
+p,
+ol,
+ul {
+  font-size: 1.1em;
+  line-height: 1.8em;
+}
+
+li > code,
+p > code {
+  background-color: var(--color-slate-200);
+  border-radius: 4px;
+  color: var(--color-yellow-600);
+  font-family: var(--font-code);
+  font-size: 0.9em;
+  overflow-wrap: break-word;
+  padding: 0.1ch 0.5ch;
+  white-space: pre-wrap;
+}
+
+.dark li > code,
+.dark p > code {
+  background-color: var(--color-yellow-300);
+  color: var(--color-abyss-500);
+}
+
+pre.astro-code {
+  border-radius: 4px;
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  margin: 1.5rem auto;
+  padding: 2rem;
+}
+
+a {
+  color: var(--color-yellow-600);
+  font-weight: var(--font-medium);
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  word-break: break-word;
+}
+
+.dark a {
+  color: var(--color-yellow-300);
+}
+
+ol,
+ul {
+  list-style-position: inside;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+b,
+strong {
+  font-weight: var(--font-bold);
+}
+
+#tldr {
+  background-color: var(--color-slate-200);
+  border-radius: 4px;
+  margin: 1.5rem auto;
+  padding: 2rem;
+  position: relative;
+}
+
+#tldr::before {
+  color: var(--color-slate-400);
+  content: "tldr";
+  display: block;
+  font-weight: var(--font-bold);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+/* .dark #tldr::before {
+  color: var(--color-abyss-500);
+} */
+
+.dark #tldr {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-gray-50);
 }

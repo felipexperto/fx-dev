@@ -1,16 +1,26 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import react from '@astrojs/react';
-import partytown from '@astrojs/partytown';
+import partytown from "@astrojs/partytown";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
+
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), partytown()],
-
+  integrations: [
+    partytown(),
+    icon({
+      iconDir: "src/assets/icons",
+    }),
+  ],
+  markdown: {
+    shikiConfig: {
+      theme: "catppuccin-macchiato",
+    },
+  },
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
 });

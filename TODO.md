@@ -1,56 +1,38 @@
 **Redesign**
 
-chore: alterar layout dos cards no post list
-  [x] criar componente PostCard;
-  [x] conferir acessibilidade nestes componentes
-  [x] versão desktop
-  [x] verificar se o hook por tamanho da tela ainda existe e deletá-lo
+[x] chore: add fira code typography
 
-chore: improve a11y
-  [ ] adicionar lint de a11y `jsx-a11y`
-  [ ] ver a proposta de `react-a11y`
-  [ ] ver a proposta de `react-axe`
-  [ ] adicionar a dependência e configurar
-  [ ] adicionar o plugin de acessibilidade `storybook-addon-a11y`
+chore: dockerfile
 
-chore: customizar o TL;DR; nos posts
-  [ ] consultar layout de quotes do Obsidian
+[x] chore: prettier
 
-refactor: ajeitar media queries para uma utilização melhor
-  [x] Pegar valor vindo do theme sem importar o theme;
-  [ ] Criar um helper para pegar multiplos breakpoints;
+[x] feat: search
 
-feat: implementar filtro da lista de posts por categoria
+feat: custom 404 page
 
-[x] refactor: reescrever projeto em Typescript e remover propTypes
+feat: skip to content
 
-chore: adicionar script de gerar componentes
+[x] chore: add gtm
 
-**Features**
+[x] chore: styling blog post
 
-- Adicionar seção com tecnologias que utilizo;
- - [Exemplo 01](https://preview.themeforest.net/item/arter-cv-resume-portfolio-web-app-template/full_screen_preview/27008333?_ga=2.216075988.370116323.1607660090-1265588602.1607660075), [Exemplo 02](https://preview.themeforest.net/item/oblas-angular-portfolio-web-application/full_screen_preview/23654405?_ga=2.172633248.2001170672.1607660092-1265588602.1607660075)
+[x] chore: tldr layout - consultar layout de quotes do Obsidian
 
-- Infinity Loading on scroll de posts na home ou paginação quando houverem +50 posts;
-
-- Custom 404 page;
-
-
-**Backlog Técnico**
-
-- Testes unitários e de integração;
+[ ] Chips com principais assuntos abaixo da busca - feat: filter by category
 
 **Pesquisa**
 
-- Estudar como desenvolver uma busca;
-  - Resultados em nova página?
-  - Vai aceitar parâmetros na url?
-  - Estudar a implementação de busca no sticky header;
+- Astro view transitions
 
 - É possível montar uma página de currículo utilizando APIs do LinkedIn?
+
+- Infinity Loading on scroll de posts na home ou paginação quando houverem +50 posts;
 
 **Atualizar o layout**
 
 - https://mainline-astro-template.vercel.app/
 - https://docs.astro.build/en/guides/styling/#markdown-styling
 - Adicionar o shadcn? https://ui.shadcn.com/docs/components/carousel
+
+- Adicionar seção com tecnologias que utilizo;
+- [Exemplo 01](https://preview.themeforest.net/item/arter-cv-resume-portfolio-web-app-template/full_screen_preview/27008333?_ga=2.216075988.370116323.1607660090-1265588602.1607660075), [Exemplo 02](https://preview.themeforest.net/item/oblas-angular-portfolio-web-application/full_screen_preview/23654405?_ga=2.172633248.2001170672.1607660092-1265588602.1607660075)
