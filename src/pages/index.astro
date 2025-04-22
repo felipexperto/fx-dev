@@ -5,17 +5,27 @@ import Container from '../components/Container.astro';
 import { getCollection } from 'astro:content';
 
 function formatDate(utcDate: string) {
-    const months = [
-        "janeiro", "fevereiro", "março", "abril", "maio", "junho",
-        "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
-    ];
+  const months = [
+    'janeiro',
+    'fevereiro',
+    'março',
+    'abril',
+    'maio',
+    'junho',
+    'julho',
+    'agosto',
+    'setembro',
+    'outubro',
+    'novembro',
+    'dezembro',
+  ];
 
-    const fullDate = new Date(utcDate);
-    const day = fullDate.getUTCDate();
-    const month = months[fullDate.getUTCMonth()];
-    const year = fullDate.getUTCFullYear();
+  const fullDate = new Date(utcDate);
+  const day = fullDate.getUTCDate();
+  const month = months[fullDate.getUTCMonth()];
+  const year = fullDate.getUTCFullYear();
 
-    return `${day} ${month}, ${year}`;
+  return `${day} ${month}, ${year}`;
 }
 
 const posts = await getCollection('blog');
@@ -58,11 +68,10 @@ const serializedData = JSON.stringify(searchKeywords);
         {
           sortedPosts.map((post: any) => (
             <li data-testid={post.id} id={post.id}>
-              <a
-                class="block mb-12"
-                href={`/${post.id}`}
-              >
-                <datetime class="text-sm">{formatDate(post.data.date)}</datetime>
+              <a class="block mb-12" href={`/${post.id}`}>
+                <datetime class="text-sm">
+                  {formatDate(post.data.date)}
+                </datetime>
                 <h3 class="font-(--font-bold) text-xl">{post.data.title}</h3>
               </a>
             </li>
