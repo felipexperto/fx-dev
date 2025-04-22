@@ -12,7 +12,7 @@ description: "Como resolver o problema de TypeError ao fazer mock no Jest"
 
 Na tentativa de mockar o método `getConfig` do `next/config` recebi o seguinte erro:
 
-```markup
+```bash
 TypeError: (0 , _config.default) is not a function
 ```
 
@@ -55,7 +55,7 @@ jest.mock("next/config", () => ({
 
 ## Dependências e versões
 
-```markup
+```json
 "next": "^12.3.4",
 "react": "^18.2.0",
 "react-dom": "^18.2.0",

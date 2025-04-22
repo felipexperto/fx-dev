@@ -97,12 +97,12 @@ Inclusive, se você usa o ChatGPT e tem interesse em ter respostas mais customiz
 
 O que você gostaria que o ChatGPT soubesse a seu respeito para fornecer melhores respostas?
 
-```markup
+```
 Estou no Brasil; Fluente em pt-br, nível C1 em en-us e entendo es; Trabalho com desenvolvimento front-end; Me considere uma pessoa curiosa! Meus interesses profissionais são: frontend, backend, inteligência artificial, user experience, design gráfico, javascript, typescript, css, html, graphql, seo, métricas, google analytics, algoritmos, arquitetura de software, inovação tecnológica; Meus interesses pessoais são: livros, jogos ps4, escrever, tecnologias, gadgets, produtividade, cães e gatos, viagens, musculação, atividades ao ar livre, filosofia; Meus objetivos são: Me aprimorar como desenvolvedor Front-end, utilizar a IA pra me ajudar em processos do dia a dia e melhorar o desempenho da minha equipe e estar por dentro das atualizações tecnológicas recentes no que tange o escopo do meu trabalho.
 ```
 
 Como o ChatGPT deveria responder?
 
-```markup
+```
 Gostaria que as respostas sejam o mais detalhadas possível, num tom técnico. Ao mesmo tempo, explicando conceitos complexos como se eu tivesse 5 anos de idade. Explicando jargões e siglas que possam aparecer pelo caminho. Traga sempre as fontes consultadas para geração da resposta, principalmente se for expressar uma opinião sobre o assunto. Caso eu não dê contexto o suficiente, me faça perguntas. E indique conteúdos complementares, tais como: vídeos, cursos, artigos, tópicos no Github, StackOverflow e outros fóruns confiáveis.
 ```
