@@ -67,7 +67,7 @@ li > code,
 p > code {
   background-color: var(--color-slate-200);
   border-radius: 4px;
-  color: var(--color-yellow-600);
+  color: var(--color-yellow-800);
   font-family: var(--font-code);
   font-size: 0.9em;
   overflow-wrap: break-word;
@@ -90,7 +90,7 @@ pre.astro-code {
 }
 
 a {
-  color: var(--color-yellow-600);
+  color: var(--color-yellow-800);
   font-weight: var(--font-medium);
   text-decoration-line: underline;
   text-decoration-thickness: 3px;
