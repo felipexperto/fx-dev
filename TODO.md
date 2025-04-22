@@ -4,6 +4,8 @@
 
 [ ] chore: dockerfile
 
+[x] chore: open graph
+
 [x] chore: prettier
 
 [x] feat: search
