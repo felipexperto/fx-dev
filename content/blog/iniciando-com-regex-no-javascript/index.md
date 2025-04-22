@@ -4,7 +4,7 @@ category: Dev
 title: Iniciando com regex no Javascript
 date: "2021-11-10T23:00:00.000Z"
 description: ""
-tldr: ''
+tldr: ""
 ---
 
 Logo de cara, vamos combinar uma coisa, pode ser? Que `regex` não é algo trivial ou intuitivo. Entendo que todo código tem seu contexto e à décadas atrás provavelmente não decidiram complicar a vida de milhares de pessoas que desenvolvem a troco de nada. No entanto, seja utilizado em Javascript ou não, é um pé no...
@@ -65,9 +65,10 @@ Vamos aos testes: 👀
 
 ```js
 const re = /cachorros/gi; // regex muito loouco
-const text = 'Cachorros são lindos, aliás, tenho dois e ambos são cachorros adotados.'; // esse é nosso texto
+const text =
+  "Cachorros são lindos, aliás, tenho dois e ambos são cachorros adotados."; // esse é nosso texto
 
-re.exec(text)
+re.exec(text);
 // Retorno: Apesar da flag 'g' retornou somente a primeira ocorrência.
 // [
 //   0: "cachorro"
@@ -77,11 +78,11 @@ re.exec(text)
 //   length: 1
 // ]
 
-re.test(text)   // true
-text.match(re)  // ['Cachorros', 'cachorros']
-text.search(re) // 0
-text.replace(re, 'gato') // 'gatos são lindos, aliás, tenho dois e ambos são gatos adotados.'
-text.split(re)  // ['', ' são lindos, aliás, tenho dois e ambos são ', ' adotados.']
+re.test(text); // true
+text.match(re); // ['Cachorros', 'cachorros']
+text.search(re); // 0
+text.replace(re, "gato"); // 'gatos são lindos, aliás, tenho dois e ambos são gatos adotados.'
+text.split(re); // ['', ' são lindos, aliás, tenho dois e ambos são ', ' adotados.']
 ```
 
 ## Checar se texto existe dentro de uma string em qualquer posição
@@ -103,11 +104,11 @@ Ao invés de pegar o cookie, dar um `split` na string, encontrar um dos itens qu
 ```js
 // ao invés disso:
 const getCookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('test2='))
-  .split('=')[1];
+  .split("; ")
+  .find((row) => row.startsWith("test2="))
+  .split("=")[1];
 
-if (getCookieValue === '1') {
+if (getCookieValue === "1") {
   // ...
 }
 
@@ -132,14 +133,14 @@ it('Should render correctly on route: /users/nikita', async () => {
 Vamos utilizar o método `match` em conjunto com `length` e encadeamento opcional `?.` ( optional chaining ) para quando nenhum resultado for encontrado recebermos `undefined` ao invés do erro `Cannot read properties of null (reading 'length')`.
 
 ```js
-const teste = 'AAAAA Javascript BBBBB Java Javascripte CCCCC Javascript' 
-teste.match(/Javascript/g)?.length // 3
+const teste = "AAAAA Javascript BBBBB Java Javascripte CCCCC Javascript";
+teste.match(/Javascript/g)?.length; // 3
 ```
 
 ## Substituir caracter dentro de uma string
 
 ```js
-const str = 'Javascript é loko';
+const str = "Javascript é loko";
 const regex = /loko/;
 str.replace(regex, "chavoso"); // "Javascript é chavoso"
 ```
@@ -149,15 +150,16 @@ str.replace(regex, "chavoso"); // "Javascript é chavoso"
 Digamos que você tenha um campo num formulário e queira zelar pela segurança removendo possíveis tags HTML que possam ser cadastradas antes de enviar o conteúdo para o backend.
 
 ```js
-const textoHtml = '<div class="classe-teste" data-testid="div-aleatoria"><strong>Texto</strong></div>'
-textoHtml.replace(/<[^>]*>?/gm, ''); // 'Texto'
+const textoHtml =
+  '<div class="classe-teste" data-testid="div-aleatoria"><strong>Texto</strong></div>';
+textoHtml.replace(/<[^>]*>?/gm, ""); // 'Texto'
 ```
 
 ## Fazer um redirect de urls
 
 Essa é uma situação bem comum, alguém solicitou a desativação de páginas e você precisa direcionar o tráfego para não ter o site punido pelo Google. Afinal, os links estão por aí, em outros sites ou favoritados pelos usuários.
 
-Digamos que estejamos num e-commerce de roupas e não venderemos mais `shorts`. Esses shorts estão cadastrados em várias categorias e a partir de agora sempre que alguém acessar um link com essa palavra, deve direcionar para a `categoria` do produto. 
+Digamos que estejamos num e-commerce de roupas e não venderemos mais `shorts`. Esses shorts estão cadastrados em várias categorias e a partir de agora sempre que alguém acessar um link com essa palavra, deve direcionar para a `categoria` do produto.
 
 Faz muito sentido? Não e isso não vem ao caso 😂
 
@@ -173,7 +175,6 @@ Você pode fazer o teste utilizando o site [regex101.com](https://regex101.com/)
 Com ele você terá o primeiro grupo de captura (entre parênteses) contendo o conteúdo antes do `/p/`, o segundo grupo sendo a palavra `shorts` em qualquer posição pois o conjunto de caracteres `.*` significa qualquer caracter (`.`) em qualquer quantidade (`*`).
 
 Em outras palavras, ele reconhecerá a palavra `shorts` nas três primeiras urls e utilizando a sintaxe `$1` você conseguirá extrair a parte da url que te leva para a categoria.
-
 
 ## Conclusão
 

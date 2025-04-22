@@ -4,7 +4,7 @@ category: Dev
 title: "Javascript Cheatsheet"
 date: "2021-12-20T00:00:00.000Z"
 description: "Javascript Cheatsheet. Alguns macetes pra solucionar problemas rotineiros."
-tldr: ''
+tldr: ""
 ---
 
 ## Sempre mantenha Strict Mode configurado
@@ -22,7 +22,8 @@ Quando o `strict mode` está declarado:
 - Proibi o uso de palavras reservadas prováveis de serem definidas em futuras versões do ECMAScript;
 - Lança erros quando ações "inseguras" são realizadas (como obter acesso ao objeto global)
 
-Fonte: 
+Fonte:
+
 - [Always Keep Strict Mode On](https://blog.bitsrc.io/8-steps-to-secure-javascript-in-2021-6d54d5415264)
 
 ## Como evitar conversões indesejadas em Javascript
@@ -35,9 +36,9 @@ Fonte:
 const isBrowserTabInView = () => document.hidden;
 ```
 
-Fonte: 
-- [Check if the current tab is in view / focus](https://medium.com/dailyjs/13-javascript-one-liners-thatll-make-you-look-like-a-pro-29a27b6f51cb)
+Fonte:
 
+- [Check if the current tab is in view / focus](https://medium.com/dailyjs/13-javascript-one-liners-thatll-make-you-look-like-a-pro-29a27b6f51cb)
 
 ## Checar se um objeto está vazio em Javascript
 
@@ -65,9 +66,9 @@ function isEmptyObject(obj) {
 }
 ```
 
-Fonte: 
-- [How to Check if an Object Is Empty in JavaScript](https://code.tutsplus.com/tutorials/how-to-check-if-an-object-is-empty-in-javascript--cms-37053)
+Fonte:
 
+- [How to Check if an Object Is Empty in JavaScript](https://code.tutsplus.com/tutorials/how-to-check-if-an-object-is-empty-in-javascript--cms-37053)
 
 ## Checar se uma propriedade existe dentro de um objeto
 
@@ -81,8 +82,8 @@ if ('name' in obj) doSomething();
 ```
 
 Fonte:
-- [in operator - MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/in)
 
+- [in operator - MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/in)
 
 ## Como adicionar novo valor (par chave/valor) em um objeto
 
@@ -99,13 +100,14 @@ obj = { ...obj, ...pair };
 ```
 
 Fonte:
+
 - [Como posso adicionar um par chave / valor a um objeto JavaScript?](https://www.ti-enxame.com/pt/javascript/como-posso-adicionar-um-par-chave-valor-um-objeto-javascript/967393095/)
 - [How can I add a key/value pair to a JavaScript object?](https://stackoverflow.com/questions/1168807/how-can-i-add-a-key-value-pair-to-a-javascript-object)
 
 ## Como copiar/duplicar um objeto em Javascript
 
 Antes de trazer o trecho de código, você já ouviu falar de `Shallow Copy` e `Deep Copy`?  
-Esses termos apesar de respectivamente significarem "Superficial" e "Profundo" não estão relacionados a quantidade de níveis que um objeto possui ou limite de níveis que podem ser copiados, e sim ao fato da cópia ser um objeto totalmente independente do original. 
+Esses termos apesar de respectivamente significarem "Superficial" e "Profundo" não estão relacionados a quantidade de níveis que um objeto possui ou limite de níveis que podem ser copiados, e sim ao fato da cópia ser um objeto totalmente independente do original.
 
 Veja o código abaixo primeiro e vamos discutir isso melhor:
 
@@ -137,12 +139,10 @@ const newUser = JSON.parse(JSON.stringify(user)); // é só essa linha mesmo
 
 Se você quer comprovar se eles são iguais, veja o próximo tópico: Comparar dois objetos em Javascript.
 
-
 Fonte:
+
 - [3 Ways to Clone Objects in JavaScript](https://www.samanthaming.com/tidbits/70-3-ways-to-clone-objects/)
 - [Understanding Deep and Shallow Copy in Javascript](https://webustry.com/understanding-deep-and-shallow-copy-in-javascript/)
-
-
 
 ## Como comparar dois objetos em Javascript
 
@@ -174,6 +174,7 @@ JSON.stringify(obj) === JSON.stringify(obj2); // false
 Isso nos leva para o próximo tópico...
 
 Fonte:
+
 - [How to Compare 2 Objects in JavaScript](https://www.samanthaming.com/tidbits/33-how-to-compare-2-objects/#deep-nested-comparison)
 - [Equality (==)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
 - [Strict equality (===)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
@@ -265,4 +266,5 @@ function multiplicar(a, b) {
 ```
 
 Fonte:
+
 - [Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/default_parameters)

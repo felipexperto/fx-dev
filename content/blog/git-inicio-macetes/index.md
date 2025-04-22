@@ -9,7 +9,9 @@ tldr: 'Este post reúne informações que recolhi realizando estudos e praticand
 ---
 
 > ### Tópicos do post
-> Busca responder algumas perguntas como: 
+>
+> Busca responder algumas perguntas como:
+>
 > - [O que é Git?](#o-que-e-git)
 > - [Por que eu deveria usar versionamento?](#por-que-usar-versionamento)
 > - [Como funciona o Git?](#como-funciona-git)
@@ -19,28 +21,27 @@ tldr: 'Este post reúne informações que recolhi realizando estudos e praticand
 
 É um sistema de controle de versões, em outras palavras essa ferramenta possibilita o controle de diferentes versões de um código substituindo os antigos arquivos: `v0.0.1.zip` 😂
 
-Existem diversas plataformas que disponibilizam esse serviço e algumas das mais famosas são: [Github](https://github.com/), [GitLab](https://about.gitlab.com/) e [Bitbucket](https://bitbucket.org/). 
+Existem diversas plataformas que disponibilizam esse serviço e algumas das mais famosas são: [Github](https://github.com/), [GitLab](https://about.gitlab.com/) e [Bitbucket](https://bitbucket.org/).
 
-Como escolher? Analise baseado nas suas necessidades, veja pontos como: APIs, plugins, integrações, preço, armazenamento, segurança, entre outros. 
+Como escolher? Analise baseado nas suas necessidades, veja pontos como: APIs, plugins, integrações, preço, armazenamento, segurança, entre outros.
 
 Se quiser adentrar nas comparações veja esse artigo do Stackshare que contém diversos detalhes: [Bitbucket vs GitHub vs GitLab](https://stackshare.io/stackups/bitbucket-vs-github-vs-gitlab).
 
-
 <h2 id="por-que-usar-versionamento">Por que eu deveria usar versionamento?</h2>
 
-Você deve estar se perguntando: 
+Você deve estar se perguntando:
 
-- 🤔 Quais problemas o Git resolve? 
-- 🧐 Quando usar? Quais situações se faz útil? 
+- 🤔 Quais problemas o Git resolve?
+- 🧐 Quando usar? Quais situações se faz útil?
 
-Trabalhar em equipe num mesmo código é sempre difícil, frequentemente necessário e caso você esteja passando por isso o Git permite: 
+Trabalhar em equipe num mesmo código é sempre difícil, frequentemente necessário e caso você esteja passando por isso o Git permite:
 
 - identificar quem escreveu o quê;
 - qual é a versão mais recente;
 - se existe uma sobreposição de código (conflito) a ser resolvido;
 - comentários a cada modificação (mensagem de commit);
 - sincronização com servidor remoto (nada de perder trabalho porque a máquina morreu);
-- ramificações do código principal para criar suas funcionalidades(branch) e; 
+- ramificações do código principal para criar suas funcionalidades(branch) e;
 - possibilidade de voltar etapas no histórico de modificações (revert);
 - code review antes de ser implementado em produção;
 
@@ -78,4 +79,4 @@ Já respondemos as perguntas "Porquê?", "O que?" e "Como?", então vamos seguir
 Depois de ler estes dois artigos, você imagina que existam outras plataformas que trabalham com Git como sistema de controle de versões.  
 Dentre as alternativas mais famosas ao Github, temos: [Gitlab](https://about.gitlab.com/) e [Bitbucket](https://bitbucket.org/), você pode inclusive conferir outras alternativas [nesta página da stackshare](https://stackshare.io/github/alternatives).
 
-*[code review]: Revisão do código por diversas pessoas.
+\*[code review]: Revisão do código por diversas pessoas.

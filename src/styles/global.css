@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-abyss-500: oklch(0.32 0.02 264.22);
+  --font-bold: 700;
+  --font-medium: 500;
+  --font-code:
+    "Fira Code", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas,
+    Courier, monospace, "sans-serif";
+  --font-sans: "Fira Sans", Ubuntu, "sans-serif";
+}
+
+html {
+  color: var(--color-abyss-500);
+}
+
+html.dark {
+  color: var(--color-gray-50);
+}

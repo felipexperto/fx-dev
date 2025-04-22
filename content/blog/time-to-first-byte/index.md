@@ -4,7 +4,7 @@ category: Dev
 title: Time To First Byte
 date: "2020-01-05T00:35:00.284Z"
 description: "O que é Time To First Byte? Como medir? Por que se importar?"
-tldr: 'Time To First Byte ou TTFB, é uma medida que indica a duração entre uma requisição HTTP e o momento que o browser inicia o recebimento desta resposta, ou seja, recebe o primeiro byte. Em outras palavras, é o tempo gasto a partir da requisição do nosso dispositivo até chegar no servidor e voltar carregando o primeiro byte de informação.'
+tldr: "Time To First Byte ou TTFB, é uma medida que indica a duração entre uma requisição HTTP e o momento que o browser inicia o recebimento desta resposta, ou seja, recebe o primeiro byte. Em outras palavras, é o tempo gasto a partir da requisição do nosso dispositivo até chegar no servidor e voltar carregando o primeiro byte de informação."
 ---
 
 > "O tempo de resposta do servidor mede quanto tempo ele leva para carregar o HTML necessário para começar a processar a página de seu servidor, subtraindo o tempo de latência de rede entre o Google e seu servidor." - [Google](https://developers.google.com/speed/docs/insights/Server)
@@ -22,19 +22,17 @@ Porém, nós temos que ficar sempre alertas porque todo o trabalho de minificar 
 Três ações podem impactar:
 
 1. O envio da requisição pela máquina do cliente ao servidor;  
-Performance do DNS lookup, velocidade da internet do usuário, distância do servidor ou interrupções na conexão.
+   Performance do DNS lookup, velocidade da internet do usuário, distância do servidor ou interrupções na conexão.
 
 2. O processamento do servidor e geração da resposta e;  
-Processamento de scripts(uso de disco e memória RAM), chamadas a base de dados e comunicação com outros sistemas.
+   Processamento de scripts(uso de disco e memória RAM), chamadas a base de dados e comunicação com outros sistemas.
 
 3. O envio da resposta do servidor ao cliente.  
-Autoexplicativo.
-
+   Autoexplicativo.
 
 ## Como medir o Time To First Byte?
 
-Você pode utilizar alguma das inúmeras ferramentas de performance disponiveis na web, sendo que aconselho o [Webpagetest](https://www.webpagetest.org/) e o  console do Google Chrome, [você pode aprender o processo clicando aqui e acessando o tutorial do Google](https://developers.google.com/web/tools/chrome-devtools/network/resource-loading).
-
+Você pode utilizar alguma das inúmeras ferramentas de performance disponiveis na web, sendo que aconselho o [Webpagetest](https://www.webpagetest.org/) e o console do Google Chrome, [você pode aprender o processo clicando aqui e acessando o tutorial do Google](https://developers.google.com/web/tools/chrome-devtools/network/resource-loading).
 
 ## Curiosidade
 
@@ -49,6 +47,5 @@ A Cloudfare diz ter realizado testes extensivos utilizando nginx enquanto invest
 - https://developers.google.com/web/tools/chrome-devtools/network/resource-loading
 - https://csswizardry.com/2019/08/time-to-first-byte-what-it-is-and-why-it-matters/
 
-
-*[TTFB]: Time to First Byte
-*[DNS lookup]: Processo de encontrar o endereço IP de qualquer url na internet
+_[TTFB]: Time to First Byte
+_[DNS lookup]: Processo de encontrar o endereço IP de qualquer url na internet

@@ -1,0 +1,29 @@
+---
+import DefaultHeadTags from '../components/DefaultHeadTags.astro';
+import GtmIframe from '../components/GtmIframe.astro';
+import Header from '../components/Header.astro';
+import NavigationBar from '@components/NavigationBar.astro';
+
+import '../styles/global.css';
+import '../styles/blogpost.css';
+
+const { pageTitle } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <DefaultHeadTags pageTitle={`${pageTitle} | FX Dev`} />
+  </head>
+  <body
+    class="bg-slate-100 dark:bg-abyss-500 pb-32"
+    data-testid="layout-blogpost"
+    id="layout-blogpost"
+  >
+    <GtmIframe />
+    <Header>
+      <NavigationBar />
+    </Header>
+    <slot />
+  </body>
+</html>

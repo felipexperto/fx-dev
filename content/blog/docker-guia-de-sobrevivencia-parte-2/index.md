@@ -23,7 +23,7 @@ Estamos executando um sistema Linux "enxuto" mas vamos fazer algo mais divertido
 - Atualize os pacotes do Ubuntu: `apt-get update`
 - Instale o pacote sudo: `apt-get -y install sudo`
 - Digite `echo $USER` e repare que é retornada uma string em branco
-- Então vamos mudar para o *super user*: `sudo su`
+- Então vamos mudar para o _super user_: `sudo su`
 - Digite `echo $USER` novamente e veja que a resposta é `root`
 - Instale o pacote `cowsay`: `sudo apt-get -y install cowsay`
 - Rode o comando: `cowsay MUUUUUU`
@@ -42,7 +42,7 @@ E a lista retornada do comando `docker ps` deve estar vazia.
 ## Subindo novamente o container
 
 Se quiser recomeçar o processo, é possível subir o container novamente com `docker start lab`
-E repetir o ciclo com `docker exec -it lab bash` 
+E repetir o ciclo com `docker exec -it lab bash`
 
 ## Utilizando Dockerfile para facilitar a construção de imagens
 
@@ -84,7 +84,6 @@ Confirmar se a imagem foi criada: `docker images | grep lab_image`
 
 E rodar a imagem: `docker run --rm lab_image cowsay muuuu`
 
-
 ### Um pouco mais sobre Entrypoint e CMD
 
 O Docker tem um `entrypoint` padrão, que é: `/bin/sh -c` mas não tem um comando especificado.  
@@ -93,7 +92,6 @@ Em outras palavras, o `entrypoint` especifica o comando que será executado semp
 Quando você utiliza o comando `docker run -i -t ubuntu bash`, o entrypoint é o padrão, a imagem é a Ubuntu e o comando é `bash`.
 
 Desse modo, o que realmente é executado é: `/bin/sh -c bash`.
-
 
 ### O comando RUN
 

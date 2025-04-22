@@ -7,7 +7,6 @@ update: "2020-12-10T00:12:03.284Z"
 description: "Construindo um blog com GatsbyJS e hospedando no Netlify"
 ---
 
-
 [GatsbyJS](https://www.gatsbyjs.org/) é um framework que já tem dado o que falar faz um tempo.
 O seu criador, [Preston So](https://preston.so/), chegou a ir na React Conf 2019 e fazer uma palestra em português(!) salientando os pontos positivos do framework.
 A [Vagas.com](https://www.vagas.com.br/) já utilizou em uma landing page e o [Felipe Fialho](https://github.com/felipefialho/felipefialho.com) tem falado bem também...
@@ -21,14 +20,14 @@ A [Vagas.com](https://www.vagas.com.br/) já utilizou em uma landing page e o [F
 
 ## O que é este site?
 
-Tempo atrás havia um projeto chamado _sitesemcomplicacao_ que nasceu no início de 2019 sendo idealizado para os empreendedores como um guia para sanar dúvidas como: 
+Tempo atrás havia um projeto chamado _sitesemcomplicacao_ que nasceu no início de 2019 sendo idealizado para os empreendedores como um guia para sanar dúvidas como:
 
 > Quanto custa desenvolver/manter um site?  
 > Deveria usar uma plataforma como Wordpress?  
 > Quais são as vantagens, desvantagens e preocupações necessárias?
 
 No entanto, como as coisas não vão exatamente como imaginamos, virou um blog pessoal.  
-Afinal de contas, criei o nome, a identidade visual e gostei.  
+Afinal de contas, criei o nome, a identidade visual e gostei.
 
 > Agora posto qualquer coisa que me faça sentido, seja com intuito de compartilhar ou documentar soluções e macetes que provavelmente esquecerei.
 

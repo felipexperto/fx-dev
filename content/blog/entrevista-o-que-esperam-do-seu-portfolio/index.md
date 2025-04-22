@@ -87,5 +87,4 @@ Coloque o que tiver de melhor. Não inclua trabalhos que você mesmo considera a
 
 Sempre existem. Geralmente é um projeto significativamente abaixo da média dos demais. Mas o que queima mais o filme é no caso de trabalhos profissionais, não dar crédito aos demais colegas que fizeram o trabalho junto e nem ao escritório onde foi feito. E no caso de projetos acadêmicos, não colocar nem o nome dos demais integrantes do grupo e nem do professor orientador. Sempre inclua o nome do orientador, afinal, ele é tão responsável pelo resultado final quanto você, e deve ser valorizado!
 
-
-*Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui.*
+_Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui._

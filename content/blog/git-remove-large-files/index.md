@@ -47,7 +47,7 @@ Confirmei que ele existia, fiz um `rebase --interactive`, removi do commit e o e
 
 ### Rebase --interactive
 
-Vamos rodar o `diff-tree` novamente, só para confirmar que nosso arquivo a ser removido (`Livro-Nao-Me-Faca-Pensar.pdf`) está no commit:  
+Vamos rodar o `diff-tree` novamente, só para confirmar que nosso arquivo a ser removido (`Livro-Nao-Me-Faca-Pensar.pdf`) está no commit:
 
 ```
 git diff-tree --no-commit-id --name-only -r 46eea44
@@ -60,24 +60,24 @@ professional/@research/design/_resources/05.2._Lista_de_livros.resources/Livro-N
 professional/@research/design/_resources/UX Principios Basicos/nui-161119122039.pdf
 ```
 
-Rebase: 
+Rebase:
 
 ```
 git rebase --interactive '46eea44^'
 ```
 
 A execução do comando nos levou para o momento no histórico onde os arquivos foram modificados mas não commitados.  
-Em outras palavras, é hora de fazer as alterações, ou seja, remover o `pdf`.  
+Em outras palavras, é hora de fazer as alterações, ou seja, remover o `pdf`.
 
 Utilizo o VSCode, então digitei `code .`, entrei no editor e deletei o arquivo.
 
-Agora vamos colocar essa modificação em `stage` para podermos commitar: 
+Agora vamos colocar essa modificação em `stage` para podermos commitar:
 
 ```
 git add .
 ```
 
-Commitamos com a flag `amend`: 
+Commitamos com a flag `amend`:
 
 ```
 git commit --amend

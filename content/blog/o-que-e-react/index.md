@@ -50,11 +50,11 @@ Em outras palavras, a [ContextAPI](https://reactjs.org/docs/context.html) assim 
 
 O React não é "preparado de fábrica" para lidar com rotas e para realizar isso pode utilizar dependências. A biblioteca mais famosa é a [React Router](https://www.npmjs.com/package/react-router).
 
-Existe outro cenário que é a utilização de frameworks que fazem renderização Server-side, por exemplo, o [Next.js](https://nextjs.org/). E ele possui seu método próprio. 
+Existe outro cenário que é a utilização de frameworks que fazem renderização Server-side, por exemplo, o [Next.js](https://nextjs.org/). E ele possui seu método próprio.
 
 ## Em breve continuamos...
 
-Próximo tópico: **Quando você não deve utilizar React...**  
+Próximo tópico: **Quando você não deve utilizar React...**
 
 Alguns posts para antecipar a leitura:
 

@@ -12,7 +12,6 @@ A ideia desse post é apresentar de maneira sucinta o código, testes de unidade
 
 Esse hook que aplica um `overflow: hidden` no `<body>` pode ser útil para bloquear a rolagem na abertura de sidebars e modais.
 
-
 ## Tecnologias e versões
 
 ```
@@ -26,16 +25,17 @@ Esse hook que aplica um `overflow: hidden` no `<body>` pode ser útil para bloqu
 ## useScrollLock
 
 `useScrollLock/index.js`
+
 ```js
-import React from 'react';
+import React from "react";
 
 export const useScrollLock = () => {
   const lockScroll = React.useCallback(() => {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   }, []);
 
   const unlockScroll = React.useCallback(() => {
-    document.body.style.overflow = 'visible';
+    document.body.style.overflow = "visible";
   }, []);
 
   return {
@@ -48,33 +48,34 @@ export const useScrollLock = () => {
 ## Teste
 
 `useScrollLock/useScrollLock.test.js`
-```js
-import { renderHook } from '@testing-library/react-hooks';
-import { useScrollLock } from './index';
 
-describe('[Hook] useScrollLock', () => {
-  test('should remove scroll from body', () => {
+```js
+import { renderHook } from "@testing-library/react-hooks";
+import { useScrollLock } from "./index";
+
+describe("[Hook] useScrollLock", () => {
+  test("should remove scroll from body", () => {
     const body = window.document.body;
     const { result } = renderHook(() => useScrollLock());
     const lockScroll = result.current.lockScroll;
 
-    body.style.overflow = 'visible';
+    body.style.overflow = "visible";
 
-    expect(body).toHaveStyle('overflow: visible');
+    expect(body).toHaveStyle("overflow: visible");
     lockScroll();
-    expect(body).toHaveStyle('overflow: hidden');
+    expect(body).toHaveStyle("overflow: hidden");
   });
 
-  test('should add scroll to body', () => {
+  test("should add scroll to body", () => {
     const body = window.document.body;
     const { result } = renderHook(() => useScrollLock());
     const unlockScroll = result.current.unlockScroll;
 
-    body.style.overflow = 'hidden';
+    body.style.overflow = "hidden";
 
-    expect(body).toHaveStyle('overflow: hidden');
+    expect(body).toHaveStyle("overflow: hidden");
     unlockScroll();
-    expect(body).toHaveStyle('overflow: visible');
+    expect(body).toHaveStyle("overflow: visible");
   });
 });
 ```
@@ -82,19 +83,23 @@ describe('[Hook] useScrollLock', () => {
 ## Utilização do hook
 
 ```js
-import React from 'react';
-import { useScrollLock } from 'hooks/useScrollLock';
-
+import React from "react";
+import { useScrollLock } from "hooks/useScrollLock";
 
 const DumbComponent = () => {
   const { lockScroll, unlockScroll } = useScrollLock();
 
   return (
     <>
-      <button onClick={() => lockScroll()} type="button">Lock Scroll</button><br />
-      <button onClick={() => unlockScroll()} type="button">Unlock Scroll</button>
+      <button onClick={() => lockScroll()} type="button">
+        Lock Scroll
+      </button>
+      <br />
+      <button onClick={() => unlockScroll()} type="button">
+        Unlock Scroll
+      </button>
     </>
-  )
+  );
 };
 ```
 

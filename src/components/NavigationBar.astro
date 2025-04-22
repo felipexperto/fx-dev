@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import profileImage from '../assets/profile-image-felipexperto.jpeg';
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<nav
+  class="flex place-content-between items-center"
+  aria-label="Navegação principal"
+>
+  <div class="flex gap-2 items-center">
+    <a href="/" title="Ir para Home">
+      <Icon
+        class="h-10 w-30"
+        data-testid="logo-fx"
+        id="logo-fx"
+        name="logo-felipexperto"
+      />
+    </a>
+  </div>
+  <ul class="flex gap-2">
+    <div class="flex gap-2 items-center">
+      <span class="italic">por</span>
+      <a
+        href="https://www.linkedin.com/in/felipexperto/"
+        title="Felipe Marciano | LinkedIn"
+      >
+        <img
+          alt="Foto de perfil de Felipe Marciano"
+          class="rounded-full w-10"
+          fetchpriority="high"
+          src={profileImage.src}
+        />
+      </a>
+      <ThemeToggle />
+    </div>
+  </ul>
+</nav>
+
+<style>
+  #logo-fx {
+    color: var(--color-abyss-500);
+  }
+
+  :global(html.dark) #logo-fx {
+    color: white;
+  }
+</style>

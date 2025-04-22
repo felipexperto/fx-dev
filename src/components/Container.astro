@@ -1,0 +1,10 @@
+---
+const { classNames = [] } = Astro.props;
+---
+
+<div
+  class:list={['max-w-2xl mx-auto px-4', classNames]}
+  data-testid="container"
+>
+  <slot />
+</div>

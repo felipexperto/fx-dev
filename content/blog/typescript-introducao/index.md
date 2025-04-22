@@ -44,7 +44,6 @@ Se você tem pouca familiaridade com Terminal esse começo pode ser difícil. Um
 
 A criação de um projeto e configuração do mesmo na minha opinião exige um vídeo e como não farei isso, aconselho o da Glaucia Lemos: [Preparando o Ambiente de Desenvolvimento para o TypeScript](https://www.youtube.com/watch?v=J-sMh3DF10U). Ela fez inclusive outro vídeo explicando o arquivo de configuração do Typescript: [Entendendo o arquivo tsconfig.json](https://www.youtube.com/watch?v=iYXzT08sX5Y).
 
-
 ## Como adicionar Typescript ao seu projeto já existente?
 
 O Node não executa os arquivos .ts, pois esses arquivos contém instruções além do que é compreensível para ele, portanto, é necessário utilizar uma dependência e configurá-la.

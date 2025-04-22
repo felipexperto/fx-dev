@@ -37,10 +37,9 @@ tldr: "Aviso de post longo pela frente. Isso não é <strong>O Guia Completo par
   </li>
 </ul>
 
-
 <h2 class="anchor" id="introducao">Introdução</h2>
 
-> Ao contrário dos ativos materiais, que diminuem à medida que são usados, os ativos do conhecimento aumentam com o uso: ideias geram novas ideias e o conhecimento compartilhado permanece com o doador ao mesmo tempo que enrique o recebedor. – *Thomas H. Davenport, Conhecimento Empresarial*.
+> Ao contrário dos ativos materiais, que diminuem à medida que são usados, os ativos do conhecimento aumentam com o uso: ideias geram novas ideias e o conhecimento compartilhado permanece com o doador ao mesmo tempo que enrique o recebedor. – _Thomas H. Davenport, Conhecimento Empresarial_.
 
 O começo de todo texto é complicado e essa não é uma exceção.  
 Primeiramente, o que será dito a seguir não é uma verdade absoluta e nem poderia, pois apesar do título de **Frontend** existir há alguns anos, é relativamente novo e se torna mais complexo à medida que novas tecnologias surgem e o escopo do trabalho se altera.
@@ -51,7 +50,7 @@ Na área de tecnologia onde tudo ocorre rapidamente - o velho clichê mas é rea
 
 Tratando-se da área de tecnologia, **não é possível aplicar uma avaliação pautada somente na variável 'Tempo como frontend'** devido a pontos como: novas oportunidades de como absorver conhecimento, necessidades do mercado e lançamento constante de novas tecnologias.
 
-No entanto, uma opinião unânime existente no mercado de trabalho é que habilidades de relacionamento(*soft skills*) são igualmente importantes à conhecimento técnico(*hard skills*) e, dificilmente são adquiridas por meio de cursos.
+No entanto, uma opinião unânime existente no mercado de trabalho é que habilidades de relacionamento(_soft skills_) são igualmente importantes à conhecimento técnico(_hard skills_) e, dificilmente são adquiridas por meio de cursos.
 
 Dito isso, a seguir é trazida uma proposta de auto-avaliação baseada em três fatores.
 
@@ -70,27 +69,25 @@ Dito isso, a seguir é trazida uma proposta de auto-avaliação baseada em três
 <p style="margin-bottom: 2rem">Relacionamento com equipe, lidar com pressão, liderança, habilidade de argumentar sem gerar conflito, não levar as coisas pro lado pessoal.</p>
 </div>
 
-Com exceção do pilar de **Conhecimento Técnico** o qual você pode comparar o que sabe e o que as vagas de emprego estão solicitando, os demais pilares apresentados por sí só não auxiliarão a responder perguntas como: 
+Com exceção do pilar de **Conhecimento Técnico** o qual você pode comparar o que sabe e o que as vagas de emprego estão solicitando, os demais pilares apresentados por sí só não auxiliarão a responder perguntas como:
 
 - Qual nível de complexidade eu deveria estar lidando?
 - Quais desafios deveria encontrar?
 - Quais metas deveria atingir?
 
-
 <h2 class="anchor" id="aprendizado-de-software">Aprendizado de Software</h2>
 
 Sendo assim, vamos mergulhar nas **expectativas comportamentais de cada nível de senioridade** e, se você já leu [O Codificador Limpo de Robert C. Martin](https://www.altabooks.com.br/produto/o-codificador-limpo/) talvez vá se recordar de alguns trechos a seguir ou até da nomenclatura.
 
-> O ofício da pessoa desenvolvedora de software profissional é similar ao do artesão. Passado de pessoa para pessoa. Ensinado pelos mais velhos para os mais jovens. Trocado entre colegas. Observado e reaprendido, conforme os velhos observam os jovens. - *Texto adaptado de O Codificador Limpo*.
-
+> O ofício da pessoa desenvolvedora de software profissional é similar ao do artesão. Passado de pessoa para pessoa. Ensinado pelos mais velhos para os mais jovens. Trocado entre colegas. Observado e reaprendido, conforme os velhos observam os jovens. - _Texto adaptado de O Codificador Limpo_.
 
 <h3 class="anchor" id="aprendizes-junior">Aprendizes / Júnior</h3>
 
 > Eles não têm autonomia e são supervisionados bem de perto pelos operadores. No começo, não recebem qualquer tarefa, simplesmente dão assistência aos operadores. Essa deve ser uma época de programação em par bastante intensa, esse é o momento em que as disciplinas são aprendidas e reforçadas. É quando a base dos valores é criada.
-> 
+>
 > Operadores são professores. Eles asseguram que os aprendizes conheçam os princípios e padrões do design, disciplinas e rituais. Ensinam TDD, refatoração, estimativas, e assim por diante. Recomendam leituras, exercícios e práticas, e revisam o progresso dos aprendizes.
-> 
-> Esse período deve durar um ano. A essa altura, se o operador estiver disposto a aceitar o aprendiz como um dos seus, fará uma recomendação aos mestres. Esses deverão avaliar o aprendiz por uma entrevista e por seus resultados até então. Se os mestres concordarem, o aprendiz se tornará um operador. – *O Codificador Limpo*.
+>
+> Esse período deve durar um ano. A essa altura, se o operador estiver disposto a aceitar o aprendiz como um dos seus, fará uma recomendação aos mestres. Esses deverão avaliar o aprendiz por uma entrevista e por seus resultados até então. Se os mestres concordarem, o aprendiz se tornará um operador. – _O Codificador Limpo_.
 
 A pessoa desenvolvedora júnior sabe alguma coisa e está em início de carreira. Essa pessoa já está inserida no mercado de trabalho, seja por um estágio ou trabalho em outras áreas, sendo assim, sabe que tem responsabilidades.
 
@@ -102,16 +99,15 @@ Não precisa entender as regras de negócio de maneira aprofundada e à medida q
 
 Trabalhará principalmente com tarefas, ou seja, escopos bem definidos, onde o início, meio e fim estão claros. É inerente a entrega de itens desta complexidade que contemplem o fluxo adotado de revisão de código, respeitem estilo de código do projeto, tenham o mínimo de critério com relação a segurança e performance.
 
-Esse perfil é constantemente acompanhado por alguém mais experiente, que vai dar as guidelines para o seu crescimento, e seu trabalho é cuidadosamente revisado com substanciais idas e vindas. Se adquirir um bom mentor Pleno ou Sênior para se inspirar e ensinar o caminho das pedras, crescerá rápido dentro da estrutura. 
+Esse perfil é constantemente acompanhado por alguém mais experiente, que vai dar as guidelines para o seu crescimento, e seu trabalho é cuidadosamente revisado com substanciais idas e vindas. Se adquirir um bom mentor Pleno ou Sênior para se inspirar e ensinar o caminho das pedras, crescerá rápido dentro da estrutura.
 
 À empresa cabe ter uma boa política de retenção de talentos para esse profissional entender que é valorizado e, quando estiver seguro que pode passar a ser Pleno, não ter motivos para ir embora.
-
 
 <h3 class="anchor" id="operadores-pleno">Operadores / Pleno</h3>
 
 > São programadores treinados, competentes e energéticos. Durante esse período em suas carreiras aprenderão a trabalhar bem em uma equipe até se tornarem líderes. Tem conhecimento da tecnologia atual, mas normalmente carecem da experiência com muitos sistemas. Eles têm a tendência de conhecer uma linguagem, um sistema e uma plataforma; porém, estão constantemente aprendendo mais. Níveis de experiência variam amplamente de acordo com cada um, mas a média gira em torno de cinco anos. Do lado extremo dessa média, temos mestres em ascensão; do outro, aprendizes recentes.
-> 
-> Operadores são supervisionados por mestres ou um colega sênior. Jovens operadores raramente recebem autonomia. Seu trabalho é supervisionado de perto. Seu código é examinado. À medida que ganham experiência, a autonomia cresce. A supervisão se torna menos direta e mais sutil. No final, ela se torna apenas uma revisão rápida. – *O Codificador Limpo*.
+>
+> Operadores são supervisionados por mestres ou um colega sênior. Jovens operadores raramente recebem autonomia. Seu trabalho é supervisionado de perto. Seu código é examinado. À medida que ganham experiência, a autonomia cresce. A supervisão se torna menos direta e mais sutil. No final, ela se torna apenas uma revisão rápida. – _O Codificador Limpo_.
 
 A pessoa de nível Pleno está pronta para te dar respaldo técnico em qualquer questão, você pode chamá-la para uma reunião ou dar uma tarefa tecnicamente complexa que será executada.
 
@@ -119,7 +115,7 @@ No entanto, não se deve esperar em questões de liderança/gerência/visão (vi
 
 Tem um nível técnico relativamente alto, uma experiência relevante e uma maturidade alta. É um profissional que provavelmente será cobrado por tudo o que erra ou deixa de acertar.
 
-Precisará de ajuda pontualmente e seu trabalho será revisado de maneira ocasional, tendo foco em funcionalidades ou problemas individuais com escopo claro e bem definido. 
+Precisará de ajuda pontualmente e seu trabalho será revisado de maneira ocasional, tendo foco em funcionalidades ou problemas individuais com escopo claro e bem definido.
 
 Compreende os padrões e abordagens estabelecidos nas bases de código existentes com facilidade e é capaz de encontrar melhorias consideráveis em modelos básicos.
 
@@ -127,18 +123,17 @@ Compreende os padrões e abordagens estabelecidos nas bases de código existente
 
 Fará a gestão compartilhada de sua equipe e do negócio.
 
-
 <h3 class="anchor" id="mestres-senior">Mestres / Sênior</h3>
 
 > São programadores que já assumiram a liderança em mais de um projeto significativo de software. Normalmente eles terão mais de dez anos de experiência e terão trabalhado em diversos tipos de sistemas, linguagens e sistemas operacionais. Sabem como lidar e coordenar múltiplas equipes; são designers e arquitetos proficientes e podem codificar círculos em volta de todo mundo sem uma gota de suor.
 >
-> Já receberam ofertas de posições na gerência, mas ou as recusaram ou voltaram atrás após as terem aceitado, ou as integraram ao seu papel técnico primordial. Eles mantêm esse papel técnico por meio da leitura, estudo, prática, desempenho e ensino. É para um mestre que a empresa designará a responsabilidade técnica de um projeto. – *O Codificador Limpo*.
+> Já receberam ofertas de posições na gerência, mas ou as recusaram ou voltaram atrás após as terem aceitado, ou as integraram ao seu papel técnico primordial. Eles mantêm esse papel técnico por meio da leitura, estudo, prática, desempenho e ensino. É para um mestre que a empresa designará a responsabilidade técnica de um projeto. – _O Codificador Limpo_.
 
-Ao apresentar um problema à pessoa desenvolvedora Sênior, o que se espera é que baseando-se em experiências adquiridas e análise do cenário, seja capaz de elaborar o melhor caminho e delegar apropriadamente as tarefas. Lidando com a sua própria equipe e se necessário fazendo interface com outras áreas. 
+Ao apresentar um problema à pessoa desenvolvedora Sênior, o que se espera é que baseando-se em experiências adquiridas e análise do cenário, seja capaz de elaborar o melhor caminho e delegar apropriadamente as tarefas. Lidando com a sua própria equipe e se necessário fazendo interface com outras áreas.
 
-Em outras palavras, coordenar uma reunião e fazer com que os participantes se envolvam e tragam opiniões úteis para solucionar o problema, tenha noções de tempo, viabilidade (habilidade técnica entra aqui), custos e, proativamente trace um plano para cumprir o objetivo. 
+Em outras palavras, coordenar uma reunião e fazer com que os participantes se envolvam e tragam opiniões úteis para solucionar o problema, tenha noções de tempo, viabilidade (habilidade técnica entra aqui), custos e, proativamente trace um plano para cumprir o objetivo.
 
-Demonstrar liderança dentro da equipe e tomar a frente em projetos é fundamental, assim como visão do todo. Deve saber priorizar, negociar, alocar membros do time e gerir de risco, ou seja, além de executar, vê e questiona os esforços envolvidos na realização de uma tarefa e é capaz de estimar cedo os recursos e limites necessários. 
+Demonstrar liderança dentro da equipe e tomar a frente em projetos é fundamental, assim como visão do todo. Deve saber priorizar, negociar, alocar membros do time e gerir de risco, ou seja, além de executar, vê e questiona os esforços envolvidos na realização de uma tarefa e é capaz de estimar cedo os recursos e limites necessários.
 
 Precisa entender de forma aprofundada as regras de negócio, os side-effects de mudanças e ser evangelizador delas para os plenos e juniores. Tendo esse conhecimento, consegue traduzir ideias em projetos com tarefas detalhadas.
 
@@ -158,12 +153,11 @@ Outra ação esperada é que esteja antenada no mercado e sugira inovações. Se
 
 <h2 class="anchor" id="complexidade-de-escopo">Complexidade de escopo</h2>
 
-**Qual é o objetivo de discutirmos complexidade de tarefas?** 
+**Qual é o objetivo de discutirmos complexidade de tarefas?**
 
 É uma tentativa de criarmos uma consciência e estabelecermos "limites" (por mais que voláteis e discutíveis) que nos permitam categorizar nossa atuação dentro dos níveis e assim possamos "comparar" se nosso cotidiano corresponde ao nosso nível de senioridade.
 
 A esperança é que seja possível ajudar a mensurar os esforços executados e que sirvam de justificativa para a transição de nível.
-
 
 <h3 class="anchor" id="complexidade-junior">Aprendizes / Júnior</h3>
 
@@ -180,7 +174,6 @@ A esperança é que seja possível ajudar a mensurar os esforços executados e q
   <li>Explicação de um tópico técnico básico para um profissional de outra área.</li>
 </ul>
 
-
 <h3 class="anchor" id="complexidade-pleno">Operadores / Pleno</h3>
 
 <ul>
@@ -195,7 +188,6 @@ A esperança é que seja possível ajudar a mensurar os esforços executados e q
   <li>Compartilhamento de conhecimento e experiência com squad e/ou staff de maneira didática por meio de apresentação ou documentação;</li>
   <li>Testes unitários e end-to-end(metodologia utilizada para testar se o fluxo de um aplicativo está sendo executado conforme o projeto do início ao fim).</li>
 </ul>
-
 
 <h3 class="anchor" id="complexidade-senior">Mestres / Sênior</h3>
 
@@ -212,7 +204,6 @@ Enfim, espero que este conteúdo tenha te auxiliado de alguma maneira ou ao meno
 É sempre bom lembrar que a caminhada é longa, contínua e que cada pessoa a realiza em seu ritmo.
 
 Agradecimentos à [Jessica Costa](https://www.linkedin.com/in/pub-jessica-costa/) pelas contribuições e à staff de frontend da VAGAS.com pelos pitacos.
-
 
 ## Referências
 

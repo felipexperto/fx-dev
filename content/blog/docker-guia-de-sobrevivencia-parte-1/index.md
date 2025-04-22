@@ -19,33 +19,29 @@ Isso equivale às imagens do Docker. Por exemplo, digamos que você queira rodar
 Um container nada mais é do que a **Imagem em execução**.  
 Linhas acima mencionei um filme ou jogo, certo? Agora imagine-os sendo executados e você podendo rodar comandos e ações.
 
-Nas linhas seguintes você pode conferir uma explicação em *tecniquês*:
+Nas linhas seguintes você pode conferir uma explicação em _tecniquês_:
 
 Containers são versões Linux super otimizadas onde você pode instalar **uma instância** de alguma ferramenta, como por exemplo: node, mongo, redis, ubuntu, mysql.
 
 > E como você sabe se existem imagens prontas das ferramentas que você necessita?  
 > Basta acessar o [Docker Hub](https://hub.docker.com/search/?q=&type=image) e procurar por elas.
 
-Também são ambientes completamente isolados que podem ter seus próprios processos ou serviços, como máquinas virtuais, contudo, eles compartilham do mesmo kernel do sistema operacional (responsável por se comunicar com o hardware). 
+Também são ambientes completamente isolados que podem ter seus próprios processos ou serviços, como máquinas virtuais, contudo, eles compartilham do mesmo kernel do sistema operacional (responsável por se comunicar com o hardware).
 
 Isso quer dizer que não existe um sistema operacional dentro de cada container e, por consequência, isso aumenta a velocidade de execução e consome menos memória RAM.
 
-
 ## Mão na massa
 
-Tendo em mente as definições acima, podemos iniciar nossa parte prática e, o primeiro passo será a instalação do Docker. 
-
+Tendo em mente as definições acima, podemos iniciar nossa parte prática e, o primeiro passo será a instalação do Docker.
 
 ### Instalando Docker
 
 No site [docs.docker.com](https://docs.docker.com/) você pode encontrar a versão para [Mac](https://docs.docker.com/docker-for-mac/install/), [Linux](https://docs.docker.com/engine/install/ubuntu/) e [Windows](https://docs.docker.com/docker-for-windows/install/).  
 Siga os passos conforme seu sistema operacional.
 
-
 ### Confirmando que a instalação foi um sucesso
 
 Para conferir se o Docker está instalado em sua máquina, abra o terminal de sua preferência (prompt de comando, Git CLI, Tmux, iTerm, ...) e digite: `docker -v`. A versão deve ser retornada com sucesso, por exemplo: `Docker version 19.03.13, build 4484c46d9d`. Para uma resposta mais detalhada utilize `docker version`.
-
 
 ### Baixando e executando a primeira imagem
 
@@ -113,7 +109,7 @@ Com o comando: `docker images`
 Você pode passar o ID (hash) com o comando: `docker rmi bf756fb1ae65`  
 Apagar múltiplas imagens soltas: `docker rmi $(docker images -f dangling=true -q)`  
 Apagar baseado em tempo, por exemplo, últimas 24h: `docker image prune –a ––filter "until=24h"`  
-Apagar imagens rotuladas como *old* pelo Docker: `docker image prune ––filter="label=old"`
+Apagar imagens rotuladas como _old_ pelo Docker: `docker image prune ––filter="label=old"`
 
 #### É possível dar um nome para o container?
 

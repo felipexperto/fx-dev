@@ -47,7 +47,7 @@ tldr: "Um (não tão) leve papo sobre tipografia. Se você chegou aqui provavelm
 
 ## Classificação Tipográfica de Robert Bringhurst
 
-Dois novos sistemas se contrapõem a essa classificação clássica. Mais do que agrupar fontes, buscam descrevê-las e qualificá-las por seus atributos técnicos e estéticos em contextos específicos. O primeiro, de Robert Bringhurst, aparece no livro Elementos do Estilo Tipográfico, de 1992. 
+Dois novos sistemas se contrapõem a essa classificação clássica. Mais do que agrupar fontes, buscam descrevê-las e qualificá-las por seus atributos técnicos e estéticos em contextos específicos. O primeiro, de Robert Bringhurst, aparece no livro Elementos do Estilo Tipográfico, de 1992.
 
 > É uma classificação baseada em períodos e estilos: renascentista, barroco, neoclássico, expressionista e assim por diante, relacionando a tipografia a outras manifestações artísticas como a música, a arquitetura e a pintura. ROCHA, Claudio. Novo Projeto Tipográfico. São Paulo: Rosari, 2012.
 
@@ -60,4 +60,4 @@ Em 2001, [Catherine Dixon propôs um sistema](https://infodesign.emnuvens.com.b
 
 ![Classificação Tipográfica de Catherine Dixon](./classificacao-tipografica-catherine-dixon.png)
 
-*Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui.*
+_Esse texto pertence a série "Revividos". São posts que foram realizados no antigo blog cmyk ativo e, por algum motivo possuem importância para estarem presentes aqui._

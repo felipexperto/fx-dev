@@ -20,7 +20,6 @@ Abaixo estão alguns dados relevantes da aplicação onde o processo foi realiza
 - Express 4.17.1
 - Redis 3.0.2
 
-
 ## Primeiro passo
 
 Alterar o comando que roda a aplicação no `package.json`, no meu caso era o `npm start`:
@@ -47,52 +46,61 @@ Abaixo nós temos o código completo do nosso arquivo e farei alguns comentário
 - Ao invés de utilizar a abordagem de executar o `tracing.js` pelo `package.json` tentei exportar o método e inseri-lo na `index.js` antes da inicialização do Express (tipicamente `const app = express()`), não funcionou.
 
 ```js
-const { Resource } = require('@opentelemetry/resources')
-const { SemanticResourceAttributes } = require('@opentelemetry/semantic-conventions')
-const { registerInstrumentations } = require('@opentelemetry/instrumentation')
-const { BatchSpanProcessor } = require('@opentelemetry/sdk-trace-base')
-const { NodeTracerProvider } = require('@opentelemetry/sdk-trace-node')
-const { ExpressInstrumentation } = require('@opentelemetry/instrumentation-express')
-const { RedisInstrumentation } = require('@opentelemetry/instrumentation-redis')
-const { HttpInstrumentation } = require('@opentelemetry/instrumentation-http')
-const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-grpc')
-const { diag, DiagConsoleLogger, DiagLogLevel } = require('@opentelemetry/api')
+const { Resource } = require("@opentelemetry/resources");
+const {
+  SemanticResourceAttributes,
+} = require("@opentelemetry/semantic-conventions");
+const { registerInstrumentations } = require("@opentelemetry/instrumentation");
+const { BatchSpanProcessor } = require("@opentelemetry/sdk-trace-base");
+const { NodeTracerProvider } = require("@opentelemetry/sdk-trace-node");
+const {
+  ExpressInstrumentation,
+} = require("@opentelemetry/instrumentation-express");
+const {
+  RedisInstrumentation,
+} = require("@opentelemetry/instrumentation-redis");
+const { HttpInstrumentation } = require("@opentelemetry/instrumentation-http");
+const {
+  OTLPTraceExporter,
+} = require("@opentelemetry/exporter-trace-otlp-grpc");
+const { diag, DiagConsoleLogger, DiagLogLevel } = require("@opentelemetry/api");
 
-const logLevel = 'DEBUG'; // também pode receber o valor ERROR. indico após a implementação estar correta
-const serviceName = '<nome-da-sua-aplicacao>';
+const logLevel = "DEBUG"; // também pode receber o valor ERROR. indico após a implementação estar correta
+const serviceName = "<nome-da-sua-aplicacao>";
 
 try {
-  diag.setLogger(new DiagConsoleLogger(), DiagLogLevel[String(logLevel)])
+  diag.setLogger(new DiagConsoleLogger(), DiagLogLevel[String(logLevel)]);
 
-  const exporter = new OTLPTraceExporter()
+  const exporter = new OTLPTraceExporter();
 
   const provider = new NodeTracerProvider({
     resource: new Resource({
       [SemanticResourceAttributes.SERVICE_NAME]: serviceName,
     }),
-  })
+  });
 
-  provider.addSpanProcessor(new BatchSpanProcessor(exporter))
+  provider.addSpanProcessor(new BatchSpanProcessor(exporter));
 
   registerInstrumentations({
     tracerProvider: provider,
     instrumentations: [
-      new HttpInstrumentation({ responseHook: (span) => {
-        const { attributes: attrs = {} } = span
-        span.updateName(`${attrs['http.method']} ${attrs['http.target']}`)
-        span.setAttribute('functions.route', attrs['http.route'])
-        span.setAttribute('functions.url', attrs['http.url'])
-      },
-      ignoreIncomingPaths: [/.*\/healthcheck/],
+      new HttpInstrumentation({
+        responseHook: (span) => {
+          const { attributes: attrs = {} } = span;
+          span.updateName(`${attrs["http.method"]} ${attrs["http.target"]}`);
+          span.setAttribute("functions.route", attrs["http.route"]);
+          span.setAttribute("functions.url", attrs["http.url"]);
+        },
+        ignoreIncomingPaths: [/.*\/healthcheck/],
       }),
       new ExpressInstrumentation(),
       new RedisInstrumentation(),
     ],
-  })
+  });
 
-  provider.register()
+  provider.register();
 } catch (error) {
-  console.error('tracing.js catch', { error })
+  console.error("tracing.js catch", { error });
 }
 ```
 

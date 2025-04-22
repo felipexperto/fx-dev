@@ -4,7 +4,7 @@ category: Dev
 title: New Relic - Introdução e conceitos básicos
 date: "2022-12-21T00:00:00.000Z"
 description: "Breve introdução sobre Monitoramento, Telemetria, Observabilidade e New Relic"
-tldr: ''
+tldr: ""
 ---
 
 # New Relic
@@ -16,9 +16,11 @@ O **Agente** é uma biblioteca de integração do New Relic com nossa aplicaçã
 ## Conceitos
 
 ### Telemetria
+
 É a instrumentação de sistema (geralmente por meio de agentes de monitoramento) para que possam coletar automaticamente dados sobre o desempenho desses sistemas, transmitindo os dados para uma localização centralizada para análise subsequente.
 
 ### Observabilidade
+
 Superconjunto de monitoramento, tendo em vista que se um sistema pode ser observável ele pode ser monitorado. Os três pilares da observabilidade são:
 
 - Traces: Informações mais granulares;
@@ -26,6 +28,7 @@ Superconjunto de monitoramento, tendo em vista que se um sistema pode ser observ
 - Logs: Pontos específicos dentro de um trace.
 
 ### APM
+
 Application Performance Monitoring é o serviço que oferece monitoramento total da sua aplicação, bem como monitoramento de performance, consumo de CPU e memória, transações e erros. É a principal ferramenta utilizada para construção de dashboards, onde você utiliza agentes para coleta de informações em tempo real das aplicações.
 
 O APM permite monitorar vários tipos de serviços como:
@@ -38,6 +41,7 @@ O APM permite monitorar vários tipos de serviços como:
 - GCP Services
 
 ### RED Method
+
 Padrão de monitoramento de serviços derivado do "The Four Golden Signals" (criado pelos engenheiros do Google), focado em arquiteturas de microsserviços:
 
 - Rate: o número de requests que o serviço está processando por segundo;
@@ -47,15 +51,17 @@ Padrão de monitoramento de serviços derivado do "The Four Golden Signals" (cri
 Importante citar que o board inicial do New Relic se baseia nesse padrão para gerar outras métricas.
 
 ### Distributed Trace
+
 É basicamente você conseguir rastrear ações do usuário, ou seja, por meio de um único id identificar as requisições e as informações que ele passa.
 
 ### NRQL
-NRQL é uma linguagem própria do New Relic para consulta de informações. Ela possui uma sintaxe bem parecida com a linguagem SQL mas com algumas diferenças. Você terá que utilizá-la para montar seus dashboards personalizados.
 
+NRQL é uma linguagem própria do New Relic para consulta de informações. Ela possui uma sintaxe bem parecida com a linguagem SQL mas com algumas diferenças. Você terá que utilizá-la para montar seus dashboards personalizados.
 
 ## Métricas mais relevantes
 
 ### Apdex ( Application Performance Index )
+
 Um dos principais índices do New Relic. O cálculo é feito em cima das requests. É aplicado um filtro baseado numa métrica chamada de `threshold` que tem seu valor padrão estabelecido como 0.5 segundos.
 
 Após aplicado o filtro as requests são classificadas entre:
@@ -71,9 +77,11 @@ Apdex = (Satisfied + (Tolerating x 2)) / Total number of requests
 ```
 
 ### Throughput
+
 O Throughput mede o tráfego de usuários (no APM do New Relic é medido como requests por minuto). Vale dizer que não se trata exatamente de visitas de usuários, qualquer request, como um consumo de API ou até uma página que é embedada por meio de um iframe, são consideradas nesta conta.
 
 ### Response time
+
 Segundo a documentação do New Relic, [Response time](https://docs.newrelic.com/docs/apm/apm-ui-pages/monitoring/response-time-chart-types-apm-browser/#time) é a duração de uma transação da perspectiva da aplicação solicitante e, não necessariamente é a soma total do tempo gasto na transação em si.
 
 Saindo da tradução literal e partindo para interpretação, na minha opinião o parágrafo acima diz que "é mas não é". Então o que é importante saber?
@@ -84,7 +92,7 @@ Saber que gráficos de Response Time permitem que você monitore a saúde da sua
 
 Imagine que você tem uma aplicação chamada `FrontendAdmin`. Ela utiliza NextJS com SSR (Server Side Rendering), é uma administração dos seus clientes e requisita informações de diversas aplicações backend.
 
-Dentre suas páginas temos a Página de edição de dados pessoais de usuário. 
+Dentre suas páginas temos a Página de edição de dados pessoais de usuário.
 
 Ao entrar na página é feita uma requisição, essa requisição solicita as informações para uma aplicação chamada `BackendPersonalData` e depois o front mostra os campos do formulário.
 
@@ -97,14 +105,17 @@ Nesse momento você está olhando para o gráfico de Response Time da `FrontendA
 Você pula para o gráfico de Response Time da `BackendPersonalData` e vê que está tudo bem mas o gráfico de Error rate está subindo. E partimos para o próximo tópico.
 
 ### Error rate
+
 Olhando o gráfico de Error rate também é possível observar o aumento. Agora você pode ir até a aba chamada Errors Inbox ([veja esse vídeo de exemplo](https://www.youtube.com/watch?v=6zRkpPTVjwc)) e com certeza sua mensagem padrão de erro de conexão com a base de dados estará lá.
 
 E se o problema fosse uma terceira aplicação a qual providencia informações para o `BackendPersonalData` também seria possível identificar por meio do gráfico de Response time. Isso é muito útil quando se está trabalhando com grandes ecossistemas onde existe uma cadeia de dependências e as aplicações são consumidas por múltiplas equipes.
 
 ### CPU and Memory usage
+
 Esse é auto-explicativo, uso de memória e CPU. Bem útil para quem trabalha com Kubernetes e tem várias instâncias/containers/pods de suas aplicações rodando.
 
 ## Métricas de performance percebida
+
 Depois de passarmos por tudo isso, tenho que dizer que nem só dessas métricas vive quem desenvolve no front. Se você ainda não ouviu falar de Métricas de performance percebida, veja o post [Métricas de performance percebida no frontend com New Relic](/new-relic-metricas-performance-percebida).
 
 ## Referências

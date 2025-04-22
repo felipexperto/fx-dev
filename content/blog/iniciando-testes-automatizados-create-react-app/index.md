@@ -13,9 +13,8 @@ tldr: "Uma análise linha a linha baseada no teste padrão do arquivo <code>src/
 Se você chegou aqui, não tenho dúvidas que você sabe o que são testes unitários e sua importância, sendo assim, vou te deixar com dois parágrafos muito bons sobre testes automatizados para aplicações em React e logo em seguida vamos pro código.
 
 > Quando escrevemos testes automatizados para aplicações em React, provavelmente uma grande parte dos nossos testes será sobre algum componente de UI e não apenas funções de regras de negócio. Por isso, precisamos de uma biblioteca que nos auxilie a interagir com o DOM, renderizando e encontrando os elementos que precisamos verificar nos testes.
-> 
+>
 > A React Testing Library surgiu com uma abordagem centrada no usuário e com padrões para enfatizar boas práticas de semântica e acessibilidade. E hoje já faz parte do pacote padrão de uma aplicação feita com o Create React App. - [Eduarda Scharnhorst](https://www.linkedin.com/in/dudaschar/) em _React: Automatizando os testes em aplicações front-end._
-
 
 ## **Mão na massa**
 
@@ -46,18 +45,17 @@ A aplicação terá um arquivo `src/App.js` com a seguinte estrutura HTML(JSX):
 E já terá um teste dentro do arquivo `src/App.test.js`. É importante explicar aqui que o `nome do componente` + `.test` dentro do mesmo diretório é uma convenção/boa prática pois a localização do teste fica mais intuitiva e não temos problemas de paths enormes em nossos imports.
 
 Exemplificando, se você tem uma pasta chamada `UI` e dentro dela o componente `Header.js` seu teste será `Header.test.js`.  
-Outro uso comum seria ter uma pasta chamada `Header` e dentro dela o arquivo `index.js`, nesse caso seu arquivo de teste continuaria sendo `Header.test.js`, só mudaria o caminho do `import`; 
-
+Outro uso comum seria ter uma pasta chamada `Header` e dentro dela o arquivo `index.js`, nesse caso seu arquivo de teste continuaria sendo `Header.test.js`, só mudaria o caminho do `import`;
 
 ## **Analisando o código**
 
 Vamos dar uma olhada no código inicial dentro de `src/App.test.js`.
 
 ```javascript
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders learn react link", () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
@@ -79,20 +77,23 @@ Então, quando o `render` é chamado, ele renderiza o componente dentro desta p�
 `screen` é um método que possui `queries` dentro dele.  
 Isso quer dizer que usaremos funções/métodos que estão dentro de `screen` para capturar as informações que queremos.  
 Já vamos chegar lá nas próximas linhas.
+
 </div>
 
 <div class="fx-group">
 
-  > `import App from './App';`
+> `import App from './App';`
 
-  Importando nosso componente. Sem novidades.
+Importando nosso componente. Sem novidades.
+
 </div>
 
 <div class="fx-group">
 
-  > `test('renders learn react link', () => {`
+> `test('renders learn react link', () => {`
 
-  `test` - que também pode ser encontrado como `it` -, é o método que nos permite escrever um texto descrevendo o que um teste bem sucedido deve fazer. No nosso exemplo, `renderiza o link "learn react"`
+`test` - que também pode ser encontrado como `it` -, é o método que nos permite escrever um texto descrevendo o que um teste bem sucedido deve fazer. No nosso exemplo, `renderiza o link "learn react"`
+
 </div>
 
 <div class="fx-group">
@@ -100,6 +101,7 @@ Já vamos chegar lá nas próximas linhas.
 > `render(<App />);`
 
 Renderizando o componente `App`.
+
 </div>
 
 <div class="fx-group">
@@ -111,6 +113,7 @@ Atribuindo à constante `linkElement` a `query`(método) `getByText` que deve en
 O trecho `/learn react/i` é um padrão regex que desabilita o `case-sensitive`, ou seja, ignora a diferença entre letras maiúsculas e minúsculas. Puro Javascript.
 
 Lembrando que para selecionar elementos você pode continuar utilizando o bom e velho `querySelector`, por exemplo: `const foo = container.querySelector('[data-foo="bar"]')`.
+
 </div>
 
 <div class="fx-group">
@@ -125,6 +128,7 @@ Para exemplificar melhor, a linha acima também poderia ser escrita assim:
 
 `toBeInTheDocument()` é um matcher. O que é isso?  
 É uma função cujo valor resultante deve ser `true` em relação ao que está testando do `expect`. Neste caso é `estarNoDocumento`. Existe inclusive uma lista de matchers e [você pode encontrá-la aqui](https://jestjs.io/docs/en/expect.html#content).
+
 </div>
 
 ## **Dificultando as coisas**
@@ -132,19 +136,19 @@ Para exemplificar melhor, a linha acima também poderia ser escrita assim:
 Vamos realizar algumas alterações para podermos abordar outros métodos e discutir:
 
 ```javascript
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-describe('Componente App', () => {
-  it('renders learn react link', () => {
+describe("Componente App", () => {
+  it("renders learn react link", () => {
     render(<App />);
     const linkElement = screen.getByText(/learn react/i);
     expect(linkElement).toBeInTheDocument();
   });
-  it('renders learn react link as anchor', () => {
+  it("renders learn react link as anchor", () => {
     render(<App />);
     const linkElement = screen.getByText(/learn react/i);
-    expect(linkElement).toHaveAttribute('href');
+    expect(linkElement).toHaveAttribute("href");
   });
 });
 ```
@@ -160,12 +164,14 @@ describe('Componente App', () => {
 > `it('renders learn react link as anchor', () => {`
 
 `renders learn react link as anchor`, novo teste, dessa vez, testaremos se o elemento é um link
+
 </div>
 <div class="fx-group">
 
 > `expect(linkElement).toHaveAttribute('href');`
 
-`toHaveAttribute('href')`, conferindo se o elemento tem um href.  
+`toHaveAttribute('href')`, conferindo se o elemento tem um href.
+
 </div>
 
 ## **E qual é o problema que temos aqui?**
@@ -174,11 +180,11 @@ O teste vai passar com qualquer elemento que tenha um `href`, por exemplo, se fo
 O correto seria:
 
 ```javascript
-it('renders learn react link as anchor', () => {
+it("renders learn react link as anchor", () => {
   render(<App />);
   // adicionando `.closest('a')`
-  const linkElement = screen.getByText(/learn react/i).closest('a');
-  expect(linkElement).toHaveAttribute('href');
+  const linkElement = screen.getByText(/learn react/i).closest("a");
+  expect(linkElement).toHaveAttribute("href");
 });
 ```
 

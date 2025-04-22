@@ -6,11 +6,10 @@ tags:
 title: "Mockando window.location usando Jest + React Testing Library + Typescript"
 date: "2022-06-03T22:05:00.000Z"
 description: "Exemplo prático de como mockar o objeto window.location usando Jest + React Testing Library + Typescript"
-tldr: ''
+tldr: ""
 ---
 
 As tecnologias vão evoluindo as `breaking changes` vão aparecendo e enfim, se você chegou até aqui provavelmente tentou algumas abordagens para mockar o objeto `window.location` que no passado funcionaram mas não funcionam mais. Então, sem enrolação, vamos à prática.
-
 
 ## Tecnologias e versões
 
