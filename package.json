@@ -2,7 +2,7 @@
   "name": "fx.dev",
   "private": true,
   "description": "Um blog pessoal para disseminar conteúdo.",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "engines": {
     "node": "22.14.0"
   },
