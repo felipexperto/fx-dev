@@ -7,13 +7,20 @@ import NavigationBar from '@components/NavigationBar.astro';
 import '../styles/global.css';
 import '../styles/blogpost.css';
 
-const { pageTitle } = Astro.props;
+const { pageDescription, pageImage, pageTitle, pageType, pageUrl } =
+  Astro.props;
 ---
 
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <DefaultHeadTags pageTitle={`${pageTitle} | FX Dev`} />
+    <DefaultHeadTags
+      pageDescription={pageDescription}
+      pageImage={pageImage}
+      pageTitle={`${pageTitle} | FX Dev`}
+      pageType={pageType}
+      pageUrl={pageUrl}
+    />
   </head>
   <body
     class="bg-slate-100 dark:bg-abyss-500 pb-32"

@@ -16,7 +16,13 @@ const { post }: any = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost pageTitle={post.data.title}>
+<BlogPost
+  pageDescription={post.data.description}
+  pageImage={post.data.image}
+  pageTitle={post.data.title}
+  pageType="article"
+  pageUrl={`https://www.fx.dev.br/${post.id}`}
+>
   <Container>
     <h1>{post.data.title}</h1>
     {post.data?.tldr && <div id="tldr" set:html={post.data.tldr} />}

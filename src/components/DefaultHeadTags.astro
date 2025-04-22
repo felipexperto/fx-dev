@@ -11,12 +11,26 @@ import '@fontsource/fira-sans/latin-700.css';
 
 import GtmScript from './GtmScript.astro';
 
-const { pageTitle } = Astro.props;
+const {
+  pageDescription = '',
+  pageImage = '/blog-cover.png',
+  pageTitle = '',
+  pageType = 'website',
+  pageUrl = '',
+} = Astro.props;
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
+
+<meta property="og:description" content={pageDescription} />
+<meta property="og:image" content={pageImage} />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:type" content={pageType} />
+<meta property="og:url" content={pageUrl} />
+
 <link rel="icon" href="/favicon-32x32.png" type="image/png" />
 <GtmScript />
 <title>{pageTitle}</title>
