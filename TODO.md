@@ -2,23 +2,23 @@
 
 [x] chore: add fira code typography
 
-chore: dockerfile
+[ ] chore: dockerfile
 
 [x] chore: prettier
 
 [x] feat: search
 
-feat: custom 404 page
+[ ] Chips com principais assuntos abaixo da busca - feat: filter by category
 
-feat: skip to content
+[ ] feat: custom 404 page
+
+[ ] feat: skip to content
 
 [x] chore: add gtm
 
 [x] chore: styling blog post
 
 [x] chore: tldr layout - consultar layout de quotes do Obsidian
-
-[ ] Chips com principais assuntos abaixo da busca - feat: filter by category
 
 **Pesquisa**
 
