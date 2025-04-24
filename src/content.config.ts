@@ -17,7 +17,6 @@ const blog = defineCollection({
     update: z.string().optional(),
   }),
 });
-// const dogs = defineCollection({ /* ... */ });
 
 // 4. Export a single `collections` object to register your collection(s)
 export const collections = { blog };
