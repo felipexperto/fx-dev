@@ -69,3 +69,4 @@ tmp
 # generated types
 .astro/
 dist
+.netlify
