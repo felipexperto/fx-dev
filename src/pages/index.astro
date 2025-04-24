@@ -56,6 +56,8 @@ const searchIndex = createSearchIndex(posts);
 </DefaultLayout>
 
 <script>
+  import Fuse from 'fuse.js';
+
   const searchIndex = document.getElementById('blog-posts-json').textContent;
 
   let fuse = null;
@@ -75,12 +77,6 @@ const searchIndex = createSearchIndex(posts);
         console.error('Error initializing Fuse:', error);
       }
     }
-  }
-
-  if (typeof Fuse !== 'undefined') {
-    initFuse();
-  } else {
-    document.addEventListener('DOMContentLoaded', initFuse);
   }
 
   function debounce(callbackFn, delay) {
@@ -145,6 +141,7 @@ const searchIndex = createSearchIndex(posts);
     }
   }
 
+  initFuse();
   const debouncedSearch = debounce(updatePostList, 300);
   searchInput?.addEventListener('keydown', handleKeyDown);
   searchInput?.addEventListener('input', debouncedSearch);
