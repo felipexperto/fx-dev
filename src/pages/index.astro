@@ -71,7 +71,7 @@ const searchIndex = createSearchIndex(posts);
       try {
         fuse = new Fuse(JSON.parse(searchIndex), {
           keys: ['title', 'description', 'body'],
-          threshold: 0.3,
+          threshold: 0.2,
         });
       } catch (error) {
         console.error('Error initializing Fuse:', error);
