@@ -56,11 +56,21 @@ h6 {
   color: var(--color-gray-300);
 }
 
+li {
+  font-size: 1.1rem;
+}
+
 p,
 ol,
 ul {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   line-height: 1.8em;
+  margin-bottom: 1.5rem;
+}
+
+ul > li ul {
+  margin-bottom: 0;
+  margin-left: 1.4em;
 }
 
 li > code,
@@ -69,7 +79,7 @@ p > code {
   border-radius: 4px;
   color: var(--color-yellow-800);
   font-family: var(--font-code);
-  font-size: 0.9em;
+  font-size: 0.9rem;
   overflow-wrap: break-word;
   padding: 0.1ch 0.5ch;
   white-space: pre-wrap;
@@ -136,10 +146,6 @@ strong {
   right: 1rem;
   top: 1rem;
 }
-
-/* .dark #tldr::before {
-  color: var(--color-abyss-500);
-} */
 
 .dark #tldr {
   background-color: rgba(0, 0, 0, 0.5);
