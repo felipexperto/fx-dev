@@ -56,93 +56,26 @@ const searchIndex = createSearchIndex(posts);
 </DefaultLayout>
 
 <script>
-  import Fuse from 'fuse.js';
+  import { debounce } from 'src/utils/debounce';
+  import { handleKeyDown, initFuse, updatePostList } from '../helpers/blog';
 
-  const searchIndex = document.getElementById('blog-posts-json').textContent;
+  const searchAlert = document.getElementById('search-alert') as HTMLElement;
+  const searchInput = document.getElementById('search-input') as HTMLElement;
+  const postList = document.getElementById('posts-list') as HTMLElement;
+  const allPosts = Array.from(postList.children) as HTMLElement[];
 
-  let fuse = null;
-  const searchAlert = document.getElementById('search-alert');
-  const searchInput = document.getElementById('search-input');
-  const postList = document.getElementById('posts-list');
-  const allPosts = Array.from(postList.children);
+  const searchIndex = document.getElementById('blog-posts-json')?.textContent || '';
 
-  function initFuse() {
-    if (!fuse) {
-      try {
-        fuse = new Fuse(JSON.parse(searchIndex), {
-          keys: ['title', 'description', 'body'],
-          threshold: 0.2,
-        });
-      } catch (error) {
-        console.error('Error initializing Fuse:', error);
-      }
-    }
-  }
+  let fuse: any = initFuse(searchIndex);
 
-  function debounce(callbackFn, delay) {
-    let timeoutId;
+  const debouncedSearch = debounce((event: Event) => updatePostList({
+    event,
+    fuse,
+    allPosts,
+    searchAlert,
+    postListElement: postList,
+  }), 300);
 
-    return function (...args) {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        callbackFn.apply(this, args);
-      }, delay);
-    };
-  }
-
-  function toggleDisplay(action = 'hide') {
-    const CLASSLIST_METHOD = {
-      hide: (item) => item.classList.add('hidden'),
-      show: (item) => item.classList.remove('hidden'),
-    };
-    return CLASSLIST_METHOD[action];
-  }
-
-  function toggleAllPosts(action = 'hide') {
-    allPosts.forEach((post) => toggleDisplay(action)(post));
-  }
-
-  function toggleSearchAlert(action = 'hide') {
-    toggleDisplay(action)(searchAlert);
-  }
-
-  function handleKeyDown(event: KeyboardEvent) {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      return;
-    };
-  }
-
-  function updatePostList(event: KeyboardEvent) {
-    const inputValue = event.target.value.trim();
-
-    if (inputValue.length < 3) {
-      toggleAllPosts('show');
-      return;
-    }
-
-    if (!fuse) {
-      console.error('Fuse.js não foi inicializado');
-      toggleAllPosts('show');
-      return;
-    }
-
-    const results = fuse.search(inputValue);
-
-    if (results.length) {
-      toggleSearchAlert();
-      toggleAllPosts();
-      results.map((post) => {
-        postList.querySelector(`#${post.item.id}`).classList.remove('hidden');
-      });
-    } else {
-      toggleAllPosts();
-      toggleSearchAlert('show');
-    }
-  }
-
-  initFuse();
-  const debouncedSearch = debounce(updatePostList, 300);
   searchInput?.addEventListener('keydown', handleKeyDown);
   searchInput?.addEventListener('input', debouncedSearch);
 </script>
