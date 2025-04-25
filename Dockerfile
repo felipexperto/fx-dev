@@ -1,45 +1,22 @@
-
-FROM node:10-alpine AS builder
-
-RUN apk add --no-cache --virtual .gyp python make g++ autoconf automake libtool gcc musl-dev nasm
-
-RUN apk add --no-cache --virtual \  
-    .gyp \
-    g++ \
-    python \
-    make \                                                                                        
-    gcc \                                                                                         
-    autoconf \                                                                                    
-    automake \                                                                                    
-    musl-dev \                                                                                    
-    libtool \                                                                                     
-    nasm \                                                                                        
-    tiff \                                                                                        
-    jpeg \                                                                                        
-    zlib \                                                                                        
-    zlib-dev \                                                                                    
-    file \                                                                                        
-    pkgconf \
-    libc6-compat \
-    libjpeg-turbo-dev \
-    libpng-dev
+FROM node:22-slim AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable && pnpm add -g serve
 
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install
 
+COPY . /app
 
-FROM node:10-alpine AS development
+FROM base AS build
+RUN pnpm install --frozen-lockfile
+RUN pnpm run build
 
-RUN yarn global add gatsby-cli
+FROM base AS prod
+COPY --from=build /app/node_modules /app/node_modules
+COPY --from=build /app/dist /app/dist
 
-WORKDIR /app
-COPY --from=builder /app/node_modules /app/node_modules
-COPY . .
+ENV HOST=0.0.0.0
+ENV PORT=4321
+EXPOSE 4321
 
-RUN yarn install
-
-EXPOSE 8000
-EXPOSE 8001
-
-CMD yarn install; gatsby develop -H 0.0.0.0
+CMD ["serve", "-l", "4321", "/app/dist"]
