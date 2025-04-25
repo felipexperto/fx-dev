@@ -7,8 +7,6 @@ description: "Breve introdução sobre Monitoramento, Telemetria, Observabilidad
 tldr: ""
 ---
 
-# New Relic
-
 O **New Relic** coleta informações da aplicação ou serviço através de um Agente que envia esses dados para sua plataforma APM (Application Performance Monitoring), que por sua vez salva esses dados e disponibiliza no formato de relatórios e dashboards padronizados. Essas informações coletadas podem ser tanto dados padrões que são coletados automaticamente quanto informações que o próprio desenvolvedor configura, caso ele queira alguma informação customizada ou específica.
 
 O **Agente** é uma biblioteca de integração do New Relic com nossa aplicação, ele é fornecido pelo próprio New Relic como um SDK em diversas linguagens. Esse Agente faz o streaming em tempo real, ou seja, envia dados a cada 5 segundos. Muitas vezes sem necessidade de alteração do código fonte ele já consegue extrair informações como: CPU, memória, informações sobre o sistema operacional e uso de disco.
