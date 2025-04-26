@@ -11,6 +11,8 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.fx.dev.br",
+
   integrations: [
     partytown(),
     icon({

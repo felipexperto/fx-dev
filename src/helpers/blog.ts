@@ -28,7 +28,7 @@ export function formatPostDate(utcDate: string) {
 
 export function sortPostsByDate(posts: PostProps[]) {
   return posts.sort(
-    (a, b) => new Date(b.data?.date) - new Date(a.data?.date)
+    (a, b) => new Date(b.data?.date).getTime() - new Date(a.data?.date).getTime()
   );
 }
 
