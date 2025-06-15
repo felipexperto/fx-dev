@@ -9,7 +9,7 @@ description: "Explorando estratégias práticas para reduzir custos de infraestr
 ## Introdução
 
 Este é um post baseado num estudo que faz parte de uma iniciativa de redução de custos com infraestrutura.  
-Alguns projetos podem conter dezenas ou centenas de containers rodando simultaneamente num cluster Kubernetes, portanto, cada megabyte é importante.  
+Alguns projetos podem conter dezenas ou centenas de containers rodando simultaneamente num cluster Kubernetes, portanto, cada megabyte é importante.
 
 Sobre o projeto analisado:
 
@@ -23,44 +23,41 @@ Ao buildar o projeto utilizando o comando `docker build -t xablau-original .`, a
 
 Para a versão **16.15.0** temos algumas tags disponíveis de imagens Node. Vamos ordená-las por tamanho:
 
-| **Repository** | **Tag** | **Size** |
-| ---------- | --- | ---- |
-| node | 16.15.0-alpine | 112MB |
-| node | 16.15.0-buster-slim | 176MB |
-| node | 16.15.0-slim | 176MB |
-| node | 16.15.0-bullseye-slim | 187MB |
-| node | 16.15.0 (utilizada atualmente) | 907MB |
-| node | 16.15.0-buster | 907MB |
-| node | 16.15.0-bullseye | 937MB |  
+| **Repository** | **Tag**                        | **Size** |
+| -------------- | ------------------------------ | -------- |
+| node           | 16.15.0-alpine                 | 112MB    |
+| node           | 16.15.0-buster-slim            | 176MB    |
+| node           | 16.15.0-slim                   | 176MB    |
+| node           | 16.15.0-bullseye-slim          | 187MB    |
+| node           | 16.15.0 (utilizada atualmente) | 907MB    |
+| node           | 16.15.0-buster                 | 907MB    |
+| node           | 16.15.0-bullseye               | 937MB    |
 
 Sabendo das versões disponíveis podemos realizar testes de build do projeto.
 
-| **Tag** | **Status / Size** |
-| ---------- | -------------- |
-| 16.15.0-alpine | ❌  Build Error |
-| 16.15.0-buster-slim | ❌  Build Error |
-| 16.15.0-slim | ❌  Build Error |
-| 16.15.0-bullseye-slim | ❌  Build Error |
-| 16.15.0 | ✅ 2.32Gb |
-| 16.15.0-buster | ❌ Não foi testado por ter o mesmo tamanho da imagem utilizada atualmente. |
-| 16.15.0-bullseye | ✅ 2.34Gb |
+| **Tag**               | **Status / Size**                                                          |
+| --------------------- | -------------------------------------------------------------------------- |
+| 16.15.0-alpine        | ❌ Build Error                                                             |
+| 16.15.0-buster-slim   | ❌ Build Error                                                             |
+| 16.15.0-slim          | ❌ Build Error                                                             |
+| 16.15.0-bullseye-slim | ❌ Build Error                                                             |
+| 16.15.0               | ✅ 2.32Gb                                                                  |
+| 16.15.0-buster        | ❌ Não foi testado por ter o mesmo tamanho da imagem utilizada atualmente. |
+| 16.15.0-bullseye      | ✅ 2.34Gb                                                                  |
 
 E concluímos que nenhuma versão mais enxuta do que a atual nesta versão do Node supri as necessidades das dependências do projeto gerando um erro no build.
-
 
 ## Atualizando a versão do Node
 
 De acordo com a documentação oficial do Next.js, a versão 11.1.2 é compatível com as seguintes versões do Node.js: `Node.js 12.22.0 ou posterior (até o Node.js 16.x)`. Portanto, realizaremos o upgrade para a versão `16.20`.
 
-
 ## Corrigindo o pipeline de build
 
 Durante testes da tag **slim** foi possível perceber que o build era quebrado por ausênsia de bibliotecas nesta imagem Docker e inserimos um step extra: `RUN apt-get update && apt-get install -y libglu1 libxi6 libgconf-2-4`.
 
-Após esse ponto, foi percebido um problema de **peer-dependency**, ou seja, algumas dependências utilizando outras e com versões diferentes. Para que isso não aconteça adicionamos ao comando de `npm install` o parâmetro `--legacy-peer-deps`. 
+Após esse ponto, foi percebido um problema de **peer-dependency**, ou seja, algumas dependências utilizando outras e com versões diferentes. Para que isso não aconteça adicionamos ao comando de `npm install` o parâmetro `--legacy-peer-deps`.
 
 Após a correção foi buildada uma imagem de 1.5GB e testada a aplicação sem problemas.
-
 
 ```
 // Criar imagem

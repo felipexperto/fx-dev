@@ -26,10 +26,9 @@ Analisando o Dockerfile do projeto é possível perceber que é construído com 
 
 Ao subir o container (rodar a imagem criada acima) com o comando `docker run --name xablau -p 3000:5000 -dit xablau` a aplicação funcionou normalmente acessando o endereço local.
 
-Ao entrar no container em modo iterativo `docker exec -it xablau sh` foi possível listar os diretórios e arquivos conforme as imagens abaixo utilizando o comando `du -sh * .[!.]* | sort -r`. 
+Ao entrar no container em modo iterativo `docker exec -it xablau sh` foi possível listar os diretórios e arquivos conforme as imagens abaixo utilizando o comando `du -sh * .[!.]* | sort -r`.
 
 ![Listagem de arquivos dentro da imagem NextJS](./analise-imagem-nextjs.png)
-
 
 ## O que podemos constatar vendo isso?
 
@@ -39,7 +38,6 @@ Ao entrar no container em modo iterativo `docker exec -it xablau sh` foi possív
 - [Esta é a pasta padrão de build do NextJS](https://upmostly.com/nextjs/where-does-nextjs-put-build-folder), _All JavaScript code inside .next has been compiled and browser bundles have been minified to help achieve the best performance and support all modern browsers_ – [Documentação Oficial](https://nextjs.org/docs/deployment#nextjs-build-api).
   - Dentro da pasta `/packages/core/.next/cache/webpack` existem aparentemente diversas versões de build, incluindo `development` que podemos explorar a possibilidade de exclusão;
 - Não é possível assumir quais arquivos são vitais para a aplicação dentro da pasta `packages` e seus subdiretórios ou lendo a documentação do NextJS;
-
 
 ## Docker Multi Stage Building
 

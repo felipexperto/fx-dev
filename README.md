@@ -1,8 +1,6 @@
-
 # FX Dev
 
-Um blog pessoal para disseminar conteúdo. 
-
+Um blog pessoal para disseminar conteúdo.
 
 ## Sobre o projeto
 
@@ -18,8 +16,7 @@ Depois de grande tempo em dúvida do propósito deste projeto estabeleci as segu
   - Pouco Javascript;
   - Sem animações;
   - O mínimo de scripts de terceiros possível;
-- Seguir a prática de [10-minute build](https://www.jamesshore.com/v2/books/aoad1/ten_minute_build); 
-
+- Seguir a prática de [10-minute build](https://www.jamesshore.com/v2/books/aoad1/ten_minute_build);
 
 ## Rodando localmente
 
@@ -78,7 +75,6 @@ Rode o container
 ```bash
   docker run -it -p 4321:4321 {{nome-da-imagem}}
 ```
-
 
 ## Deploy
 

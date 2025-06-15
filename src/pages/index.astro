@@ -3,7 +3,11 @@ import DefaultLayout from '../layouts/Default.astro';
 import Container from '../components/Container.astro';
 
 import { getCollection } from 'astro:content';
-import { createSearchIndex, formatPostDate, sortPostsByDate } from '../helpers/blog';
+import {
+  createSearchIndex,
+  formatPostDate,
+  sortPostsByDate,
+} from '../helpers/blog';
 import type { PostProps } from '../types/blog';
 
 const posts: PostProps[] = await getCollection('blog');
@@ -13,7 +17,11 @@ const searchIndex = createSearchIndex(posts);
 
 <DefaultLayout>
   <Container>
-    <script type="application/json" id="blog-posts-json" set:html={JSON.stringify(searchIndex)} />
+    <script
+      type="application/json"
+      id="blog-posts-json"
+      set:html={JSON.stringify(searchIndex)}
+    />
     <section class="pb-10 pt-8" data-testid="hero-banner">
       <h1 class="font-(--font-bold) text-3xl my-2">Procure um assunto</h1>
       <form>
@@ -64,17 +72,22 @@ const searchIndex = createSearchIndex(posts);
   const postList = document.getElementById('posts-list') as HTMLElement;
   const allPosts = Array.from(postList.children) as HTMLElement[];
 
-  const searchIndex = document.getElementById('blog-posts-json')?.textContent || '';
+  const searchIndex =
+    document.getElementById('blog-posts-json')?.textContent || '';
 
   let fuse: any = initFuse(searchIndex);
 
-  const debouncedSearch = debounce((event: Event) => updatePostList({
-    event,
-    fuse,
-    allPosts,
-    searchAlert,
-    postListElement: postList,
-  }), 300);
+  const debouncedSearch = debounce(
+    (event: Event) =>
+      updatePostList({
+        event,
+        fuse,
+        allPosts,
+        searchAlert,
+        postListElement: postList,
+      }),
+    300
+  );
 
   searchInput?.addEventListener('keydown', handleKeyDown);
   searchInput?.addEventListener('input', debouncedSearch);

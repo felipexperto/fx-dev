@@ -1,21 +1,21 @@
-import Fuse from 'fuse.js';
+import Fuse from "fuse.js";
 
-import type { PostProps, PostRenderedProps } from '../types/blog';
+import type { PostProps, PostRenderedProps } from "../types/blog";
 
 export function formatPostDate(utcDate: string) {
   const months = [
-    'janeiro',
-    'fevereiro',
-    'março',
-    'abril',
-    'maio',
-    'junho',
-    'julho',
-    'agosto',
-    'setembro',
-    'outubro',
-    'novembro',
-    'dezembro',
+    "janeiro",
+    "fevereiro",
+    "março",
+    "abril",
+    "maio",
+    "junho",
+    "julho",
+    "agosto",
+    "setembro",
+    "outubro",
+    "novembro",
+    "dezembro",
   ];
 
   const fullDate = new Date(utcDate);
@@ -28,7 +28,8 @@ export function formatPostDate(utcDate: string) {
 
 export function sortPostsByDate(posts: PostProps[]) {
   return posts.sort(
-    (a, b) => new Date(b.data?.date).getTime() - new Date(a.data?.date).getTime()
+    (a, b) =>
+      new Date(b.data?.date).getTime() - new Date(a.data?.date).getTime(),
   );
 }
 
@@ -40,7 +41,7 @@ export function createSearchIndex(posts: PostProps[]): PostRenderedProps[] {
       id,
       description,
       title,
-      body: body?.split(' ').slice(0, 300),
+      body: body?.split(" ").slice(0, 300),
     };
     return searchItem;
   }, []);
@@ -48,59 +49,70 @@ export function createSearchIndex(posts: PostProps[]): PostRenderedProps[] {
   return searchIndex;
 }
 
-type DisplayActionProps = 'hide' | 'show';
+type DisplayActionProps = "hide" | "show";
 type updatePostListProps = {
   event: Event;
   allPosts: HTMLElement[];
   postListElement: HTMLElement;
   searchAlert: HTMLElement;
   fuse: any;
-}
+};
 type fuseFilteresResultsProps = {
   item: PostRenderedProps;
-}
+};
 
 export function initFuse(searchIndex: string) {
   try {
     return new Fuse(JSON.parse(searchIndex), {
-      keys: ['title', 'description', 'body'],
+      keys: ["title", "description", "body"],
       threshold: 0.2,
     });
   } catch (error) {
-    console.error('Error initializing Fuse:', error);
+    console.error("Error initializing Fuse:", error);
   }
 }
 
-export function toggleDisplay(action: DisplayActionProps = 'hide'): (item: HTMLElement) => void {
+export function toggleDisplay(
+  action: DisplayActionProps = "hide",
+): (item: HTMLElement) => void {
   const CLASSLIST_METHOD = {
-    hide: (item: HTMLElement) => item.classList.add('hidden'),
-    show: (item: HTMLElement) => item.classList.remove('hidden'),
+    hide: (item: HTMLElement) => item.classList.add("hidden"),
+    show: (item: HTMLElement) => item.classList.remove("hidden"),
   };
   return CLASSLIST_METHOD[action];
 }
 
-export function toggleAllPosts(action: DisplayActionProps = 'hide', elements: HTMLElement[]) {
+export function toggleAllPosts(
+  action: DisplayActionProps = "hide",
+  elements: HTMLElement[],
+) {
   elements.forEach((post) => toggleDisplay(action)(post));
 }
 
 export function handleKeyDown(event: KeyboardEvent) {
-  if (event.key === 'Enter') {
+  if (event.key === "Enter") {
     event.preventDefault();
     return;
-  };
+  }
 }
 
-export function updatePostList({ event, allPosts, searchAlert, postListElement, fuse }: updatePostListProps) {
+export function updatePostList({
+  event,
+  allPosts,
+  searchAlert,
+  postListElement,
+  fuse,
+}: updatePostListProps) {
   const inputValue = (event.target as HTMLInputElement).value.trim();
 
   if (inputValue.length < 3) {
-    toggleAllPosts('show', allPosts);
+    toggleAllPosts("show", allPosts);
     return;
   }
 
   if (!fuse) {
-    console.error('Fuse.js não foi inicializado');
-    toggleAllPosts('show', allPosts);
+    console.error("Fuse.js não foi inicializado");
+    toggleAllPosts("show", allPosts);
     return;
   }
 
@@ -109,13 +121,15 @@ export function updatePostList({ event, allPosts, searchAlert, postListElement, 
   const results: fuseFilteresResultsProps[] = fuse.search(inputValue);
 
   if (results.length) {
-    toggleDisplay('hide')(searchAlert);
-    toggleAllPosts('hide', allPosts);
+    toggleDisplay("hide")(searchAlert);
+    toggleAllPosts("hide", allPosts);
     results.map((post) => {
-      postListElement.querySelector(`#${post.item.id}`)?.classList.remove('hidden');
+      postListElement
+        .querySelector(`#${post.item.id}`)
+        ?.classList.remove("hidden");
     });
   } else {
-    toggleAllPosts('hide', allPosts);
-    toggleDisplay('show')(searchAlert);
+    toggleAllPosts("hide", allPosts);
+    toggleDisplay("show")(searchAlert);
   }
 }
