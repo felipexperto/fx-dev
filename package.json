@@ -4,7 +4,7 @@
   "description": "Um blog pessoal para disseminar conteúdo.",
   "version": "3.0.0",
   "engines": {
-    "node": "22.14.0"
+    "node": "22.22.0"
   },
   "type": "module",
   "author": "Felipe Marciano <felipexperto@gmail.com>",
